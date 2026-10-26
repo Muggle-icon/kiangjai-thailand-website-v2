@@ -1,30 +1,29 @@
 /* Product proof, application, company identity and help use distinct visual rhythms. */
 .product-section{padding-block:40px 64px}
-.product-section>.shell>h2{font-size:36px;line-height:1.45;text-align:center;margin-bottom:48px}
-.benefits-layout{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);grid-template-rows:auto auto;grid-template-areas:"proof main" "proof support";column-gap:64px;align-items:center}
-.benefit-feature-copy{grid-area:main;align-self:end;padding-bottom:28px;min-width:0}
-.benefit-feature-copy h3{font-size:32px;line-height:1.45;margin-bottom:20px}
-.benefit-feature-copy p{font-size:17px;line-height:1.9;color:var(--muted);max-width:39ch}
-.repayment-proof{grid-area:proof;min-height:590px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface);padding:28px 32px 24px;border-radius:16px}
-.repayment-device{display:block;width:238px;max-width:100%;line-height:0}
-.repayment-proof figcaption{font-size:12px;line-height:1.7;margin-top:18px;text-align:center;color:var(--muted)}
-.benefit-support{grid-area:support;align-self:start;min-width:0}
-.benefit-support article{display:grid;grid-template-columns:48px minmax(0,1fr);gap:20px;align-items:start;padding-block:24px;border-top:1px solid var(--line)}
-.benefit-support-icon{display:grid;place-items:center;width:48px;height:48px;background:var(--cyan-soft);border-radius:50%;color:var(--ink)}
-.benefit-support-icon>.icon{width:25px;height:25px}
-.benefit-support h3{font-size:18px;line-height:1.6;margin-bottom:8px}
+.product-section>.shell>h2{font-size:38px;line-height:1.45;text-align:left;margin-bottom:32px}
+.benefits-layout{display:grid;grid-template-columns:minmax(0,276px) minmax(0,1fr) minmax(0,.9fr);grid-template-areas:"proof main support";gap:32px;align-items:center;background:var(--surface);padding:28px 32px;border-radius:12px}
+.benefit-feature-copy{grid-area:main;min-width:0}
+.benefit-feature-copy h3{font-size:34px;line-height:1.45;margin-bottom:20px}
+.benefit-feature-copy p{font-size:17px;line-height:1.9;color:var(--muted)}
+.repayment-proof{grid-area:proof;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.repayment-device{display:block;width:276px;max-width:100%;line-height:0}
+.repayment-proof figcaption{font-size:12px;line-height:1.7;margin-top:16px;text-align:center;color:var(--muted)}
+.benefit-support{grid-area:support;min-width:0;border-left:1px solid var(--line);padding-left:32px}
+.benefit-support article+article{border-top:1px solid var(--line);margin-top:28px;padding-top:28px}
+.benefit-support-icon{display:block;width:32px;height:32px;margin-bottom:16px;color:var(--ink)}
+.benefit-support-icon>.icon{width:32px;height:32px}
+.benefit-support h3{font-size:20px;line-height:1.6;margin-bottom:8px}
 .benefit-support p{font-size:15px;line-height:1.9;color:var(--muted)}
-.benefit-support .app-original-link{font-size:14px;font-weight:500;margin-top:10px;gap:8px}
+.benefit-support .app-original-link{font-size:14px;font-weight:500;margin-top:24px;gap:8px}
 .app-original-link .icon{width:17px;height:17px}
-.application-steps{padding-block:0 72px;background:var(--white)}
-.application-steps>.shell{border-top:1px solid var(--line);padding-top:48px}
-.application-steps h2{font-size:32px;margin-bottom:40px;line-height:1.5;text-align:center}
+.application-steps{padding-block:48px 56px;background:var(--surface)}
+.application-steps h2{font-size:32px;margin-bottom:32px;line-height:1.5;text-align:left}
 .step-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding:0;margin:0;list-style:none}
 .step-list li{position:relative;min-width:0}
-.step-marker{display:flex;align-items:center;margin-bottom:24px;color:var(--ink)}
-.step-number{display:grid;place-content:center;flex:none;width:42px;height:42px;border:0;border-radius:8px;background:var(--cyan);font-size:17px;font-weight:600;font-variant-numeric:tabular-nums;position:relative;z-index:1}
-.step-marker>.icon{display:none}
-.step-list li:not(:last-child)::after{content:"";position:absolute;top:21px;left:62px;width:calc(100% - 50px);height:1px;background:var(--line)}
+.step-marker{display:flex;align-items:center;gap:14px;margin-bottom:20px;color:var(--ink)}
+.step-number{display:grid;place-content:center;flex:none;width:42px;height:42px;border:0;border-radius:50%;background:var(--cyan);font-size:17px;font-weight:600;font-variant-numeric:tabular-nums;position:relative;z-index:1}
+.step-marker>.icon{display:block;width:32px;height:32px;position:relative;z-index:1;background:var(--surface)}
+.step-list li:not(:last-child)::after{content:"";position:absolute;top:21px;left:108px;width:calc(100% - 96px);height:1px;background:#c6d4d9}
 .step-list h3{font-size:18px;line-height:1.65;margin-bottom:12px;max-width:250px}
 .step-list p{font-size:15px;line-height:1.85;color:var(--muted);max-width:270px}
 .step-list .screen-detail-link{font-size:13px;line-height:1.7;gap:8px;margin-top:12px;text-align:left;align-items:flex-start;min-height:44px}
@@ -63,11 +62,11 @@
 .security-links a{font-size:13px;display:flex;gap:8px;align-items:center;min-height:38px}
 .security-links .icon{width:18px;height:18px}
 @media(max-width:1050px){
-  .benefits-layout{column-gap:40px;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
-  .repayment-proof{min-height:540px;padding-inline:24px}.repayment-device{width:218px}
-  .benefit-feature-copy h3{font-size:29px}.benefit-feature-copy p{font-size:16px}
-  .benefit-support article{grid-template-columns:40px minmax(0,1fr);gap:16px;padding-block:20px}.benefit-support-icon{width:40px;height:40px}.benefit-support-icon>.icon{width:23px;height:23px}
-  .benefit-support h3{font-size:18px}.benefit-support p{font-size:14px}
+  .benefits-layout{grid-template-columns:250px minmax(0,1fr);grid-template-areas:"proof main" "proof support";gap:24px 32px;padding:28px}
+  .repayment-device{width:250px}.benefit-feature-copy{align-self:end}.benefit-feature-copy h3{font-size:30px}.benefit-feature-copy p{font-size:16px}
+  .benefit-support{align-self:start;border-left:0;border-top:1px solid var(--line);padding:24px 0 0}
+  .benefit-support article{display:grid;grid-template-columns:32px minmax(0,1fr);gap:16px}.benefit-support article+article{margin-top:20px;padding-top:20px}.benefit-support-icon{margin-bottom:0}
+  .benefit-support h3{font-size:19px}.benefit-support p{font-size:14px}
   .step-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}.step-list li::after{display:none}
   .company-layout,.help-layout{grid-template-columns:270px minmax(0,1fr);gap:48px}
   .company-layout>h2,.help-layout .section-heading>h2{font-size:32px}
@@ -75,18 +74,18 @@
   .official-panel{grid-template-columns:36px minmax(0,1fr)}.official-icon>.icon{width:34px;height:34px}.security-links{grid-column:2;flex-direction:row;gap:24px;padding:0;border:0}
 }
 @media(max-width:760px){
-  .product-section{padding-block:40px 44px}.product-section>.shell>h2{font-size:28px;margin-bottom:32px}
-  .benefits-layout{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"main" "proof" "support";gap:28px}
-  .benefit-feature-copy{padding:0;align-self:auto}.benefit-feature-copy h3{font-size:26px;margin-bottom:14px}.benefit-feature-copy p{font-size:15px;line-height:1.9;max-width:none}
-  .repayment-proof{width:100%;min-height:0;padding:28px 24px 22px;border-radius:12px}.repayment-device{width:220px}.repayment-proof figcaption{font-size:11px;margin-top:16px}
-  .benefit-support{align-self:auto}.benefit-support article{grid-template-columns:40px minmax(0,1fr);gap:16px;padding-block:24px}.benefit-support h3{font-size:18px;margin-bottom:8px}.benefit-support p{font-size:14px}
-  .benefit-support .app-original-link{margin-top:4px;font-size:13px}
-  .application-steps{padding-block:0 44px}.application-steps>.shell{padding-top:36px}.application-steps h2{font-size:28px;margin-bottom:32px;text-align:left}
-  .step-list{grid-template-columns:1fr;gap:28px}.step-list li{display:grid;grid-template-columns:42px minmax(0,1fr);column-gap:20px}
-  .step-marker{grid-row:1 / span 3;display:block;margin:0}.step-number{width:42px;height:42px;font-size:16px}
+  .product-section{padding-block:40px 44px}.product-section>.shell>h2{font-size:28px;margin-bottom:28px}
+  .benefits-layout{grid-template-columns:1fr;grid-template-areas:"main" "proof" "support";gap:28px;padding:24px 20px}
+  .benefit-feature-copy{align-self:auto}.benefit-feature-copy h3{font-size:26px;margin-bottom:14px}.benefit-feature-copy p{font-size:15px;line-height:1.9}
+  .repayment-proof{width:100%;min-width:0}.repayment-device{width:270px;max-width:100%}.repayment-proof figcaption{font-size:12px;margin-top:16px}
+  .benefit-support{align-self:auto;padding-top:24px}.benefit-support article{grid-template-columns:32px minmax(0,1fr);gap:14px}.benefit-support h3{font-size:18px;margin-bottom:8px}.benefit-support p{font-size:14px}
+  .benefit-support .app-original-link{margin-top:20px;font-size:13px}
+  .application-steps{padding-block:36px 44px}.application-steps h2{font-size:28px;margin-bottom:32px}
+  .step-list{grid-template-columns:1fr;gap:28px}.step-list li{padding-left:62px}
+  .step-marker{display:block;margin-bottom:12px}.step-number{position:absolute;left:0;top:0;width:42px;height:42px;font-size:16px}.step-marker>.icon{width:32px;height:32px}
   .step-list h3{font-size:18px;max-width:none;margin-bottom:8px}.step-list p{font-size:14px;max-width:none}
   .step-list li:not(:last-child)::after{display:block;left:21px;top:42px;width:1px;height:calc(100% - 14px)}
-  .step-list .screen-detail-link{grid-column:2;font-size:12px;margin-top:8px}
+  .step-list .screen-detail-link{font-size:12px;margin-top:8px}
   .company-section{padding-block:32px 40px}.company-layout{grid-template-columns:1fr;gap:24px}.company-layout>h2{font-size:28px}.company-intro>p{font-size:15px;line-height:1.95}
   .company-facts{margin-top:20px}.company-facts p{font-size:13px;padding-block:12px}
   .help-section{padding-block:0 40px}.help-layout{grid-template-columns:1fr;gap:24px;padding-top:36px}.help-layout .section-heading>h2{font-size:28px}.help-layout .section-heading>.text-link{margin-top:12px;font-size:14px}

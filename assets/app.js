@@ -111,6 +111,25 @@
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') { setMenu(false); menu.focus(); } });
   // Only the real confirmation screen is bound to application step 03.
   $$('[data-screen-detail]').forEach(button => button.addEventListener('click', () => openDialog($('#screen-dialog'), button)));
+  // Original App examples stay separate from the four-step application walkthrough.
+  const gallery = $('#app-gallery-dialog');
+  const galleryPanels = $$('[data-gallery-panel]');
+  let galleryIndex = 0;
+  const showGalleryImage = index => {
+    if (!galleryPanels.length) return;
+    galleryIndex = (index + galleryPanels.length) % galleryPanels.length;
+    galleryPanels.forEach((panel, i) => { panel.hidden = i !== galleryIndex; });
+    $('[data-gallery-position]').textContent = `${galleryIndex + 1} / ${galleryPanels.length}`;
+  };
+  $$('[data-app-gallery]').forEach(button => button.addEventListener('click', () => {
+    showGalleryImage(0); openDialog(gallery, button);
+  }));
+  $('[data-gallery-previous]')?.addEventListener('click', () => showGalleryImage(galleryIndex - 1));
+  $('[data-gallery-next]')?.addEventListener('click', () => showGalleryImage(galleryIndex + 1));
+  gallery?.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault(); showGalleryImage(galleryIndex + (event.key === 'ArrowRight' ? 1 : -1));
+  });
   // Store homepage position only when entering the safety page, never on brand-to-top links.
   const scrollKey = 'kiangjai-v2-home-position';
   if (isHome) {
