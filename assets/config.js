@@ -1,0 +1,1 @@
+window.KIANGJAI_CONFIG = {"releaseStatus": "preview", "loanMaxAmount": 50000, "companyPhone": "0812341407", "lineUrl": "", "androidDownloadUrl": "", "iosDownloadUrl": "", "officialWebsiteUrl": "", "appPublisherName": "", "lendingLicenseNumber": "", "lendingLicenseVerifyUrl": "", "antiFraudChannel": null};
