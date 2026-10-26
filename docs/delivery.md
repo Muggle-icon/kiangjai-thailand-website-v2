@@ -1,85 +1,84 @@
 # Kiangjai官网V2交付说明
 
-更新日期：2026-10-26。当前交付为第七轮设计，独立仓库 `Muggle-icon/kiangjai-thailand-website-v2`。旧仓库与旧网址不受影响。本文只描述当前版本，历史设计及验收通过Git版本查看。
+更新日期：2026-10-26。当前交付为第八轮，独立仓库 `Muggle-icon/kiangjai-thailand-website-v2`，不覆盖旧仓库。本文只记录当前实现，历史设计和验收通过Git版本查看。
 
-## 当前实现
+## 本轮修正
 
-首页从产品说明式首屏调整为品牌字体封面。居中原泰语定位在PC使用72px两行大标题，额度与主CTA成组；Hero没有手机、人物、照片或几何装饰，产品解释进入下方服务区。
+保留原居中品牌Hero、#44E0F8、额度和主CTA体系，不重新生成整站。用户最新首页原样保存为 `assets/app/home-overview.png`，用于首个深青产品主面和图库第1张；`loan-plan.png`回到步骤03确认详情及可选图库第3张，不再替代首页。
 
-服务区建立明确主次：约60%深青主面原样展示“全流程线上申请”及申请／认证／确认说明，配完整贷款计划图；约40%浅灰次面解释扫码还款，配较小完整还款图。银行到账使用独立轻量事实行，App图标→现有银行SVG示意只辅助原文，不代表到账凭证或新增时效。手机将两个产品面独立堆叠，避免把PC比例等比缩小。
+产品区仍以真实首页解释线上申请，以还款图解释银行App扫码还款。银行到账只保留已审文字事实，装饰性的App→银行示意已撤除。产品区增加服务范围和费用两条并列文字链接，分别复用原FAQ F01／F04问题，点击只打开、定位并聚焦原问答；没有新增条件、费率、流程或承诺。
 
-四步申请及七条FAQ原文保留。步骤03仍打开匹配的贷款计划详情，其余步骤使用统一编号轴，不伪造操作界面。公司事实、单一安全中心入口、深青页脚和下载待开放状态保留。
+四步与七条FAQ原文、公司事实、安全中心、政策页、单一安全入口及深青页脚保留。所有照片继续禁用，生成候选不进入项目或发布包。
 
-## 修改位置与维护
+## 文件与维护
 
 | 文件 | 当前职责 |
 | --- | --- |
-| `src/components/hero.html` | 居中品牌定位、额度、主下载、待开放提示及免责声明 |
-| `src/components/benefits.html` | 深青线上申请主面、浅灰还款次面、银行到账事实行和两处图库工具 |
-| `src/components/application-steps.html` | 四步原文、编号轴和步骤03详情弹窗 |
-| `src/components/app-gallery.html` | 四张完整App示例的浏览弹窗 |
-| `src/pages/home.html` | 首页顺序、公司事实、七条FAQ、下载条、安全入口 |
-| `assets/redesign.css` | Tokens、72px字体Hero、共享导航／按钮／弹窗及响应式 |
-| `assets/homepage.css` | 60／40产品面、产品图尺寸、到账示意及下方布局 |
-| `assets/secondary.css` | 安全中心、政策页和共享页脚 |
-| `assets/app.js` | 导航状态、菜单、FAQ、下载及详情／图库交互 |
-| `src/content/reviewed-th.json`、`src/config.json` | 已审泰语与公开业务口径，均未改动 |
+| `src/components/hero.html` | 居中原泰语定位、额度、主下载、待开放提示与免责声明 |
+| `src/components/benefits.html` | 真实首页主面、还款次面、到账文字事实和服务范围／费用链接 |
+| `src/components/application-steps.html` | 四步原文与步骤03确认详情 |
+| `src/components/app-gallery.html` | 首页／还款／贷款计划／可提款首页四图图库 |
+| `assets/app/home-overview.png` | 新文件名保存用户最新750×1624完整首页，避免沿用旧资源缓存 |
+| `assets/app.js` | 现有交互及 `data-faq-target` 定向展开／定位／聚焦 |
+| `assets/redesign.css`、`homepage.css`、`secondary.css` | 共享Tokens、首页及支持页样式 |
+| `src/content/reviewed-th.json`、`src/config.json` | 已审泰语与公开业务配置，均未改动 |
+| `docs/competitor-research.md` | 泰国同类产品官方来源及本轮落地边界 |
 
-项目继续使用原生HTML/CSS/JS与Python构建器；编辑源组件后重新生成根HTML和clean routes。全部页面可维护，不是整页图片。发布包只包括访客页面和资源，文档不进入GitHub Pages。
+继续使用原生HTML/CSS/JS与Python组件构建器；源文件可编辑，构建生成根页面及clean routes。Pages仅发布访客网页与资源，不发布内部文档。
 
-## 设计与动作规范
+## 图片与信息对应
 
-品牌主色固定#44E0F8，配深青#00384C、白色及中性灰。自托管Noto Sans Thai；内容轴1200px，PC外边距40px、移动24px。主模块间距72／48px，标题至内容32／24px。完整规则见[设计系统](design-system.md)。
-
-PC主CTA224×52px、16px字体，手机满宽52px；桌面页头描边下载144×44px，手机页头只保留Logo与菜单。主动作无外跳箭头或按压位移。图片查看为依附产品面文案的低权重工具，Hero没有图片或图库工具。
-
-计划图设备框PC224px／手机200px，还款图PC142px／手机164px，均保持750×1624原比例。主面工具从图库第1张打开，次面工具从第2张打开；四图顺序依次为计划、还款、申请中首页、可提款首页。图库的按钮、左右方向键、循环页码、Esc和焦点恢复已在本轮实测；主面工具从1／4打开，还款工具从2／4打开。
-
-## 内容与业务边界
-
-已审泰语基线 `src/content/reviewed-th.json` 未修改，SHA256为 `d0a1668f74bab8b29a8d0bb369bcc734d2d0df8f21f1417084f29708a2d8dedc`。业务配置保持不变，最高额度仍为50,000泰铢。已审定位 `5fac19c1a68d0d` 留在Hero，线上说明 `1bebb0e80ef694`／`68746a71c6f62d` 原样回到服务主面；没有新增或改写贷款能力、费率、资格、时效或牌照承诺。
-
-公司名称沿用已审 **บริษัท ชิง เหอ เทคโนโลยี จำกัด**，注册号0105567184971仅作为公司注册资料，不作为放贷牌照。无有效牌照与核验地址时不显示许可断言；政策页保留已审待编制状态，不虚构条款或发布日期。
-
-所有照片继续禁用；旧6张照片已移出项目，生成候选没有复制或发布。完整App图仍含示例金额、200,000泰铢推广、异常日利率及3分钟提示，这些仅属于产品示例，未转成官网正文承诺。正式运营前应替换为业务核准的公开展示图。还款图内二维码不作为官网付款入口。
-
-`releaseStatus`保持preview并输出noindex。商店链接未开放，所有下载入口显示同一待开放状态，无商店外跳或下载二维码；不新增官网申请能力、不收集资料。素材来源和用途见[素材状态](visual-assets.md)。
-
-## 参考与取舍
-
-本轮实际查看[Wise首页](https://wise.com/)、[LINE BK首页](https://www.linebk.com/th/)及[FINNIX首页](https://www.finnix.co/)。主要参考Wise的集中品牌色面、大幅字体与大小不等产品面，LINE BK的品牌专属视觉与产品关系；不采用临时纪念活动轮播为Hero范本。设计方法结合[Impeccable](https://github.com/pbakaus/impeccable)、[Anthropic frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)及已安装的[Vercel网页规范技能](https://github.com/vercel-labs/agent-skills/blob/main/skills/web-design-guidelines/SKILL.md)。仅使用设计与验收方法，不复制竞品业务、资格、费用、牌照或背书；英文风格规则不覆盖已审泰语。
-
-## 本轮检查状态
-
-已检查1440px PC及360／375／390px移动实际截图和Hero尺寸：
-
-| 视口宽度 | Hero实测高度 |
+| 展示 | 图片与用途 |
 | --- | --- |
-| 1440px | 511.5859px |
-| 360px | 453.1875px |
-| 375px | 453.1875px |
-| 390px | 453.1875px |
+| 线上申请主面／图库1 | `home-overview.png`，真实首页，PC设备224px／手机200px |
+| 扫码还款次面／图库2 | `repayment.png`，PC设备142px／手机164px |
+| 步骤03详情／图库3 | `loan-plan.png`，金额、期数与确认前信息，不代表首页或到账 |
+| 图库4 | `withdrawal-current.png`，额度可用状态，不代表银行到账证明 |
+| 旧源保留 | `home-current.png`与`home.png`不再作为主展示图 |
 
-本轮实测完成：
+所有App图保持750×1624完整比例，静态展示不作为整图按钮；两个产品面工具分别从图库第1／2张打开。图库保留按钮、方向键、循环页码、Esc与焦点恢复实现，本轮工具起点、切换、键盘与关闭焦点已实测。Hero没有图片或图库工具。
 
-- 1440及360／375／390实际首屏与整页截图；无横向溢出或可见文字截断，App图完整加载并保持原比例。
-- 页头／Hero／页尾下载均打开同一真实待开放提示，无下载QR或外跳；Esc及焦点恢复正确。根页面固定滚动条占位，修复模态窗口打开时15px横移。桌面主CTA实测224×52，页头次入口144×44。
-- 手机菜单点击步骤锚点后关闭；4步骤顺序保持，仅03打开匹配的真实贷款计划详情。
-- 7条FAQ保留单开逻辑，FAQ联系入口与原生弹窗正常。
-- 两处产品工具分别打开图库1／4和2／4；前后按钮、左右方向键循环、页码、Esc及焦点恢复通过。
-- 构建、JS语法、差异格式及7份HTML资源／路由／锚点检查通过，无重复ID，每页单H1及th语言；已审泰语SHA与业务配置未变，照片引用为0，浏览器未记录JS错误。支持页没有改写业务或功能，本轮静态路由与构建覆盖7份输出。
-- 独立视觉复审查看桌面首屏、产品面、整页及完整390移动页，结论为SHIP，范围是当前preview视觉交付；不代表业务运营资料已齐全。
+最新首页SHA256：`4df5ce9ddc7ebeea958388c16eab24e31f9df5578cf7464f6aa1a0bd0fde2cc7`。已核对新文件尺寸及SHA与用户最新附件一致，没有裁切、重绘或改写图中文字。
 
-截图在仓库外`../round7-preview/`：`hero-desktop.png`、`benefits-desktop.png`、`full-desktop.png`、`mobile-360.png`、`mobile-375.png`、`mobile-390.png`、`full-mobile.png`、`gallery-mobile.png`，以及`comparison-desktop.png`／`comparison-mobile.png`。原图与对照均来自浏览器实页，不使用生成概念图代替成品。
+## 设计与业务约束
 
-Impeccable上下文加载器无法执行，本轮直接读取设计与精修规则，再用实际截图和独立复审验收，没有自动检测器通过声明。检查使用浏览器模拟视口，不声称覆盖实体设备或所有浏览器。最终线上发布核验另记于仓库外`../round7-preview/release-verification.md`，不会将尚未部署的版本称为已发布。
+Hero、60／40产品面和原按钮体系沿用；PC主CTA224×52px、16px字体，手机满宽52px；PC页头描边下载144×44px，手机仅Logo和菜单。图片及帮助工具保持低权重，不使用主CTA表现。共享排版规则见[设计系统](design-system.md)。
 
-## 正式运营待补资料
+已审泰语基线SHA256仍为 `d0a1668f74bab8b29a8d0bb369bcc734d2d0df8f21f1417084f29708a2d8dedc`，配置上限仍为50,000泰铢。服务范围链接精确复用 `710688adb73fea`，费用链接精确复用 `bf2f04aacad8b7`；答案仍为F01／F04原文。没有复制竞品的资格、利率、牌照、审批时效或其他能力。
 
-1. Android／iOS真实商店地址与商店开发者名称。
-2. 正式域名、有效放贷牌照及官方核验地址。
-3. 已核准的隐私政策／服务条款正文与真实发布日期。
-4. 经确认的举报受理渠道和LINE入口（若提供）。
-5. 去除异常与旧推广信息的官网专用App图。
+公司名称沿用已审 **บริษัท ชิง เหอ เทคโนโลยี จำกัด**，注册号0105567184971仅为公司注册信息；无有效牌照与核验地址时不显示许可断言。政策页保留已审待编制状态，不虚构条款或日期。
 
-补齐并确认正式内容后才能切换production。当前没有新建CMS或声称接入既有后台。
+真实首页中的200,000泰铢推广、日利率文字以及其他状态图中的3分钟、示例金额仍待业务核准。不因这些冲突隐藏首页，也不裁切或涂改原图；保留界面示例说明，正文只使用已审业务口径，不把图内数字提取为新卖点或承诺。示例标签不替代业务核准。还款图内二维码不是官网付款入口。
+
+`releaseStatus`保持preview并输出noindex；商店未开放，下载显示同一待开放提示，无下载QR、商店外跳或官网申请／资料收集能力。当前素材用途见[素材状态](visual-assets.md)。
+
+## 同类竞品与落地
+
+本轮主要参考泰国贷款产品的官方页面：[FINNIX产品页](https://www.finnix.co/product-finnix-bewinged/)、[LINE BK信贷页](https://www.linebk.com/th/credit-line/)和[MoneyThunder借款页](https://www.money-thunder.com/mtloan)。参考信息结构、真实产品认知、申请范围及费用信息的可找到性；仅通过已有内容和入口落地，不移植竞品业务。Wise不作为本轮核心产品benchmark。具体映射见[竞品研究](competitor-research.md)。
+
+设计和代码检查继续结合Impeccable、frontend-design及已安装的Vercel web-design-guidelines。英文风格规则不覆盖已审泰语，也不把代码规则检查等同于完整视觉验收。
+
+## 本轮QA结果
+
+- 最新首页与用户附件逐字节一致，750×1624、221409字节；SHA见上文。页面主图、图库首图均为新文件，主正文可见确认图数量为0。
+- 1440px桌面及360／375／390px移动实际检查，新首页完整加载、比例保留，无文档横向溢出或可见文字截断；完整桌面与390移动页已保存。
+- 图库顺序、主面默认1／4首页、还款工具2／4、确认图3／4、4次右方向键循环回首页、Esc与焦点恢复实测通过。步骤只有03关联匹配的确认图，未伪配其他步骤。
+- F01／F04链接支持点击和键盘Enter，定位、聚焦原问答；已有展开项不会被导航链接反向收起，两个答案保持互斥单开。目标位置PC约112px／手机88px，分别低于页头81／69px。
+- FAQ键盘焦点沿用共享3px轮廓、5px正偏移，答案顶留白8px，复核无泰文首字／上标遮挡。手机菜单点击步骤锚点后收起。
+- 下载保持真实待开放状态，无下载QR或外跳；Esc后焦点返回主入口。390px主按钮在弹窗打开前后均327px宽，无横移。
+- 构建、JS语法、差异格式及7份HTML资源／锚点／路由检查通过，无重复ID，每页单H1且语言th。已审泰语catalog SHA与业务config未变；本轮没有改写支持页功能，静态检查覆盖其输出。浏览器未记录JS错误，照片引用0。
+- 独立复审实际核对原用户图、主面、图库、桌面和完整移动页；唯一焦点留白问题已修复并复核为resolved，最终结论SHIP，限当前preview交付，不等于业务运营资料已核准。
+
+本轮截图位于仓库外`../round8-preview/`：`products-desktop.png`、`products-mobile-360.png`／`products-mobile-375.png`／`products-mobile-390.png`、`full-desktop.png`、`full-mobile.png`、`home-gallery-desktop.png`、`fee-answer-desktop.png`、`fee-answer-mobile.png`、`range-answer-mobile.png`，以及`comparison-products.png`／`comparison-mobile.png`。均为实页截图或明确的配对裁切，不用生成概念图代替成品。
+
+使用浏览器模拟视口，不声称覆盖所有实体设备／浏览器。线上发布核验另记于仓库外`../round8-preview/release-verification.md`，只有部署成功并实际打开后才记为已发布。
+
+## 正式运营待补
+
+1. Android／iOS真实商店链接及开发者名称。
+2. 正式域名、有效放贷牌照和官方核验地址。
+3. 核准的隐私政策／服务条款及真实发布日期。
+4. 经确认的举报受理渠道及LINE入口（若提供）。
+5. 业务核准的官网App展示图，解决现有费率／推广冲突。
+
+资料补齐并确认后才能切换production。当前不新增CMS或声称接入既有后台。

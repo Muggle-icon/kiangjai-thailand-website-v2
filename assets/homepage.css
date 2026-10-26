@@ -8,17 +8,16 @@
 .benefit-feature-copy h3{font-size:34px;line-height:1.4;margin-bottom:16px;color:var(--white)}
 .benefit-feature-copy p{font-size:17px;line-height:30px;color:#d4e8ec;max-width:32ch}
 .benefit-feature-copy .image-tool{margin-top:24px;color:var(--white)}.benefit-feature-copy .image-tool:focus-visible{outline-color:var(--white)}
-.benefit-product-figure{width:224px;max-width:100%}.plan-device{width:224px;box-shadow:0 16px 28px #001e2a38}
+.benefit-product-figure{width:224px;max-width:100%}.home-device{width:224px;box-shadow:0 16px 28px #001e2a38}
 .benefit-product-figure figcaption{font-size:12px;line-height:20px;text-align:center;color:#d4e8ec;margin-top:16px}
 .benefit-repayment{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:20px;min-width:0;padding:32px;border-radius:16px;background:var(--surface)}
 .benefit-repayment h3{font-size:28px;line-height:1.45;margin-bottom:12px}
 .benefit-repayment p{font-size:16px;line-height:28px;color:var(--muted)}.benefit-repayment .image-tool{margin-top:8px}
 .repayment-figure{width:142px;max-width:100%;margin-inline:auto}.repayment-device{width:142px;box-shadow:0 16px 24px #00384c12;padding:4px;border-radius:18px}.repayment-device img{border-radius:13px}.repayment-figure figcaption{font-size:12px;line-height:20px;text-align:center;color:var(--muted);margin-top:12px;white-space:nowrap}
-.benefit-transfer{display:grid;grid-template-columns:260px minmax(0,1fr) 208px;gap:32px;align-items:center;padding-top:32px;margin-top:32px;border-top:1px solid var(--line)}
+.benefit-transfer{display:grid;grid-template-columns:260px minmax(0,1fr);gap:32px;align-items:center;padding-top:32px;margin-top:32px;border-top:1px solid var(--line)}
 .benefit-transfer h3{font-size:26px;line-height:1.45}.benefit-transfer p{font-size:16px;line-height:28px;color:var(--muted)}
-.transfer-diagram{display:flex;align-items:center;gap:16px;max-width:208px}
-.transfer-app,.transfer-bank{display:grid;place-items:center;flex:none;width:56px;height:56px;border-radius:12px;overflow:hidden}.transfer-app img{display:block;width:56px;height:56px}.transfer-bank{background:var(--cyan-soft);color:var(--ink)}.transfer-bank>.icon{width:36px;height:36px}
-.transfer-path{height:1px;flex:1;background:var(--line);position:relative}.transfer-path::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid var(--ink);border-right:1px solid var(--ink);transform:rotate(45deg)}
+.product-help-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px 32px;margin-top:24px;padding-top:12px;border-top:1px solid var(--line)}
+.product-help-links .text-link{font-size:14px;line-height:24px;min-height:44px}
 
 /* The sequence is the graphic: one marker and one axis, no decorative step icons. */
 .application-steps{padding-block:var(--section-space);background:var(--surface)}
@@ -52,8 +51,8 @@
 .faq-mark>.icon{display:block;width:20px;height:20px}
 .kj-question:hover>.faq-mark,.kj-question[aria-expanded=true]>.faq-mark{background:var(--ink);color:var(--white)}
 .kj-question[aria-expanded=true] .icon-vertical{display:none}
-.kj-answer{padding:0 56px 24px 0;font-size:16px;line-height:28px}
-.kj-answer .kj-link{font-size:16px}.kj-question:focus-visible{outline-offset:-3px}
+.kj-answer{padding:var(--space-1) 56px 24px 0;font-size:16px;line-height:28px}
+.kj-answer .kj-link{font-size:16px}
 
 /* A compact conversion bar and an independent safety reminder. */
 .download-section{background:var(--cyan);color:var(--ink)}
@@ -72,7 +71,7 @@
 .security-links .icon{width:18px;height:18px}
 
 @media(max-width:1050px){
- .benefits-layout{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}.benefit-feature{padding:28px;grid-template-columns:minmax(0,1fr) 190px;gap:20px}.benefit-product-figure,.plan-device{width:190px}.benefit-feature-copy h3{font-size:28px}.benefit-feature-copy p{font-size:16px;line-height:28px}.benefit-repayment{padding:28px}.benefit-repayment h3{font-size:24px}.benefit-transfer{grid-template-columns:200px minmax(0,1fr);gap:24px}.transfer-diagram{grid-column:2}
+ .benefits-layout{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}.benefit-feature{padding:28px;grid-template-columns:minmax(0,1fr) 190px;gap:20px}.benefit-product-figure,.home-device{width:190px}.benefit-feature-copy h3{font-size:28px}.benefit-feature-copy p{font-size:16px;line-height:28px}.benefit-repayment{padding:28px}.benefit-repayment h3{font-size:24px}.benefit-transfer{grid-template-columns:200px minmax(0,1fr);gap:24px}
  .step-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.step-list li:nth-child(2)::after{display:none}
  .company-layout,.help-layout{grid-template-columns:240px minmax(0,1fr);gap:32px}
  .download-identity{display:block}.download h2{font-size:26px}.download .download-note{border:0;padding-left:0;margin-top:8px;max-width:none}
@@ -80,8 +79,8 @@
 }
 @media(max-width:760px){
  .product-section>.shell>h2,.application-steps h2,.company-layout>h2,.help-layout .section-heading>h2{font-size:28px;line-height:40px}
- .product-section>.shell>h2{text-align:left}.benefits-layout{grid-template-columns:1fr;gap:20px}.benefit-feature{grid-template-columns:1fr;gap:28px;padding:28px 24px}.benefit-feature-copy h3{font-size:28px;margin-bottom:12px}.benefit-feature-copy p,.benefit-repayment p,.benefit-transfer p{font-size:15px;line-height:27px;max-width:none}.benefit-feature-copy .image-tool{margin-top:12px}.benefit-product-figure,.plan-device{width:200px;margin-inline:auto}.benefit-product-figure figcaption{margin-top:12px}
- .benefit-repayment{padding:28px 24px;gap:24px}.benefit-repayment h3{font-size:26px}.repayment-figure,.repayment-device{width:164px}.benefit-transfer{grid-template-columns:1fr;gap:16px;padding-top:28px;margin-top:28px}.benefit-transfer h3{font-size:24px}.transfer-diagram{grid-column:1;margin-top:8px;width:208px}
+ .product-section>.shell>h2{text-align:left}.benefits-layout{grid-template-columns:1fr;gap:20px}.benefit-feature{grid-template-columns:1fr;gap:28px;padding:28px 24px}.benefit-feature-copy h3{font-size:28px;margin-bottom:12px}.benefit-feature-copy p,.benefit-repayment p,.benefit-transfer p{font-size:15px;line-height:27px;max-width:none}.benefit-feature-copy .image-tool{margin-top:12px}.benefit-product-figure,.home-device{width:200px;margin-inline:auto}.benefit-product-figure figcaption{margin-top:12px}
+ .benefit-repayment{padding:28px 24px;gap:24px}.benefit-repayment h3{font-size:26px}.repayment-figure,.repayment-device{width:164px}.benefit-transfer{grid-template-columns:1fr;gap:16px;padding-top:28px;margin-top:28px}.benefit-transfer h3{font-size:24px}.product-help-links{display:grid;grid-template-columns:1fr;gap:0;margin-top:24px}
  .step-list{grid-template-columns:1fr;gap:24px}.step-list li{padding-left:56px}.step-marker{margin:0}
  .step-number{position:absolute;left:0;top:0;width:36px;height:36px;font-size:15px}
  .step-list h3{font-size:18px;line-height:28px;margin:4px 0 8px}.step-list p{font-size:15px;line-height:27px}

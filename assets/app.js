@@ -99,6 +99,16 @@
     button.setAttribute('aria-expanded',String(expand));
     document.getElementById(button.getAttribute('aria-controls')).hidden = !expand;
   }));
+  // Product-information links open the existing reviewed answer, without duplicating it.
+  $$('[data-faq-target]').forEach(link => link.addEventListener('click', event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const target = $(`[data-faq="${link.dataset.faqTarget}"]`);
+    if (!target) return;
+    event.preventDefault();
+    if (target.getAttribute('aria-expanded') !== 'true') target.click();
+    target.scrollIntoView({behavior:reduceMotion.matches ? 'instant' : 'smooth',block:'start'});
+    target.focus({preventScroll:true});
+  }));
   const menu = $('.menu-toggle');
   const setMenu = expand => {
     if (!menu) return;
