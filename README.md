@@ -2,7 +2,7 @@
 
 2026-10-26 独立官网改版。沿用旧项目的静态 HTML/CSS/JS、共享组件和 Python 构建器，保留 #44E0F8 品牌色、原始 Logo、已审泰语与提供的 App 素材。旧版仓库不受影响。
 
-第二轮重点优化首页 Hero、Benefits 和 Application Steps：首屏以真实 App 贷款计划页建立产品认知；优势区以还款功能为重点、另两项特点辅助说明；申请流程保留四步，仅第三步关联已有真实界面。去除重复卖点、重复安全提醒和多余品牌装饰，保留公司资料、七条 FAQ 与现有安全中心。
+第三轮在第二轮信息去重的基础上完善首页视觉：桌面导航居中；首屏将白底泰语文案、额度和下载动作集中成组，以原有泰国夜市生活照片配合白框深边的完整 App 贷款计划截图，明确区分生活场景与产品界面。优势区重点展示还款截图，线上申请与到账方式作为两项辅助说明；四步申请使用简洁编号，仅第三步关联已有真实界面。公司介绍保留已审正文与事实，移除重复人物图，共享页脚调整为深青色。保留七条 FAQ、安全中心及预览阶段真实的下载未开放状态。
 
 ## 本地运行
 
@@ -18,15 +18,15 @@ python3 -m http.server 4173
 - `src/pages/home.html` 首页整体顺序、公司资料、FAQ、下载条和页尾安全提醒
 - `src/pages/security.html` 安全中心
 - `src/pages/privacy.html`、`terms.html` 法律页面
-- `src/components/hero.html` 真实 App 截图、最高额度和下载入口
+- `src/components/hero.html` 白底文案、最高额度、下载入口、生活照片与完整 App 截图
 - `src/components/benefits.html` 主要还款功能与辅助特点
 - `src/components/application-steps.html` 四步申请及第三步截图详情弹窗
 - `src/components/` 其他共用导航、FAQ、弹窗和页脚
 - `src/config.json` 公开配置（电话、商店链接、官方渠道和核验资料）
 - `src/content/reviewed-th.json` 已审泰语原文参考
-- `assets/redesign.css` Tokens、共享控件、首屏、响应式与弹窗
+- `assets/redesign.css` Tokens、居中桌面导航、共享控件、首屏照片与设备框、响应式与弹窗
 - `assets/homepage.css` 优势、步骤、公司、FAQ、下载和防骗模块
-- `assets/secondary.css` 安全中心、政策和页脚
+- `assets/secondary.css` 安全中心、政策和深青共享页脚
 - `assets/app.js` 全部交互，下载二维码使用本地 MIT 库
 
 修改后运行构建器，提交源文件及生成结果。根 `.html` 和 `/privacy/`、`/terms/`、`/security/` 均可直接访问和刷新，支持 GitHub Pages 项目子路径。
@@ -37,4 +37,4 @@ python3 -m http.server 4173
 
 GitHub Pages workflow 位于 `.github/workflows/pages.yml`。仓库设置中启用 GitHub Actions 为 Pages 发布源后，推送 main 即构建发布。构建产物仅含网页和 assets，不发布源代码文档目录。
 
-设计、素材和验收记录见 [交付说明](docs/delivery.md)。
+设计、素材和验收记录见 [交付说明](docs/delivery.md)。第三轮浏览器截图与交互验收正在进行；第二轮已完成的验证记录单独保留，不作为第三轮最终结论。
