@@ -122,7 +122,7 @@
     $('[data-gallery-position]').textContent = `${galleryIndex + 1} / ${galleryPanels.length}`;
   };
   $$('[data-app-gallery]').forEach(button => button.addEventListener('click', () => {
-    showGalleryImage(0); openDialog(gallery, button);
+    showGalleryImage(Number(button.dataset.galleryStart) || 0); openDialog(gallery, button);
   }));
   $('[data-gallery-previous]')?.addEventListener('click', () => showGalleryImage(galleryIndex - 1));
   $('[data-gallery-next]')?.addEventListener('click', () => showGalleryImage(galleryIndex + 1));
@@ -143,8 +143,10 @@
   if (links.length) {
     let frame; const update = () => {
       const line = ($('.site-header')?.getBoundingClientRect().bottom||0)+150;
-      let active=null; links.forEach(item => { if (item.section.getBoundingClientRect().top <= line) active=item.link; });
+      const homeNav = $('#main-nav [data-home-nav]');
+      let active=isHome ? homeNav : null; links.forEach(item => { if (item.section.getBoundingClientRect().top <= line) active=item.link; });
       links.forEach(({link}) => { if (link === active) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current'); });
+      if (homeNav) { if (active === homeNav) homeNav.setAttribute('aria-current','page'); else homeNav.removeAttribute('aria-current'); }
     };
     window.addEventListener('scroll', () => { cancelAnimationFrame(frame);frame=requestAnimationFrame(update); },{passive:true}); update();
   }

@@ -2,11 +2,13 @@
 
 2026-10-26 独立官网改版。沿用旧项目的静态 HTML/CSS/JS、共享组件和 Python 构建器，保留 #44E0F8 品牌色、原始 Logo、已审泰语与提供的 App 素材。旧版仓库不受影响。
 
-第五轮按用户最新要求撤除全部人物及场景照片。Hero 仅以原Logo、#44E0F8 原生色面、已审文案和完整真实 `loan-plan.png` 构成，设备框桌面280px、手机240px。优势区使用240px完整还款图的独立中性展示台，右侧主说明与辅助特点成组；四步申请统一为编号和一条流程轴。FAQ采用几何SVG加减号，弹窗关闭按钮使用共享SVG，统一同类控件的对齐方式。
+第六轮重点纠正“巨幅截图先于服务说明”和主动作／图片工具同权的问题。Hero以两行产品定位、原样移入的已审线上申请说明、最高额度和下载入口完成介绍，完整 `loan-plan.png` 降为静态示例：桌面220px、手机160px，图注中的低权重工具打开完整图库。优势区删除重复线上申请整项及大幅还款图，改为银行到账主项和扫码还款次项两栏；原还款图完整移入图库。
+
+导航新增首页入口及顶部当前状态；桌面页头下载使用144×44px描边按钮，手机页头只保留Logo和菜单。Hero与结尾下载按钮共享桌面224×52px、16px字体，手机按内容宽度展开；移除外跳箭头与按压位移。FAQ标题旁重复联系入口撤除，F05和页脚联系方式保留；安全条合并为一个安全中心入口。
 
 全站收敛模块间距、标题间距、正文行高及内容列轴：PC模块72px、手机48px，标题至内容32/24px，主正文16/28px、手机15/27px。公司和FAQ共用320px标题列与48px列距，安全中心长文及政策页也同步调整阅读宽度。七条FAQ、截图图库、安全中心、深青页脚和下载待开放状态保留。官方Vercel `web-design-guidelines` 已安装，补充现有设计技能的代码与可访问性验收。
 
-旧照片已从项目移除；第五轮生成的候选图未复制进项目，也不会发布。两张补发首页图仍只用于示例图库，其中推广额度、日利率和到账时效未经业务核准，不转成官网正文承诺。
+全部人物和场景照片继续禁用，第五轮候选未复制进项目，也不会发布。图库依次展示贷款计划、还款、申请中首页、可提款首页四张完整原图；首页图中的推广额度、日利率和到账时效未经业务核准，不转成官网正文承诺。
 
 ## 本地运行
 
@@ -22,10 +24,10 @@ python3 -m http.server 4173
 - `src/pages/home.html` 首页整体顺序、公司资料、FAQ、下载条和页尾安全提醒
 - `src/pages/security.html` 安全中心
 - `src/pages/privacy.html`、`terms.html` 法律页面
-- `src/components/hero.html` 青蓝品牌色面、最高额度、下载入口与完整 App 截图
-- `src/components/benefits.html` 主要还款功能与辅助特点
+- `src/components/hero.html` 两行定位、线上申请说明、最高额度、主下载入口与静态App示例
+- `src/components/benefits.html` 银行到账主项、扫码还款次项及还款图查看工具
 - `src/components/application-steps.html` 四步申请及第三步截图详情弹窗
-- `src/components/app-gallery.html` 用户本次两张完整 App 首页图的浏览弹窗
+- `src/components/app-gallery.html` 计划／还款／申请中首页／可提款首页四张完整原图的浏览弹窗
 - `src/components/` 其他共用导航、FAQ、弹窗和页脚
 - `src/config.json` 公开配置（电话、商店链接、官方渠道和核验资料）
 - `src/content/reviewed-th.json` 已审泰语原文参考
@@ -44,4 +46,4 @@ python3 -m http.server 4173
 
 GitHub Pages workflow 位于 `.github/workflows/pages.yml`。仓库设置中启用 GitHub Actions 为 Pages 发布源后，推送 main 即构建发布。构建产物仅含网页和 assets，不发布源代码文档目录。
 
-设计规则见 [设计系统](docs/design-system.md)，素材状态见 [视觉素材记录](docs/visual-assets.md)，验收记录见 [交付说明](docs/delivery.md)。第三／四轮历史验收与对应附件保留；第五轮已完成1440px PC与360／375／390px移动模拟视口的实页、交互及独立复审，具体范围与限制见交付说明。
+设计规则见 [设计系统](docs/design-system.md)，素材状态见 [视觉素材记录](docs/visual-assets.md)，验收记录见 [交付说明](docs/delivery.md)。第三至第五轮历史验收与对应附件保留；第六轮已完成1440／360／375／390实际截图、交互及独立复核，另回归支持页1440／390；具体范围与限制见交付说明。
