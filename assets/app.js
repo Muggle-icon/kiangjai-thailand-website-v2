@@ -109,30 +109,8 @@
   $$('#main-nav a').forEach(link => link.addEventListener('click', () => setMenu(false)));
   document.addEventListener('click', event => { if (menu && !event.target.closest('.site-header')) setMenu(false); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') { setMenu(false); menu.focus(); } });
-  // Native horizontal scroll preserves complete original screens at all widths.
-  const gallery = $('#app-gallery');
-  if (gallery) {
-    const screens = [...gallery.querySelectorAll('figure')]; const controls = $$('[data-app-view]');
-    const updateGallery = () => {
-      const inset = parseFloat(getComputedStyle(gallery).paddingLeft);
-      const start = gallery.getBoundingClientRect().left + inset;
-      const distances = screens.map(screen => Math.abs(screen.getBoundingClientRect().left - start));
-      const index = distances.indexOf(Math.min(...distances));
-      controls.forEach((control,i) => control.setAttribute('aria-pressed',String(i === index)));
-    };
-    controls.forEach(control => control.addEventListener('click', () => {
-      const screen = screens[Number(control.dataset.appView)];
-      const inset = parseFloat(getComputedStyle(gallery).paddingLeft);
-      const left = screen.getBoundingClientRect().left - gallery.getBoundingClientRect().left + gallery.scrollLeft - inset;
-      gallery.scrollTo({left,behavior:reduceMotion.matches ? 'instant' : 'smooth'});
-    }));
-    let frame; gallery.addEventListener('scroll', () => { cancelAnimationFrame(frame); frame=requestAnimationFrame(updateGallery); },{passive:true});
-    gallery.addEventListener('keydown', event => {
-      if (!['ArrowRight','ArrowLeft'].includes(event.key)) return;
-      event.preventDefault(); const current = controls.findIndex(el => el.getAttribute('aria-pressed') === 'true');
-      controls[Math.min(controls.length-1,Math.max(0,current+(event.key === 'ArrowRight' ? 1 : -1)))].click();
-    }); updateGallery();
-  }
+  // Only the real confirmation screen is bound to application step 03.
+  $$('[data-screen-detail]').forEach(button => button.addEventListener('click', () => openDialog($('#screen-dialog'), button)));
   // Store homepage position only when entering the safety page, never on brand-to-top links.
   const scrollKey = 'kiangjai-v2-home-position';
   if (isHome) {
