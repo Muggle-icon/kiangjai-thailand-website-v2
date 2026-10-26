@@ -1,23 +1,45 @@
-# 第四轮视觉素材记录
+# 第五轮视觉素材状态
 
-生成日期：2026-10-26。工具：内置 ImageGen；未调用fallback CLI或外部API key。场景仅用于品牌生活插图，不是实际客户肖像、见证或合作门店。
+更新日期：2026-10-26。第五轮按用户最新要求撤除全部人物与场景照片。当前网站主视觉仅使用原Logo、用户提供的真实App截图，以及原生HTML/CSS品牌构图。
 
-## 网站使用的文件
+## 当前使用的素材
 
-- `assets/images/cafe-life-v4.jpg`：1448×1086，JPG回退。
-- `assets/images/cafe-life-v4-800.webp`：800×600，移动/普通密度。
-- `assets/images/cafe-life-v4-1440.webp`：1440×1080，较宽/高密度。
-- 原生HTML picture负责响应式照片；手机边框、页面背景、文字与按钮都是HTML/CSS，真实App截图是独立图片。未将整张生成稿作为网站。
-- 使用用户原有Logo、贷款计划和还款图；`home-current.png`、`withdrawal-current.png`为本次用户补发的750×1624原图，只在产品示例图库中呈现。
+| 素材 | 尺寸／类型 | 当前用途 |
+| --- | --- | --- |
+| `assets/brand/logo-master.png`及已有品牌素材 | 原始Logo／品牌图形 | 导航、页脚及品牌识别；沿用用户提供版本 |
+| `assets/app/loan-plan.png` | 750×1624完整原图 | Hero产品主视觉、申请步骤03详情弹窗；桌面设备框280px，移动240px |
+| `assets/app/repayment.png` | 750×1624完整原图 | 优势区的扫码还款说明；240px设备框独立置于中性展示台 |
+| `assets/app/home-current.png` | 750×1624完整原图 | 用户本次补发的申请中首页，示例图库第1张 |
+| `assets/app/withdrawal-current.png` | 750×1624完整原图 | 用户本次补发的可提款首页，示例图库第2张 |
+| `assets/app/home.png` | 750×1624旧完整原图 | 原始素材保留；页面查看入口使用当前两图图库 |
+| `assets/icons/plus.svg` | 24×24 SVG坐标系 | FAQ共享几何加号；展开时仅隐藏竖线路径 |
+| `assets/icons/x.svg` | 已有SVG | 共享弹窗关闭图标，以Grid居中 |
 
-## 场景最终生成提示词
+产品图片不重绘、不改业务数字、不改变原始宽高比。设备边框、页面背景、文字、按钮、流程编号及FAQ标记均由可编辑HTML/CSS/SVG呈现，网站不是一张完整生成图片。
 
-以首屏概念图为构图参考，单独生成以下照片。生成概念中的品牌招牌和未经确认的文案均未进入网站。
+## 已撤除的照片
 
-```text
-Use case: photorealistic-natural. Create a STANDALONE PRODUCTION PHOTOGRAPH for the right-side hero window of a Thai lending app website. Reference image is a website design CONCEPT only; isolate and recreate the café-life scene with the same daytime lighting and composition, not the website UI. Output landscape 4:3, richly detailed, natural photography. Thai woman small café owner around30, warm beige cotton blouse, practical indigo apron, real unretouched skin, tied-up hair, on RIGHT 60% of frame. She looks down at a phone held naturally in BOTH hands and reads it with a calm small smile, never looks at camera and never advertises phone to camera. Both hands anatomically natural. Neighborhood Bangkok café, modest clean wooden shelves and brewing equipment, daylight from left, leafy view outside. Foreground counter across bottom, LEFT 30% relatively quiet clear counter/soft background so a native website product screen can be composed there later. No second large device, no mockups, no superimposed text, no financial claims, no logos, no brand signs, no watermark, no readable chalkboard text. Remove the hanging Kiangjai-like brand sign visible in reference; this is an illustrative everyday-life scene, not an endorsed customer or official branded store. Avoid luxury marble palaces, cheap neon, staged cheering, coins, money, stock-photo thumbs-up. White neutral daylight with gentle natural warmth; NO teal/cyan overlay, NO gradients. The production website will add its cyan field and exact real app screenshot with code separately; photograph only.
-```
+以下6张文件已从当前项目移除，不再由页面引用，不进入第五轮发布包。文件名仅用于历史记录，不是当前资源链接：
 
-## 实施校核
+- `assets/images/market-life.jpg`
+- `assets/images/market-life.webp`
+- `assets/images/merchant-cutout.png`
+- `assets/images/cafe-life-v4.jpg`
+- `assets/images/cafe-life-v4-800.webp`
+- `assets/images/cafe-life-v4-1440.webp`
 
-完整App图片未重绘、未改业务数字；照片仅进行格式转换和响应式缩放，裁切由CSS object-fit控制。用户截图中未经核准的推广额度、异常日利率和时效没有转为官网文字承诺。正式运营仍需替换为核准的公开展示图。
+其中咖啡店场景属于第四轮内置ImageGen生成的品牌场景插图，曾用于历史版本，不是实际客户肖像、见证、实际门店或合作背书。第五轮已撤除这些视觉，不沿用第四轮“当前采用照片”的描述。
+
+## 第五轮候选图
+
+第五轮曾生成候选图，但未复制进项目、未接入页面，也不会发布。候选不属于交付素材，不作为照片撤除后的替代图。当前页面无需人物或场景照片即可完成产品和品牌呈现。
+
+## 业务与步骤边界
+
+两张当前首页截图只在独立产品示例图库中呈现，不与四步申请逐一配对。`loan-plan.png`对应步骤03确认前信息；还款截图解释扫码还款方式，不代表借款到账证明。其余步骤采用一致编号与原已审正文，没有伪造产品界面。
+
+完整原图中的200,000泰铢推广、异常日利率、3分钟提示及示例金额仍待业务核准。页面未将这些信息转成新的官网额度、利率、时效、优惠或牌照承诺；正式运营前应换成已核准的公开展示图。还款截图内二维码属于示例图内容，不是官网提供的付款入口。
+
+## 校核状态
+
+第五轮源模板、生成HTML与发布资产均已检查：无人物或场景图残留引用，原6张照片已从当前版本删除。1440px PC及360／375／390px移动模拟视口已进行实页检查；支持页1440／390回归。FAQ SVG加号中心偏移均为0，流程仅步骤03关联真实截图，完整App比例保留。独立视觉复审已完成，结果与限制见[交付说明](delivery.md)。第三／四轮截图只作历史记录。

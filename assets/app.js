@@ -93,10 +93,10 @@
     const expand = button.getAttribute('aria-expanded') !== 'true';
     const group = button.closest('.kj-faq-list');
     group.querySelectorAll('[data-faq]').forEach(other => {
-      other.setAttribute('aria-expanded','false'); other.lastElementChild.textContent = '＋';
+      other.setAttribute('aria-expanded','false');
       document.getElementById(other.getAttribute('aria-controls')).hidden = true;
     });
-    button.setAttribute('aria-expanded',String(expand)); button.lastElementChild.textContent = expand ? '−' : '＋';
+    button.setAttribute('aria-expanded',String(expand));
     document.getElementById(button.getAttribute('aria-controls')).hidden = !expand;
   }));
   const menu = $('.menu-toggle');
