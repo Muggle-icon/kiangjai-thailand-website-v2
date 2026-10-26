@@ -1,12 +1,10 @@
-# เคียงใจ Thailand website v2
+# เคียงใจ Thailand website V2
 
-Kiangjai泰国官网V2独立项目，当前为第八轮。沿用静态HTML/CSS/JS与Python组件构建器，保留#44E0F8、原Logo、已审泰语及业务配置。旧仓库不受影响，历史设计与验收通过Git版本查看。
+泰国小贷产品官网，独立仓库 `Muggle-icon/kiangjai-thailand-website-v2`。第九轮重新对照 FINNIX、LINE BK、MoneyThunder 官方产品及支持页面，重做首页、安全中心、隐私与服务条款页的布局，原 V1 仓库不受影响。
 
-本轮保留居中品牌Hero和按钮体系，修正产品图用途：用户最新完整首页原样保存为 `assets/app/home-overview.png`，用于首个产品主面及图库首图；贷款计划页仅用于步骤03确认详情和图库第3张，不再代表首页。扫码还款仍为次产品面，银行到账只保留已审文字事实，撤除装饰示意图。
+首页将产品定位、最高50,000泰铢额度、下载与一张完整真实 App 首页组成同一首屏；撤除双手机卡片。优势集中解释线上办理及还款，到账只在四步申请中说明；公司身份、FAQ和安全内容各有独立职责。安全中心采用目录和阅读区，政策页明确保留待发布状态。
 
-产品区增加两条低权重帮助链接，精确复用原FAQ的服务范围F01和费用F04问题。点击只展开、定位并聚焦既有问答，不添加条件、费率或流程，原七条FAQ单开逻辑保留。四图图库顺序为首页／还款／贷款计划／可提款首页。
-
-所有人物及场景照片继续禁用。首页保持750×1624原图，不因图内费率或推广冲突而隐藏，也不裁切、涂改或将其转成官网正文承诺。
+保留 #44E0F8、原Logo、自托管 Noto Sans Thai、已审泰语、公开业务配置与静态 HTML/CSS/JS。没有人物照片、虚构产品界面、下载链接或新增贷款承诺。
 
 ## 本地运行
 
@@ -15,27 +13,24 @@ python3 scripts/build.py
 python3 -m http.server 4173
 ```
 
-打开 http://localhost:4173 。无需npm安装；字体、图标、图片和二维码库均在本地。编辑源组件后重新构建，根HTML与 `/privacy/`、`/terms/`、`/security/` 别名一并输出。
+打开 http://localhost:4173 。无npm依赖。修改源组件后重新构建，提交生成的根页面及 `/privacy/`、`/terms/`、`/security/` 别名。
 
 ## 编辑位置
 
 | 文件 | 职责 |
 | --- | --- |
-| `src/components/hero.html` | 品牌字体封面、额度与主下载动作 |
-| `src/components/benefits.html` | 真实首页主面、还款次面、到账事实及F01／F04帮助链接 |
-| `src/components/application-steps.html` | 四步原文与步骤03真实确认图详情 |
-| `src/components/app-gallery.html` | 首页／还款／贷款计划／可提款首页图库 |
-| `src/pages/home.html`、`security.html`、`privacy.html`、`terms.html` | 首页与支持页 |
-| `src/components/` | 共享导航、FAQ、弹窗与页脚 |
-| `src/content/reviewed-th.json`、`src/config.json` | 已审原文与公开业务配置 |
-| `assets/redesign.css`、`homepage.css`、`secondary.css` | Tokens、首页及支持页样式 |
-| `assets/app.js` | 导航、FAQ定向展开、图库、下载与弹窗 |
-| `scripts/build.py`、`.github/workflows/pages.yml` | 构建及独立Pages发布 |
+| `src/components/hero.html`、`benefits.html`、`application-steps.html` | 一体化首屏、主次优势、真实四步流程 |
+| `src/pages/home.html` | 公司身份、FAQ、下载和独立安全提醒 |
+| `src/pages/security.html`、`privacy.html`、`terms.html` | 安全知识中心及真实政策状态 |
+| `src/components/header.html`、`footer.html` | 共享导航与公司、联系、法律信息 |
+| `src/components/app-gallery.html`、`dialogs.html` | 完整原图及原生弹窗 |
+| `assets/redesign.css`、`homepage.css`、`secondary.css` | Tokens、首屏/共享控件、首页内容、支持页 |
+| `assets/app.js` | 菜单、FAQ、图库、下载与焦点交互 |
+| `src/content/reviewed-th.json`、`src/config.json` | 已审原文和公开业务配置，均未改 |
+| `scripts/build.py`、`.github/workflows/pages.yml` | 组件构建和独立Pages发布 |
 
-主CTA桌面224×52px、手机满宽52px；PC页头描边下载144×44px，手机只保留Logo和菜单。Pages只发布网页及访客资源，不发布源组件和内部文档。
+## 当前边界
 
-## 当前状态
+`releaseStatus: preview`，noindex。商店未开放，下载入口显示待开放弹窗，不外跳、不生成下载QR、不收集资料。法律正文、有效牌照和官方核验/举报渠道仍待业务提供。完整App原图内的费率及推广冲突仍需业务核准，未提取为正文宣称。
 
-`releaseStatus: preview`，noindex；真实商店未开放，下载只显示待开放弹窗，不外跳、不生成下载二维码、不收集资料。政策、官方身份／核验和举报渠道仍待业务确认。
-
-第八轮已完成1440／360／375／390实页、图片／图库映射、定向FAQ、菜单、下载及步骤03检查，构建／JS和7份HTML静态检查通过；独立复审的唯一焦点问题已修复。线上发布另做实际核验。见[交付说明](docs/delivery.md)、[设计系统](docs/design-system.md)、[素材状态](docs/visual-assets.md)及[泰国竞品研究与落地](docs/competitor-research.md)。
+四页分别检查1440／360／375／390实页，交互及静态检查记录见[交付说明](docs/delivery.md)。设计依据、素材映射见[竞品对照](docs/competitor-research.md)、[设计系统](docs/design-system.md)、[素材状态](docs/visual-assets.md)。截图保存在仓库外 `../round9-preview/`，不进入发布包。

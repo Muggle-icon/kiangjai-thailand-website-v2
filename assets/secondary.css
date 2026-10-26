@@ -1,8 +1,145 @@
-/* Shared footer and readable supporting pages. */
-.kj-footer{padding:48px max(var(--gutter),calc((100% - var(--content))/2)) 24px;background:#00384c;color:var(--muted);--ink:#fff;--muted:#c5d8df;--line:#ffffff29}.kj-footer-grid{grid-template-columns:280px minmax(0,1fr) 230px;gap:48px;padding-bottom:32px}.kj-footer-brand img{width:164px;height:auto;display:block;filter:brightness(0) invert(1)}.kj-footer-brand>p:last-child{font-size:13px;margin-top:16px;max-width:230px}.kj-footer h2{font-size:15px;line-height:24px;color:var(--ink);margin-bottom:12px}.kj-footer-company p,.kj-footer-license p{font-size:14px;line-height:24px}.kj-footer-company p+p{margin-top:8px}.kj-footer .kj-company-name{font-size:14px;font-weight:650}.kj-footer-company .kj-link{font-size:12px;min-height:32px}.kj-footer-license .kj-link{font-size:13px}.kj-footer-bottom{padding-top:24px}.kj-footer-bottom nav{gap:24px;margin-bottom:12px}.kj-footer-bottom nav .kj-link{font-size:13px;min-height:44px}.kj-footer .kj-small{font-size:12px;line-height:1.75;max-width:950px}.footer-contact h2{font-size:15px;line-height:24px}.footer-contact .footer-phone{font-size:23px;line-height:1.5;color:var(--ink);font-weight:550;margin-block:4px 10px}.footer-contact .kj-link{font-size:13px}.footer-contact>p{font-size:14px;line-height:24px}
+/* Company identity, safety knowledge centre, and truthful policy states. */
+.kj-footer{--footer-muted:#c5d8df;--line:#ffffff29;padding:0;background:#00384c;color:#fff;border-top:0}
+.kj-footer-grid{grid-template-columns:240px minmax(0,1fr) 248px;gap:56px;padding-block:64px 48px}
+.kj-footer-brand img{display:block;width:176px;height:auto;filter:brightness(0) invert(1)}
+.kj-footer-brand>p:last-child{max-width:240px;margin-top:20px;font-size:14px;line-height:1.8;color:var(--footer-muted)}
+.kj-footer h2{margin:0 0 16px;font-size:16px;line-height:1.5;color:#fff}
+.kj-footer-company p,.footer-contact>p{font-size:14px;line-height:1.8;overflow-wrap:break-word;color:var(--footer-muted)}
+.kj-footer-company p+p{margin-top:10px}
+.kj-footer .kj-company-name{font-size:16px;font-weight:650;color:#fff}
+.footer-contact .footer-phone{margin-block:4px 8px;font-size:27px;line-height:1.5;color:#fff;font-weight:650;font-variant-numeric:tabular-nums}
+.footer-contact .kj-link{font-size:13px}
+.footer-contact>p:last-child{margin-top:12px;color:var(--footer-muted)}
+.kj-footer-bottom{padding-block:16px 24px}
+.kj-footer-bottom nav{gap:8px 32px;margin:0}
+.kj-footer .kj-link{color:#fff}
+.kj-footer-bottom .kj-link{font-size:14px;min-height:44px}
 .kj-footer a:hover,.kj-footer button:hover{color:var(--cyan)}
-.secondary-page{color:var(--text)}.secondary-page>.kj-section{width:min(var(--content),calc(100% - var(--gutter)*2));margin-inline:auto;padding-block:var(--section-space);border:0}.secondary-page h1{font-size:48px;line-height:1.4;margin-bottom:24px}.secondary-page h2{font-size:36px;line-height:1.4;margin-bottom:var(--heading-gap)}.secondary-page h3{font-size:21px;line-height:1.5}.secondary-page p,.secondary-page li{font-size:16px;line-height:1.75}.secondary-page>.kj-security-hero{width:100%;padding:48px max(var(--gutter),calc((100% - var(--content))/2)) 56px;background:var(--surface);border-bottom:1px solid var(--line);position:relative;overflow:hidden}.secondary-page .kj-security-hero>p:first-child{font-size:14px;line-height:24px;margin:0 0 24px}.secondary-page .kj-security-hero h2{font-size:26px;margin-bottom:12px}.secondary-page .kj-security-hero>p{max-width:740px;color:var(--muted)}.secondary-page .kj-security-hero>.kj-link{font-size:14px;margin-top:24px}.secondary-page .kj-section+.kj-section{border-top:1px solid var(--line)}.secondary-page .kj-section>p{font-size:16px;color:var(--muted);line-height:28px;max-width:800px}.security-page-nav{display:flex;gap:24px;flex-wrap:wrap;margin-top:24px;font-size:14px}.security-page-nav a{min-height:44px;padding-block:10px}
-.kj-security-channels{gap:0 var(--column-gap);border-top:1px solid var(--line)}.kj-security-channels article{padding:24px 0;border:0;border-bottom:1px solid var(--line);min-width:0}.kj-security-channels p{font-size:15px}.kj-security-channels .kj-primary{margin-top:24px;font-size:16px;min-height:var(--control-height)}.kj-security-channels .kj-link{font-size:14px}.kj-safety-list{padding-left:24px;max-width:800px;margin-block:0}.kj-safety-list li::marker{color:#07879b}.kj-safety-list li+li{margin-top:24px}.kj-scam-list{display:block;margin-top:32px;border-top:1px solid var(--line)}.kj-scam-list details{border:0;border-bottom:1px solid var(--line);padding:0}.kj-scam-list summary{padding:24px 56px 24px 0;font-size:18px;position:relative;list-style:none}.kj-scam-list summary::-webkit-details-marker{display:none}.kj-scam-list summary::before,.kj-scam-list summary::after{content:"";position:absolute;right:9px;top:50%;width:14px;height:2px;border-radius:1px;background:currentColor;transform:translateY(-50%)}.kj-scam-list summary::after{transform:translateY(-50%) rotate(90deg)}.kj-scam-list details[open] summary::after{display:none}.kj-scam-list details p{padding-right:40px;font-size:16px;line-height:28px;max-width:800px}.kj-scam-list details p:last-child{padding-bottom:24px}.kj-help-guide{padding:24px 0}.kj-help-guide h3{font-size:20px}.kj-help-guide li,.kj-help-guide p{font-size:15px;line-height:1.75}.kj-help-guide summary{cursor:pointer;font-weight:650;min-height:44px;font-size:18px;color:var(--ink)}.kj-report-channel{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:24px;margin-top:24px}.kj-report-channel p{overflow-wrap:anywhere}.secondary-page .kj-question{font-size:16px}.secondary-page .kj-answer{font-size:16px;line-height:28px;max-width:856px}
-.kj-policy-view{width:min(848px,calc(100% - var(--gutter)*2));padding-block:48px 72px;min-height:440px}.breadcrumb{font-size:14px;color:var(--muted);margin:0 0 32px;line-height:24px}.kj-policy-view h1{font-size:40px}.kj-policy-empty{border-top:1px solid var(--line);margin-top:32px;padding-block:32px}.kj-policy-empty p{color:var(--muted);font-size:16px;line-height:1.75}.kj-policy-empty>.kj-primary{margin-top:32px}
-@media(max-width:1050px){.kj-footer-grid{grid-template-columns:200px minmax(0,1fr);gap:40px}.footer-contact{grid-column:2}.secondary-page>.kj-section{padding-block:var(--section-space)}.secondary-page h1{font-size:44px}}
-@media(max-width:760px){.kj-footer{padding-top:36px}.kj-footer-grid{grid-template-columns:1fr;gap:32px;padding-bottom:28px}.kj-footer-brand img{width:145px}.kj-footer-brand>p:last-child{max-width:none;margin-top:12px;font-size:13px}.kj-footer h2{margin-bottom:12px}.footer-contact{grid-column:auto}.kj-footer-company p,.kj-footer-license p{font-size:14px}.kj-footer-bottom{padding-top:20px}.kj-footer-bottom nav{gap:4px 20px}.kj-footer-bottom nav .kj-link{font-size:12px}.kj-footer .kj-small{font-size:11px}.secondary-page>.kj-section{padding-block:var(--section-space)}.secondary-page>.kj-security-hero{padding:32px var(--gutter) 40px}.secondary-page .kj-security-hero>p:first-child{margin-bottom:24px}.secondary-page h1{font-size:32px;margin-bottom:24px}.secondary-page h2{font-size:28px;margin-bottom:24px}.secondary-page .kj-security-hero h2{font-size:22px}.secondary-page p,.secondary-page li{font-size:15px;line-height:27px}.secondary-page .kj-section>p{font-size:15px;line-height:27px}.security-page-nav{gap:8px 24px;font-size:13px}.kj-security-channels{grid-template-columns:1fr}.kj-security-channels article{padding:24px 0;border:0;border-bottom:1px solid var(--line)}.kj-security-channels h3{font-size:20px}.kj-safety-list li+li{margin-top:20px}.kj-scam-list summary{font-size:17px;padding-block:20px}.kj-scam-list details p{padding-right:0;font-size:15px;line-height:27px}.kj-help-guide li,.kj-help-guide p{font-size:15px;line-height:27px}.secondary-page .kj-security-actions{gap:12px}.secondary-page .kj-question{font-size:16px}.secondary-page .kj-answer{font-size:15px;line-height:27px}.kj-policy-view{padding-block:32px 48px;min-height:400px}.kj-policy-view h1{font-size:28px}.breadcrumb{font-size:12px;margin-bottom:32px}.kj-policy-empty p{font-size:15px}.kj-report-channel{padding:20px}}
+.kj-footer a:focus-visible,.kj-footer button:focus-visible{outline-color:var(--cyan)}
+.footer-responsible{padding-block:22px;background:#002d3d}
+.footer-responsible .kj-small{margin-block:0;color:#d4e4e9;font-size:13px;line-height:1.8}
+
+.secondary-page{color:var(--text)}
+.secondary-page h1{font-size:48px;line-height:1.35;font-weight:750;letter-spacing:0}
+.secondary-page h2{font-size:30px;line-height:1.45;margin:0 0 28px}
+.secondary-page h3{font-size:21px;line-height:1.5}
+.secondary-page p,.secondary-page li{font-size:16px;line-height:1.8}
+.breadcrumb{margin:0 0 32px;color:var(--muted);font-size:14px!important;line-height:1.7!important}
+.breadcrumb a{text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+.kj-security-hero{padding-block:48px 56px;border-bottom:1px solid var(--line);background:var(--surface)}
+.security-title-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.security-title-layout h1{max-width:540px}
+.security-title-description h2{font-size:23px;line-height:1.5;margin-bottom:12px}
+.security-title-description>p{max-width:520px;color:var(--muted)}
+.security-title-description>.kj-link{margin-top:16px;font-size:14px}
+.security-content-layout{display:grid;grid-template-columns:232px minmax(0,1fr);gap:72px;align-items:start;padding-block:64px 96px}
+.security-page-nav{position:sticky;top:120px;display:flex;flex-direction:column;align-items:stretch;padding-left:20px;border-left:3px solid var(--cyan)}
+.security-page-nav a{display:flex;align-items:center;min-height:48px;padding:10px 0;color:var(--ink);font-size:15px;line-height:1.6;text-decoration:none}
+.security-page-nav a:hover{text-decoration:underline;text-underline-offset:6px}
+.security-article{min-width:0}
+.security-article>.kj-section{padding:0 0 56px;margin:0;border:0}
+.security-article>.kj-section+.kj-section{padding-top:56px;border-top:1px solid var(--line)}
+.security-article>.kj-section:last-child{padding-bottom:0}
+.secondary-page .kj-section>p{max-width:800px;font-size:16px;line-height:1.8;color:var(--muted)}
+.kj-security-channels{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--line)}
+.kj-security-channels article{padding:28px;border:0;min-width:0;background:#fff;overflow-wrap:break-word}
+.kj-security-channels h3{margin-bottom:12px;font-size:19px}
+.kj-security-channels p{font-size:15px;line-height:1.8;color:var(--muted)}
+.kj-security-channels .kj-primary{width:var(--cta-width);max-width:100%;margin-top:24px;font-size:15px;min-height:var(--control-height)}
+.kj-security-channels .kj-link{margin-top:16px;font-size:14px}
+#kj-identity-pending{margin-top:20px;font-size:13px;line-height:1.8}
+.kj-safety-list{margin:0;padding:0;list-style:none;max-width:800px}
+.kj-safety-list li{position:relative;padding-left:24px;color:var(--text)}
+.kj-safety-list li::before{content:"";position:absolute;left:0;top:.78em;width:6px;height:6px;background:var(--ink);border-radius:50%}
+.kj-safety-list li+li{margin-top:24px}
+.kj-scam-list{display:block;margin-top:24px;border-top:1px solid var(--line)}
+.kj-scam-list details{border:0;border-bottom:1px solid var(--line);padding:0}
+.kj-scam-list summary{position:relative;list-style:none;padding:24px 48px 24px 0;font-size:18px;line-height:1.65;font-weight:600;cursor:pointer}
+.kj-scam-list summary::-webkit-details-marker,.kj-help-guide summary::-webkit-details-marker{display:none}
+.kj-scam-list summary::before,.kj-scam-list summary::after,.kj-help-guide summary::before,.kj-help-guide summary::after{content:"";position:absolute;right:9px;top:50%;width:14px;height:2px;background:var(--ink);transform:translateY(-50%)}
+.kj-scam-list summary::after,.kj-help-guide summary::after{transform:translateY(-50%) rotate(90deg)}
+.kj-scam-list details[open] summary::after,.kj-help-guide[open] summary::after{display:none}
+.kj-scam-list details p{max-width:800px;margin:0;padding-right:40px;color:var(--muted);font-size:16px;line-height:1.8}
+.kj-scam-list details p+p{margin-top:16px}
+.kj-scam-list details p:last-child{padding-bottom:28px}
+.kj-scam-list details strong{color:var(--text);font-weight:650}
+#help{position:relative}
+#kj-report-pending{padding:24px 28px;border-left:3px solid var(--cyan);background:var(--surface);border-radius:0 var(--radius) var(--radius) 0}
+.kj-help-guide{margin-block:24px;padding:24px 0;border-block:1px solid var(--line)}
+.kj-help-guide summary{position:relative;display:block;list-style:none;min-height:44px;padding:4px 48px 4px 0;font-size:18px;line-height:1.7;font-weight:650;color:var(--ink);cursor:pointer}
+.kj-help-guide ol{margin:16px 0 0;padding-left:24px}
+.kj-help-guide li{padding-left:6px;font-size:16px;line-height:1.8}
+.kj-help-guide li+li{margin-top:12px}
+.kj-security-actions{gap:16px;margin-top:24px}
+.kj-report-channel{margin-top:24px;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.kj-report-channel p{overflow-wrap:anywhere}
+.secondary-page .kj-question{font-size:16px;line-height:1.75;gap:24px}
+.secondary-page .kj-answer{max-width:800px;font-size:16px;line-height:1.8}
+.secondary-page .kj-answer p{font-size:inherit;line-height:inherit}
+
+.kj-policy-view{width:100%;min-height:560px;padding-block:56px 96px;background:var(--white)}
+.policy-document{max-width:960px}
+.kj-policy-view h1{max-width:900px}
+.kj-policy-empty{margin-top:40px;padding:32px 0 0;border-top:1px solid var(--line);position:relative}
+.kj-policy-empty::before{content:"";position:absolute;top:-2px;left:0;width:80px;height:3px;background:var(--cyan)}
+.kj-policy-empty p{max-width:620px;font-size:18px;line-height:1.9;color:var(--muted)}
+.kj-policy-empty .kj-primary{width:var(--cta-width);margin-top:32px}
+
+@media(max-width:1050px){
+ .kj-footer-grid{grid-template-columns:200px minmax(0,1fr);gap:40px 48px}
+ .footer-contact{grid-column:2}
+ .security-content-layout{grid-template-columns:200px minmax(0,1fr);gap:40px}
+ .security-title-layout{gap:40px}
+ .secondary-page h1{font-size:42px}
+ .kj-security-channels{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+ .kj-footer-grid{grid-template-columns:1fr;gap:32px;padding-block:40px 32px}
+ .kj-footer-brand img{width:152px}
+ .kj-footer-brand>p:last-child{max-width:290px;font-size:13px;margin-top:16px}
+ .footer-contact{grid-column:auto}
+ .kj-footer h2{font-size:15px;margin-bottom:12px}
+ .kj-footer .kj-company-name{font-size:15px}
+ .footer-contact .footer-phone{font-size:26px}
+ .kj-footer-bottom{padding-block:16px 20px}
+ .kj-footer-bottom nav{gap:4px 24px}
+ .kj-footer-bottom .kj-link{font-size:13px}
+ .footer-responsible{padding-block:20px}
+ .footer-responsible .kj-small{font-size:12px;line-height:1.9}
+ .secondary-page h1{font-size:34px;line-height:1.45}
+ .secondary-page h2{font-size:27px;line-height:1.5;margin-bottom:24px}
+ .secondary-page p,.secondary-page li,.secondary-page .kj-section>p{font-size:15px;line-height:1.85}
+ .breadcrumb{font-size:12px!important;margin-bottom:24px}
+ .kj-security-hero{padding-block:32px 36px}
+ .security-title-layout{grid-template-columns:1fr;gap:20px}
+ .security-title-description h2{font-size:20px;line-height:1.6;margin-bottom:12px}
+ .security-title-description>.kj-link{margin-top:12px;font-size:13px}
+ .security-content-layout{display:block;padding-block:0 56px}
+ .security-page-nav{position:static;display:flex;flex-direction:row;flex-wrap:wrap;gap:0 24px;border-left:0;border-bottom:1px solid var(--line);padding:20px 0;margin-bottom:36px}
+ .security-page-nav a{min-height:44px;padding:8px 0;font-size:13px;text-decoration:underline;text-underline-offset:5px}
+ .security-article>.kj-section{padding-bottom:40px}
+ .security-article>.kj-section+.kj-section{padding-top:40px}
+ .kj-security-channels article{padding:24px}
+ .kj-security-channels h3{font-size:19px}
+ .kj-security-channels p{font-size:15px}
+ .kj-security-channels .kj-primary{width:100%;margin-top:20px;font-size:15px}
+ #kj-identity-pending{font-size:12px;margin-top:16px}
+ .kj-safety-list li{padding-left:20px}
+ .kj-safety-list li+li{margin-top:20px}
+ .kj-scam-list summary{font-size:16px;padding-block:20px}
+ .kj-scam-list details p{padding-right:0;font-size:15px;line-height:1.85}
+ .kj-scam-list details p:last-child{padding-bottom:24px}
+ #kj-report-pending{padding:20px}
+ .kj-help-guide{margin-block:24px;padding-block:20px}
+ .kj-help-guide summary{font-size:17px;line-height:1.75}
+ .kj-help-guide li{font-size:15px;line-height:1.85}
+ .kj-report-channel{padding:20px}
+ .secondary-page .kj-question{font-size:15px;gap:16px}
+ .secondary-page .kj-answer{font-size:15px;line-height:1.85}
+ .kj-policy-view{min-height:480px;padding-block:36px 56px}
+ .kj-policy-view h1{font-size:31px;line-height:1.5}
+ .kj-policy-empty{margin-top:28px;padding-top:28px}
+ .kj-policy-empty p{font-size:16px;line-height:1.9}
+ .kj-policy-empty .kj-primary{width:100%;margin-top:28px}
+}
