@@ -37,4 +37,4 @@ python3 -m http.server 4173
 
 GitHub Pages workflow 位于 `.github/workflows/pages.yml`。仓库设置中启用 GitHub Actions 为 Pages 发布源后，推送 main 即构建发布。构建产物仅含网页和 assets，不发布源代码文档目录。
 
-设计、素材和验收记录见 [交付说明](docs/delivery.md)。第三轮浏览器截图与交互验收正在进行；第二轮已完成的验证记录单独保留，不作为第三轮最终结论。
+设计、素材和验收记录见 [交付说明](docs/delivery.md)。第三轮已完成1440px桌面与360/375/390px移动端浏览器截图及交互验收，前后对照附件位于仓库外的 `../round3-preview/`。GitHub Pages 已核对显示本轮设计。
