@@ -1,6 +1,6 @@
 ---
 name: Kiangjai Thailand V2
-description: A contextual Thai daily-life campaign followed by original App evidence and clear support reading surfaces.
+description: Authentic Bangkok workday photography, complete original App evidence and one shared responsive component system.
 colors:
   cyan: "#44E0F8"
   ink: "#00384C"
@@ -13,26 +13,34 @@ colors:
 typography:
   display:
     fontFamily: "Noto Sans Thai, sans-serif"
-    fontSize: "56px"
+    fontSize: "52px"
     fontWeight: 750
     lineHeight: 1.35
     letterSpacing: "0"
+  page:
+    fontFamily: "Noto Sans Thai, sans-serif"
+    fontSize: "48px"
+    fontWeight: 750
+    lineHeight: 1.4
   headline:
     fontFamily: "Noto Sans Thai, sans-serif"
-    fontSize: "44px"
+    fontSize: "40px"
     fontWeight: 700
     lineHeight: 1.4
-    letterSpacing: "0"
+  module:
+    fontFamily: "Noto Sans Thai, sans-serif"
+    fontSize: "28px"
+    fontWeight: 700
+    lineHeight: 1.5
   title:
     fontFamily: "Noto Sans Thai, sans-serif"
-    fontSize: "24px"
+    fontSize: "20px"
     fontWeight: 700
-    lineHeight: 1.4
-    letterSpacing: "0"
+    lineHeight: 1.5
   body:
     fontFamily: "Noto Sans Thai, sans-serif"
     fontSize: "16px"
-    lineHeight: 1.8
+    lineHeight: 1.85
   label:
     fontFamily: "Noto Sans Thai, sans-serif"
     fontSize: "16px"
@@ -40,8 +48,7 @@ typography:
     lineHeight: 1.5
 rounded:
   control: "10px"
-  panel: "12px"
-  hero: "16px"
+  dialog: "16px"
   device: "28px"
 spacing:
   space-1: "8px"
@@ -50,9 +57,9 @@ spacing:
   space-4: "32px"
   space-5: "48px"
   space-6: "64px"
-  space-7: "88px"
-  chapter: "88px"
-  chapter-mobile: "56px"
+  space-7: "80px"
+  chapter: "80px"
+  chapter-mobile: "48px"
 components:
   button-primary:
     backgroundColor: "{colors.ink}"
@@ -80,52 +87,46 @@ components:
 
 # Design System: Kiangjai Thailand V2
 
-## Overview
+## Current direction
 
-**Creative North Star: “Everyday Context, Clear Product”**
+Round 14 replaces the rejected synthetic shopkeeper and inconsistent product-image treatments. Authentic workday photography supplies context; the original App supplies product evidence. Native editable HTML supplies all text, controls and layout. The old round-13 generated scene and section concepts are historical references only.
 
-Round 13 follows the user's latest request for a full visual redesign based on Thai lending competitors and credible life scenes. This supersedes the former App-only/no-people direction. One complete photographic-style illustration of a Thai neighborhood shop establishes everyday context. The untouched original App HOME then explains the real product below the Hero. Native HTML supplies every text element, control, section and interaction.
+The Hero photo is Pexels 35764278 by Sommart Sopon, captured in Bangkok on 2022-02-19. Keep its source/license record in `docs/visual-assets.md`. Its subject is illustrative and is not identified as a customer, borrower, employee or endorser. Do not infer nationality, occupation or financial situation from location metadata.
 
-The scene is generated artwork, not proof of a real customer, shop, company workplace or outcome. Six generated section concepts support implementation planning only; their text, logos, hardware and interfaces are not production assets. See `docs/generated-art-prompts.md` for exact prompts and historical rejected experiments.
+## Shared typography and actions
 
-MONIX informs contextual composition and display hierarchy; it is a corporate site rather than a direct lending-product page. FINNIX, MoneyThunder and Promise inform distinct product, process, fee and support responsibilities. Their business claims, testimonials and photography are not copied.
+Use self-hosted Noto Sans Thai and zero Thai letter spacing. Semantic desktop type roles are page48, chapter40, module28, item20, body16, supporting14 and caption12px; mobile page32, chapter30, module24 and item18px retain the same body/support/caption roles. Body leading is1.85. The Hero has a deliberate display exception: product name52px, tagline28px and amount72px; mobile32/23/60px. Numeral tracking is separate.
 
-## Color, Type and Controls
+Main actions share52px minimum height,224px intended desktop width,10px radius,16px text and20px icons. Compact controls are44px. `.kj-link`, `.text-link`, `.image-tool` and `.app-image-action` consume one14px/26px text-action rule with44px hit area,8px gap and18px icons. Product-image actions use the same plus SVG.
 
-Use exact cyan #44E0F8 for the Hero amount/action, concise process accents and final conversion band. White supports product and help reading; #F2F6F7 separates repayment and company facts; ink anchors mobile Hero copy, text and footer. Cyan does not become the repeated background of every section.
+Homepage and security FAQ use one component: desktop minimum76px,20×24px padding,16px/30px text,32px marker and20px SVG; mobile minimum72px,18×16px padding,16px/28px text,28px marker and18px SVG. No secondary-page internal overrides. Native focus, Esc and reduced motion remain required.
 
-Noto Sans Thai is self-hosted. Desktop Hero product name is 56px/1.35, tagline 32px/1.5 and amount 80px/1.2; mobile uses 32px/1.4, 23px/1.5 and 60px/1.2. Homepage chapter headings use 44px desktop and 30px mobile. Product explanation uses 17px/1.95 desktop and 16px/1.9 mobile. Default body is 16px/1.8. Preserve natural Thai wrapping and zero Thai letter spacing; numeric tracking applies only to numerals.
+## Shared grid and rhythm
 
-Main controls are 224×52px desktop and full content width on mobile, with 10px corners. Compact header action is 44px high; text actions use at least 44px hit areas. FAQ markers are 32px with centered20px SVG on desktop and28px/18px on mobile; safety FAQ uses30px/17px and28px/16px. Focus styles, reduced motion and native keyboard behavior remain functional requirements.
+`.shell` caps content at1240px with desktop48px gutters,24px below1100px and20px below760px. Shared12-column grid gap is24px desktop/20px mobile. Chapters use80px desktop/48px mobile spacing, headings32px/24px to content, group24px and paragraph16px. These are project choices implemented as semantic tokens, not claimed external mandatory measurements.
 
-## Layout and Rhythm
+Header heights remain88/76/68px; desktop navigation is independently centered. A single `--anchor-offset` supplies header height plus24px through root scroll padding. Do not add duplicate section scroll margins.
 
-Content axis is capped at1240px with48px desktop,24px compact/tablet and20px mobile gutters. Header height is88px desktop,76px below1100px and68px mobile. Navigation is centered independently of Logo and action, with an expanded mobile menu below1100px.
+The primary product row places the complete HOME atleft and the online explanation atright; the repayment row mirrors this with explanation atleft and the complete screen atright. Both use the same grid and App component, with no giant mat behind HOME. Company and FAQ use shared4+8 column axes; all stack naturally on mobile. Four application steps retain actual sequence numbers and only03 opens matching product evidence.
 
-Desktop Hero is inset24px horizontally,20px below the header, minimum640px high with16px corners. A single continuous scene fills it; a controlled left scrim supports legible editable white copy, cyan amount and action. It contains no App image. Below760px, the inset is12px and corners12px; the copy occupies an ink surface above a280px-high scene, whose focal point is72% horizontally. Narrow text is not overprinted on the photograph.
+## Authentic-photo Hero
 
-Product section uses88px top spacing, centered title and a dominant two-column row: full HOME image atleft on a neutral stage, online explanation atright. The complete reviewed introduction occurs once. Service region and F01/F04 links remain subordinate. The native product frame is240px wide desktop and210px mobile; the original750×1624 image keeps its complete ratio. Mobile puts explanation before the image.
+Desktop Hero is edge-to-edge, minimum560px high, with a solid exact #44E0F8 copy area and the real workday photograph entering from43% horizontally. There is no gradient or synthetic people. The editable text remains in the shared content axis; a dark button supplies the primary next entry. The photo uses70% 28% focal position.
 
-Repayment follows as a lower-weight neutral band with40px vertical padding, explanatory copy and a complete190px image desktop/180px mobile. The QR belongs to the App example; it is not a website payment function.
+Mobile reorders the section as title,244px photograph, amount, CTA/pending note, qualification. The picture focal position is72% 35%. Both layouts retain a visible `ภาพประกอบ` caption and avoid treating the image as a loan testimonial. The same mother photo supplies1200×800 and2000×1333 WebP derivatives.
 
-Four steps use an open white sequence,80px light-weight numbers and cyan underlines; mobile uses44px numbers beside compact text rows. Only03 links to the matching loan-plan image. Company follows on a neutral band with verified name, registration, address, phone and contact action. FAQ returns to white with split title/accordion; mobile stacks the columns. Conversion is one cyan invitation, followed by a separate quiet safety strip and an ink factual footer.
+## One App-screen component
 
-Primary section spacing is88px desktop/56px mobile, with96px after the desktop process and72px/48px company spacing. Section-specific spacing is intentional; do not force every block into the same Banner or card layout.
+`APP_SCREENS` in `scripts/build.py` maps four original images and their existing alt text. `{{app-screen:home}}`, `repayment`, `loan-plan` and `withdrawal` render identical `.app-device > img.app-screen` markup, explicit750×1624 dimensions, lazy loading and async decoding. Original PNG pixels remain untouched.
 
-## Supporting Pages and Behavior
+All inline frames are240px wide desktop/210px mobile, with4px inner edge,28px/26px corners, ink background and the same `0 12px 32px #00384c18` shadow. Images retain complete height:auto proportions. Both native viewers use the same component and width `min(320px,calc((100dvh - 280px)*.46182266),100%)`; enlargement is a contextual variant, not another device design.
 
-Safety center uses a pale-cyan title band, a240px sticky chapter directory and a reading column; compact widths adjust the directory, mobile turns it into a two-column task list. Company/contact and unavailable official identity remain clearly distinguished. Scam details, help guidance and safety FAQ use the shared type and control system.
+## Supporting pages and facts
 
-Policies use a1060px maximum document axis, pale-cyan title band, simple status icon and white pending-content surface. They retain only original Logo and return-home header navigation. Do not fill missing legal bodies with invented text.
+Safety center retains a240px sticky desktop directory and task navigation on mobile, while chapter headings, body, actions and FAQs use shared roles. Contact-card titles have a separate small20px role. Policies retain the common1240px shell and max720px reading copy, natural content height and a page-level flex footer push rather than a fixed blank content height. Missing legal content remains the reviewed pending state.
 
-Native dialogs preserve gallery order HOME/repayment/loan-plan/withdrawal, direction keys, Esc and focus restoration. Preserve FAQ single-open behavior, correct F01/F04 targeting, mobile menu behavior, pending download messaging, `scrollbar-gutter:stable` and reduced motion.
+Keep approved copy, public configuration, original Logo and all screenshot content unchanged. Preserve four steps, seven home FAQs, six safety FAQs, seven scam categories, native dialogs, gallery order, keyboard controls, F01/F04 targeting, menu and focus restoration. No invented rates, approval times, licenses, store links or official channels. Preview/noindex remains.
 
-## Rules and Verification
+## Verification state
 
-- Keep original Logo, approved Thai, public configuration and complete App images authoritative.
-- Use the generated life scene solely as illustrative context; do not present it as customer testimony or company evidence.
-- Do not reuse rejected still-life props or unselected hardware frames; do not generate fake App interfaces, financial evidence or approval badges.
-- Keep Hero, product, process, company, FAQ, conversion and safety responsibilities distinct.
-- Preserve preview download/legal states; do not invent pricing, eligibility, speed, license, official channels, store links or payment QR.
-- Verify all four pages at1440/360/375/390px with real browser screenshots, inspect scene crops and Thai wrapping, and test existing interactions.
-- Round-13 browser review covers all four pages at1440/360/375/390px,17 interaction observations and visual comparison; evidence is in the external round13-preview directory. Publication is verified separately in release-verification.md.
+Sixteen current-round layouts across four pages at1440/360/375/390px have actual screenshots and measured no horizontal overflow. Build, seven-page static structure/link checks, JS syntax and core interactions were checked. Matching device geometry, chapter type, company/FAQ axes and homepage/security FAQ internals were measured at all four widths. Evidence belongs in external `../round14-preview/`; release-verification.json and live screenshots record publication independently of local checks. Historical round-13 checks do not substitute for round14 acceptance. Reused GitHub skills and their scope are recorded in `docs/round14-review.md`; no new installation is claimed.

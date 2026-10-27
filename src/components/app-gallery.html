@@ -1,10 +1,10 @@
 <dialog id="app-gallery-dialog" class="kj-dialog screen-dialog app-gallery-dialog" aria-labelledby="app-gallery-title">
   <div class="kj-dialog-heading"><h2 id="app-gallery-title">ภาพตัวอย่างหน้าจอแอป</h2><button class="kj-close" type="button" data-close="gallery" aria-label="ปิดภาพหน้าจอ">{{icon:x}}</button></div>
   <div class="gallery-stage">
-    <figure data-gallery-panel><img src="assets/app/home-overview.png" alt="หน้าหลักแอปเคียงใจ แสดงวงเงินและความคืบหน้าการกรอกข้อมูล" width="750" height="1624" loading="lazy"></figure>
-    <figure data-gallery-panel hidden><img src="assets/app/repayment.png" alt="หน้าจอสแกนจ่ายเพื่อชำระคืน" width="750" height="1624" loading="lazy"></figure>
-    <figure data-gallery-panel hidden><img src="assets/app/loan-plan.png" alt="หน้าจอเลือกจำนวนเงินและจำนวนงวด" width="750" height="1624" loading="lazy"></figure>
-    <figure data-gallery-panel hidden><img src="assets/app/withdrawal-current.png" alt="หน้าจอแอปเคียงใจแสดงวงเงินที่พร้อมใช้งาน" width="750" height="1624" loading="lazy"></figure>
+    <figure data-gallery-panel>{{app-screen:home}}</figure>
+    <figure data-gallery-panel hidden>{{app-screen:repayment}}</figure>
+    <figure data-gallery-panel hidden>{{app-screen:loan-plan}}</figure>
+    <figure data-gallery-panel hidden>{{app-screen:withdrawal}}</figure>
   </div>
   <div class="gallery-controls"><button class="button button-outline gallery-arrow gallery-previous" type="button" data-gallery-previous aria-label="ภาพก่อนหน้า">{{icon:arrow-right}}</button><output data-gallery-position aria-live="polite" aria-atomic="true">1 / 4</output><button class="button button-outline gallery-arrow" type="button" data-gallery-next aria-label="ภาพถัดไป">{{icon:arrow-right}}</button></div>
 </dialog>

@@ -13,13 +13,27 @@ COPY = json.loads((ROOT/'src/content/reviewed-th.json').read_text())['copy']
 (ROOT/'assets/config.js').write_text('window.KIANGJAI_CONFIG = '+json.dumps(CONFIG,ensure_ascii=False).replace('<','\\u003c')+';\n')
 VERSION = hashlib.sha256(b''.join((ROOT/name).read_bytes() for name in ('assets/base.css','assets/redesign.css','assets/homepage.css','assets/secondary.css','assets/app.js','assets/config.js'))).hexdigest()[:12]
 
+# One renderer keeps every original App screen's geometry and markup identical.
+APP_SCREENS = {
+    'home': ('assets/app/home-overview.png', 'หน้าหลักแอปเคียงใจ แสดงวงเงินและความคืบหน้าการกรอกข้อมูล'),
+    'repayment': ('assets/app/repayment.png', 'หน้าจอสแกนจ่ายเพื่อชำระคืน'),
+    'loan-plan': ('assets/app/loan-plan.png', 'หน้าจอเลือกจำนวนเงินและจำนวนงวด'),
+    'withdrawal': ('assets/app/withdrawal-current.png', 'หน้าจอแอปเคียงใจแสดงวงเงินที่พร้อมใช้งาน'),
+}
+
 def render(text):
     text=re.sub(r'\{\{copy:([\w-]+)\}\}', lambda m:escape(COPY[m[1]]),text)
     def component(match): return render((ROOT/'src/components'/(match[1]+'.html')).read_text())
     def icon(match):
         svg=(ROOT/'assets/icons'/(match[1]+'.svg')).read_text()
         return svg.replace('<svg ','<svg class="icon" aria-hidden="true" focusable="false" ',1)
-    return re.sub(r'\{\{icon:([\w-]+)\}\}',icon,re.sub(r'\{\{component:([\w-]+)\}\}',component,text))
+    def app_screen(match):
+        source, alt = APP_SCREENS[match[1]]
+        return (f'<div class="app-device"><img class="app-screen" src="{escape(source)}" '
+                f'alt="{escape(alt)}" width="750" height="1624" loading="lazy" decoding="async"></div>')
+    text=re.sub(r'\{\{component:([\w-]+)\}\}',component,text)
+    text=re.sub(r'\{\{app-screen:([\w-]+)\}\}',app_screen,text)
+    return re.sub(r'\{\{icon:([\w-]+)\}\}',icon,text)
 
 for source,filename,title in [('home','index','หน้าแรก'),('security','security','ศูนย์ความปลอดภัย'),('privacy','privacy','นโยบายความเป็นส่วนตัว'),('terms','terms','ข้อกำหนดการใช้บริการ')]:
     main=render((ROOT/'src/pages'/(source+'.html')).read_text())

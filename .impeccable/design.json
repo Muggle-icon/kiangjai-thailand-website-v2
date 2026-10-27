@@ -48,22 +48,30 @@
     "typographyMeta": {
       "display": {
         "displayName": "Product Display",
-        "purpose": "Lifestyle Hero product name, 56px desktop/32px mobile; positioning and amount have separate scales in CSS."
+        "purpose": "Hero product name52px desktop/32px mobile; separate positioning28/23px and amount72/60px."
+      },
+      "page": {
+        "displayName": "Page Title",
+        "purpose": "Shared support-page title48px desktop/32px mobile."
       },
       "headline": {
-        "displayName": "Section Headline",
-        "purpose": "Homepage chapter headings, 44px desktop and 30px mobile."
+        "displayName": "Chapter Title",
+        "purpose": "Shared40px desktop/30px mobile role across homepage and support chapters."
+      },
+      "module": {
+        "displayName": "Module Title",
+        "purpose": "Shared28px desktop/24px mobile feature and company title."
       },
       "body": {
         "displayName": "Thai Reading Text",
-        "purpose": "Default text; long modules increase leading where implemented."
+        "purpose": "Shared16px/1.85 body,14px supporting copy and12px captions; natural Thai wrapping."
       }
     },
     "shadows": [
       {
-        "name": "product-viewer",
+        "name": "app-device",
         "value": "0 12px 32px #00384c18",
-        "purpose": "Separate complete original App HOME from its neutral product-information stage, below the lifestyle Hero."
+        "purpose": "Shared complete original App frame in inline product rows and both native image viewers; no oversized HOME mat."
       },
       {
         "name": "dialog",
@@ -98,24 +106,90 @@
       }
     ],
     "assetDirection": {
-      "generationMode": "illustrative-lifestyle-photo-selected",
+      "generationMode": "none-current-production",
       "productionArt": [
-        "assets/campaign/neighborhood-shop-1400.webp",
-        "assets/campaign/neighborhood-shop-1862.webp"
+        "assets/campaign/bangkok-workday-1200.webp",
+        "assets/campaign/bangkok-workday-2000.webp"
       ],
       "provenance": "docs/visual-assets.md",
       "promptsAndHistory": "docs/generated-art-prompts.md",
-      "sceneStatus": "Generated illustration; not actual customer, shop, employee, company workplace or financial-outcome evidence.",
-      "conceptStatus": "Six nonproduction section references; generated text, logos, hardware and App UI are not deployable assets.",
+      "photographer": "Sommart Sopon",
+      "pexelsId": "35764278",
+      "source": "https://www.pexels.com/photo/professional-working-remotely-in-bangkok-cafe-35764278/",
+      "license": "https://www.pexels.com/license/",
+      "capturedAt": "2022-02-19",
+      "capturedIn": "Bangkok, Thailand",
+      "sceneStatus": "Authentic licensed workday photo, illustrative context only; not customer, borrower, employee, endorser, company location or financial-outcome evidence.",
+      "conceptStatus": "Historical round13 scene and six concepts are not production assets. No generated people remain in current Hero.",
       "realApp": "assets/app/home-overview.png",
-      "realAppLocation": "Primary product introduction below Hero",
+      "realAppLocation": "Primary product row below Hero, HOME left and explanation right; repayment mirrors the row.",
       "repayment": "assets/app/repayment.png",
+      "renderer": "scripts/build.py APP_SCREENS and {{app-screen:key}}",
       "frameWidth": {
         "desktop": "240px",
         "mobile": "210px"
       },
-      "mobileHeroPhotoHeight": "280px",
-      "heroPhotoFocalPointMobile": "72% 50%"
+      "frameEdge": "4px",
+      "frameRadius": {
+        "desktop": "28px",
+        "mobile": "26px"
+      },
+      "dialogFrameWidth": "min(320px,calc((100dvh - 280px)*.46182266),100%)",
+      "heroDesktopComposition": "Solid #44E0F8 copy area, real photo right from43%, no gradient; min-height560px.",
+      "mobileHeroOrder": [
+        "title",
+        "photo",
+        "amount",
+        "action and pending note",
+        "qualification"
+      ],
+      "mobileHeroPhotoHeight": "244px",
+      "heroPhotoFocalPointDesktop": "70% 28%",
+      "heroPhotoFocalPointMobile": "72% 35%"
+    },
+    "layoutContract": {
+      "content": "1240px",
+      "gutter": {
+        "desktop": "48px",
+        "compact": "24px",
+        "mobile": "20px"
+      },
+      "grid": "12columns",
+      "gridGap": {
+        "desktop": "24px",
+        "mobile": "20px"
+      },
+      "chapterSpace": {
+        "desktop": "80px",
+        "mobile": "48px"
+      },
+      "headingGap": {
+        "desktop": "32px",
+        "mobile": "24px"
+      },
+      "companyAndFaq": "Shared4+8column axes",
+      "anchorOffset": "One root scroll-padding value: header height +24px",
+      "policy": "Shared1240px shell, max720px reading text, natural height, page-level flex footer push"
+    },
+    "verification": {
+      "round": 14,
+      "responsiveCases": 16,
+      "pages": [
+        "home",
+        "security",
+        "privacy",
+        "terms"
+      ],
+      "widths": [
+        1440,
+        360,
+        375,
+        390
+      ],
+      "responsiveState": "16 actual layouts without horizontal overflow; matching device/FAQ geometry and chapter/grid roles verified. Build, seven-page static and core interaction checks completed.",
+      "releaseState": "See external round14-preview/release-verification.json and live screenshots; local checks alone do not prove publication.",
+      "evidence": "../round14-preview/",
+      "skillInstallation": "Existing verified skills reused; no new installation this round."
     }
   },
   "components": [
@@ -123,7 +197,7 @@
       "name": "Primary Download Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Shared dark download action for header/final conversion; Hero uses the cyan variant. Main action224×52px desktop/full width mobile.",
+      "description": "Shared dark primary action including Hero and final conversion;224×52px intended desktop size/full width at mobile conversion entries. Compact header variant44px.",
       "html": "<button type=\"button\" class=\"ds-button ds-primary\">ดาวน์โหลดแอป</button>",
       "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-primary{width:224px;background:var(--ink,#00384C);color:var(--white,#FFFFFF)}.ds-primary:hover{background:#07586A}.ds-primary:active{background:#07586A}@media(max-width:760px){.ds-primary{width:100%}}"
     },
@@ -131,7 +205,7 @@
       "name": "Cyan Button",
       "kind": "button",
       "refersTo": "button-cyan",
-      "description": "Hero brand action on the scene/dark copy surface; same52px main-action anatomy.",
+      "description": "Available brand-cyan variant with the same52px main-action anatomy; current Hero uses dark action on cyan.",
       "html": "<button type=\"button\" class=\"ds-button ds-cyan\">ดาวน์โหลดแอป</button>",
       "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-cyan{background:var(--cyan,#44E0F8);color:var(--ink,#00384C)}.ds-cyan:hover,.ds-cyan:active{background:#74E9FA}"
     },
@@ -153,55 +227,62 @@
     {
       "name": "Online Product Explanation",
       "kind": "section",
-      "description": "Open reading column beside the complete original HOME image, with one unchanged full introduction and subordinate process/FAQ entries.",
+      "description": "Complete original HOME atleft with one unchanged reviewed introduction atright; subordinate process andFAQ actions. Repayment mirrors this with the same frame.",
       "html": "<article class=\"ds-feature\"><h3>สมัครออนไลน์ทุกขั้นตอน</h3><p><!-- Insert the unchanged reviewed full product introduction from the content catalog. --></p><a class=\"ds-step-link\" href=\"#kj-steps\"><!-- Existing reviewed process label --></a></article>",
-      "css": ".ds-feature{font-family:Noto Sans Thai,sans-serif;color:var(--ink,#00384C)}.ds-feature h3{margin:0 0 20px;font-size:38px;font-weight:700;line-height:1.5}.ds-feature p{margin:0;font-size:17px;line-height:1.95;color:var(--muted,#566E76)}.ds-step-link{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;color:var(--ink,#00384C)}@media(max-width:760px){.ds-feature h3{font-size:28px;margin-bottom:16px}.ds-feature p{font-size:16px;line-height:1.9}}"
+      "css": ".ds-feature{font-family:Noto Sans Thai,sans-serif;color:var(--ink,#00384C)}.ds-feature h3{margin:0 0 16px;font-size:28px;font-weight:700;line-height:1.5}.ds-feature p{margin:0;font-size:16px;line-height:1.85;color:var(--muted,#566E76)}.ds-step-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;font-size:14px;line-height:26px;color:var(--ink,#00384C)}@media(max-width:760px){.ds-feature h3{font-size:24px}}"
     },
     {
       "name": "FAQ Question",
       "kind": "button",
-      "description": "Neutral rounded question row, exact centered32px/20px marker; mobile28px/18px. Native website provides single-open behavior.",
+      "description": "One homepage/safety FAQ component;16px body,76px row, centered32/20px marker; mobile72px row and28/18px marker.",
       "html": "<button type=\"button\" class=\"ds-faq\" aria-expanded=\"false\"><span>คำถามที่พบบ่อย</span><span class=\"ds-faq-mark\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5v14\" stroke=\"currentColor\" stroke-width=\"2\"/></svg></span></button>",
-      "css": ".ds-faq{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:76px;padding:20px 24px;border:0;border-radius:10px;background:var(--surface,#F2F6F7);color:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif;font-size:17px;font-weight:600;line-height:30px;text-align:left;cursor:pointer}.ds-faq-mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:#E1E8EB;color:var(--ink,#00384C)}.ds-faq-mark svg{display:block;width:20px;height:20px}.ds-faq:hover .ds-faq-mark,.ds-faq[aria-expanded=true] .ds-faq-mark{background:var(--cyan,#44E0F8)}.ds-faq:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(max-width:760px){.ds-faq{font-size:16px;line-height:28px;min-height:72px;padding:18px 16px;gap:16px}.ds-faq-mark{width:28px;height:28px}.ds-faq-mark svg{width:18px;height:18px}}"
+      "css": ".ds-faq{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:76px;padding:20px 24px;border:0;border-radius:10px;background:var(--surface,#F2F6F7);color:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif;font-size:16px;font-weight:600;line-height:30px;text-align:left;cursor:pointer}.ds-faq-mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:#E1E8EB;color:var(--ink,#00384C)}.ds-faq-mark svg{display:block;width:20px;height:20px}.ds-faq:hover .ds-faq-mark,.ds-faq[aria-expanded=true] .ds-faq-mark{background:var(--cyan,#44E0F8)}.ds-faq:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(max-width:760px){.ds-faq{font-size:16px;line-height:28px;min-height:72px;padding:18px 16px;gap:16px}.ds-faq-mark{width:28px;height:28px}.ds-faq-mark svg{width:18px;height:18px}}"
+    },
+    {
+      "name": "Original App Screen",
+      "kind": "media",
+      "description": "One builder-rendered component for HOME, repayment, loan-plan and withdrawal. Untouched750×1624 PNG, shared240/210px inline frame; common height-fit viewer variant.",
+      "html": "<div class=\"app-device\"><img class=\"app-screen\" src=\"assets/app/home-overview.png\" alt=\"หน้าหลักแอปเคียงใจ แสดงวงเงินและความคืบหน้าการกรอกข้อมูล\" width=\"750\" height=\"1624\" loading=\"lazy\" decoding=\"async\"></div>",
+      "css": ".app-device{width:var(--app-width,240px);max-width:100%;padding:4px;border:0;border-radius:var(--app-radius,28px);background:var(--ink,#00384C);box-shadow:0 12px 32px #00384c18;line-height:0}.app-screen{display:block;width:100%;height:auto;border-radius:calc(var(--app-radius,28px) - 4px)}@media(max-width:760px){.app-device{--app-width:210px;--app-radius:26px}}"
     }
   ],
   "narrative": {
-    "northStar": "Everyday Context, Clear Product",
-    "overview": "One complete generated daily-life scene leads the Hero; native editable copy establishes positioning, maximum amount and next entry. The untouched original HOME explains the actual product below. Full-site visual redesign preserves approved content, framework and interactions. Generated scene is illustrative, not customer/company evidence; concepts are not deployable assets.",
+    "northStar": "Authentic Context, Consistent Product",
+    "overview": "Real Bangkok workday photography replaces the synthetic shop scene. Solid brand cyan and native HTML establish the campaign; complete untouched App images and shared roles organize the rest. Approved content, framework and native behavior remain.",
     "keyCharacteristics": [
-      "Contextual lifestyle composition with separate mobile copy/photo arrangement.",
-      "Original full HOME product introduction and subordinate repayment explanation.",
-      "Open four-step typography, distinct company facts, split FAQ, one conversion and separate safety.",
-      "Coordinated header, controls, support reading surfaces and ink footer."
+      "Traceable authentic photography, no gradient or generated subject.",
+      "One App renderer, one inline size per breakpoint and one viewer enlargement rule.",
+      "Shared12column grid,4+8company/FAQ axes, semantic typography and spacing.",
+      "One action family and identical homepage/security FAQ internals."
     ],
     "rules": [
       {
-        "name": "Chapter Rhythm",
-        "body": "Let the photographic Hero lead, then use white product/process/help, neutral repayment/company, cyan final conversion and ink footer. No repeated oversized campaign panels.",
-        "section": "colors"
-      },
-      {
-        "name": "Thai Integrity",
-        "body": "Preserve reviewed Thai, natural wrapping and zero Thai letter spacing. Numeral tracking is separate.",
+        "name": "Shared Roles",
+        "body": "Use page48/32, chapter40/30, module28/24, body16/1.85, support14 and caption12. Chapters80/48 and heading gap32/24.",
         "section": "typography"
       },
       {
-        "name": "Image Integrity",
-        "body": "Untouched complete App PNGs supply product evidence. Generated life scene is illustrative context only; concepts, fake interfaces and unselected hardware are not production assets.",
+        "name": "Photographic Integrity",
+        "body": "Keep Pexels35764278 provenance and license. Illustration caption does not imply customer, borrower or endorser identity. No generative changes to its subject.",
+        "section": "assets"
+      },
+      {
+        "name": "Product Integrity",
+        "body": "All original750×1624 screens use one macro and full aspect ratio. Do not crop, repaint or turn them into invented workflow steps.",
         "section": "assets"
       }
     ],
     "dos": [
-      "Use original Logo and complete real App screenshots.",
-      "Use one coherent life scene without presenting fictional people as customers or employees.",
-      "Preserve exact approved copy, pending download/legal states and keyboard access.",
-      "Verify1440/360/375/390 actual renders and report current-round results separately."
+      "Use original Logo, exact cyan, reviewed Thai and confirmed configuration.",
+      "Use shared grid, type, spacing, actions, FAQ and App frames across routes.",
+      "Keep preview/legal pending states and keyboard/focus behavior.",
+      "Verify current1440/360/375/390renders, original-image ratios and live release separately."
     ],
     "donts": [
-      "Do not reintroduce rejected still-life props, unselected hardware frames, fake App interfaces or approval evidence.",
-      "Do not crop App screens into decorative halves or repaint their content.",
-      "Do not invent financial claims, store links, paymentQR, eligibility, official channels or licenses.",
-      "Do not treat generated concepts, source metadata or previous-round QA as current acceptance results."
+      "Do not reintroduce rejected generated shopkeeper, props, concepts or hardware.",
+      "Do not infer customer identity, nationality, occupation or finances from the photo.",
+      "Do not invent rates, approval promises, licenses, store links, channels or paymentQR.",
+      "Do not reuse historical QA as current evidence or claim publication before verification."
     ]
   }
 }

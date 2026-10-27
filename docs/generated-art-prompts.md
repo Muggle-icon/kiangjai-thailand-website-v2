@@ -1,14 +1,17 @@
-# Generated artwork provenance · current round 13
+# Generated artwork provenance · historical experiments
 
-Updated 2026-10-27. The user's latest request supersedes the former App-only/no-people direction. One original photographic-style Thai daily-life scene is selected for the current Hero. It is **generated illustrative artwork, not a real customer, shop, employee, company location or financial outcome**. The six section concepts below are implementation references only; their generated text, logos, hardware and App interfaces are not production assets.
+Updated2026-10-27 for round14. **No generated scene or concept is part of the current production website.** The round13 shopkeeper was rejected for insufficient realism; its two `neighborhood-shop-*.webp` derivatives were removed. The current Hero uses an authentic licensed photograph: Sommart Sopon, Pexels35764278, captured in Bangkok on2022-02-19. Its1200×800 and2000×1333 WebP derivatives are83,408B and181,664B. Source, license and usage limits are in[visual-assets.md](visual-assets.md).
 
-All seven outputs were created using the built-in `image_gen.imagegen` tool with `transparent_background: false`. The shop scene and five desktop section concepts were new generations. The mobile concept used the viewed shop-scene master as an image reference; it is a layout reference, not a separate production photo. Exact prompts are preserved below without rewriting. Original Thai, Logo and untouched full App PNGs override any generated concept details. All website text, controls and layout remain editable HTML/CSS/JS.
+Round14 did not generate or alter the photographic subject. It uses a solid #44E0F8 HTML copy area and native responsive layout, with no gradient. PC combines copy atleft and photo atright; mobile shows title,244px photograph, then amount and CTA. All product screenshots come from the user's untouched PNGs through one shared `app-screen` renderer. No concept image supplies production text, Logo, hardware or App UI.
 
-Selected scene master is retained outside the repository as `../round13-preview/generated-masters/bangkok-shop-life.png`. Production uses only `assets/campaign/neighborhood-shop-1400.webp` (119,812B) and `assets/campaign/neighborhood-shop-1862.webp` (165,894B), optimized from that same master. Other `concept-*.png` files remain outside the deployable website. Their presence is provenance, not evidence of successful browser QA or user approval.
+The original prompts below are retained **verbatim as history**, not as current design instructions. In round13, seven outputs were made using built-in `image_gen.imagegen` with`transparent_background:false`: a new shop scene, five new desktop section concepts and a mobile concept referencing the viewed shop-scene master. Their former selected status described that round only and does not imply current production use or user approval.
 
-## Round-13 exact generation prompts
+Historical master:`../round13-preview/generated-masters/bangkok-shop-life.png`; six`concept-*.png` files also remain outside the deployable website. Former derivatives were`assets/campaign/neighborhood-shop-1400.webp`(119,812B) and`neighborhood-shop-1862.webp`(165,894B); neither is a current asset. Earlier rejected still-life and hardware experiments remain historical as recorded below.
 
-### Selected scene — production illustration
+## Round-13 exact generation prompts — historical
+
+
+### Former selected scene — removed from production in round 14
 
 Source output: `exec-f967d464-a8ae-4e87-b5c5-2edb70ab0b90.png`
 
