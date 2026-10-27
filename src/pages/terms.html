@@ -1,10 +1,17 @@
 <main class="kj-policy-view secondary-page terms-page" id="main">
-  <div class="policy-document shell">
-    <p class="breadcrumb"><a href="index.html">หน้าแรก</a> / ข้อกำหนดการใช้บริการ</p>
-    <h1>ข้อกำหนดการใช้บริการ</h1>
+  <header class="policy-title-band">
+    <div class="policy-document shell">
+      <p class="breadcrumb"><a href="index.html">หน้าแรก</a> / ข้อกำหนดการใช้บริการ</p>
+      <h1>ข้อกำหนดการใช้บริการ</h1>
+    </div>
+  </header>
+  <div class="policy-document policy-reading-area shell">
     <section class="kj-policy-empty" aria-labelledby="policy-pending">
-      <p id="policy-pending">เรากำลังจัดทำข้อกำหนดการใช้บริการ สามารถอ่านได้ที่นี่เมื่อเผยแพร่อย่างเป็นทางการ</p>
-      <a class="kj-primary" href="index.html">กลับหน้าแรก</a>
+      <span class="policy-status-icon" aria-hidden="true">{{icon:file-text}}</span>
+      <div class="policy-status-copy">
+        <p id="policy-pending">เรากำลังจัดทำข้อกำหนดการใช้บริการ สามารถอ่านได้ที่นี่เมื่อเผยแพร่อย่างเป็นทางการ</p>
+        <a class="kj-primary" href="index.html">กลับหน้าแรก<span aria-hidden="true">{{icon:arrow-right}}</span></a>
+      </div>
     </section>
   </div>
 </main>

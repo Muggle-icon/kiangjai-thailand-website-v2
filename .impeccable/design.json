@@ -7,124 +7,52 @@
       "cyan": {
         "role": "primary",
         "displayName": "Campaign Cyan",
-        "tonalRamp": [
-          "oklch(15% 0.1294 210.10)",
-          "oklch(27% 0.1294 210.10)",
-          "oklch(38% 0.1294 210.10)",
-          "oklch(49% 0.1294 210.10)",
-          "oklch(61% 0.1294 210.10)",
-          "oklch(72% 0.1294 210.10)",
-          "oklch(84% 0.1294 210.10)",
-          "oklch(95% 0.1294 210.10)"
-        ]
+        "hex": "#44E0F8"
       },
       "ink": {
         "role": "primary",
         "displayName": "Deep Cyan Ink",
-        "tonalRamp": [
-          "oklch(15% 0.0630 229.30)",
-          "oklch(27% 0.0630 229.30)",
-          "oklch(38% 0.0630 229.30)",
-          "oklch(49% 0.0630 229.30)",
-          "oklch(61% 0.0630 229.30)",
-          "oklch(72% 0.0630 229.30)",
-          "oklch(84% 0.0630 229.30)",
-          "oklch(95% 0.0630 229.30)"
-        ]
+        "hex": "#00384C"
       },
       "text": {
         "role": "neutral",
         "displayName": "Reading Ink",
-        "tonalRamp": [
-          "oklch(15% 0.0468 222.14)",
-          "oklch(27% 0.0468 222.14)",
-          "oklch(38% 0.0468 222.14)",
-          "oklch(49% 0.0468 222.14)",
-          "oklch(61% 0.0468 222.14)",
-          "oklch(72% 0.0468 222.14)",
-          "oklch(84% 0.0468 222.14)",
-          "oklch(95% 0.0468 222.14)"
-        ]
+        "hex": "#183D49"
       },
       "muted": {
         "role": "neutral",
         "displayName": "Quiet Text",
-        "tonalRamp": [
-          "oklch(15% 0.0310 220.18)",
-          "oklch(27% 0.0310 220.18)",
-          "oklch(38% 0.0310 220.18)",
-          "oklch(49% 0.0310 220.18)",
-          "oklch(61% 0.0310 220.18)",
-          "oklch(72% 0.0310 220.18)",
-          "oklch(84% 0.0310 220.18)",
-          "oklch(95% 0.0310 220.18)"
-        ]
+        "hex": "#566E76"
       },
       "surface": {
         "role": "neutral",
         "displayName": "Reading Surface",
-        "tonalRamp": [
-          "oklch(15% 0.0032 197.10)",
-          "oklch(27% 0.0032 197.10)",
-          "oklch(38% 0.0032 197.10)",
-          "oklch(49% 0.0032 197.10)",
-          "oklch(61% 0.0032 197.10)",
-          "oklch(72% 0.0032 197.10)",
-          "oklch(84% 0.0032 197.10)",
-          "oklch(95% 0.0032 197.10)"
-        ]
+        "hex": "#F2F6F7"
       },
       "line": {
         "role": "neutral",
         "displayName": "Quiet Divider",
-        "tonalRamp": [
-          "oklch(15% 0.0105 219.60)",
-          "oklch(27% 0.0105 219.60)",
-          "oklch(38% 0.0105 219.60)",
-          "oklch(49% 0.0105 219.60)",
-          "oklch(61% 0.0105 219.60)",
-          "oklch(72% 0.0105 219.60)",
-          "oklch(84% 0.0105 219.60)",
-          "oklch(95% 0.0105 219.60)"
-        ]
+        "hex": "#D9E2E5"
       },
       "white": {
         "role": "neutral",
         "displayName": "Open White",
-        "tonalRamp": [
-          "oklch(15% 0.0000 0.00)",
-          "oklch(27% 0.0000 0.00)",
-          "oklch(38% 0.0000 0.00)",
-          "oklch(49% 0.0000 0.00)",
-          "oklch(61% 0.0000 0.00)",
-          "oklch(72% 0.0000 0.00)",
-          "oklch(84% 0.0000 0.00)",
-          "oklch(95% 0.0000 0.00)"
-        ]
+        "hex": "#FFFFFF"
       },
       "cyan-soft": {
         "role": "neutral",
         "displayName": "Quiet Cyan",
-        "tonalRamp": [
-          "oklch(15% 0.0203 208.14)",
-          "oklch(27% 0.0203 208.14)",
-          "oklch(38% 0.0203 208.14)",
-          "oklch(49% 0.0203 208.14)",
-          "oklch(61% 0.0203 208.14)",
-          "oklch(72% 0.0203 208.14)",
-          "oklch(84% 0.0203 208.14)",
-          "oklch(95% 0.0203 208.14)"
-        ]
+        "hex": "#E7FAFD"
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Product Display",
-        "purpose": "Homepage product name, 60px desktop; mobile and module-specific values remain in the implementation."
+        "purpose": "Lifestyle Hero product name, 56px desktop/32px mobile; positioning and amount have separate scales in CSS."
       },
       "headline": {
         "displayName": "Section Headline",
-        "purpose": "Main homepage chapter headings."
+        "purpose": "Homepage chapter headings, 44px desktop and 30px mobile."
       },
       "body": {
         "displayName": "Thai Reading Text",
@@ -134,8 +62,8 @@
     "shadows": [
       {
         "name": "product-viewer",
-        "value": "inset 0 0 0 2px #203c47, 0 18px 30px #00384c26",
-        "purpose": "Separate the complete original App image from the cyan product plane with a neutral native frame."
+        "value": "0 12px 32px #00384c18",
+        "purpose": "Separate complete original App HOME from its neutral product-information stage, below the lifestyle Hero."
       },
       {
         "name": "dialog",
@@ -158,11 +86,11 @@
     "breakpoints": [
       {
         "name": "compact-desktop",
-        "value": "1200px"
+        "value": "1240px"
       },
       {
-        "name": "tablet",
-        "value": "1050px"
+        "name": "tablet-navigation",
+        "value": "1100px"
       },
       {
         "name": "mobile",
@@ -170,20 +98,24 @@
       }
     ],
     "assetDirection": {
-      "generationMode": "none-selected",
+      "generationMode": "illustrative-lifestyle-photo-selected",
+      "productionArt": [
+        "assets/campaign/neighborhood-shop-1400.webp",
+        "assets/campaign/neighborhood-shop-1862.webp"
+      ],
+      "provenance": "docs/visual-assets.md",
+      "promptsAndHistory": "docs/generated-art-prompts.md",
+      "sceneStatus": "Generated illustration; not actual customer, shop, employee, company workplace or financial-outcome evidence.",
+      "conceptStatus": "Six nonproduction section references; generated text, logos, hardware and App UI are not deployable assets.",
       "realApp": "assets/app/home-overview.png",
+      "realAppLocation": "Primary product introduction below Hero",
       "repayment": "assets/app/repayment.png",
       "frameWidth": {
-        "desktop": "294px",
-        "mobile": "186px"
+        "desktop": "240px",
+        "mobile": "210px"
       },
-      "screenWidth": {
-        "desktop": "282px",
-        "mobile": "178px"
-      },
-      "mobileArtStageHeight": "440px",
-      "provenance": "docs/visual-assets.md",
-      "unselectedExperiments": "docs/generated-art-prompts.md"
+      "mobileHeroPhotoHeight": "280px",
+      "heroPhotoFocalPointMobile": "72% 50%"
     }
   },
   "components": [
@@ -191,17 +123,17 @@
       "name": "Primary Download Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Dark main action, 224px on desktop and full content width on mobile.",
+      "description": "Shared dark download action for header/final conversion; Hero uses the cyan variant. Main action224×52px desktop/full width mobile.",
       "html": "<button type=\"button\" class=\"ds-button ds-primary\">ดาวน์โหลดแอป</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,12px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-primary{width:224px;background:var(--ink,#00384C);color:var(--white,#FFFFFF)}.ds-primary:hover{background:#07586A}.ds-primary:active{background:#07586A}@media(max-width:760px){.ds-primary{width:100%}}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-primary{width:224px;background:var(--ink,#00384C);color:var(--white,#FFFFFF)}.ds-primary:hover{background:#07586A}.ds-primary:active{background:#07586A}@media(max-width:760px){.ds-primary{width:100%}}"
     },
     {
       "name": "Cyan Button",
       "kind": "button",
       "refersTo": "button-cyan",
-      "description": "Brand-colored action on a neutral surface.",
+      "description": "Hero brand action on the scene/dark copy surface; same52px main-action anatomy.",
       "html": "<button type=\"button\" class=\"ds-button ds-cyan\">ดาวน์โหลดแอป</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,12px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-cyan{background:var(--cyan,#44E0F8);color:var(--ink,#00384C)}.ds-cyan:hover,.ds-cyan:active{background:#74E9FA}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-cyan{background:var(--cyan,#44E0F8);color:var(--ink,#00384C)}.ds-cyan:hover,.ds-cyan:active{background:#74E9FA}"
     },
     {
       "name": "Outlined Button",
@@ -209,7 +141,7 @@
       "refersTo": "button-outline",
       "description": "Lower-emphasis action with the shared control shape.",
       "html": "<button type=\"button\" class=\"ds-button ds-outline\">กลับหน้าแรก</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,12px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-outline{background:transparent;color:var(--ink,#00384C);border-color:var(--ink,#00384C)}.ds-outline:hover,.ds-outline:active{background:var(--surface,#F3F6F6)}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-outline{background:transparent;color:var(--ink,#00384C);border-color:var(--ink,#00384C)}.ds-outline:hover,.ds-outline:active{background:var(--surface,#F2F6F7)}"
     },
     {
       "name": "Brand Navigation Links",
@@ -219,57 +151,57 @@
       "css": ".ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:0 24px;background:var(--white,#FFFFFF);font-family:Noto Sans Thai,sans-serif;font-size:14px}.ds-nav a{position:relative;padding:24px 0;color:var(--ink,#00384C);text-decoration:none;transition:color .2s}.ds-nav a:hover,.ds-nav a:active,.ds-nav a[aria-current]{color:var(--ink,#00384C)}.ds-nav a[aria-current]{font-weight:700}.ds-nav a[aria-current]::after{content:\"\";position:absolute;left:0;right:0;bottom:15px;height:3px;background:var(--cyan,#44E0F8)}.ds-nav a:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
     },
     {
-      "name": "Application Feature Panel",
-      "kind": "card",
-      "description": "Primary text-led online product explanation with the unchanged reviewed full introduction and existing process/FAQ entries; no generated illustration.",
+      "name": "Online Product Explanation",
+      "kind": "section",
+      "description": "Open reading column beside the complete original HOME image, with one unchanged full introduction and subordinate process/FAQ entries.",
       "html": "<article class=\"ds-feature\"><h3>สมัครออนไลน์ทุกขั้นตอน</h3><p><!-- Insert the unchanged reviewed full product introduction from the content catalog. --></p><a class=\"ds-step-link\" href=\"#kj-steps\"><!-- Existing reviewed process label --></a></article>",
-      "css": ".ds-feature{padding:32px 36px;border-radius:16px;background:var(--ink,#00384C);color:var(--white,#FFFFFF);font-family:Noto Sans Thai,sans-serif}.ds-feature h3{margin:0 0 20px;font-size:34px;font-weight:700;line-height:1.5;color:var(--white,#FFFFFF)}.ds-feature p{margin:0;font-size:17px;line-height:1.95;color:#D0E9EE}.ds-step-link{display:inline-flex;align-items:center;min-height:44px;margin-top:20px;color:var(--white,#FFFFFF)}@media(max-width:760px){.ds-feature{padding:28px 24px}.ds-feature h3{font-size:26px;margin-bottom:16px}.ds-feature p{font-size:16px;line-height:1.9}}"
+      "css": ".ds-feature{font-family:Noto Sans Thai,sans-serif;color:var(--ink,#00384C)}.ds-feature h3{margin:0 0 20px;font-size:38px;font-weight:700;line-height:1.5}.ds-feature p{margin:0;font-size:17px;line-height:1.95;color:var(--muted,#566E76)}.ds-step-link{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;color:var(--ink,#00384C)}@media(max-width:760px){.ds-feature h3{font-size:28px;margin-bottom:16px}.ds-feature p{font-size:16px;line-height:1.9}}"
     },
     {
       "name": "FAQ Question",
       "kind": "button",
-      "description": "Quiet question row with the current fixed SVG marker box; behavior is supplied by the website.",
+      "description": "Neutral rounded question row, exact centered32px/20px marker; mobile28px/18px. Native website provides single-open behavior.",
       "html": "<button type=\"button\" class=\"ds-faq\" aria-expanded=\"false\"><span>คำถามที่พบบ่อย</span><span class=\"ds-faq-mark\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5v14\" stroke=\"currentColor\" stroke-width=\"2\"/></svg></span></button>",
-      "css": ".ds-faq{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:84px;padding:24px 0;border:0;border-block:1px solid var(--line,#D9E2E5);background:var(--white,#FFFFFF);color:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif;font-size:18px;font-weight:600;line-height:30px;text-align:left;cursor:pointer}.ds-faq-mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--cyan-soft,#E7FAFD);color:var(--ink,#00384C)}.ds-faq:hover .ds-faq-mark,.ds-faq:active .ds-faq-mark,.ds-faq[aria-expanded=true] .ds-faq-mark{background:var(--ink,#00384C);color:var(--white,#FFFFFF)}.ds-faq:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(max-width:760px){.ds-faq{font-size:16px;line-height:28px;min-height:76px;padding:20px 0;gap:16px}}"
+      "css": ".ds-faq{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:76px;padding:20px 24px;border:0;border-radius:10px;background:var(--surface,#F2F6F7);color:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif;font-size:17px;font-weight:600;line-height:30px;text-align:left;cursor:pointer}.ds-faq-mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:#E1E8EB;color:var(--ink,#00384C)}.ds-faq-mark svg{display:block;width:20px;height:20px}.ds-faq:hover .ds-faq-mark,.ds-faq[aria-expanded=true] .ds-faq-mark{background:var(--cyan,#44E0F8)}.ds-faq:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(max-width:760px){.ds-faq{font-size:16px;line-height:28px;min-height:72px;padding:18px 16px;gap:16px}.ds-faq-mark{width:28px;height:28px}.ds-faq-mark svg{width:18px;height:18px}}"
     }
   ],
   "narrative": {
-    "northStar": "Clear Cyan, Real Product",
-    "overview": "An untouched App home is the sole Hero product image, framed with native HTML/CSS on a cyan product plane beside a white information plane. No generated raster is selected for visitor pages. Competitors inform hierarchy and content responsibilities; reviewed copy remains the product authority.",
+    "northStar": "Everyday Context, Clear Product",
+    "overview": "One complete generated daily-life scene leads the Hero; native editable copy establishes positioning, maximum amount and next entry. The untouched original HOME explains the actual product below. Full-site visual redesign preserves approved content, framework and interactions. Generated scene is illustrative, not customer/company evidence; concepts are not deployable assets.",
     "keyCharacteristics": [
-      "One complete original App home, separate from the white reading plane.",
-      "Text-led online product explanation and a subordinate complete repayment screenshot.",
-      "Company facts and quiet reading areas with independent responsibilities.",
-      "Natural Thai typography and consistent native interactions."
+      "Contextual lifestyle composition with separate mobile copy/photo arrangement.",
+      "Original full HOME product introduction and subordinate repayment explanation.",
+      "Open four-step typography, distinct company facts, split FAQ, one conversion and separate safety.",
+      "Coordinated header, controls, support reading surfaces and ink footer."
     ],
     "rules": [
       {
         "name": "Chapter Rhythm",
-        "body": "Use white for navigation and the Hero information plane, cyan for its product plane and final action, ink for primary online explanation, neutral surfaces for repayment, process and help.",
+        "body": "Let the photographic Hero lead, then use white product/process/help, neutral repayment/company, cyan final conversion and ink footer. No repeated oversized campaign panels.",
         "section": "colors"
       },
       {
         "name": "Thai Integrity",
-        "body": "Preserve natural Thai wrapping and zero Thai letter spacing; numeric tracking does not apply to Thai text.",
+        "body": "Preserve reviewed Thai, natural wrapping and zero Thai letter spacing. Numeral tracking is separate.",
         "section": "typography"
       },
       {
         "name": "Image Integrity",
-        "body": "Keep untouched App images complete at natural ratios. A neutral native frame may separate them from the background; no generated device or props are selected.",
+        "body": "Untouched complete App PNGs supply product evidence. Generated life scene is illustrative context only; concepts, fake interfaces and unselected hardware are not production assets.",
         "section": "assets"
       }
     ],
     "dos": [
-      "Use original master Logo and complete real App screenshots.",
-      "Use original screenshots to explain actual functions with explicit example captions.",
-      "Retain real pending download/legal states and keyboard access.",
-      "Verify each required viewport with actual rendered screenshots."
+      "Use original Logo and complete real App screenshots.",
+      "Use one coherent life scene without presenting fictional people as customers or employees.",
+      "Preserve exact approved copy, pending download/legal states and keyboard access.",
+      "Verify1440/360/375/390 actual renders and report current-round results separately."
     ],
     "donts": [
-      "Do not reintroduce rejected generated still life, unselected hardware frames, people photos, fake App interfaces or approval evidence.",
-      "Do not crop phones into half-screen decoration or paint over product content.",
-      "Do not invent financial claims, store links, payment QR codes or license resources.",
-      "Do not treat metadata or previous-round QA as current test results."
+      "Do not reintroduce rejected still-life props, unselected hardware frames, fake App interfaces or approval evidence.",
+      "Do not crop App screens into decorative halves or repaint their content.",
+      "Do not invent financial claims, store links, paymentQR, eligibility, official channels or licenses.",
+      "Do not treat generated concepts, source metadata or previous-round QA as current acceptance results."
     ]
   }
 }
