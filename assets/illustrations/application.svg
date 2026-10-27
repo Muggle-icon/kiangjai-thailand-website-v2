@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" fill="none">
+  <!-- Original Kiangjai functional document pictogram, 2026-10-27.
+       Editable vector geometry; generic application paperwork, not an App screen
+       or a promise that any credit application has been approved. -->
+  <path d="M48 22h146l26 26v148H48V22Z" fill="#44E0F8"/>
+  <path d="M84 42h130l46 46v130H84V42Z" fill="#FFFFFF" stroke="#00384C" stroke-width="6" stroke-linejoin="miter"/>
+  <path d="M214 42v46h46" fill="#DFF9FD"/>
+  <path d="M214 42v46h46" stroke="#00384C" stroke-width="6" stroke-linejoin="miter"/>
+  <path d="M112 80h50M112 102h32" stroke="#00384C" stroke-width="6"/>
+  <path d="m120 154 25 25 57-57" stroke="#44E0F8" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M112 194h78" stroke="#00384C" stroke-width="6"/>
+</svg>

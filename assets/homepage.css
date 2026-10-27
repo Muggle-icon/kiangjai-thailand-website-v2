@@ -1,80 +1,85 @@
-/* Product introduction: one primary idea, two supporting uses. */
-.product-section{padding-block:var(--section-space)}
-.section-kicker{font-size:16px;font-weight:600;line-height:28px;margin-bottom:32px;color:var(--muted)}
-.benefits-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:96px;align-items:start}
-.benefit-feature h2{font-size:44px;line-height:1.4;text-wrap:balance;max-width:9em;margin-bottom:24px}
-.benefit-feature h2::after{content:"";display:block;width:64px;height:6px;background:var(--cyan);margin-top:28px}
-.benefit-feature p{font-size:20px;line-height:1.8;max-width:400px;color:var(--muted)}
-.benefit-support article+article{padding-top:28px;margin-top:28px;border-top:1px solid var(--line)}
-.benefit-support h3{font-size:24px;line-height:1.5;margin-bottom:12px}
-.benefit-support p{font-size:16px;line-height:1.75;color:var(--muted);max-width:490px}
-.benefit-support .image-tool{gap:8px;margin-top:8px;font-size:14px}.image-tool .icon{width:17px;height:17px}
-.product-help-links{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px}
-.product-help-links .text-link{font-size:15px;justify-content:space-between;padding-right:24px;text-decoration:none}
+/* Product benefits use a main graphic feature and a subordinate repayment panel. */
+.product-section{padding-block:80px}
+.product-section>.shell>h2{font-size:40px;line-height:1.4;text-align:center;margin-bottom:40px}
+.benefits-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.benefit-feature{display:grid;grid-template-columns:240px minmax(0,1fr);gap:24px;align-items:center;padding:36px 32px;background:var(--ink);border-radius:16px;color:var(--white)}
+.benefit-art{display:block;width:100%;height:auto}
+.application-art{width:240px}
+.benefit-feature h3{font-size:34px;line-height:1.45;margin-bottom:16px;color:var(--white);text-wrap:balance}
+.benefit-feature p{font-size:17px;line-height:1.85;color:#d0e9ee}
+.benefit-repayment{background:#e5fafd;border-radius:16px;padding:28px 32px}
+.repayment-art{width:124px;margin-bottom:12px}
+.benefit-repayment h3{font-size:25px;line-height:1.5;margin-bottom:12px}
+.benefit-repayment p{font-size:15px;line-height:1.8;color:var(--text)}
+.benefit-repayment .image-tool{gap:8px;font-size:13px;margin-top:8px}
+.image-tool .icon{width:17px;height:17px}
+.product-help-links{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.product-help-links .text-link{font-size:15px;justify-content:space-between;gap:16px;padding:16px 0;text-decoration:none;border-bottom:1px solid var(--line)}
 .product-help-links .text-link:hover{text-decoration:underline}
-/* Four actual actions, read in order on an uninterrupted vertical axis. */
-.application-steps{padding-block:80px;background:var(--surface)}
-.application-steps>.shell{display:grid;grid-template-columns:320px minmax(0,1fr);gap:80px;align-items:start}
-.application-steps h2{font-size:40px;line-height:1.45;max-width:8em}
-.step-list{list-style:none;padding:0;margin:0}
-.step-list li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:28px;position:relative;padding-bottom:16px}
-.step-list li:last-child{padding-bottom:0}
-.step-number{display:flex;justify-content:center;align-items:center;position:relative;z-index:1;width:52px;height:52px;border:1px solid #b5d1d8;background:var(--surface);border-radius:50%;font-size:18px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
-.step-list li:first-child .step-number{background:var(--ink);border-color:var(--ink);color:var(--cyan)}
-.step-list li:not(:last-child)::before{content:"";position:absolute;left:26px;top:52px;bottom:0;width:1px;background:#b5d1d8}
-.step-copy{padding:4px 0 16px;border-bottom:1px solid var(--line)}
-.step-list li:last-child .step-copy{padding-bottom:0;border:0}
-.step-list h3{font-size:21px;line-height:1.5;margin-bottom:8px}
-.step-list p{font-size:16px;line-height:1.75;color:var(--muted)}
-.step-list .screen-detail-link{font-size:14px;line-height:24px;margin-top:8px}
-/* Identity has a quiet brand signature; help is a full-width reading surface. */
-.company-section{padding-block:var(--section-space)}
-.company-layout{display:grid;grid-template-columns:320px minmax(0,1fr);gap:80px;align-items:start}
-.company-heading img{display:block;width:64px;height:64px;object-fit:contain;margin-bottom:24px}
-.company-heading h2{font-size:36px;line-height:1.45}
-.company-intro>p{font-size:18px;line-height:1.9;max-width:70ch}
-.company-facts{margin-top:32px;padding:24px 28px;background:var(--surface);border-left:4px solid var(--cyan)}
-.company-facts p{font-size:15px;line-height:1.8}.company-facts p:first-child{font-weight:600;color:var(--ink)}
-.company-facts p+p{margin-top:8px;color:var(--muted)}.company-facts .text-link{font-size:14px}
-.help-section{padding-block:var(--section-space);background:#f7f9f9;border-top:1px solid var(--line)}
-.help-layout{max-width:960px}.help-layout .section-heading{margin-bottom:40px}
-.help-layout .section-heading h2{font-size:40px;line-height:1.4}
+/* Process numbers represent the actual sequence, never four invented App screens. */
+.application-steps{padding-block:0 80px;background:var(--white)}
+.application-steps h2{font-size:40px;line-height:1.4;text-align:center;margin-bottom:40px}
+.step-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.step-list li{position:relative;min-width:0}
+.step-number{display:grid;place-items:center;position:relative;z-index:1;width:56px;height:56px;border-radius:50%;background:var(--cyan);color:var(--ink);font-size:20px;line-height:1;font-weight:650;font-variant-numeric:tabular-nums;margin-bottom:24px}
+.step-list li:not(:last-child)::before{content:"";position:absolute;left:72px;right:-16px;top:28px;height:1px;background:#b8d8df}
+.step-list h3{font-size:19px;line-height:1.5;margin-bottom:12px}
+.step-list p{font-size:15px;line-height:1.8;color:var(--muted)}
+.step-list .screen-detail-link{font-size:13px;line-height:24px;margin-top:8px}
+/* A real company identity feature anchors the marketing rhythm. */
+.company-section{padding-block:80px;background:var(--ink);color:var(--white)}
+.company-layout{display:grid;grid-template-columns:320px minmax(0,1fr);gap:80px;align-items:center}
+.company-heading img{display:block;width:200px;height:auto;filter:brightness(0) invert(1);margin-bottom:28px}
+.company-heading h2{font-size:36px;line-height:1.45;color:var(--white)}
+.company-intro>p{font-size:18px;line-height:1.9;color:#d3e7ed;max-width:70ch}
+.company-facts{margin-top:28px;padding-top:24px;border-top:1px solid #ffffff38}
+.company-facts p{font-size:15px;line-height:1.8;color:var(--white)}
+.company-facts p:first-child{font-weight:650}.company-facts p+p{margin-top:8px;color:#bcdde5}
+.company-facts .text-link{font-size:14px;color:var(--white)}
+.company-section a:focus-visible{outline-color:var(--cyan)}
+/* Answers stay calm, consistent, and easy to read. */
+.help-section{padding-block:80px;background:var(--white)}
+.help-layout{max-width:960px}.help-layout .section-heading{margin-bottom:32px}
+.help-layout .section-heading h2{font-size:40px;line-height:1.4;text-align:center}
 .faq-panel{border-top:1px solid var(--line)}
 .kj-question{font-family:inherit;font-weight:600;font-size:18px;line-height:30px;padding:24px 0;gap:24px;min-height:84px}
 .kj-question>.kjs-inline-wrap{min-width:0}
-.kj-question>.faq-mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;color:var(--ink);background:transparent;line-height:0}
+.kj-question>.faq-mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;color:var(--ink);background:var(--cyan-soft);line-height:0}
 .faq-mark>.icon{display:block;width:20px;height:20px}
 .kj-question:hover>.faq-mark,.kj-question[aria-expanded=true]>.faq-mark{background:var(--ink);color:var(--white)}
 .kj-question[aria-expanded=true] .icon-vertical{display:none}
 .kj-answer{padding:8px 56px 28px 0;font-size:16px;line-height:1.85}.kj-answer p{max-width:800px}
 .kj-answer .kj-link{font-size:16px}
-.download-section{background:var(--white);color:var(--ink);padding-block:48px}
-.download{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:32px 40px;border:1px solid var(--line);border-radius:16px}
-.download-identity{display:flex;align-items:center;gap:24px;min-width:0}.download-identity>img{width:64px;height:64px;border-radius:14px;flex:none}
-.download h2{font-size:26px;line-height:1.5}.download .download-note{font-size:14px;color:var(--muted);margin-top:4px;line-height:24px}
+/* One bright final action, separate from safety and company obligations. */
+.download-section{background:var(--cyan);color:var(--ink)}
+.download{display:flex;align-items:center;justify-content:space-between;gap:32px;padding-block:44px}
+.download-identity{display:flex;align-items:center;gap:24px;min-width:0}
+.download-identity>img{width:80px;height:80px;border-radius:18px;flex:none}
+.download h2{font-size:32px;line-height:1.5}.download .download-note{font-size:14px;color:var(--ink);margin-top:8px;line-height:24px}
 .download>.button{flex:none;width:var(--cta-width)}
-.official-section{padding-block:0 48px;background:var(--white)}
+.official-section{padding-block:32px;background:var(--surface)}
 .official-panel{display:grid;grid-template-columns:32px minmax(0,1fr) 220px;gap:20px;align-items:start}
 .official-icon>.icon{width:28px;height:28px;display:block}.official-panel h3{font-size:18px;margin-bottom:8px;line-height:28px}
 .official-panel p{font-size:14px;line-height:24px;color:var(--muted);max-width:740px}
-.security-links{display:flex;align-items:center;justify-content:flex-end}.security-links a{font-size:14px;line-height:24px;display:flex;gap:8px;align-items:center;min-height:44px}.security-links .icon{width:18px;height:18px}
+.security-links{display:flex;align-items:center;justify-content:flex-end}
+.security-links a{font-size:14px;line-height:24px;display:flex;gap:8px;align-items:center;min-height:44px}.security-links .icon{width:18px;height:18px}
 @media(max-width:1050px){
- .benefits-layout{gap:48px}.benefit-feature h2{font-size:38px}.benefit-feature p{font-size:18px}
- .application-steps>.shell,.company-layout{grid-template-columns:240px minmax(0,1fr);gap:48px}.application-steps h2{font-size:34px}
- .download{padding:28px}.download h2{font-size:22px}.download-identity{gap:16px}
+ .benefit-feature{grid-template-columns:170px minmax(0,1fr);gap:16px;padding:28px 24px}.application-art{width:170px}.benefit-feature h3{font-size:28px}.benefit-feature p{font-size:16px}.benefit-repayment{padding:28px 24px}
+ .company-layout{grid-template-columns:240px minmax(0,1fr);gap:48px}
+ .step-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.step-list li:nth-child(2)::before{display:none}
+ .download h2{font-size:26px}.download-identity{gap:16px}.download-identity>img{width:64px;height:64px}
  .official-panel{grid-template-columns:28px minmax(0,1fr)}.security-links{grid-column:2;justify-content:flex-start}
 }
 @media(max-width:760px){
- .application-steps{padding-block:var(--section-space)}
- .section-kicker{font-size:14px;line-height:24px;margin-bottom:20px}
- .benefits-layout{grid-template-columns:1fr;gap:32px}.benefit-feature h2{font-size:32px;line-height:1.45;max-width:9em;margin-bottom:16px}.benefit-feature h2::after{width:48px;height:4px;margin-top:20px}.benefit-feature p{font-size:17px;line-height:1.8;max-width:none}
- .benefit-support{border-top:1px solid var(--line);padding-top:28px}.benefit-support article+article{margin-top:24px;padding-top:24px}.benefit-support h3{font-size:22px;margin-bottom:8px}.benefit-support p{font-size:15px;line-height:1.8}
- .product-help-links{grid-template-columns:1fr;gap:0;margin-top:28px;padding-top:12px}.product-help-links .text-link{font-size:14px;padding-right:0;min-height:52px}
- .application-steps>.shell,.company-layout{grid-template-columns:1fr;gap:32px}.application-steps h2{font-size:30px;line-height:1.45;max-width:none}
- .step-list li{grid-template-columns:40px minmax(0,1fr);gap:20px;padding-bottom:24px}.step-number{width:40px;height:40px;font-size:15px}.step-list li:not(:last-child)::before{left:20px;top:40px}.step-copy{padding:3px 0 24px}.step-list h3{font-size:18px;line-height:28px;margin-bottom:8px}.step-list p{font-size:15px;line-height:27px}.step-list .screen-detail-link{font-size:13px}
- .company-heading{display:flex;align-items:center;gap:16px}.company-heading img{width:44px;height:44px;margin:0}.company-heading h2{font-size:28px}.company-intro>p{font-size:16px;line-height:1.9}.company-facts{padding:20px;margin-top:24px}.company-facts p{font-size:14px}
- .help-layout .section-heading{margin-bottom:28px}.help-layout .section-heading h2{font-size:30px;line-height:1.45}
- .kj-question{font-size:16px;line-height:28px;gap:16px;padding:20px 0;min-height:76px}.kj-answer{padding-right:0;font-size:15px;line-height:1.8}.kj-answer .kj-link{font-size:15px}
- .download-section{padding-block:32px}.download{display:block;padding:24px}.download-identity{gap:16px;align-items:start}.download-identity>img{width:48px;height:48px;border-radius:10px}.download h2{font-size:21px;line-height:1.5}.download .download-note{font-size:13px;line-height:23px;margin-top:8px}.download>.button{margin-top:24px;width:100%}
- .official-section{padding-bottom:20px}.official-panel{grid-template-columns:24px minmax(0,1fr);gap:12px 16px}.official-icon>.icon{width:24px;height:24px}.official-panel h3{font-size:17px;line-height:28px}.official-panel p{font-size:13px;line-height:24px}.security-links{grid-column:2}
+ .product-section,.company-section,.help-section{padding-block:56px}.application-steps{padding-block:0 56px}
+ .product-section>.shell>h2,.application-steps h2,.help-layout .section-heading h2{font-size:30px;line-height:1.45;margin-bottom:28px}
+ .benefits-layout{grid-template-columns:1fr;gap:20px}
+ .benefit-feature{grid-template-columns:1fr;gap:16px;padding:28px 24px}.application-art{width:180px;margin-inline:auto}.benefit-feature h3{font-size:28px;line-height:1.5;margin-bottom:12px}.benefit-feature p{font-size:16px;line-height:1.85}
+ .benefit-repayment{display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;padding:24px}.repayment-art{width:72px;margin:0;align-self:center}.benefit-repayment .benefit-copy{display:contents}.benefit-repayment h3{grid-column:2;align-self:center;font-size:22px;margin:0}.benefit-repayment p,.benefit-repayment .image-tool{grid-column:1/-1;margin:0}.benefit-repayment p{font-size:15px;line-height:1.8}
+ .product-help-links{grid-template-columns:1fr;gap:0;margin-top:20px}.product-help-links .text-link{font-size:14px;min-height:52px;padding-block:12px}
+ .step-list{grid-template-columns:1fr;gap:0}.step-list li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:20px;padding-bottom:28px}.step-list li:last-child{padding-bottom:0}.step-number{width:44px;height:44px;font-size:16px;margin:0}.step-copy{padding-top:5px}.step-list h3{font-size:18px;line-height:28px;margin-bottom:8px}.step-list p{font-size:15px;line-height:27px}.step-list li:not(:last-child)::before{display:block;left:22px;right:auto;top:56px;width:1px;height:calc(100% - 68px)}
+ .company-layout{grid-template-columns:1fr;gap:28px}.company-heading img{width:156px;margin-bottom:20px}.company-heading h2{font-size:30px}.company-intro>p{font-size:16px;line-height:1.9}.company-facts{margin-top:24px;padding-top:20px}.company-facts p{font-size:14px}
+ .help-layout .section-heading{margin-bottom:0}.kj-question{font-size:16px;line-height:28px;gap:16px;padding:20px 0;min-height:76px}.kj-answer{padding-right:0;font-size:15px;line-height:1.8}.kj-answer .kj-link{font-size:15px}
+ .download{display:block;padding-block:32px}.download-identity{gap:16px;align-items:start}.download-identity>img{width:56px;height:56px;border-radius:12px}.download h2{font-size:24px;line-height:1.5}.download .download-note{font-size:13px;line-height:23px;margin-top:8px}.download>.button{margin-top:24px;width:100%}
+ .official-section{padding-block:28px}.official-panel{grid-template-columns:24px minmax(0,1fr);gap:12px 16px}.official-icon>.icon{width:24px;height:24px}.official-panel h3{font-size:17px;line-height:28px}.official-panel p{font-size:13px;line-height:24px}.security-links{grid-column:2}
 }

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-27T13:58:21+08:00",
+  "title": "Design System: Kiangjai Thailand V2",
+  "extensions": {
+    "colorMeta": {
+      "cyan": {
+        "role": "primary",
+        "displayName": "Campaign Cyan",
+        "tonalRamp": [
+          "oklch(15% 0.1294 210.10)",
+          "oklch(27% 0.1294 210.10)",
+          "oklch(38% 0.1294 210.10)",
+          "oklch(49% 0.1294 210.10)",
+          "oklch(61% 0.1294 210.10)",
+          "oklch(72% 0.1294 210.10)",
+          "oklch(84% 0.1294 210.10)",
+          "oklch(95% 0.1294 210.10)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Deep Cyan Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0630 229.30)",
+          "oklch(27% 0.0630 229.30)",
+          "oklch(38% 0.0630 229.30)",
+          "oklch(49% 0.0630 229.30)",
+          "oklch(61% 0.0630 229.30)",
+          "oklch(72% 0.0630 229.30)",
+          "oklch(84% 0.0630 229.30)",
+          "oklch(95% 0.0630 229.30)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Reading Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0468 222.14)",
+          "oklch(27% 0.0468 222.14)",
+          "oklch(38% 0.0468 222.14)",
+          "oklch(49% 0.0468 222.14)",
+          "oklch(61% 0.0468 222.14)",
+          "oklch(72% 0.0468 222.14)",
+          "oklch(84% 0.0468 222.14)",
+          "oklch(95% 0.0468 222.14)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Quiet Text",
+        "tonalRamp": [
+          "oklch(15% 0.0310 220.18)",
+          "oklch(27% 0.0310 220.18)",
+          "oklch(38% 0.0310 220.18)",
+          "oklch(49% 0.0310 220.18)",
+          "oklch(61% 0.0310 220.18)",
+          "oklch(72% 0.0310 220.18)",
+          "oklch(84% 0.0310 220.18)",
+          "oklch(95% 0.0310 220.18)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Reading Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0032 197.10)",
+          "oklch(27% 0.0032 197.10)",
+          "oklch(38% 0.0032 197.10)",
+          "oklch(49% 0.0032 197.10)",
+          "oklch(61% 0.0032 197.10)",
+          "oklch(72% 0.0032 197.10)",
+          "oklch(84% 0.0032 197.10)",
+          "oklch(95% 0.0032 197.10)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Quiet Divider",
+        "tonalRamp": [
+          "oklch(15% 0.0105 219.60)",
+          "oklch(27% 0.0105 219.60)",
+          "oklch(38% 0.0105 219.60)",
+          "oklch(49% 0.0105 219.60)",
+          "oklch(61% 0.0105 219.60)",
+          "oklch(72% 0.0105 219.60)",
+          "oklch(84% 0.0105 219.60)",
+          "oklch(95% 0.0105 219.60)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Open White",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.00)",
+          "oklch(27% 0.0000 0.00)",
+          "oklch(38% 0.0000 0.00)",
+          "oklch(49% 0.0000 0.00)",
+          "oklch(61% 0.0000 0.00)",
+          "oklch(72% 0.0000 0.00)",
+          "oklch(84% 0.0000 0.00)",
+          "oklch(95% 0.0000 0.00)"
+        ]
+      },
+      "cyan-soft": {
+        "role": "neutral",
+        "displayName": "Quiet Cyan",
+        "tonalRamp": [
+          "oklch(15% 0.0203 208.14)",
+          "oklch(27% 0.0203 208.14)",
+          "oklch(38% 0.0203 208.14)",
+          "oklch(49% 0.0203 208.14)",
+          "oklch(61% 0.0203 208.14)",
+          "oklch(72% 0.0203 208.14)",
+          "oklch(84% 0.0203 208.14)",
+          "oklch(95% 0.0203 208.14)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Product Display",
+        "purpose": "Homepage product name; responsive module values remain in the implementation."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Main homepage chapter headings."
+      },
+      "body": {
+        "displayName": "Thai Reading Text",
+        "purpose": "Default text; long modules increase leading where implemented."
+      }
+    },
+    "shadows": [
+      {
+        "name": "product-device",
+        "value": "0 20px 36px #00384c26",
+        "purpose": "Separate the complete App device from its structural stage."
+      },
+      {
+        "name": "app-signature",
+        "value": "0 8px 20px #00384c1c",
+        "purpose": "Desktop App badge next to the device."
+      },
+      {
+        "name": "dialog",
+        "value": "0 24px 80px #002b3a38",
+        "purpose": "Temporary native dialogs."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-color",
+        "value": "background-color .18s, color .18s, border-color .18s",
+        "purpose": "Shared button color state changes; disabled for reduced motion."
+      },
+      {
+        "name": "nav-color",
+        "value": "color .2s",
+        "purpose": "Navigation color state changes; disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1200px"
+      },
+      {
+        "name": "tablet",
+        "value": "1050px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Download Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Dark main action, 224px on desktop and full content width on mobile.",
+      "html": "<button type=\"button\" class=\"ds-button ds-primary\">ดาวน์โหลดแอป</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,12px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-primary{width:224px;background:var(--ink,#00384C);color:var(--white,#FFFFFF)}.ds-primary:hover{background:#07586A}.ds-primary:active{background:#07586A}@media(max-width:760px){.ds-primary{width:100%}}"
+    },
+    {
+      "name": "Cyan Button",
+      "kind": "button",
+      "refersTo": "button-cyan",
+      "description": "Brand-colored action on a neutral surface.",
+      "html": "<button type=\"button\" class=\"ds-button ds-cyan\">ดาวน์โหลดแอป</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,12px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-cyan{background:var(--cyan,#44E0F8);color:var(--ink,#00384C)}.ds-cyan:hover,.ds-cyan:active{background:#74E9FA}"
+    },
+    {
+      "name": "Outlined Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Lower-emphasis action with the shared control shape.",
+      "html": "<button type=\"button\" class=\"ds-button ds-outline\">กลับหน้าแรก</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,12px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-outline{background:transparent;color:var(--ink,#00384C);border-color:var(--ink,#00384C)}.ds-outline:hover,.ds-outline:active{background:var(--surface,#F3F6F6)}"
+    },
+    {
+      "name": "Brand Navigation Links",
+      "kind": "nav",
+      "description": "Desktop navigation links shown on ink with cyan hover and current-page underline.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"เมนูหลัก\"><a href=\"#\" aria-current=\"page\">หน้าแรก</a><a href=\"#\">จุดเด่นของบริการ</a><a href=\"#\">ศูนย์ความปลอดภัย</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:0 24px;background:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif;font-size:14px}.ds-nav a{position:relative;padding:24px 0;color:var(--white,#FFFFFF);text-decoration:none;transition:color .2s}.ds-nav a:hover,.ds-nav a:active,.ds-nav a[aria-current]{color:var(--cyan,#44E0F8)}.ds-nav a[aria-current]{font-weight:700}.ds-nav a[aria-current]::after{content:\"\";position:absolute;left:0;right:0;bottom:15px;height:3px;background:var(--cyan,#44E0F8)}.ds-nav a:focus-visible{outline:3px solid var(--cyan,#44E0F8);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
+    },
+    {
+      "name": "Application Feature Panel",
+      "kind": "card",
+      "description": "The main functional graphic panel, using the original editable document pictogram. The check is symbolic, not approval evidence.",
+      "html": "<article class=\"ds-feature\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"64\" height=\"48\" viewBox=\"0 0 320 240\" fill=\"none\" aria-hidden=\"true\"><path d=\"M48 22h146l26 26v148H48V22Z\" fill=\"#44E0F8\"/><path d=\"M84 42h130l46 46v130H84V42Z\" fill=\"#FFFFFF\" stroke=\"#00384C\" stroke-width=\"6\" stroke-linejoin=\"miter\"/><path d=\"M214 42v46h46\" fill=\"#DFF9FD\" stroke=\"#00384C\" stroke-width=\"6\" stroke-linejoin=\"miter\"/><path d=\"M112 80h50M112 102h32M112 194h78\" stroke=\"#00384C\" stroke-width=\"6\"/><path d=\"m120 154 25 25 57-57\" stroke=\"#44E0F8\" stroke-width=\"8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg><div><h3>สมัครออนไลน์ทุกขั้นตอน</h3><p>สมัคร ยืนยันตัวตน และยืนยันการกู้เงินได้ทางออนไลน์</p></div></article>",
+      "css": ".ds-feature{display:grid;grid-template-columns:240px minmax(0,1fr);align-items:center;gap:24px;padding:36px 32px;border-radius:16px;background:var(--ink,#00384C);color:var(--white,#FFFFFF);font-family:Noto Sans Thai,sans-serif}.ds-feature svg{display:block;width:240px;height:auto}.ds-feature h3{margin:0 0 16px;font-size:34px;font-weight:700;line-height:1.45;color:var(--white,#FFFFFF)}.ds-feature p{margin:0;font-size:17px;line-height:1.85;color:#D0E9EE}@media(max-width:1050px){.ds-feature{grid-template-columns:170px minmax(0,1fr);gap:16px;padding:28px 24px}.ds-feature svg{width:170px}.ds-feature h3{font-size:28px}.ds-feature p{font-size:16px}}@media(max-width:760px){.ds-feature{grid-template-columns:1fr;padding:28px 24px}.ds-feature svg{width:180px;margin-inline:auto}}"
+    },
+    {
+      "name": "FAQ Question",
+      "kind": "button",
+      "description": "Quiet question row with the current fixed SVG marker box; behavior is supplied by the website.",
+      "html": "<button type=\"button\" class=\"ds-faq\" aria-expanded=\"false\"><span>คำถามที่พบบ่อย</span><span class=\"ds-faq-mark\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5v14\" stroke=\"currentColor\" stroke-width=\"2\"/></svg></span></button>",
+      "css": ".ds-faq{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:84px;padding:24px 0;border:0;border-block:1px solid var(--line,#D9E2E5);background:var(--white,#FFFFFF);color:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif;font-size:18px;font-weight:600;line-height:30px;text-align:left;cursor:pointer}.ds-faq-mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--cyan-soft,#E7FAFD);color:var(--ink,#00384C)}.ds-faq:hover .ds-faq-mark,.ds-faq:active .ds-faq-mark,.ds-faq[aria-expanded=true] .ds-faq-mark{background:var(--ink,#00384C);color:var(--white,#FFFFFF)}.ds-faq:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(max-width:760px){.ds-faq{font-size:16px;line-height:28px;min-height:76px;padding:20px 0;gap:16px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Cyan Product Stage",
+    "overview": "The system pairs confident Thai product communication with calm, task-oriented reading. The user-selected MoneyThunder homepage supplies the campaign grammar; Kiangjai's original identity, App imagery and reviewed content remain the visual and product authority.\n\nA complete original App screen sits on a crisp layered stage. Strong cyan and ink chapters create the homepage rhythm; support and policy pages use restrained document layouts. These are native, editable HTML/CSS surfaces.",
+    "keyCharacteristics": [
+      "One integrated product campaign with meaningful functional graphics.",
+      "Original brand assets and complete App screenshots.",
+      "Strong chapter contrast with quiet reading areas.",
+      "Natural Thai typography and visible keyboard states."
+    ],
+    "rules": [
+      {
+        "name": "The Chapter Contrast Rule",
+        "body": "Use cyan and ink to establish purposeful chapters; keep reading areas open and neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "The Thai Integrity Rule",
+        "body": "Preserve natural Thai wrapping and zero letter spacing; the amount's numeric tracking does not apply to Thai text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Structural Depth Rule",
+        "body": "Reserve depth for the complete product stage and dialogs; do not scatter floating ornaments through reading content.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the original master Logo and complete App images at their natural ratio.",
+      "Do keep the campaign integrated and functional illustrations subordinate to product truth.",
+      "Do preserve Thai wrapping, keyboard focus and reduced-motion behavior.",
+      "Do use reading layouts for safety and policy content."
+    ],
+    "donts": [
+      "Don't introduce people photos, coins, gradients, giant decorative logos or fake App screens.",
+      "Don't crop a phone into half-screen decoration or split its background through the device.",
+      "Don't invent financial claims, approval evidence, store links, payment QR codes or legal resources."
+    ]
+  }
+}

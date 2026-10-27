@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" fill="none">
+  <!-- QR glyph adapted from Phosphor Icons ph:qr-code-duotone,
+       Copyright (c) 2023 Phosphor Icons, MIT license.
+       Source in this project: ../icons/qr-payment-duotone.svg.
+       License text: ../icons/LICENSE-Phosphor.txt.
+       Scanner-corner composition is original Kiangjai vector geometry.
+       This symbolic glyph encodes no destination and is not a payment QR. -->
+  <path d="M48 66V22h44M228 22h44v44M272 174v44h-44M92 218H48v-44" stroke="#44E0F8" stroke-width="8" stroke-linecap="square"/>
+  <g transform="translate(32 -8)">
+    <path d="M112 56v48a8 8 0 0 1-8 8H56a8 8 0 0 1-8-8V56a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8m-8 88H56a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8m96-96h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8" fill="#DFF9FD"/>
+    <path d="M56 48h48a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H56a8 8 0 0 1-8-8V56a8 8 0 0 1 8-8Zm0 96h48a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H56a8 8 0 0 1-8-8v-48a8 8 0 0 1 8-8Zm96-96h48a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8h-48a8 8 0 0 1-8-8V56a8 8 0 0 1 8-8ZM144 144v32m32-32v64h-32m32-48h32m0 32v16" stroke="#00384C" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </g>
+</svg>
