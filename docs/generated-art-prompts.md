@@ -1,16 +1,20 @@
-# Generated campaign artwork · round 11
+# Generated artwork experiments · current status round 12
 
-Created 2026-10-27 using the built-in image generation tool (`image_gen.imagegen`), with `transparent_background: true`. These are original conceptual still-life illustrations, not photographs of actual customers, proof of services, approvals, or financial data. No people were generated. App screens, Thai website text, and controls are separate native HTML; no App interface was generated or repainted.
+Updated 2026-10-27. **No generated raster image is selected for the current visitor-facing website.** The three round-11 still-life assets below were deployed previously but rejected by the user as artificial and insufficiently relevant to the product. Their prompts are retained as historical provenance, not current creative guidance or approved deliverables. All four WebP derivatives have been withdrawn from the current site.
 
-The source PNG masters are delivered outside the repository in `../round11-preview/generated-masters/`. Visitor assets are alpha-preserving WebP derivatives in `assets/campaign/`; only resizing and format optimization were applied after generation. No competitor artwork was copied.
+Round 11 used the built-in image generation tool (`image_gen.imagegen`) with `transparent_background: true`. Original masters remain outside the repository in `../round11-preview/generated-masters/`. App screens, Thai copy and controls were never generated or repainted.
 
-| Asset | Generated source basename | Derivatives |
+| Rejected round-11 experiment | Generated source basename | Withdrawn derivatives |
 | --- | --- | --- |
 | Everyday counter | `exec-e0723421-da52-47ec-af75-365ef76cfe7f.png` | `everyday-counter-640.webp`, `everyday-counter-1000.webp` |
 | Online application | `exec-faf2e36d-f77d-457e-9a17-2994d51ca429.png` | `online-application.webp` |
 | Repayment planning | `exec-8fec04fb-af13-4ab9-a1c9-20fa84a950b1.png` | `repayment-planning.webp` |
 
-The hero scene frames the complete user-supplied App home (`assets/app/home-overview.png`) as a separate image. The plants in the generated composition were accepted as ordinary scene props; they do not imply any product capability.
+## Round-12 hardware experiment — not selected
+
+A hardware-only generated device frame was tested but not used after checking operating-system appearance and frame proportions. Its master remains outside the repository in `../round12-preview/generated-masters/`; the exact prompt and output metadata belong with that experiment's evidence. The current Hero instead uses the complete user-supplied App home in a native HTML/CSS frame. No generated frame or still life is loaded by the page. This document does not describe a real hardware photograph.
+
+## Historical round-11 prompts
 
 ## Hero scene
 

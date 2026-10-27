@@ -1,6 +1,6 @@
 ---
 name: Kiangjai Thailand V2
-description: Thai product communication with a cyan campaign and precise reading surfaces.
+description: Thai product communication through original App evidence and clear reading surfaces.
 colors:
   cyan: "#44E0F8"
   ink: "#00384C"
@@ -13,7 +13,7 @@ colors:
 typography:
   display:
     fontFamily: "Noto Sans Thai, sans-serif"
-    fontSize: "62px"
+    fontSize: "60px"
     fontWeight: 750
     lineHeight: 1.35
     letterSpacing: "0"
@@ -41,8 +41,8 @@ typography:
 rounded:
   control: "12px"
   panel: "16px"
-  screenshot: "22px"
-  device: "32px"
+  screenshot: "24px"
+  device: "30px"
 spacing:
   space-1: "8px"
   space-2: "16px"
@@ -78,49 +78,45 @@ components:
     height: "52px"
 ---
 
-# Design System: Kiangjai Thailand V2
+# Design System: Kiangjai Thailand V 2
 
 ## Overview
 
-**Creative North Star: "Everyday Cyan, Real Product"**
+**Creative North Star: "Clear Cyan, Real Product"**
 
-A coherent cyan campaign pairs original generated still-life art with the untouched Kiangjai App home. The user-selected MoneyThunder homepage informs campaign completeness and chapter rhythm; Kiangjai's identity and reviewed content remain the product authority. Native HTML supplies every webpage label, action and interaction.
+The original Kiangjai App home is the sole Hero product image. A white information plane and cyan product plane separate copy, action and product evidence. Current visitor pages contain no generated raster assets. Round-11 still-life artwork was rejected by the user and withdrawn; an additional generated hardware frame was not selected after visual checks.
 
-The art uses ordinary work and shopping objects, tactile paper and canvas, hard-edged forms and cyan accents. It contains no people, generated App screen or financial evidence. Calm reading layouts support real company facts, help and policy content.
+MoneyThunder, RabbitCash and LINE BK inform content hierarchy and composition, not Kiangjai business claims. Native HTML supplies all text, controls and interactions. This direction does not claim to reproduce the lifestyle quality of MoneyThunder's licensed human photography.
 
 ## Colors and Typography
 
-Cyan carries the Hero and final download invitation. Ink anchors navigation, primary actions, the main online feature and footer. White and neutral surfaces separate product explanation, process, company and FAQ without repeated promotional banners.
+Use exact cyan #44E 0F 8 for the product field and final download invitation. White supports the header, Hero reading plane and company facts; ink anchors actions, the primary online feature and footer. Neutral surfaces support repayment, process and help.
 
-The product name uses 62px/1.35, the tagline 42px/1.4 and amount 80px/1.15. Mobile sizes are 35px, 26px and 64px. Homepage headlines use 40px, mobile 30px; reading-page titles retain 48px, policy titles 31px on mobile. Natural Thai wrapping and zero Thai letter spacing remain mandatory; compact numeric tracking applies only to the amount.
+Hero product name is 60px/1.35, tagline 40px/1.45 and amount 88px/1.15 on desktop; mobile 35px,26px and 64px. Homepage chapter headings use 40px, mobile 30px. Preserve natural Thai wrapping and zero Thai letter spacing. Numeric tracking applies only to the amount.
 
 ## Layout and Rhythm
 
-The shell is capped at 1200px with 40px desktop gutters, 32px below 1050px and 20px below 760px. Homepage spacing is section-specific: product 80/64px, steps 64/72px, company 72px, FAQ 64/80px; these become 48px on mobile. The frontmatter chapter values are reusable reference tokens, not a claim that every live section uses that spacing.
+The shell is capped at 1200px with 40px desktop gutters,32px below 1050px and 20px below 760px. Homepage product spacing is 80px; process 64/72px, company 72px, FAQ 64/80px. Mobile main sections use 48px. Frontmatter chapter tokens are reusable references, not every live section's spacing.
 
-Hero has one cyan field and one coherent product composition. The desktop Hero is at least 700px; the complete App device is 246px wide. Mobile stacks copy, one full-width action and a 428px art stage with a complete 180px device. The raster scene sits behind the independent App image; it does not paint over the screen. The old CSS podium, white amount card and adjacent App badge are removed.
+Desktop Hero has min-height 720px and a 672px product stage. The native frame is 294px wide; its complete original App image is 282px. On mobile the cyan stage is 440px high, frame 186px and image 178px. The neutral border is editable CSS, not a generated or photographed device. Do not add fake operating-system furniture or obscure the original screen.
 
-Product explanation uses a 1.65:1 hierarchy: the main ink panel combines generated folder art and the full reviewed product description; repayment is secondary with matching calendar art and a real screenshot entry. The reviewed Bangkok service area accompanies the section title. Four process nodes remain horizontal, then two-column, then vertical; only step 03 has a corresponding real confirmation image.
+Product explanation uses a primary ink text panel and subordinate neutral repayment panel. The main panel contains the full reviewed introduction plus existing process/FAQ entries. The repayment panel uses a complete 174px original screenshot with an example caption; mobile 180px. Bangkok service area remains reviewed text. Four application nodes explain the actual sequence; only step 03 has a matching confirmation image.
 
-Company information uses a white fact layout for name, registration, address and phone with one contact entry. It does not repeat the product introduction. FAQ uses a neutral 960px reading surface; download is cyan, safety neutral and footer ink. Safety pages retain a 232px task directory and reading column; policies retain a 960px document axis.
+Company facts, help, final download and safety retain their own content responsibilities. Safety pages keep the task directory and reading column; policy pages retain a 960px document axis and truthful pending state.
 
-## Shape, Depth and Assets
+## Components, Assets and Behavior
 
-Controls retain 12px radii and 52px heights; main desktop download actions are 224px wide and mobile actions fill their content width. Auxiliary tools retain 44px touch areas. Generated material depth is reserved for the coherent campaign and two feature illustrations; reading sections remain flat. Device and dialog shadows separate imagery and temporary UI.
+White header: original dark Logo, centered desktop navigation and 144×44px ink action. Below 1050px the 44px menu opens a white navigation surface. Main actions are 224×52px on desktop and full content width on mobile with 12px radii. Keyboard focus uses a 3px outline and 5px offset, cyan on ink surfaces.
 
-Transparent WebP campaign files live in `assets/campaign/`; original PNG masters and before/after evidence live outside the repository in `../round11-preview/`. Generation used `builtin-imagegen`; exact prompts and provenance are documented in `docs/generated-art-prompts.md` and `docs/visual-assets.md`. These are conceptual assets, not customer photography or business evidence.
+Hero frame radius 30px and screen 24px; mobile 24px/20px. Light native frame shadow separates the screenshot from the cyan field. FAQ uses a 32px marker with centered 20px SVG and one-open behavior. Native dialogs preserve gallery arrows, direction keys, Esc and focus restoration. Keep `scrollbar-gutter:stable` and reduced-motion behavior.
 
-## Components and Behavior
-
-Desktop navigation remains centered between the original master Logo and 144×44px download control; below 1050px it becomes a 44px menu. Main buttons share 16px labels, 12px radii and 52px heights. Hover changes color; keyboard focus uses a 3px outline with 5px offset, cyan on ink backgrounds.
-
-FAQ uses a 32px marker box with centered 20px SVG and one-open behavior. Native dialogs preserve gallery navigation, direction keys, Esc and focus restoration. `scrollbar-gutter:stable` prevents dialog shifts. Reduced-motion preferences disable transitions and smooth scrolling. Pending download and legal states remain explicit.
+Original assets live in `assets/app/` and `assets/brand/`. Withdrawn generation masters and current unselected hardware experiment remain outside the repository as process evidence; see `docs/generated-art-prompts.md`. Metadata is not a test result.
 
 ## Rules
 
-- Use original Logo and complete App images at their natural ratios.
-- Keep the generated scene behind a separate, untouched App image; no half-phone crops or generated UI.
-- Preserve exact approved Thai and business configuration; art cannot imply new features or evidence.
-- Keep photos, people, coins, fake approval badges and decorative logo enlargement out of this direction.
-- Keep safety and policy content readable, with truthful pending states.
-- Verify actual desktop and 360/375/390px mobile rendering; metadata is not an automated test result.
+- Use original Logo and complete App images at natural ratios.
+- Explain actual product use with real screenshots; retain example captions.
+- Do not reintroduce rejected still-life props, generated device frames, people, coins or fake financial evidence.
+- Preserve approved Thai and business configuration, preview downloads and legal states.
+- Keep process, company, safety and FAQ responsibilities distinct.
+- Check 1440px desktop and 360/375/390px mobile in a real browser; report visual limitations candidly.

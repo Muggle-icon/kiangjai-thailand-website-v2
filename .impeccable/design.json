@@ -120,7 +120,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Product Display",
-        "purpose": "Homepage product name, 62px desktop; mobile and module-specific values remain in the implementation."
+        "purpose": "Homepage product name, 60px desktop; mobile and module-specific values remain in the implementation."
       },
       "headline": {
         "displayName": "Section Headline",
@@ -133,9 +133,9 @@
     },
     "shadows": [
       {
-        "name": "product-device",
-        "value": "0 16px 28px #00384c30",
-        "purpose": "Separate the complete original App device from the generated still-life scene."
+        "name": "product-viewer",
+        "value": "inset 0 0 0 2px #203c47, 0 18px 30px #00384c26",
+        "purpose": "Separate the complete original App image from the cyan product plane with a neutral native frame."
       },
       {
         "name": "dialog",
@@ -170,19 +170,20 @@
       }
     ],
     "assetDirection": {
-      "generationMode": "builtin-imagegen",
-      "campaign": "assets/campaign/everyday-counter-{640,1000}.webp",
-      "features": [
-        "assets/campaign/online-application.webp",
-        "assets/campaign/repayment-planning.webp"
-      ],
+      "generationMode": "none-selected",
       "realApp": "assets/app/home-overview.png",
-      "deviceWidth": {
-        "desktop": "246px",
-        "mobile": "180px"
+      "repayment": "assets/app/repayment.png",
+      "frameWidth": {
+        "desktop": "294px",
+        "mobile": "186px"
       },
-      "mobileArtStageHeight": "428px",
-      "provenance": "docs/generated-art-prompts.md"
+      "screenWidth": {
+        "desktop": "282px",
+        "mobile": "178px"
+      },
+      "mobileArtStageHeight": "440px",
+      "provenance": "docs/visual-assets.md",
+      "unselectedExperiments": "docs/generated-art-prompts.md"
     }
   },
   "components": [
@@ -213,16 +214,16 @@
     {
       "name": "Brand Navigation Links",
       "kind": "nav",
-      "description": "Desktop navigation links shown on ink with cyan hover and current-page underline.",
+      "description": "Centered desktop navigation on white with ink links and a cyan current-page underline.",
       "html": "<nav class=\"ds-nav\" aria-label=\"เมนูหลัก\"><a href=\"#\" aria-current=\"page\">หน้าแรก</a><a href=\"#\">จุดเด่นของบริการ</a><a href=\"#\">ศูนย์ความปลอดภัย</a></nav>",
-      "css": ".ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:0 24px;background:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif;font-size:14px}.ds-nav a{position:relative;padding:24px 0;color:var(--white,#FFFFFF);text-decoration:none;transition:color .2s}.ds-nav a:hover,.ds-nav a:active,.ds-nav a[aria-current]{color:var(--cyan,#44E0F8)}.ds-nav a[aria-current]{font-weight:700}.ds-nav a[aria-current]::after{content:\"\";position:absolute;left:0;right:0;bottom:15px;height:3px;background:var(--cyan,#44E0F8)}.ds-nav a:focus-visible{outline:3px solid var(--cyan,#44E0F8);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:0 24px;background:var(--white,#FFFFFF);font-family:Noto Sans Thai,sans-serif;font-size:14px}.ds-nav a{position:relative;padding:24px 0;color:var(--ink,#00384C);text-decoration:none;transition:color .2s}.ds-nav a:hover,.ds-nav a:active,.ds-nav a[aria-current]{color:var(--ink,#00384C)}.ds-nav a[aria-current]{font-weight:700}.ds-nav a[aria-current]::after{content:\"\";position:absolute;left:0;right:0;bottom:15px;height:3px;background:var(--cyan,#44E0F8)}.ds-nav a:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
     },
     {
       "name": "Application Feature Panel",
       "kind": "card",
-      "description": "Primary online product explanation with original generated blank-document still life and reviewed full introduction; art is conceptual, not approval evidence.",
-      "html": "<article class=\"ds-feature\"><img src=\"assets/campaign/online-application.webp\" alt=\"\" width=\"1448\" height=\"1086\"><div><h3>สมัครออนไลน์ทุกขั้นตอน</h3><p><!-- Insert the unchanged reviewed full product introduction from the content catalog. --></p></div></article>",
-      "css": ".ds-feature{display:grid;grid-template-columns:43% minmax(0,1fr);align-items:center;gap:8px;padding:32px 32px 32px 16px;border-radius:16px;background:var(--ink,#00384C);color:var(--white,#FFFFFF);font-family:Noto Sans Thai,sans-serif}.ds-feature img{display:block;width:100%;height:auto}.ds-feature h3{margin:0 0 16px;font-size:32px;font-weight:700;line-height:1.5;color:var(--white,#FFFFFF)}.ds-feature p{margin:0;font-size:16px;line-height:1.9;color:#D0E9EE}@media(max-width:1050px){.ds-feature{grid-template-columns:1fr;padding:20px 28px 28px;gap:0}.ds-feature img{width:220px;margin-inline:auto}.ds-feature h3{font-size:28px}}@media(max-width:760px){.ds-feature{padding:16px 24px 28px}.ds-feature h3{margin-bottom:12px}.ds-feature p{line-height:1.85}}"
+      "description": "Primary text-led online product explanation with the unchanged reviewed full introduction and existing process/FAQ entries; no generated illustration.",
+      "html": "<article class=\"ds-feature\"><h3>สมัครออนไลน์ทุกขั้นตอน</h3><p><!-- Insert the unchanged reviewed full product introduction from the content catalog. --></p><a class=\"ds-step-link\" href=\"#kj-steps\"><!-- Existing reviewed process label --></a></article>",
+      "css": ".ds-feature{padding:32px 36px;border-radius:16px;background:var(--ink,#00384C);color:var(--white,#FFFFFF);font-family:Noto Sans Thai,sans-serif}.ds-feature h3{margin:0 0 20px;font-size:34px;font-weight:700;line-height:1.5;color:var(--white,#FFFFFF)}.ds-feature p{margin:0;font-size:17px;line-height:1.95;color:#D0E9EE}.ds-step-link{display:inline-flex;align-items:center;min-height:44px;margin-top:20px;color:var(--white,#FFFFFF)}@media(max-width:760px){.ds-feature{padding:28px 24px}.ds-feature h3{font-size:26px;margin-bottom:16px}.ds-feature p{font-size:16px;line-height:1.9}}"
     },
     {
       "name": "FAQ Question",
@@ -233,18 +234,18 @@
     }
   ],
   "narrative": {
-    "northStar": "Everyday Cyan, Real Product",
-    "overview": "A coherent cyan campaign pairs original generated still-life art with the untouched Kiangjai App home. MoneyThunder informs campaign completeness and chapter rhythm; reviewed content and original identity remain the product authority. Native HTML supplies all webpage labels, controls and interactions. Art is conceptual, not customer photography or business evidence.",
+    "northStar": "Clear Cyan, Real Product",
+    "overview": "An untouched App home is the sole Hero product image, framed with native HTML/CSS on a cyan product plane beside a white information plane. No generated raster is selected for visitor pages. Competitors inform hierarchy and content responsibilities; reviewed copy remains the product authority.",
     "keyCharacteristics": [
-      "Transparent generated work-life still life behind one complete real App home.",
-      "Coordinated paper-and-canvas feature art with a clear primary/secondary hierarchy.",
-      "Company facts and quiet reading areas instead of repeated marketing copy.",
+      "One complete original App home, separate from the white reading plane.",
+      "Text-led online product explanation and a subordinate complete repayment screenshot.",
+      "Company facts and quiet reading areas with independent responsibilities.",
       "Natural Thai typography and consistent native interactions."
     ],
     "rules": [
       {
         "name": "Chapter Rhythm",
-        "body": "Use cyan for the campaign and final action, ink for navigation and primary online feature, neutral reading areas for process and help, and white for company facts.",
+        "body": "Use white for navigation and the Hero information plane, cyan for its product plane and final action, ink for primary online explanation, neutral surfaces for repayment, process and help.",
         "section": "colors"
       },
       {
@@ -254,18 +255,18 @@
       },
       {
         "name": "Image Integrity",
-        "body": "Generated assets frame the untouched App image, never replace or obscure it; keep complete natural aspect ratios.",
+        "body": "Keep untouched App images complete at natural ratios. A neutral native frame may separate them from the background; no generated device or props are selected.",
         "section": "assets"
       }
     ],
     "dos": [
       "Use original master Logo and complete real App screenshots.",
-      "Keep generated still life conceptual and subordinate to reviewed business truth.",
+      "Use original screenshots to explain actual functions with explicit example captions.",
       "Retain real pending download/legal states and keyboard access.",
       "Verify each required viewport with actual rendered screenshots."
     ],
     "donts": [
-      "Do not generate people photos, fake App interfaces, coins or approval evidence.",
+      "Do not reintroduce rejected generated still life, unselected hardware frames, people photos, fake App interfaces or approval evidence.",
       "Do not crop phones into half-screen decoration or paint over product content.",
       "Do not invent financial claims, store links, payment QR codes or license resources.",
       "Do not treat metadata or previous-round QA as current test results."

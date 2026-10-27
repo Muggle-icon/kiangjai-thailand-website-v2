@@ -1,24 +1,26 @@
-/* Product explanation: a concise introduction, one main use and one supporting use. */
-.product-section{padding-block:80px 64px}
-.product-intro{text-align:center;margin-bottom:36px}
+/* Each feature explains a real use; original repayment imagery supplies product detail. */
+.product-section{padding-block:80px}
+.product-intro{text-align:center;margin-bottom:48px}
 .product-intro h2{font-size:40px;line-height:1.4}
 .service-area{font-size:14px;line-height:24px;margin-top:12px;color:var(--muted);font-weight:500}
-.benefits-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:24px;align-items:stretch}
-.benefit-feature{display:grid;grid-template-columns:43% minmax(0,1fr);gap:8px;align-items:center;padding:32px 32px 32px 16px;background:var(--ink);border-radius:16px;color:var(--white)}
-.benefit-art{display:block;width:100%;height:auto;pointer-events:none}
-.application-art{width:100%}
-.benefit-feature h3{font-size:32px;line-height:1.5;margin-bottom:16px;color:var(--white);text-wrap:balance}
-.benefit-feature p{font-size:16px;line-height:1.9;color:#d0e9ee}
-.benefit-repayment{background:#f0f8f8;border-radius:16px;padding:24px 32px 28px;display:grid;grid-template-columns:116px minmax(0,1fr);gap:16px;align-content:center;align-items:center}
-.repayment-art{width:136px;max-width:none;margin-left:-12px}
-.benefit-repayment h3{font-size:25px;line-height:1.5;margin:0}
-.benefit-repayment .benefit-copy{display:contents}
-.benefit-repayment p,.benefit-repayment .image-tool{grid-column:1/-1}
-.benefit-repayment p{font-size:15px;line-height:1.85;color:var(--text)}
-.benefit-repayment .image-tool{gap:8px;font-size:13px;margin-top:0}
+.benefits-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:64px;align-items:stretch}
+.benefit-feature{padding:32px 36px;background:var(--ink);border-radius:16px;color:var(--white)}
+.benefit-feature h3{font-size:34px;line-height:1.5;margin-bottom:20px;color:var(--white)}
+.benefit-feature h3>span,.application-steps h2>span{display:inline-block;white-space:nowrap}
+.benefit-feature>p{font-size:17px;line-height:1.95;color:#d0e9ee;max-width:55ch}
+.benefit-steps-link{margin-top:20px;color:var(--white)}
+.benefit-feature .text-link{color:var(--white)}.benefit-feature .text-link:hover{color:var(--cyan)}.benefit-feature .text-link:focus-visible{outline-color:var(--cyan)}
+.benefit-repayment{background:var(--surface);border-radius:16px;padding:32px;display:grid;grid-template-columns:minmax(0,1fr) 174px;gap:20px 24px;align-items:center}
+.benefit-repayment h3{font-size:28px;line-height:1.5;margin-bottom:16px;color:var(--ink)}
+.benefit-repayment p{font-size:15px;line-height:1.9;color:var(--muted)}
+.benefit-repayment figure{grid-column:2;grid-row:1/3;margin:0;align-self:center}
+.benefit-repayment figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px}
+.benefit-repayment figcaption{text-align:center;font-size:10px;line-height:18px;margin-top:12px;color:var(--muted)}
+.benefit-repayment .image-tool{gap:8px;font-size:13px;margin:0;color:var(--ink);align-self:start;justify-self:start;text-align:left}
+.benefit-repayment .image-tool:hover{color:#05697b}
 .image-tool .icon{width:17px;height:17px}
-.product-help-links{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
-.product-help-links .text-link{font-size:15px;justify-content:space-between;gap:16px;padding:16px 0;text-decoration:none;border-bottom:1px solid var(--line)}
+.product-help-links{display:grid;grid-template-columns:1fr;gap:0;margin-top:28px;border-top:1px solid #ffffff40}
+.product-help-links .text-link{font-size:14px;justify-content:space-between;gap:16px;padding:14px 0;text-decoration:none;border-bottom:1px solid #ffffff40}
 .product-help-links .text-link:hover{text-decoration:underline}
 /* Process numbers represent the actual sequence, never four invented App screens. */
 .application-steps{padding-block:64px 72px;background:var(--surface)}
@@ -69,9 +71,8 @@
 .security-links{display:flex;align-items:center;justify-content:flex-end}
 .security-links a{font-size:14px;line-height:24px;display:flex;gap:8px;align-items:center;min-height:44px}.security-links .icon{width:18px;height:18px}
 @media(max-width:1050px){
- .product-intro{gap:24px}.product-intro h2{font-size:34px}
- .benefit-feature{grid-template-columns:1fr;gap:0;padding:20px 28px 28px}.application-art{width:220px;margin-inline:auto}.benefit-feature h3{font-size:28px}.benefit-feature p{font-size:16px}
- .benefit-repayment{display:block;padding:24px}.repayment-art{width:140px;margin:0 auto 16px}.benefit-repayment .benefit-copy{display:block}.benefit-repayment h3{margin-bottom:12px}.benefit-repayment .image-tool{margin-top:8px}
+ .product-intro h2{font-size:34px}.benefits-layout{gap:32px;grid-template-columns:1fr 1fr}.benefit-feature h3{font-size:28px}.benefit-feature>p{font-size:16px}
+ .benefit-repayment{grid-template-columns:1fr;padding:28px;gap:20px}.benefit-repayment figure{grid-column:1;grid-row:2;width:160px;margin-inline:auto}.benefit-repayment h3{font-size:26px}.benefit-repayment .image-tool{grid-row:3}
  .company-layout{grid-template-columns:220px minmax(0,1fr);gap:40px}.company-facts{grid-template-columns:1fr}.company-registration{grid-column:auto}.company-phone{display:flex;align-items:baseline;gap:16px}.company-phone p[data-phone]{margin:0}
  .step-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.step-list li:nth-child(2)::before{display:none}
  .download h2{font-size:26px}.download-identity{gap:16px}.download-identity>img{width:64px;height:64px}
@@ -79,11 +80,11 @@
 }
 @media(max-width:760px){
  .product-section{padding-block:48px}.company-section,.help-section{padding-block:48px}.application-steps{padding-block:48px}
- .product-intro{text-align:left;margin-bottom:28px}.product-intro h2,.application-steps h2,.help-layout .section-heading h2{font-size:30px;line-height:1.45;margin-bottom:0}.application-steps h2{margin-bottom:28px}.service-area{font-size:13px;margin-top:16px}
- .benefits-layout{grid-template-columns:1fr;gap:16px}
- .benefit-feature{grid-template-columns:1fr;gap:0;padding:16px 24px 28px}.application-art{width:220px;margin-inline:auto}.benefit-feature h3{font-size:28px;line-height:1.5;margin-bottom:12px}.benefit-feature p{font-size:16px;line-height:1.85}
- .benefit-repayment{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px 16px;padding:20px 24px 24px}.repayment-art{width:124px;margin:0 0 0 -12px;align-self:center}.benefit-repayment .benefit-copy{display:contents}.benefit-repayment h3{grid-column:2;align-self:center;font-size:22px;margin:0}.benefit-repayment p,.benefit-repayment .image-tool{grid-column:1/-1;margin:0}.benefit-repayment p{font-size:15px;line-height:1.85}
- .product-help-links{grid-template-columns:1fr;gap:0;margin-top:16px}.product-help-links .text-link{font-size:14px;min-height:52px;padding-block:12px}
+ .product-intro{text-align:left;margin-bottom:28px}.product-intro h2,.application-steps h2,.help-layout .section-heading h2{font-size:30px;line-height:1.45;margin-bottom:0}.application-steps h2{margin-bottom:28px}.service-area{font-size:13px;margin-top:12px}
+ .benefits-layout{grid-template-columns:1fr;gap:28px}
+ .benefit-feature{padding:28px 24px}.benefit-feature h3{font-size:26px;line-height:1.5;margin-bottom:16px}.benefit-feature>p{font-size:16px;line-height:1.9}.benefit-steps-link{margin-top:16px;font-size:14px}
+ .benefit-repayment{display:grid;grid-template-columns:1fr;gap:24px;padding:28px 24px}.benefit-repayment h3{font-size:26px;margin-bottom:12px}.benefit-repayment p{font-size:15px;line-height:1.85}.benefit-repayment figure{grid-column:1;grid-row:2;width:180px;margin-inline:auto}.benefit-repayment .image-tool{grid-row:3;justify-self:center}
+ .product-help-links{gap:0;margin-top:20px}.product-help-links .text-link{font-size:14px;min-height:52px;padding-block:12px}
  .step-list{grid-template-columns:1fr;gap:0}.step-list li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:20px;padding-bottom:28px}.step-list li:last-child{padding-bottom:0}.step-number{width:44px;height:44px;font-size:16px;margin:0}.step-copy{padding-top:5px}.step-list h3{font-size:18px;line-height:28px;margin-bottom:8px}.step-list p{font-size:15px;line-height:27px}.step-list li:not(:last-child)::before{display:block;left:22px;right:auto;top:56px;width:1px;height:calc(100% - 68px)}
  .company-layout{grid-template-columns:1fr;gap:28px}.company-heading img{width:144px;margin-bottom:16px}.company-heading h2{font-size:30px;margin-bottom:8px}.company-facts{gap:20px;padding:0}.company-registration{padding-bottom:20px}.company-registration h3{font-size:21px;margin-bottom:8px}.company-facts p{font-size:14px}.company-phone{display:block}.company-phone p[data-phone]{font-size:22px;margin-top:4px}
  .help-layout .section-heading{margin-bottom:24px}.kj-question{font-size:16px;line-height:28px;gap:16px;padding:20px 0;min-height:76px}.kj-answer{padding-right:0;font-size:15px;line-height:1.8}.kj-answer .kj-link{font-size:15px}
