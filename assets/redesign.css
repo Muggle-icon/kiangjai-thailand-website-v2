@@ -4,7 +4,7 @@
 :root{
  --cyan:#44E0F8;--cyan-soft:#e7fafd;--ink:#00384c;--text:#183d49;
  --muted:#566e76;--surface:#f2f6f7;--line:#d9e2e5;--white:#fff;
- --content:1240px;--gutter:48px;--grid-gap:24px;--column-gap:64px;
+ --content:1120px;--gutter:48px;--grid-gap:24px;--column-gap:64px;
  --section-space:80px;--heading-gap:32px;--group-gap:24px;--paragraph-gap:16px;
  --font-page:48px;--font-heading:40px;--font-module:28px;--font-title:20px;
  --font-body:16px;--font-small:14px;--font-caption:12px;

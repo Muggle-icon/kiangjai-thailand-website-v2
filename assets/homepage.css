@@ -1,17 +1,20 @@
 /* Full-width chapter surfaces, with exactly one shared content container. */
-.product-section{padding-block:var(--section-space);background:var(--surface)}
-.product-intro{margin-bottom:var(--heading-gap)}
-.product-showcase{padding:0}
-.product-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:640px;gap:4px;padding:4px;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+.product-section{padding-block:64px;background:var(--cyan)}
+.product-header{display:block}
+.product-intro{min-width:0}.product-intro h2{text-align:left}
+.product-showcase{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:center;min-height:600px;padding:0}
+.product-content{grid-column:2;grid-row:1;min-width:0}.product-media{grid-column:1;grid-row:1;min-width:0}
+.product-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:520px;max-width:100%;gap:4px;padding:4px;border:0;border-radius:12px;background:var(--white);margin-top:24px}
 .product-tab{min-width:0;min-height:52px;padding:12px 20px;border:0;border-radius:8px;background:transparent;color:var(--text);font-family:inherit;font-size:var(--font-body);font-weight:var(--weight-ui);line-height:26px;text-align:center;transition:background-color .18s,color .18s}
-.product-tab:hover{color:var(--ink);background:var(--surface)}.product-tab[aria-selected=true]{background:var(--cyan);color:var(--ink);font-weight:var(--weight-strong)}
-.product-row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--grid-gap);align-items:start;margin-top:32px;min-height:602px}
-.product-row>.benefit-feature,.product-row>.benefit-copy{grid-column:1/span 6;min-width:0;max-width:58ch}
-.product-row>.app-media{grid-column:7/span 6}
-.benefit-feature>p,.benefit-copy>p{font-size:var(--font-body);line-height:var(--leading-body);color:var(--text)}
-.benefit-feature>.service-area{font-size:var(--font-small);color:var(--muted);line-height:24px;margin-top:24px}
-.benefit-steps-link{margin-top:24px;padding:8px 18px;border:1px solid #a7bec6;border-radius:var(--radius);background:var(--white)}.benefit-steps-link:hover{background:var(--cyan-soft);text-decoration:none}
-.product-help-links{display:flex;flex-wrap:wrap;gap:0 24px;align-items:flex-start;margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}
+.product-tab:hover{color:var(--ink);background:var(--surface)}.product-tab[aria-selected=true]{background:var(--ink);color:var(--white);font-weight:var(--weight-strong)}
+.product-panels{margin-top:24px}.benefit-feature,.benefit-copy{min-width:0;max-width:58ch}
+.benefit-feature>p,.benefit-copy>p{font-size:20px;line-height:1.8;color:var(--ink)}
+.benefit-feature>.service-area{font-size:var(--font-body);color:var(--ink);line-height:26px;margin-top:24px}
+.benefit-steps-link{margin-top:24px;padding:10px 24px;border:1px solid var(--ink);border-radius:var(--radius);background:var(--ink);color:var(--white);font-size:var(--font-body)}.benefit-steps-link:hover{background:#07586a;color:var(--white);text-decoration:none}
+.product-help-links{display:flex;flex-wrap:wrap;gap:0 24px;align-items:flex-start;margin-top:24px;padding-top:16px;border-top:1px solid #00384c40}
+.product-help-links>.text-link{font-size:var(--font-body)}
+.product-section .app-media-caption{flex-direction:row;justify-content:center;gap:12px;margin-top:12px;color:var(--ink)}
+.product-section .app-image-action{background:transparent;border-color:#00384c50;white-space:nowrap}
 /* The process explains sequence; its numerals do not compete with the offer. */
 .application-steps{padding-block:var(--section-space);background:var(--white)}
 .application-steps h2{margin-bottom:var(--heading-gap)}
@@ -20,34 +23,41 @@
 .step-list li{min-width:0}.step-number{display:block;margin-bottom:16px;color:var(--ink);font-size:44px;font-weight:var(--weight-body);line-height:1.2;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .step-list h3{font-size:var(--font-title);font-weight:var(--weight-strong);line-height:1.5;margin-bottom:12px}.step-list p{font-size:var(--font-body);line-height:var(--leading-body);color:var(--text)}.step-list .screen-detail-link{margin-top:16px}
 /* Read in one direction: heading, full-width content, then the supporting action. */
-.company-section{padding-block:var(--section-space);background:var(--surface)}
+.company-section{padding-block:64px;background:var(--surface)}
 .company-layout,.help-layout{display:block}
 .company-heading h2,.help-layout .section-heading h2{font-size:var(--font-heading);margin-bottom:var(--heading-gap)}
 .section-contact{margin-top:24px;padding:8px 18px;border:1px solid #a7bec6;border-radius:var(--radius)}.section-contact:hover{background:var(--white);text-decoration:none}
+.company-details{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);gap:64px;align-items:start}
 .company-facts{display:block}
 .company-registration h3{font-size:var(--font-module);font-weight:var(--weight-strong);line-height:1.5;margin-bottom:12px}
 .company-facts p{font-size:var(--font-body);line-height:var(--leading-body);color:var(--text)}
-.company-address{max-width:75ch;margin-top:16px}.company-phone{margin-top:24px}
-.company-phone p:first-child{font-size:var(--font-small);color:var(--muted)}.company-phone p[data-phone]{font-size:24px;font-weight:var(--weight-strong);line-height:1.6;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:8px}
+.company-address{max-width:75ch;margin-top:16px}
+.company-contact{border-left:1px solid #a7bec6;padding-left:32px}.company-contact>.button{margin-top:16px;min-height:44px;padding:9px 20px}
+.company-phone p:first-child{font-size:var(--font-body);color:var(--muted)}.company-phone p[data-phone]{font-size:36px;font-weight:var(--weight-strong);line-height:1.4;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:8px}
 .help-section{padding-block:var(--section-space);background:var(--white)}
 /* Conversion and safety have separate duties, without repeated campaign imagery. */
-.download-section{background:var(--cyan);color:var(--ink)}.download{padding-block:48px}
+.download-section{background:var(--cyan);color:var(--ink)}.download{display:flex;align-items:center;justify-content:space-between;gap:32px;padding-block:40px}
 .download h2{font-size:var(--font-module);font-weight:var(--weight-strong);line-height:1.5}
-.download .download-note{font-size:var(--font-small);line-height:24px;margin-top:8px;color:var(--ink)}.download>.button{width:var(--cta-width);margin-top:24px}
-.official-section{padding-block:40px 32px;background:var(--ink);color:var(--white)}.official-panel{display:block}
+.download .download-note{font-size:var(--font-small);line-height:24px;margin-top:8px;color:var(--ink)}.download>.button{width:var(--cta-width);flex:none}
+.official-section{padding-block:32px;background:var(--ink);color:var(--white)}.official-panel{display:flex;align-items:center;justify-content:space-between;gap:48px}.official-panel>div{max-width:75ch}
 .official-panel h3{font-size:var(--font-title);font-weight:var(--weight-strong);line-height:1.5;margin-bottom:8px;color:var(--white)}.official-panel p{max-width:75ch;font-size:var(--font-small);line-height:24px;color:#c5d8df}
-.security-links{margin-top:16px}.security-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:var(--font-small);font-weight:var(--weight-ui);line-height:26px;color:var(--cyan);text-decoration:none}.security-links a:hover{text-decoration:underline}.security-links .icon{width:18px;height:18px}.security-links a:focus-visible{outline-color:var(--cyan)}
+.security-links{flex:none}.security-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:var(--font-small);font-weight:var(--weight-ui);line-height:26px;color:var(--cyan);text-decoration:none}.security-links a:hover{text-decoration:underline}.security-links .icon{width:18px;height:18px}.security-links a:focus-visible{outline-color:var(--cyan)}
 @media(max-width:1100px){
+ .product-showcase{gap:40px}.product-intro h2{font-size:36px}
+ .company-details{gap:40px}
  .step-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
 }
 @media(max-width:760px){
+ .product-section,.company-section{padding-block:40px}.product-intro h2{text-align:left;font-size:var(--font-heading)}
  .product-tabs{gap:2px;padding:3px}.product-tab{padding:10px 8px;min-height:72px;font-size:16px;line-height:24px}
- .product-row{grid-template-columns:1fr;gap:32px;min-height:0;margin-top:24px}.product-row>.benefit-feature,.product-row>.benefit-copy,.product-row>.app-media{grid-column:1}
- .product-row>.app-media{width:100%}.benefit-feature>.service-area{margin-top:20px}.benefit-steps-link{margin-top:20px}
- .product-help-links{margin-top:20px;padding-top:12px;gap:0 16px}.app-media-caption{margin-top:16px}
+ .product-showcase{display:flex;flex-direction:column;gap:24px;min-height:0;align-items:stretch}.product-content,.product-media{width:100%}
+ .benefit-feature>p,.benefit-copy>p{font-size:18px;line-height:1.8}
+ .benefit-feature>.service-area{margin-top:20px}.benefit-steps-link{margin-top:20px}
+ .product-help-links{margin-top:20px;padding-top:12px;gap:0 16px}.product-help-links>.text-link{font-size:var(--font-small)}.app-media-caption{margin-top:16px}.product-section .app-media-caption{flex-direction:column;gap:8px}
  .step-list{grid-template-columns:1fr;gap:0}.step-list li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;padding-block:24px;border-top:1px solid var(--line)}.step-list li:first-child{padding-top:0;border-top:0}.step-list li:last-child{padding-bottom:0}
  .step-number{font-size:32px;margin:0;align-self:start}.step-copy{padding-top:2px}.step-list h3{margin-bottom:8px}
  .company-registration h3{margin-bottom:8px}
- .download{padding-block:32px}.download>.button{width:100%}
- .official-section{padding-block:32px}
+ .company-details{display:block}.company-contact{margin-top:24px;padding:24px 0 0;border-left:0;border-top:1px solid var(--line)}.company-phone p[data-phone]{font-size:30px}
+ .download{display:block;padding-block:32px}.download>.button{width:100%;margin-top:24px}
+ .official-section{padding-block:32px}.official-panel{display:block}.security-links{margin-top:16px}
 }

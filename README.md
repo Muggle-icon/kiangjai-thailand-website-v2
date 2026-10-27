@@ -1,8 +1,8 @@
 # เคียงใจ Thailand website V2
 
-泰国小贷产品官网，独立仓库 `Muggle-icon/kiangjai-thailand-website-v2`。本轮针对多重容器、左起点不齐及页脚断层，参照MoneyThunder的全宽章节与连续页脚重整布局。已审泰语、产品框架、品牌、照片、JS交互均保留；原V1不受影响。
+泰国小贷产品官网，独立仓库`Muggle-icon/kiangjai-thailand-website-v2`。第十七轮重新对照MoneyThunder实页，集中调整产品／公司／页脚，并收紧共享内容轴。已审泰语、品牌、原图、业务与既有功能保留，V1不受影响。
 
-首页背景均铺满视口，只有一个最大1240px shell和48／24／20px边距。Hero全宽无外白边／圆角，文字直接复用shell；产品去掉内嵌padding并采用6+6列；公司和FAQ标题置于完整内容上方；下载文字和下方CTA左对齐；安全提醒和页脚连续深青，页脚品牌整行后公司／联系两列，手机单列，无竖线或额外横向缩进。 照片仍为Tony Wu的曼谷餐食摊实拍，未修改人物，非客户或产品代言证明。
+共享内容轴收至1120px（原1240px），48／24／20px边距不变，页头、Hero和所有页面同步。产品整章改为品牌青蓝，完整原App在左，标题／Tab／正文／操作组成右侧完整信息组；手机DOM顺序为信息组后原图。公司章标题下按左事实、右电话／联系组织；页脚按左品牌／公司、右侧既有四个主导航／联系组织，法律安全入口另占全宽底栏，下载与安全条桌面横排、手机堆叠。 照片仍为Tony Wu的曼谷实拍，未改人物；JS仅增加Tab的多ID配对控制。
 
 ## 本地运行
 
@@ -33,8 +33,8 @@ python3 -m http.server 4173
 
 继续 `releaseStatus: preview`、noindex。下载显示真实待开放提示；未增加商店链接、下载 QR、官方身份／举报渠道或放贷牌照。法律正文及原 App 图内推广、费率和示例状态仍待业务核准。
 
-第十六轮已完成18组实际布局：四页×1440／360／375／390px，加首页1024／760px，无横向溢出或可见破图。6种首页布局的9个全宽背景、23个主要左起点以及4种必检宽度的两种Tab设备规格均已测量；交互回归、7页静态检查和JS语法已完成。证据目录为仓库外`../round16-preview/`；线上发布结论以`../round16-preview/release-verification.json`中的commit、CI与实际浏览器记录为准；本文件记录本地验收。
+第十七轮已完成18组实际页面（四页×1440／360／375／390px，另加首页1024／760px），无横向溢出或可见破图；4组配对设备规格、所有aria-controls目标及17项运行记录已检查，7页静态检查、JS语法和差异检查通过。catalog／config／原HOME的SHA保持基线。当前证据在`../round17-preview/`；线上发布结论以`../round17-preview/release-verification.json`中的commit、CI与实际浏览器记录为准。
 
 复用已有 GitHub 技能：Vercel Web Interface Guidelines、Anthropic frontend-design、Impeccable 与 UI UX Pro Max；未重复安装同名技能。通过 Better Icons／Iconify 获取 Lucide `maximize-2`，替换图片查看入口原先的加号；FAQ 加号保留展开语义。
 
-详见[交付说明](docs/delivery.md)、[设计系统](docs/design-system.md)、[第十六轮比较与整改](docs/round16-review.md)、[素材来源](docs/visual-assets.md)、[生成实验历史](docs/generated-art-prompts.md)。
+详见[交付说明](docs/delivery.md)、[设计系统](docs/design-system.md)、[第十七轮比较与整改](docs/round17-review.md)、[素材来源](docs/visual-assets.md)、[生成实验历史](docs/generated-art-prompts.md)。

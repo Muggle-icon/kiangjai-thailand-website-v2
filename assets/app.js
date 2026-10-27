@@ -201,8 +201,10 @@
         const selected = tab === target;
         tab.setAttribute('aria-selected', String(selected));
         tab.tabIndex = selected ? 0 : -1;
-        const panel = document.getElementById(tab.getAttribute('aria-controls'));
-        if (panel) panel.hidden = !selected;
+        tab.getAttribute('aria-controls').split(/\s+/).forEach(id => {
+          const controlled = document.getElementById(id);
+          if (controlled) controlled.hidden = !selected;
+        });
       });
       try { sessionStorage.setItem(storageKey, target.dataset.productTab); } catch {}
       if (moveFocus) target.focus();

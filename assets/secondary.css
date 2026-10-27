@@ -8,15 +8,17 @@
   color: #fff;
 }
 .kj-footer-grid {
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 32px 64px;
-  padding-block: 32px;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 80px;
+  padding-block: 48px;
   border-top: 1px solid var(--line);
 }
-.kj-footer-brand { grid-column: 1 / -1; }
+.kj-footer-identity,.kj-footer-services{min-width:0}
+.footer-main-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;margin-bottom:24px}
+.footer-main-nav a{display:flex;align-items:center;min-height:44px;color:var(--white);font-size:18px;font-weight:500;line-height:1.6;text-decoration:none}
 .kj-footer-brand img {
   display: block;
-  width: 156px;
+  width: 176px;
   height: auto;
   filter: brightness(0) invert(1);
 }
@@ -24,19 +26,20 @@
   max-width: 75ch;
   margin-top: 16px;
   color: var(--footer-muted);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.85;
 }
 .kj-footer-company {
   min-width: 0;
   padding: 0;
   border: 0;
+  margin-top: 24px;
 }
 .footer-contact { padding: 0; border: 0; }
 .kj-footer h2 {
   margin: 0 0 16px;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.65;
 }
@@ -48,29 +51,30 @@
   overflow-wrap: break-word;
 }
 .kj-footer-company p + p { margin-top: 8px; }
-.kj-footer .kj-company-name { color: #fff; font-size: var(--font-body); font-weight: 500; }
+.kj-footer .kj-company-name { color: #fff; font-size: 20px; font-weight: 500; }
 .footer-contact .footer-phone {
   margin-block: 2px 6px;
   color: #fff;
-  font-size: var(--font-module);
+  font-size: 36px;
   font-weight: 600;
   line-height: 1.65;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 .footer-contact > p:last-child { margin-top: 10px; }
-.kj-footer-bottom { padding-block: 12px 16px; }
-.kj-footer-bottom nav { gap: 4px 32px; margin: 0; }
+.kj-footer-bottom { padding-block:16px; }
+.kj-footer-bottom nav { display:flex;flex-wrap:wrap;gap:0 32px; margin: 0;align-items:center }
+.kj-footer-bottom .kj-link{font-size:16px}
 .kj-footer .kj-link { color: #fff; }
 .kj-footer a:hover,
 .kj-footer button:hover { color: var(--cyan); }
 .kj-footer a:focus-visible,
 .kj-footer button:focus-visible { outline-color: var(--cyan); }
-.footer-responsible { padding-block: 20px 32px; }
+.footer-responsible { padding-block: 24px;border-top:1px solid var(--line); }
 .footer-responsible .kj-small {
   margin-block: 0;
   color: #d4e4e9;
-  font-size: var(--font-caption);
+  font-size: 14px;
   line-height: 1.85;
 }
 
@@ -325,6 +329,7 @@
   .security-channel-icon { margin-bottom: 20px; }
 }
 @media (max-width: 900px) {
+  .kj-footer-grid{gap:48px}
   .security-content-layout { grid-template-columns: 180px minmax(0, 1fr); }
   .security-page-nav { padding-right: 0; }
   .security-page-nav a { padding-inline: 12px; }
@@ -337,12 +342,14 @@
 @media (max-width: 760px) {
   .kj-footer-grid { grid-template-columns: 1fr; gap: var(--grid-gap); padding-block: 32px 24px; }
   .kj-footer-brand img { width: 156px; }
-  .kj-footer-brand > p:last-child { max-width: 290px; margin-top: 16px; }
-  .kj-footer-company { padding: 24px 0 0; border: 0; border-top: 1px solid var(--line); }
-  .footer-contact { grid-column: auto; padding: 24px 0 0; border: 0; border-top: 1px solid var(--line); }
+  .kj-footer-brand > p:last-child { max-width: 290px; margin-top: 12px;font-size:16px; }
+  .kj-footer-company { padding:0;border:0;margin-top:24px; }
+  .footer-contact { padding:24px 0 0;border:0;border-top:1px solid var(--line); }
   .kj-footer h2 { margin-bottom: 8px; }
-  .kj-footer-bottom { padding-block: 12px 16px; }
-  .kj-footer-bottom nav { gap: 0 24px; }
+  .kj-footer-bottom { padding-block:16px; }
+  .kj-footer-bottom nav { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;align-items:start }
+  .footer-main-nav a{font-size:16px}
+  .footer-contact .footer-phone{font-size:30px}
   .footer-responsible { padding-block: 20px; }
   .breadcrumb { margin-bottom: 16px; font-size: var(--font-caption) !important; }
   .kj-security-hero { padding-block: 32px; }

@@ -64,7 +64,7 @@
       },
       "body": {
         "displayName": "Thai Reading Text",
-        "purpose": "16px/1.85 weight400 in #183D49; support14 and caption12 secondary."
+        "purpose": "Base Thai reading16px/1.85 weight400; product explanation20px/1.8 desktop and18px mobile; support14 and captions12."
       },
       "weights": {
         "displayName": "Four Weight Roles",
@@ -128,7 +128,7 @@
       "conceptStatus": "Cafe photography, round13 shopkeeper and concepts are superseded history, not current Hero art.",
       "realApp": "assets/app/home-overview.png",
       "repayment": "assets/app/repayment.png",
-      "realAppLocation": "One product showcase, online/repayment tabs; original complete copy and screens remain in DOM.",
+      "realAppLocation": "Original full App atleft; complete heading/tabs/copy/actions at right. DOM content then paired media for mobile. Both state figures and original reviewed text stay in DOM.",
       "renderer": "scripts/build.py APP_SCREENS and {{app-screen:key}}",
       "frameWidth": {
         "desktop": "240px",
@@ -152,7 +152,7 @@
       }
     },
     "layoutContract": {
-      "content": "1240px",
+      "content": "1120px",
       "gutter": {
         "desktop": "48px",
         "compact": "24px",
@@ -171,47 +171,62 @@
         "desktop": "32px",
         "mobile": "24px"
       },
-      "companyAndFaq": "Headings above full content and following contact action, no4+8 sidebar.",
+      "companyAndFaq": "Company heading then1.8fr facts/1fr contact,64px gap; phone36/30 and contact44px. FAQ heading remains above full accordion.",
       "anchorOffset": "One root scroll-padding value: header height +24px",
-      "policy": "Shared1240px shell, max720px reading text, natural height, page-level flex footer push",
-      "product": "Full-width neutral chapter, showcase padding0; balanced6+6 top-aligned columns; same two tab states and240/210px original-device frames.",
-      "tabState": "Selected exact#44E0F8/600; unselected reading text/500.",
+      "policy": "Shared1120px shell, max720px reading text, natural height and flex footer push.",
+      "product": "Full-cyan chapter64px padding/40mobile. Grid.85fr/1.15fr gap64/40; original App LEFT, complete content group RIGHT; mobile content then media. Same240/210frames.",
+      "tabState": "White tray520px max100%; selected ink/white600, unselected reading text500. Each tab controls paired text/media IDs.",
       "navigation": "Current quiet-cyan fill/600, no decorative underline pseudo-element.",
       "faq": "Plain ruled shared rows, no repetitive FAQ cards.",
       "process": "44px/400 numerals desktop,32px/400 mobile, no cyan underline.",
-      "conversion": "Title/note and below CTA share a left edge, no App-icon shift.",
-      "footer": "Continuous ink safety/footer. Brand whole row, company/contact2:1 desktop and1column mobile; no vertical borders/extra horizontal inset.",
-      "surfaces": "Full-width chapter backgrounds, exactly one1240px shell with48/24/20px gutters."
+      "conversion": "Download and safety inline compact desktop; stacked mobile. Existing content only.",
+      "footer": "Continuous ink; identity(left176px Logo+company), services(right existing4main links2cols18/16px, then36/30px phone/contact). Existing4legal/safety/contact links full-width bottom row: flexdesktop/grid2mobile. Columns1.25fr/1fr,gap80px.",
+      "surfaces": "Full-width chapter backgrounds; one1120px shell with48/24/20px gutters across header/Hero/all routes."
     },
     "verification": {
-      "round": 16,
+      "round": 17,
       "responsiveCases": 18,
-      "plannedResponsiveCases": 18,
       "pages": [
         "home",
         "security",
         "privacy",
         "terms"
       ],
-      "widths": [
+      "requiredWidths": [
         1440,
         360,
         375,
         390
       ],
-      "responsiveState": "18 actual layouts: four pages at1440/360/375/390 plus home1024/760; no horizontal overflow or broken visible images. Each6homecase has9full-bleed surfaces and23primary axes.",
-      "interactionState": "Current native download/contact/FAQ/plan/tab keyboard/gallery/security/return/menu regression completed, console warning/error empty. Seven-page static and JS syntax checked.",
-      "releaseState": "Online release conclusions are recorded in ../round16-preview/release-verification.json through commit, CI and actual browser evidence; this metadata records local acceptance.",
-      "evidence": "../round16-preview/",
-      "competitorEvidence": "../round16-preview/competitors/",
-      "skillInstallation": "Existing verified skills reused; no new installation this round.",
-      "launcherFallback": "Prior direct-read Impeccable fallback retained; not a detector pass.",
+      "responsiveState": "18 rendered/viewed cases, no horizontal overflow or visible broken images; common max1120px.",
+      "interactionState": "17runtime records: four keyboard tab keys pair text/media/focus; download0stores0QR and focus return; company/footer contact, F04single-open, gallery2→3, original plan, safety6FAQ7scams, paired return, menu and footer navigation. Console empty.",
+      "releaseState": "Online release conclusions use ../round17-preview/release-verification.json with commit, CI and actual browser evidence; no live-pass assertion here.",
+      "evidence": "../round17-preview/",
+      "competitorEvidence": "../round17-preview/competitors/",
+      "skillInstallation": "Existing design skills reused; no new install.",
+      "launcherFallback": "Prior direct-read fallback; no detector-pass claim.",
       "extraHomeWidths": [
         1024,
         760
       ],
-      "productFrameState": "Same x/width/height/radius across online/repayment at4required widths;240desktop/210mobile; mobile y may differ naturally due to content length.",
-      "layoutAvailableWidthNote": "Reserved15px scrollbar gutter excluded from full-bleed width; primaryL=(availableWidth-min(1240,availableWidth-2*gutter))/2."
+      "pairedTabFrameChecks": 4,
+      "missingAriaControlIds": 0,
+      "staticState": "Build/seven-page static/JSsyntax/diff checked; original catalog/config/HOME hashes unchanged.",
+      "desktopHeightBeforeAfter": {
+        ".product-section": {
+          "before": 944.3515625,
+          "after": 728
+        },
+        ".company-section": {
+          "before": 541.484375,
+          "after": 363.9921875
+        },
+        ".kj-footer": {
+          "before": 542.7421875,
+          "after": 579.7890625
+        }
+      },
+      "footerHeightNote": "Footer is taller after purposeful grouping and four existing main navigation links; no reduction claimed."
     }
   },
   "components": [
@@ -249,9 +264,9 @@
     {
       "name": "Tabbed Product Explanation",
       "kind": "section",
-      "description": "Full-width neutral product chapter with zero nested inset; balanced6+6 explanation/media columns, reviewed native tabs and same240/210px original frames.",
-      "html": "<div class=\"ds-product\"><div role=\"tablist\" aria-label=\"จุดเด่นของบริการ\"><button type=\"button\" role=\"tab\" aria-selected=\"true\" aria-controls=\"ds-online\" id=\"ds-tab-online\" tabindex=\"0\">สมัครออนไลน์ทุกขั้นตอน</button><button type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"ds-repayment\" id=\"ds-tab-repayment\" tabindex=\"-1\">ชำระคืนสะดวก</button></div><div role=\"tabpanel\" aria-labelledby=\"ds-tab-online\" id=\"ds-online\" tabindex=\"0\"><!-- Complete reviewed introduction and original HOME --></div><div role=\"tabpanel\" aria-labelledby=\"ds-tab-repayment\" id=\"ds-repayment\" tabindex=\"0\" hidden><!-- Complete reviewed repayment text and original screenshot --></div></div>",
-      "css": ".ds-product{padding:0;background:var(--surface,#F2F6F7);color:var(--text,#183D49);font-family:Noto Sans Thai,sans-serif}.ds-product [role=tablist]{display:grid;grid-template-columns:1fr 1fr;max-width:640px;gap:4px;padding:4px;border:1px solid var(--line,#D9E2E5);border-radius:12px;background:#fff}.ds-product [role=tab]{min-height:52px;padding:12px 20px;border:0;border-radius:8px;background:transparent;color:var(--text,#183D49);font:inherit;font-weight:500}.ds-product [aria-selected=true]{background:var(--cyan,#44E0F8);color:var(--ink,#00384C);font-weight:600}.ds-product [role=tabpanel]{margin-top:32px;min-height:602px}.ds-product p{font-size:16px;line-height:1.85}@media(max-width:760px){.ds-product{padding:0}.ds-product [role=tab]{min-height:72px;padding:10px 8px}.ds-product [role=tabpanel]{min-height:0}}"
+      "description": "Full-cyan product chapter; original media left, complete content group right. Native tabs control paired text/media ID references; DOM content before media.20/18px copy and unchanged240/210px devices.",
+      "html": "<div class=\"ds-product\"><div class=\"ds-product-content\"><h2>ทำไมต้องเลือกเคียงใจ</h2><div role=\"tablist\" aria-label=\"จุดเด่นของบริการ\"><button type=\"button\" role=\"tab\" aria-selected=\"true\" aria-controls=\"ds-online ds-media-online\" id=\"ds-tab-online\" tabindex=\"0\">สมัครออนไลน์ทุกขั้นตอน</button><button type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"ds-repayment ds-media-repayment\" id=\"ds-tab-repayment\" tabindex=\"-1\">ชำระคืนสะดวก</button></div><div id=\"ds-online\" role=\"tabpanel\" aria-labelledby=\"ds-tab-online\" tabindex=\"0\"><!-- unchanged reviewed online description and actions --></div><div id=\"ds-repayment\" role=\"tabpanel\" aria-labelledby=\"ds-tab-repayment\" tabindex=\"0\" hidden><!-- unchanged reviewed repayment description --></div></div><div class=\"ds-product-media\"><figure id=\"ds-media-online\"><!-- original HOME and view action --></figure><figure id=\"ds-media-repayment\" hidden><!-- original repayment and view action --></figure></div></div>",
+      "css": ".ds-product{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:center;min-height:600px;padding:0;background:var(--cyan,#44E0F8);color:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif}.ds-product-content{grid-column:2;grid-row:1;min-width:0}.ds-product-media{grid-column:1;grid-row:1;min-width:0}.ds-product [role=tablist]{display:grid;grid-template-columns:1fr 1fr;width:520px;max-width:100%;gap:4px;padding:4px;margin-top:24px;border-radius:12px;background:#fff}.ds-product [role=tab]{min-height:52px;padding:12px 20px;border:0;border-radius:8px;background:transparent;color:var(--text,#183D49);font:inherit;font-weight:500}.ds-product [aria-selected=true]{background:var(--ink,#00384C);color:#fff;font-weight:600}.ds-product [role=tabpanel]{margin-top:24px}.ds-product p{font-size:20px;line-height:1.8}@media(max-width:760px){.ds-product{display:flex;flex-direction:column;gap:24px;min-height:0;align-items:stretch}.ds-product [role=tab]{min-height:72px;padding:10px 8px}.ds-product p{font-size:18px}}"
     },
     {
       "name": "FAQ Question",
@@ -269,13 +284,13 @@
     }
   ],
   "narrative": {
-    "northStar": "One Content Axis, Full-width Chapters",
-    "overview": "Keep authentic photography, native product tabs and business truth. Remove Hero framing, nested product insets, side-heading gaps, download icon shifts and footer indents. Full-width chapter surfaces carry one shared1240px content shell.",
+    "northStar": "Clear Product, Recognizable Identity",
+    "overview": "One1120px shared axis frames a full-cyan product chapter, left original App and right complete content group; company identity/contact and footer navigation are coherently grouped. Original content and photography remain; tab visibility pairs text with media.",
     "keyCharacteristics": [
-      "Full-bleed Hero and full-width chapter backgrounds; one shared shell.",
-      "Balanced6+6 product layout without inset; unchanged equal devices.",
-      "Heading-above-content company/FAQ and left-stacked conversion.",
-      "Continuous ink safety/footer; branding whole row then2:1 company/contact, mobile1column."
+      "1120px common header/Hero/content axis, full-width surfaces.",
+      "Full-cyan product; left original App, right grouped heading/tabs/copy/actions; mobile content first.",
+      "Company title then facts/contact columns with readable36/30px phone.",
+      "Footer identity left, main navigation/contact right and full-width original policy row."
     ],
     "rules": [
       {
@@ -295,15 +310,15 @@
       },
       {
         "name": "Proportion",
-        "body": "One content axis governs homepage chapters; remove nested insets and side-heading gaps rather than compensating each region separately.",
+        "body": "Group a section heading with the content it names. Desktop product groups on the right, original media on the left; use real information density, not added claims.",
         "section": "layout"
       }
     ],
     "dos": [
-      "Keep original Logo, exact cyan, approved Thai and confirmed config.",
-      "Verify actual current16groups plus both tab states/keyboard and existing controls.",
-      "Use icons to explain actual actions; preserve FAQ expansion and image enlargement distinction.",
-      "Keep preview/legal pending truth and source/license records."
+      "Keep original Logo, exact cyan, reviewed Thai and confirmed configuration.",
+      "Verify current required widths, paired Tab controls, original frame ratios and all existing keyboard paths.",
+      "Keep content-first DOM order for mobile while desktop media leads visually.",
+      "Keep truthful preview/legal states, sources and release evidence."
     ],
     "donts": [
       "Do not use old cafe/generated art as current production.",
