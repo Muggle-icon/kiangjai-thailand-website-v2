@@ -1,51 +1,48 @@
-# Kiangjai V2 第十四轮实现与交付边界
+# Kiangjai V2 第十五轮实现与交付边界
 
-日期：2026-10-27。独立仓库`Muggle-icon/kiangjai-thailand-website-v2`。本轮针对人物不真实、手机样机不统一和全页排版规则混乱进行整改，保留已审内容、产品框架及功能。原V1不受影响。
+日期：2026-10-27。独立仓库 `Muggle-icon/kiangjai-thailand-website-v2`。本轮对照 MONIX 和 MoneyThunder 的 Banner／内容层级重整首页，统一全页字重、颜色和动作形态，保留已审内容、产品框架和安全功能。原 V1 不受影响。
 
-当前已完成16组实页布局截图（四页×1440／360／375／390px），布局测量无横向溢出。构建、7页资源／锚点／结构检查、JS语法、设备／FAQ共享规格比对及核心交互检查已完成；本轮证据目录为仓库外`../round14-preview/`，线上发布事实以其中`release-verification.json`和线上截图为准。旧轮次测试、截图或发布成功不计作本轮结果。
+本轮已完成四页×1440／360／375／390px的16组实页检查，并增加首页1024／760px两组，共18组；未发现横向溢出。产品切换及键盘、图片查看器、FAQ、菜单、下载、联系和安全中心返回状态已实测。证据在仓库外`../round15-preview/`，发布事实以其中release-verification.json和线上截图为准；旧轮检查不计作本轮结果。
 
 ## 当前实现
 
-| 区域 | 本轮变化与保留职责 |
+| 区域 | 本轮整改与保留职责 |
 | --- | --- |
-| 首屏 | 用可追溯的曼谷工作情境实拍替代生成小店人物；PC青蓝文字面与右侧照片，无渐变；手机标题、照片、额度、CTA依次组织；保留最高50,000泰铢和真实待开放提示 |
-| 产品主行 | 完整原始HOME在左、完整已审线上办理介绍在右，范围及费用FAQ入口为辅助信息 |
-| 还款行 | 镜像为文字在左、完整原还款图在右；与HOME使用同一产品组件、宽度、圆角、阴影和查看操作 |
-| 四步申请 | 实际顺序编号和已审文案；只有步骤03打开匹配原贷款计划图 |
-| 公司／FAQ | 同一4+8列轴线；手机单列；首页和安全页FAQ内部样式完全共享 |
-| 导航／控件 | 保留居中导航与手机菜单，统一52px主按钮、44px紧凑／文本触点；锚点只有全局一份偏移 |
-| 支持页／页脚 | 共用标题、正文和动作角色；政策页共同内容轴、自然高度及真实待提供状态；公司联系与安全功能保留 |
+| Hero | Tony Wu 的曼谷餐食摊实拍贯穿整幅 Banner；深青可读性遮罩和可编辑文字，不再左右各半。PC 600px／手机 690px 最小高度，保留最高 50,000 泰铢和真实待开放下载 |
+| 产品 | 一个双 Tab 演示区切换在线申请／还款，全部已审原文和原图保留；取消单独巨大还款 Banner，两图同框同宽 |
+| 四步 | 保留完整顺序和已审原文；数字 44／32px、400 字重，移除装饰短线；只有步骤 03 查看真实贷款计划图 |
+| 公司／FAQ | 公司身份和联系事实保留；共享 4+8 轴线；FAQ 为素行分隔，首页与安全中心共用 |
+| 导航／动作 | 当前导航用淡青底与 600 字重，移除装饰下划线；七处重复箭头删除；图片查看用 maximize 图标，不复用 FAQ 加号 |
+| 全局／支持页 | 仅使用 400／500／600／700 四类字重；主要阅读正文回到正文色；共享按钮、间距、原生弹窗及真实法律待提供状态 |
 
-## 实施规格与文件
+## 文件和组件
 
-内容轴最大1240px；左右边距48／24／20px。页面／章节／模块字号48／40／28px，手机32／30／24px；正文16px/1.85、辅助14px、caption12px。章节间距80／48px，标题到内容32／24px。详见[设计系统](design-system.md)。
+继续静态 HTML/CSS/JS 与既有 Python builder。主要改动位于 `src/components/hero.html`、`benefits.html`、`application-steps.html`、`src/pages/home.html`／政策页、三份 CSS 和 `assets/app.js`；四个根页面与三个 clean-route alias 需要随构建提交。
 
-`APP_SCREENS`与`{{app-screen:…}}`由`scripts/build.py`集中生成七处产品图片实例：两张内联图、步骤03原图、图库四张。内联外框统一240px／手机210px，4px内边、28／26px角；原PNG始终完整750×1624。两个图片弹窗共用最大320px及视口高度适配公式，不各写一套样机。
+`APP_SCREENS` 与 `{{app-screen:…}}` 集中七个原图实例：两个产品 Tab、步骤 03、图库四张。内联外框 240px／手机 210px，4px 内边、28／26px 角；PNG 保持完整 750×1624。两个原图弹窗使用共同的最大 320px／高度适配公式。
 
-主要源码为`src/components/hero.html`、`benefits.html`、`application-steps.html`、`app-gallery.html`，`scripts/build.py`及三份CSS。生成四个根页面与三个干净路由别名。完整页面保持可编辑HTML/CSS/JS，无框架迁移。
+新增产品 Tab 使用 native button、role tablist／tab／tabpanel、aria-selected／controls、roving tabindex 和 Left／Right／Home／End，完整内容仍在 DOM。返回安全中心时会在恢复滚动前恢复所选产品标签；普通访问仍默认线上申请。既有图库顺序 HOME／还款／贷款计划／可提款状态、Esc／方向键／焦点恢复、FAQ 单开、菜单、联系与待开放下载保留；相关操作已实测。
 
-## 素材来源与事实边界
+详细尺寸与角色见 [design-system.md](design-system.md)。
 
-Hero为Sommart Sopon的真实摄影[Pexels35764278](https://www.pexels.com/photo/professional-working-remotely-in-bangkok-cafe-35764278/)，拍摄于曼谷，日期2022-02-19；按[Pexels许可](https://www.pexels.com/license/)使用。生产派生仅为`assets/campaign/bangkok-workday-1200.webp`（1200×800，83,408B）与`bangkok-workday-2000.webp`（2000×1333，181,664B）。照片仅缩放压缩，人物和场景没有生成式编辑。
+## 素材与业务边界
 
-照片是情境配图，不证明产品客户、员工、代言、公司地点、贷款效果或人物国籍／职业／财务状况。首屏保留`ภาพประกอบ`说明。第十三轮两份生成小店WebP已从生产资源撤下，历史母版与六份概念只留来源记录，不部署。详见[素材记录](visual-assets.md)与[历史提示词](generated-art-prompts.md)。
+当前 Hero：[Tony Wu／Pexels 16761599](https://www.pexels.com/photo/woman-working-on-food-stand-16761599/)，来源地点曼谷，上传日 2023-05-10，未核验拍摄日。按 [Pexels 许可](https://www.pexels.com/license/)使用，不暗示画中人物代言或使用 Kiangjai。两份生产图为 `bangkok-food-stand-1200.webp`（1200×800、172,856B）、`bangkok-food-stand-2200.webp`（2200×1467、433,824B）。只缩放压缩，显示裁切与遮罩均为 CSS；无生成人物修补。上一轮咖啡馆照片与生成小店不再作当前 Hero。
 
-- 原Logo、全部原App PNG、已审catalog、公开config和50,000泰铢上限保持。
-- 四步、7条首页FAQ、6条安全FAQ、7类骗局及公司／联系／政策入口保持。
-- 图库顺序仍为HOME、还款、贷款计划、可提款状态；HOME从第1张、还款从第2张打开。
-- native dialog、图库切换、Esc及焦点恢复、单开FAQ、菜单、联系弹窗和首页返回位置已点测；减少动画CSS保留。
-- 不复制竞品照片、人物、奖项或业务承诺；不新增利率、审批时效、资格、牌照、商店链接、下载QR、官方渠道或客户证言。网站不接受申请或还款。
+配图不证明人物国籍、借款需求、财务状态、客户／员工关系、贷款结果或公司地点。原 App 图内 QR 只是产品示例，不是网站支付入口。Lucide maximize-2 来自 Better Icons／Iconify，保留 ISC／相关 Feather MIT 许可记录。完整出处和历史见 [visual-assets.md](visual-assets.md) 与 [generated-art-prompts.md](generated-art-prompts.md)。
 
-| 来源基线 | SHA256 |
+| 原有基线 | SHA256 |
 | --- | --- |
-| `src/content/reviewed-th.json` | `d0a1668f74bab8b29a8d0bb369bcc734d2d0df8f21f1417084f29708a2d8dedc` |
-| `src/config.json` | `fc0ab4fd68c9727195d6fbb2a2998ffaa03c95629f3e508898b1d523be57e179` |
-| `assets/app/home-overview.png` | `4df5ce9ddc7ebeea958388c16eab24e31f9df5578cf7464f6aa1a0bd0fde2cc7` |
+| 已审 Thai catalog | `d0a1668f74bab8b29a8d0bb369bcc734d2d0df8f21f1417084f29708a2d8dedc` |
+| 公开 config | `fc0ab4fd68c9727195d6fbb2a2998ffaa03c95629f3e508898b1d523be57e179` |
+| 最新原 HOME PNG | `4df5ce9ddc7ebeea958388c16eab24e31f9df5578cf7464f6aa1a0bd0fde2cc7` |
 
-## 规则复用、验收与发布
+保留四步、7 条首页 FAQ、6 条安全 FAQ、7 类骗局、公司联系与政策入口。不复制竞品人物、照片、奖项或承诺；不新增利率、审批时效、资格、牌照、商店、下载 QR、官方渠道或客户证言。登记号 0105567184971 不是放贷牌照。
 
-GitHub成熟规则已核验并复用现有安装：Vercel Web Interface Guidelines、Anthropic frontend-design、Impeccable和UI UX Pro Max。本轮不重复安装，不以技能存在代替实际检查；来源、角色和CLI fallback见[整改记录](round14-review.md)。
+## 验收与正式上线前资料
 
-当前16组布局截图、共享规格计算值、核心交互结果、PC与移动端前后比较均已产生。发布证明记录Pages工作流、线上资源版本与真实线上截图；本地构建不作为上线成功依据。模拟手机视口不等同于实体Android测试，静态检查不等于完整可访问性认证。
+本轮还须保存 16 组实页截图、两种 Tab 内容及键盘路径、各宽度原图比例、FAQ／下载／联系／菜单／弹窗结果，检查构建、静态资源与锚点、JS 语法和差异，再确认 Pages 工作流与线上资源版本。模拟手机视口不等于实体 Android 测试，静态规则不等于完整无障碍认证。
 
-继续`releaseStatus: preview`和noindex；Pages只打包访客页面及资源。正式运营仍需业务确认商店／开发者身份、有效资质及核验地址、正式隐私和服务条款及日期、官方举报渠道、无冲突的官网App展示图。登记号0105567184971不是放贷牌照；原首页200,000推广、日利率和示例金额／时间仍待业务核准。App账单QR不是网站付款入口。
+继续 `releaseStatus: preview`／noindex。正式运营仍需业务确认商店／开发者身份、有效资质和核验地址、正式隐私及服务条款／日期、官方举报渠道，以及无推广／费率冲突的 App 展示图。原首页 200,000 推广、日利率及示例金额／时间仍待核准，未提取为官网承诺。
+
+规则来源、竞品观察、技能复用和本轮状态见 [round15-review.md](round15-review.md)。不把技能存在或构建成功作为交付已经验收的依据。

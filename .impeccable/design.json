@@ -48,23 +48,27 @@
     "typographyMeta": {
       "display": {
         "displayName": "Product Display",
-        "purpose": "Hero product name52px desktop/32px mobile; separate positioning28/23px and amount72/60px."
+        "purpose": "Hero product56/32px, positioning28/21px and amount80/60px; display700, UI500."
       },
       "page": {
         "displayName": "Page Title",
-        "purpose": "Shared support-page title48px desktop/32px mobile."
+        "purpose": "48/32px, weight700."
       },
       "headline": {
         "displayName": "Chapter Title",
-        "purpose": "Shared40px desktop/30px mobile role across homepage and support chapters."
+        "purpose": "40/30px, weight700 across home and support."
       },
       "module": {
         "displayName": "Module Title",
-        "purpose": "Shared28px desktop/24px mobile feature and company title."
+        "purpose": "28/24px, weight600; item20/18px."
       },
       "body": {
         "displayName": "Thai Reading Text",
-        "purpose": "Shared16px/1.85 body,14px supporting copy and12px captions; natural Thai wrapping."
+        "purpose": "16px/1.85 weight400 in #183D49; support14 and caption12 secondary."
+      },
+      "weights": {
+        "displayName": "Four Weight Roles",
+        "purpose": "body400, UI500, strong600, display700; no arbitrary300/550/650/750."
       }
     },
     "shadows": [
@@ -108,22 +112,23 @@
     "assetDirection": {
       "generationMode": "none-current-production",
       "productionArt": [
-        "assets/campaign/bangkok-workday-1200.webp",
-        "assets/campaign/bangkok-workday-2000.webp"
+        "assets/campaign/bangkok-food-stand-1200.webp",
+        "assets/campaign/bangkok-food-stand-2200.webp"
       ],
       "provenance": "docs/visual-assets.md",
       "promptsAndHistory": "docs/generated-art-prompts.md",
-      "photographer": "Sommart Sopon",
-      "pexelsId": "35764278",
-      "source": "https://www.pexels.com/photo/professional-working-remotely-in-bangkok-cafe-35764278/",
+      "photographer": "Tony Wu",
+      "pexelsId": "16761599",
+      "source": "https://www.pexels.com/photo/woman-working-on-food-stand-16761599/",
       "license": "https://www.pexels.com/license/",
-      "capturedAt": "2022-02-19",
-      "capturedIn": "Bangkok, Thailand",
-      "sceneStatus": "Authentic licensed workday photo, illustrative context only; not customer, borrower, employee, endorser, company location or financial-outcome evidence.",
-      "conceptStatus": "Historical round13 scene and six concepts are not production assets. No generated people remain in current Hero.",
+      "uploadedAt": "2023-05-10",
+      "capturedAt": null,
+      "capturedIn": "Bangkok, Thailand (source location)",
+      "sceneStatus": "Authentic illustrative photography, no generative subject changes; no customer, borrower, employee, endorser, nationality or financial-outcome claim.",
+      "conceptStatus": "Cafe photography, round13 shopkeeper and concepts are superseded history, not current Hero art.",
       "realApp": "assets/app/home-overview.png",
-      "realAppLocation": "Primary product row below Hero, HOME left and explanation right; repayment mirrors the row.",
       "repayment": "assets/app/repayment.png",
+      "realAppLocation": "One product showcase, online/repayment tabs; original complete copy and screens remain in DOM.",
       "renderer": "scripts/build.py APP_SCREENS and {{app-screen:key}}",
       "frameWidth": {
         "desktop": "240px",
@@ -135,17 +140,16 @@
         "mobile": "26px"
       },
       "dialogFrameWidth": "min(320px,calc((100dvh - 280px)*.46182266),100%)",
-      "heroDesktopComposition": "Solid #44E0F8 copy area, real photo right from43%, no gradient; min-height560px.",
-      "mobileHeroOrder": [
-        "title",
-        "photo",
-        "amount",
-        "action and pending note",
-        "qualification"
-      ],
-      "mobileHeroPhotoHeight": "244px",
-      "heroPhotoFocalPointDesktop": "70% 28%",
-      "heroPhotoFocalPointMobile": "72% 35%"
+      "heroDesktopComposition": "Continuous real photo, editable white copy/cyan amount and action over ink readability gradient. Outer24px, radius16px, min600px; no half split.",
+      "mobileHeroComposition": "Continuous photo, native top headline and bottom offer/actions over vertical ink overlay. Outer12px, radius12px, min690px.",
+      "heroPhotoFocalPointDesktop": "64% 45%",
+      "heroPhotoFocalPointMobile": "64% 35%",
+      "viewIcon": {
+        "file": "assets/icons/maximize.svg",
+        "sourceId": "lucide:maximize-2",
+        "source": "https://api.iconify.design/lucide/maximize-2.svg",
+        "license": "assets/icons/LICENSE-Lucide.txt"
+      }
     },
     "layoutContract": {
       "content": "1240px",
@@ -169,11 +173,16 @@
       },
       "companyAndFaq": "Shared4+8column axes",
       "anchorOffset": "One root scroll-padding value: header height +24px",
-      "policy": "Shared1240px shell, max720px reading text, natural height, page-level flex footer push"
+      "policy": "Shared1240px shell, max720px reading text, natural height, page-level flex footer push",
+      "product": "One two-tab showcase, explanation and device top aligned on shared12columns; no separate repayment Banner. Desktop panel min602px; mobile natural height.",
+      "tabState": "Selected exact#44E0F8/600; unselected reading text/500.",
+      "navigation": "Current quiet-cyan fill/600, no decorative underline pseudo-element.",
+      "faq": "Plain ruled shared rows, no repetitive FAQ cards.",
+      "process": "44px/400 numerals desktop,32px/400 mobile, no cyan underline."
     },
     "verification": {
-      "round": 14,
-      "responsiveCases": 16,
+      "round": 15,
+      "responsiveCases": 18,
       "pages": [
         "home",
         "security",
@@ -186,10 +195,16 @@
         375,
         390
       ],
-      "responsiveState": "16 actual layouts without horizontal overflow; matching device/FAQ geometry and chapter/grid roles verified. Build, seven-page static and core interaction checks completed.",
-      "releaseState": "See external round14-preview/release-verification.json and live screenshots; local checks alone do not prove publication.",
-      "evidence": "../round14-preview/",
-      "skillInstallation": "Existing verified skills reused; no new installation this round."
+      "responsiveState": "18 actual screenshots and DOM cases; no horizontal overflow. Four weight roles and navigation without underline verified. Matching original-screen states and shared FAQ geometry checked.",
+      "interactionState": "Tabs including Left/Right/Home/End, gallery/plan, Esc/focus, F01/F04, menu/anchor, contact/preview download, safety and support-return product state verified.",
+      "releaseState": "See external round15-preview/release-verification.json and live screenshots; local checks do not prove publication.",
+      "evidence": "../round15-preview/",
+      "skillInstallation": "Existing verified design skills reused; no new installation. Better Icons/Iconify fetched the licensed Lucide maximize-2 asset.",
+      "launcherFallback": "Impeccable context permission denied; direct read of PRODUCT/DESIGN and layout/typeset/polish references; not a detector pass.",
+      "extraHomeWidths": [
+        1024,
+        760
+      ]
     }
   },
   "components": [
@@ -197,17 +212,17 @@
       "name": "Primary Download Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Shared dark primary action including Hero and final conversion;224×52px intended desktop size/full width at mobile conversion entries. Compact header variant44px.",
+      "description": "Dark primary on final cyan conversion;224×52px desktop/full width on mobile. Hero uses the cyan variant on photographic ink; compact header44px.",
       "html": "<button type=\"button\" class=\"ds-button ds-primary\">ดาวน์โหลดแอป</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-primary{width:224px;background:var(--ink,#00384C);color:var(--white,#FFFFFF)}.ds-primary:hover{background:#07586A}.ds-primary:active{background:#07586A}@media(max-width:760px){.ds-primary{width:100%}}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:600;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-primary{width:224px;background:var(--ink,#00384C);color:var(--white,#FFFFFF)}.ds-primary:hover{background:#07586A}.ds-primary:active{background:#07586A}@media(max-width:760px){.ds-primary{width:100%}}"
     },
     {
       "name": "Cyan Button",
       "kind": "button",
       "refersTo": "button-cyan",
-      "description": "Available brand-cyan variant with the same52px main-action anatomy; current Hero uses dark action on cyan.",
+      "description": "Hero primary action on ink-overlaid continuous photography; same52px anatomy/600 weight.",
       "html": "<button type=\"button\" class=\"ds-button ds-cyan\">ดาวน์โหลดแอป</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-cyan{background:var(--cyan,#44E0F8);color:var(--ink,#00384C)}.ds-cyan:hover,.ds-cyan:active{background:#74E9FA}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:600;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-cyan{background:var(--cyan,#44E0F8);color:var(--ink,#00384C)}.ds-cyan:hover,.ds-cyan:active{background:#74E9FA}"
     },
     {
       "name": "Outlined Button",
@@ -215,28 +230,28 @@
       "refersTo": "button-outline",
       "description": "Lower-emphasis action with the shared control shape.",
       "html": "<button type=\"button\" class=\"ds-button ds-outline\">กลับหน้าแรก</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-outline{background:transparent;color:var(--ink,#00384C);border-color:var(--ink,#00384C)}.ds-outline:hover,.ds-outline:active{background:var(--surface,#F2F6F7)}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Noto Sans Thai,sans-serif;font-size:16px;line-height:1.5;font-weight:600;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-outline{background:transparent;color:var(--ink,#00384C);border-color:var(--ink,#00384C)}.ds-outline:hover,.ds-outline:active{background:var(--surface,#F2F6F7)}"
     },
     {
       "name": "Brand Navigation Links",
       "kind": "nav",
-      "description": "Centered desktop navigation on white with ink links and a cyan current-page underline.",
+      "description": "Centered native links on white; current quiet-cyan fill and600 weight, no underline.",
       "html": "<nav class=\"ds-nav\" aria-label=\"เมนูหลัก\"><a href=\"#\" aria-current=\"page\">หน้าแรก</a><a href=\"#\">จุดเด่นของบริการ</a><a href=\"#\">ศูนย์ความปลอดภัย</a></nav>",
-      "css": ".ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:0 24px;background:var(--white,#FFFFFF);font-family:Noto Sans Thai,sans-serif;font-size:14px}.ds-nav a{position:relative;padding:24px 0;color:var(--ink,#00384C);text-decoration:none;transition:color .2s}.ds-nav a:hover,.ds-nav a:active,.ds-nav a[aria-current]{color:var(--ink,#00384C)}.ds-nav a[aria-current]{font-weight:700}.ds-nav a[aria-current]::after{content:\"\";position:absolute;left:0;right:0;bottom:15px;height:3px;background:var(--cyan,#44E0F8)}.ds-nav a:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;font-family:Noto Sans Thai,sans-serif;font-size:15px;font-weight:500}.ds-nav a{padding:10px 9px;border-radius:8px;color:var(--ink,#00384C);text-decoration:none}.ds-nav a:hover{background:var(--surface,#F2F6F7)}.ds-nav a[aria-current]{font-weight:600;background:var(--cyan-soft,#E7FAFD)}.ds-nav a:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}"
     },
     {
-      "name": "Online Product Explanation",
+      "name": "Tabbed Product Explanation",
       "kind": "section",
-      "description": "Complete original HOME atleft with one unchanged reviewed introduction atright; subordinate process andFAQ actions. Repayment mirrors this with the same frame.",
-      "html": "<article class=\"ds-feature\"><h3>สมัครออนไลน์ทุกขั้นตอน</h3><p><!-- Insert the unchanged reviewed full product introduction from the content catalog. --></p><a class=\"ds-step-link\" href=\"#kj-steps\"><!-- Existing reviewed process label --></a></article>",
-      "css": ".ds-feature{font-family:Noto Sans Thai,sans-serif;color:var(--ink,#00384C)}.ds-feature h3{margin:0 0 16px;font-size:28px;font-weight:700;line-height:1.5}.ds-feature p{margin:0;font-size:16px;line-height:1.85;color:var(--muted,#566E76)}.ds-step-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;font-size:14px;line-height:26px;color:var(--ink,#00384C)}@media(max-width:760px){.ds-feature h3{font-size:24px}}"
+      "description": "One showcase with reviewed online and repayment labels, original copy and equal240/210px complete App frames. Roving tabindex and Left/Right/Home/End handled by assets/app.js.",
+      "html": "<div class=\"ds-product\"><div role=\"tablist\" aria-label=\"จุดเด่นของบริการ\"><button type=\"button\" role=\"tab\" aria-selected=\"true\" aria-controls=\"ds-online\" id=\"ds-tab-online\" tabindex=\"0\">สมัครออนไลน์ทุกขั้นตอน</button><button type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"ds-repayment\" id=\"ds-tab-repayment\" tabindex=\"-1\">ชำระคืนสะดวก</button></div><div role=\"tabpanel\" aria-labelledby=\"ds-tab-online\" id=\"ds-online\" tabindex=\"0\"><!-- Complete reviewed introduction and original HOME --></div><div role=\"tabpanel\" aria-labelledby=\"ds-tab-repayment\" id=\"ds-repayment\" tabindex=\"0\" hidden><!-- Complete reviewed repayment text and original screenshot --></div></div>",
+      "css": ".ds-product{padding:32px 40px;border-radius:16px;background:var(--surface,#F2F6F7);color:var(--text,#183D49);font-family:Noto Sans Thai,sans-serif}.ds-product [role=tablist]{display:grid;grid-template-columns:1fr 1fr;max-width:640px;gap:4px;padding:4px;border:1px solid var(--line,#D9E2E5);border-radius:12px;background:#fff}.ds-product [role=tab]{min-height:52px;padding:12px 20px;border:0;border-radius:8px;background:transparent;color:var(--text,#183D49);font:inherit;font-weight:500}.ds-product [aria-selected=true]{background:var(--cyan,#44E0F8);color:var(--ink,#00384C);font-weight:600}.ds-product [role=tabpanel]{margin-top:32px;min-height:602px}.ds-product p{font-size:16px;line-height:1.85}@media(max-width:760px){.ds-product{padding:20px;border-radius:12px}.ds-product [role=tab]{min-height:72px;padding:10px 8px}.ds-product [role=tabpanel]{min-height:0}}"
     },
     {
       "name": "FAQ Question",
       "kind": "button",
-      "description": "One homepage/safety FAQ component;16px body,76px row, centered32/20px marker; mobile72px row and28/18px marker.",
+      "description": "One plain ruled homepage/safety FAQ row;16px/500,76px row,32/20px marker; mobile72px row/28/18px marker.",
       "html": "<button type=\"button\" class=\"ds-faq\" aria-expanded=\"false\"><span>คำถามที่พบบ่อย</span><span class=\"ds-faq-mark\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5v14\" stroke=\"currentColor\" stroke-width=\"2\"/></svg></span></button>",
-      "css": ".ds-faq{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:76px;padding:20px 24px;border:0;border-radius:10px;background:var(--surface,#F2F6F7);color:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif;font-size:16px;font-weight:600;line-height:30px;text-align:left;cursor:pointer}.ds-faq-mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:#E1E8EB;color:var(--ink,#00384C)}.ds-faq-mark svg{display:block;width:20px;height:20px}.ds-faq:hover .ds-faq-mark,.ds-faq[aria-expanded=true] .ds-faq-mark{background:var(--cyan,#44E0F8)}.ds-faq:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(max-width:760px){.ds-faq{font-size:16px;line-height:28px;min-height:72px;padding:18px 16px;gap:16px}.ds-faq-mark{width:28px;height:28px}.ds-faq-mark svg{width:18px;height:18px}}"
+      "css": ".ds-faq{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:76px;padding:20px 0;border:0;border-bottom:1px solid var(--line,#D9E2E5);border-radius:0;background:transparent;color:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif;font-size:16px;font-weight:500;line-height:30px;text-align:left;cursor:pointer}.ds-faq-mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:transparent}.ds-faq-mark svg{display:block;width:20px;height:20px}.ds-faq:hover .ds-faq-mark,.ds-faq[aria-expanded=true] .ds-faq-mark{background:var(--cyan-soft,#E7FAFD)}.ds-faq:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(max-width:760px){.ds-faq{line-height:28px;min-height:72px;padding:18px 0;gap:16px}.ds-faq-mark{width:28px;height:28px}.ds-faq-mark svg{width:18px;height:18px}}"
     },
     {
       "name": "Original App Screen",
@@ -247,42 +262,47 @@
     }
   ],
   "narrative": {
-    "northStar": "Authentic Context, Consistent Product",
-    "overview": "Real Bangkok workday photography replaces the synthetic shop scene. Solid brand cyan and native HTML establish the campaign; complete untouched App images and shared roles organize the rest. Approved content, framework and native behavior remain.",
+    "northStar": "Everyday Scene, Clear Product, Coherent Craft",
+    "overview": "Continuous authentic Bangkok food-stand photography leads the Hero; native edited text remains separate. One compact tabbed product showcase replaces the oversized independent repayment chapter. Four weight roles, meaningful icons and shared action/FAQ anatomy organize the site.",
     "keyCharacteristics": [
-      "Traceable authentic photography, no gradient or generated subject.",
-      "One App renderer, one inline size per breakpoint and one viewer enlargement rule.",
-      "Shared12column grid,4+8company/FAQ axes, semantic typography and spacing.",
-      "One action family and identical homepage/security FAQ internals."
+      "Real photo without generative person edits or customer implication.",
+      "One product showcase, two reviewed uses, unchanged complete App screenshots.",
+      "body400/UI500/strong600/display700; reading ink for explanations.",
+      "Quiet filled active navigation, branded active product tab, meaningful maximize icons and plain FAQ rows."
     ],
     "rules": [
       {
         "name": "Shared Roles",
-        "body": "Use page48/32, chapter40/30, module28/24, body16/1.85, support14 and caption12. Chapters80/48 and heading gap32/24.",
+        "body": "Page48/32, chapter40/30, module28/24, body16/1.85; body400 UI500 strong600 display700.",
         "section": "typography"
       },
       {
         "name": "Photographic Integrity",
-        "body": "Keep Pexels35764278 provenance and license. Illustration caption does not imply customer, borrower or endorser identity. No generative changes to its subject.",
+        "body": "Tony Wu Pexels16761599, Bangkok source location, uploaded2023-05-10, capture date unverified. No implicit customer or endorsement.",
         "section": "assets"
       },
       {
         "name": "Product Integrity",
-        "body": "All original750×1624 screens use one macro and full aspect ratio. Do not crop, repaint or turn them into invented workflow steps.",
+        "body": "Keep untouched750×1624 screens and full reviewed copy in native tabpanels; one renderer and same inline frames.",
         "section": "assets"
+      },
+      {
+        "name": "Proportion",
+        "body": "Size chapters to information value; do not make a two-line secondary use another full Banner.",
+        "section": "layout"
       }
     ],
     "dos": [
-      "Use original Logo, exact cyan, reviewed Thai and confirmed configuration.",
-      "Use shared grid, type, spacing, actions, FAQ and App frames across routes.",
-      "Keep preview/legal pending states and keyboard/focus behavior.",
-      "Verify current1440/360/375/390renders, original-image ratios and live release separately."
+      "Keep original Logo, exact cyan, approved Thai and confirmed config.",
+      "Verify actual current16groups plus both tab states/keyboard and existing controls.",
+      "Use icons to explain actual actions; preserve FAQ expansion and image enlargement distinction.",
+      "Keep preview/legal pending truth and source/license records."
     ],
     "donts": [
-      "Do not reintroduce rejected generated shopkeeper, props, concepts or hardware.",
-      "Do not infer customer identity, nationality, occupation or finances from the photo.",
-      "Do not invent rates, approval promises, licenses, store links, channels or paymentQR.",
-      "Do not reuse historical QA as current evidence or claim publication before verification."
+      "Do not use old cafe/generated art as current production.",
+      "Do not infer customer, nationality, finances or endorsement from the photo.",
+      "Do not invent fees, approval promises, licenses, store links or official channels.",
+      "Do not reuse prior QA or local build as proof of current release."
     ]
   }
 }

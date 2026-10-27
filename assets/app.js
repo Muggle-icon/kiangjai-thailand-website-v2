@@ -188,3 +188,42 @@
     $$('[data-license-link]').forEach(el => { el.href=licenseUrl; el.hidden=false; });
   }
 })();
+
+// One compact product section; all reviewed descriptions and original screens stay in the DOM.
+(() => {
+  'use strict';
+  document.querySelectorAll('.product-showcase').forEach(showcase => {
+    const tabs = [...showcase.querySelectorAll('[data-product-tab]')];
+    if (!tabs.length) return;
+    const storageKey = 'kiangjai-v2-product-tab';
+    const activate = (target, moveFocus = false) => {
+      tabs.forEach(tab => {
+        const selected = tab === target;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        const panel = document.getElementById(tab.getAttribute('aria-controls'));
+        if (panel) panel.hidden = !selected;
+      });
+      try { sessionStorage.setItem(storageKey, target.dataset.productTab); } catch {}
+      if (moveFocus) target.focus();
+    };
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activate(tab));
+      tab.addEventListener('keydown', event => {
+        let next;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        activate(tabs[next], true);
+      });
+    });
+    let savedKey = '';
+    if (new URLSearchParams(location.search).get('return') === '1') {
+      try { savedKey = sessionStorage.getItem(storageKey) || ''; } catch {}
+    }
+    activate(tabs.find(tab => tab.dataset.productTab === savedKey) || tabs.find(tab => tab.getAttribute('aria-selected') === 'true') || tabs[0]);
+  });
+})();
