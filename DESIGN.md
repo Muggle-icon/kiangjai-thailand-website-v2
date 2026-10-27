@@ -13,7 +13,7 @@ colors:
 typography:
   display:
     fontFamily: "Noto Sans Thai, sans-serif"
-    fontSize: "64px"
+    fontSize: "62px"
     fontWeight: 750
     lineHeight: 1.35
     letterSpacing: "0"
@@ -82,86 +82,45 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Cyan Product Stage"**
+**Creative North Star: "Everyday Cyan, Real Product"**
 
-The system pairs confident Thai product communication with calm, task-oriented reading. The user-selected MoneyThunder homepage supplies the campaign grammar; Kiangjai's original identity, App imagery and reviewed content remain the visual and product authority.
+A coherent cyan campaign pairs original generated still-life art with the untouched Kiangjai App home. The user-selected MoneyThunder homepage informs campaign completeness and chapter rhythm; Kiangjai's identity and reviewed content remain the product authority. Native HTML supplies every webpage label, action and interaction.
 
-A complete original App screen sits on a crisp layered stage. Strong cyan and ink chapters create the homepage rhythm; support and policy pages use restrained document layouts. These are native, editable HTML/CSS surfaces.
+The art uses ordinary work and shopping objects, tactile paper and canvas, hard-edged forms and cyan accents. It contains no people, generated App screen or financial evidence. Calm reading layouts support real company facts, help and policy content.
 
-**Key Characteristics:**
+## Colors and Typography
 
-- One integrated product campaign with meaningful functional graphics.
-- Original brand assets and complete App screenshots.
-- Strong chapter contrast with quiet reading areas.
-- Natural Thai typography and visible keyboard states.
+Cyan carries the Hero and final download invitation. Ink anchors navigation, primary actions, the main online feature and footer. White and neutral surfaces separate product explanation, process, company and FAQ without repeated promotional banners.
 
-## Colors
+The product name uses 62px/1.35, the tagline 42px/1.4 and amount 80px/1.15. Mobile sizes are 35px, 26px and 64px. Homepage headlines use 40px, mobile 30px; reading-page titles retain 48px, policy titles 31px on mobile. Natural Thai wrapping and zero Thai letter spacing remain mandatory; compact numeric tracking applies only to the amount.
 
-### Primary
+## Layout and Rhythm
 
-Cyan carries the campaign, sequence markers and final download invitation. Ink anchors navigation, primary actions, the main feature, company identity and footer.
+The shell is capped at 1200px with 40px desktop gutters, 32px below 1050px and 20px below 760px. Homepage spacing is section-specific: product 80/64px, steps 64/72px, company 72px, FAQ 64/80px; these become 48px on mobile. The frontmatter chapter values are reusable reference tokens, not a claim that every live section uses that spacing.
 
-### Neutral
+Hero has one cyan field and one coherent product composition. The desktop Hero is at least 700px; the complete App device is 246px wide. Mobile stacks copy, one full-width action and a 428px art stage with a complete 180px device. The raster scene sits behind the independent App image; it does not paint over the screen. The old CSS podium, white amount card and adjacent App badge are removed.
 
-Text and muted text form the reading hierarchy. White supplies open reading space; surface and line separate help content without decorative depth. Cyan-soft supports quiet FAQ and control states.
+Product explanation uses a 1.65:1 hierarchy: the main ink panel combines generated folder art and the full reviewed product description; repayment is secondary with matching calendar art and a real screenshot entry. The reviewed Bangkok service area accompanies the section title. Four process nodes remain horizontal, then two-column, then vertical; only step 03 has a corresponding real confirmation image.
 
-**The Chapter Contrast Rule.** Use cyan and ink to establish purposeful chapters; keep reading areas open and neutral.
+Company information uses a white fact layout for name, registration, address and phone with one contact entry. It does not repeat the product introduction. FAQ uses a neutral 960px reading surface; download is cyan, safety neutral and footer ink. Safety pages retain a 232px task directory and reading column; policies retain a 960px document axis.
 
-## Typography
+## Shape, Depth and Assets
 
-Self-hosted Noto Sans Thai supplies all roles. The frontmatter records the desktop base hierarchy; module-specific and responsive sizes are documented in `docs/design-system.md`.
+Controls retain 12px radii and 52px heights; main desktop download actions are 224px wide and mobile actions fill their content width. Auxiliary tools retain 44px touch areas. Generated material depth is reserved for the coherent campaign and two feature illustrations; reading sections remain flat. Device and dialog shadows separate imagery and temporary UI.
 
-The campaign product name uses display. The tagline is smaller (44px/1.4, weight 600) and the amount uses tabular numerals (68px/1.12, weight 750). On mobile these become 35px, 26px and 60px respectively. Section headlines become 30px. Reading pages use 48px desktop titles; policy titles become 31px on mobile.
+Transparent WebP campaign files live in `assets/campaign/`; original PNG masters and before/after evidence live outside the repository in `../round11-preview/`. Generation used `builtin-imagegen`; exact prompts and provenance are documented in `docs/generated-art-prompts.md` and `docs/visual-assets.md`. These are conceptual assets, not customer photography or business evidence.
 
-**The Thai Integrity Rule.** Preserve natural Thai wrapping and zero letter spacing; the amount's numeric tracking does not apply to Thai text.
+## Components and Behavior
 
-## Layout
+Desktop navigation remains centered between the original master Logo and 144×44px download control; below 1050px it becomes a 44px menu. Main buttons share 16px labels, 12px radii and 52px heights. Hover changes color; keyboard focus uses a 3px outline with 5px offset, cyan on ink backgrounds.
 
-The content shell is capped at 1200px with 40px desktop gutters, 32px below 1050px and 20px below 760px. Homepage chapters use 80px vertical space on desktop and 56px on mobile. Supporting layouts use their own reading measures.
+FAQ uses a 32px marker box with centered 20px SVG and one-open behavior. Native dialogs preserve gallery navigation, direction keys, Esc and focus restoration. `scrollbar-gutter:stable` prevents dialog shifts. Reduced-motion preferences disable transitions and smooth scrolling. Pending download and legal states remain explicit.
 
-The homepage sequence is integrated campaign, graphic product explanation, compact four-step sequence, dark company feature, quiet FAQ, cyan download, neutral safety reminder and footer. Hero uses a single cyan background; the complete device is 250px wide on desktop and 236px on mobile. Its adjacent App badge appears only above the mobile breakpoint.
+## Rules
 
-Four application nodes run horizontally on desktop, two columns below 1050px and vertically below 760px. FAQ and policy reading measures are 960px. Safety content pairs a 232px sticky task directory with the reading column; mobile links wrap above the article.
-
-## Elevation & Depth
-
-Hard-edged backplate and podium geometry provide structural depth in the campaign. Product-device and dialog shadows distinguish physical imagery and temporary UI; ordinary content surfaces remain flat. Exact shadow, motion and breakpoint extensions are recorded in `.impeccable/design.json`.
-
-**The Structural Depth Rule.** Reserve depth for the complete product stage and dialogs; do not scatter floating ornaments through reading content.
-
-## Shapes
-
-Controls and information panels use the gentle radii in the frontmatter. The product stage deliberately keeps crisp polygon edges. Device and screenshot radii preserve the physical frame; step numbers use circles and fine connectors. Shared dividers are thin and quiet.
-
-## Components
-
-### Buttons
-
-Dark primary actions, cyan secondary actions and outlined actions share label typography and control shape. Main desktop download actions use the frontmatter width; mobile actions fill the content width. Auxiliary tools retain 44px touch areas. Hover changes color; keyboard focus uses a 3px outline with 5px offset, switching to cyan on ink backgrounds.
-
-### Navigation
-
-Ink navigation carries a white rendition of the original master Logo. Desktop links sit between the brand and a 144×44px cyan download control. Hover and current-page states use cyan, with an underline on the current page. Below 1050px, a 44px menu control opens the stacked navigation.
-
-### Product Stage and Feature Panels
-
-The complete original App home is paired with native clipped geometry. The main online-application feature is an ink graphic panel; the repayment feature is smaller and pale. Their SVGs explain functions and do not assert approval or encode payment destinations.
-
-### FAQ and Dialogs
-
-FAQ questions use consistent plus/minus SVG markers and retain one-open behavior. Native dialogs retain gallery navigation, Esc, close controls and focus restoration. Reduced-motion preferences disable transitions and smooth scrolling. Pending download and policy states remain truthful.
-
-## Do's and Don'ts
-
-### Do:
-
-- **Do** use the original master Logo and complete App images at their natural ratio.
-- **Do** keep the campaign integrated and functional illustrations subordinate to product truth.
-- **Do** preserve Thai wrapping, keyboard focus and reduced-motion behavior.
-- **Do** use reading layouts for safety and policy content.
-
-### Don't:
-
-- **Don't** introduce people photos, coins, gradients, giant decorative logos or fake App screens.
-- **Don't** crop a phone into half-screen decoration or split its background through the device.
-- **Don't** invent financial claims, approval evidence, store links, payment QR codes or legal resources.
+- Use original Logo and complete App images at their natural ratios.
+- Keep the generated scene behind a separate, untouched App image; no half-phone crops or generated UI.
+- Preserve exact approved Thai and business configuration; art cannot imply new features or evidence.
+- Keep photos, people, coins, fake approval badges and decorative logo enlargement out of this direction.
+- Keep safety and policy content readable, with truthful pending states.
+- Verify actual desktop and 360/375/390px mobile rendering; metadata is not an automated test result.

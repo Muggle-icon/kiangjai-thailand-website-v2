@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-27T13:58:21+08:00",
+  "generatedAt": "2026-10-27",
   "title": "Design System: Kiangjai Thailand V2",
   "extensions": {
     "colorMeta": {
@@ -120,7 +120,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Product Display",
-        "purpose": "Homepage product name; responsive module values remain in the implementation."
+        "purpose": "Homepage product name, 62px desktop; mobile and module-specific values remain in the implementation."
       },
       "headline": {
         "displayName": "Section Headline",
@@ -134,13 +134,8 @@
     "shadows": [
       {
         "name": "product-device",
-        "value": "0 20px 36px #00384c26",
-        "purpose": "Separate the complete App device from its structural stage."
-      },
-      {
-        "name": "app-signature",
-        "value": "0 8px 20px #00384c1c",
-        "purpose": "Desktop App badge next to the device."
+        "value": "0 16px 28px #00384c30",
+        "purpose": "Separate the complete original App device from the generated still-life scene."
       },
       {
         "name": "dialog",
@@ -173,7 +168,22 @@
         "name": "mobile",
         "value": "760px"
       }
-    ]
+    ],
+    "assetDirection": {
+      "generationMode": "builtin-imagegen",
+      "campaign": "assets/campaign/everyday-counter-{640,1000}.webp",
+      "features": [
+        "assets/campaign/online-application.webp",
+        "assets/campaign/repayment-planning.webp"
+      ],
+      "realApp": "assets/app/home-overview.png",
+      "deviceWidth": {
+        "desktop": "246px",
+        "mobile": "180px"
+      },
+      "mobileArtStageHeight": "428px",
+      "provenance": "docs/generated-art-prompts.md"
+    }
   },
   "components": [
     {
@@ -210,9 +220,9 @@
     {
       "name": "Application Feature Panel",
       "kind": "card",
-      "description": "The main functional graphic panel, using the original editable document pictogram. The check is symbolic, not approval evidence.",
-      "html": "<article class=\"ds-feature\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"64\" height=\"48\" viewBox=\"0 0 320 240\" fill=\"none\" aria-hidden=\"true\"><path d=\"M48 22h146l26 26v148H48V22Z\" fill=\"#44E0F8\"/><path d=\"M84 42h130l46 46v130H84V42Z\" fill=\"#FFFFFF\" stroke=\"#00384C\" stroke-width=\"6\" stroke-linejoin=\"miter\"/><path d=\"M214 42v46h46\" fill=\"#DFF9FD\" stroke=\"#00384C\" stroke-width=\"6\" stroke-linejoin=\"miter\"/><path d=\"M112 80h50M112 102h32M112 194h78\" stroke=\"#00384C\" stroke-width=\"6\"/><path d=\"m120 154 25 25 57-57\" stroke=\"#44E0F8\" stroke-width=\"8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg><div><h3>สมัครออนไลน์ทุกขั้นตอน</h3><p>สมัคร ยืนยันตัวตน และยืนยันการกู้เงินได้ทางออนไลน์</p></div></article>",
-      "css": ".ds-feature{display:grid;grid-template-columns:240px minmax(0,1fr);align-items:center;gap:24px;padding:36px 32px;border-radius:16px;background:var(--ink,#00384C);color:var(--white,#FFFFFF);font-family:Noto Sans Thai,sans-serif}.ds-feature svg{display:block;width:240px;height:auto}.ds-feature h3{margin:0 0 16px;font-size:34px;font-weight:700;line-height:1.45;color:var(--white,#FFFFFF)}.ds-feature p{margin:0;font-size:17px;line-height:1.85;color:#D0E9EE}@media(max-width:1050px){.ds-feature{grid-template-columns:170px minmax(0,1fr);gap:16px;padding:28px 24px}.ds-feature svg{width:170px}.ds-feature h3{font-size:28px}.ds-feature p{font-size:16px}}@media(max-width:760px){.ds-feature{grid-template-columns:1fr;padding:28px 24px}.ds-feature svg{width:180px;margin-inline:auto}}"
+      "description": "Primary online product explanation with original generated blank-document still life and reviewed full introduction; art is conceptual, not approval evidence.",
+      "html": "<article class=\"ds-feature\"><img src=\"assets/campaign/online-application.webp\" alt=\"\" width=\"1448\" height=\"1086\"><div><h3>สมัครออนไลน์ทุกขั้นตอน</h3><p><!-- Insert the unchanged reviewed full product introduction from the content catalog. --></p></div></article>",
+      "css": ".ds-feature{display:grid;grid-template-columns:43% minmax(0,1fr);align-items:center;gap:8px;padding:32px 32px 32px 16px;border-radius:16px;background:var(--ink,#00384C);color:var(--white,#FFFFFF);font-family:Noto Sans Thai,sans-serif}.ds-feature img{display:block;width:100%;height:auto}.ds-feature h3{margin:0 0 16px;font-size:32px;font-weight:700;line-height:1.5;color:var(--white,#FFFFFF)}.ds-feature p{margin:0;font-size:16px;line-height:1.9;color:#D0E9EE}@media(max-width:1050px){.ds-feature{grid-template-columns:1fr;padding:20px 28px 28px;gap:0}.ds-feature img{width:220px;margin-inline:auto}.ds-feature h3{font-size:28px}}@media(max-width:760px){.ds-feature{padding:16px 24px 28px}.ds-feature h3{margin-bottom:12px}.ds-feature p{line-height:1.85}}"
     },
     {
       "name": "FAQ Question",
@@ -223,41 +233,42 @@
     }
   ],
   "narrative": {
-    "northStar": "The Cyan Product Stage",
-    "overview": "The system pairs confident Thai product communication with calm, task-oriented reading. The user-selected MoneyThunder homepage supplies the campaign grammar; Kiangjai's original identity, App imagery and reviewed content remain the visual and product authority.\n\nA complete original App screen sits on a crisp layered stage. Strong cyan and ink chapters create the homepage rhythm; support and policy pages use restrained document layouts. These are native, editable HTML/CSS surfaces.",
+    "northStar": "Everyday Cyan, Real Product",
+    "overview": "A coherent cyan campaign pairs original generated still-life art with the untouched Kiangjai App home. MoneyThunder informs campaign completeness and chapter rhythm; reviewed content and original identity remain the product authority. Native HTML supplies all webpage labels, controls and interactions. Art is conceptual, not customer photography or business evidence.",
     "keyCharacteristics": [
-      "One integrated product campaign with meaningful functional graphics.",
-      "Original brand assets and complete App screenshots.",
-      "Strong chapter contrast with quiet reading areas.",
-      "Natural Thai typography and visible keyboard states."
+      "Transparent generated work-life still life behind one complete real App home.",
+      "Coordinated paper-and-canvas feature art with a clear primary/secondary hierarchy.",
+      "Company facts and quiet reading areas instead of repeated marketing copy.",
+      "Natural Thai typography and consistent native interactions."
     ],
     "rules": [
       {
-        "name": "The Chapter Contrast Rule",
-        "body": "Use cyan and ink to establish purposeful chapters; keep reading areas open and neutral.",
+        "name": "Chapter Rhythm",
+        "body": "Use cyan for the campaign and final action, ink for navigation and primary online feature, neutral reading areas for process and help, and white for company facts.",
         "section": "colors"
       },
       {
-        "name": "The Thai Integrity Rule",
-        "body": "Preserve natural Thai wrapping and zero letter spacing; the amount's numeric tracking does not apply to Thai text.",
+        "name": "Thai Integrity",
+        "body": "Preserve natural Thai wrapping and zero Thai letter spacing; numeric tracking does not apply to Thai text.",
         "section": "typography"
       },
       {
-        "name": "The Structural Depth Rule",
-        "body": "Reserve depth for the complete product stage and dialogs; do not scatter floating ornaments through reading content.",
-        "section": "elevation"
+        "name": "Image Integrity",
+        "body": "Generated assets frame the untouched App image, never replace or obscure it; keep complete natural aspect ratios.",
+        "section": "assets"
       }
     ],
     "dos": [
-      "Do use the original master Logo and complete App images at their natural ratio.",
-      "Do keep the campaign integrated and functional illustrations subordinate to product truth.",
-      "Do preserve Thai wrapping, keyboard focus and reduced-motion behavior.",
-      "Do use reading layouts for safety and policy content."
+      "Use original master Logo and complete real App screenshots.",
+      "Keep generated still life conceptual and subordinate to reviewed business truth.",
+      "Retain real pending download/legal states and keyboard access.",
+      "Verify each required viewport with actual rendered screenshots."
     ],
     "donts": [
-      "Don't introduce people photos, coins, gradients, giant decorative logos or fake App screens.",
-      "Don't crop a phone into half-screen decoration or split its background through the device.",
-      "Don't invent financial claims, approval evidence, store links, payment QR codes or legal resources."
+      "Do not generate people photos, fake App interfaces, coins or approval evidence.",
+      "Do not crop phones into half-screen decoration or paint over product content.",
+      "Do not invent financial claims, store links, payment QR codes or license resources.",
+      "Do not treat metadata or previous-round QA as current test results."
     ]
   }
 }
