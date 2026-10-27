@@ -140,8 +140,8 @@
         "mobile": "26px"
       },
       "dialogFrameWidth": "min(320px,calc((100dvh - 280px)*.46182266),100%)",
-      "heroDesktopComposition": "Continuous real photo, editable white copy/cyan amount and action over ink readability gradient. Outer24px, radius16px, min600px; no half split.",
-      "mobileHeroComposition": "Continuous photo, native top headline and bottom offer/actions over vertical ink overlay. Outer12px, radius12px, min690px.",
+      "heroDesktopComposition": "Full bleed, no outer inset/cap/radius. hero-copy.shell uses the page content axis; same photo and ink gradient, min600px.",
+      "mobileHeroComposition": "Full bleed, no outer inset/corners. Native690px composition uses shared20px shell gutters without another horizontal padding layer.",
       "heroPhotoFocalPointDesktop": "64% 45%",
       "heroPhotoFocalPointMobile": "64% 35%",
       "viewIcon": {
@@ -171,18 +171,22 @@
         "desktop": "32px",
         "mobile": "24px"
       },
-      "companyAndFaq": "Shared4+8column axes",
+      "companyAndFaq": "Headings above full content and following contact action, no4+8 sidebar.",
       "anchorOffset": "One root scroll-padding value: header height +24px",
       "policy": "Shared1240px shell, max720px reading text, natural height, page-level flex footer push",
-      "product": "One two-tab showcase, explanation and device top aligned on shared12columns; no separate repayment Banner. Desktop panel min602px; mobile natural height.",
+      "product": "Full-width neutral chapter, showcase padding0; balanced6+6 top-aligned columns; same two tab states and240/210px original-device frames.",
       "tabState": "Selected exact#44E0F8/600; unselected reading text/500.",
       "navigation": "Current quiet-cyan fill/600, no decorative underline pseudo-element.",
       "faq": "Plain ruled shared rows, no repetitive FAQ cards.",
-      "process": "44px/400 numerals desktop,32px/400 mobile, no cyan underline."
+      "process": "44px/400 numerals desktop,32px/400 mobile, no cyan underline.",
+      "conversion": "Title/note and below CTA share a left edge, no App-icon shift.",
+      "footer": "Continuous ink safety/footer. Brand whole row, company/contact2:1 desktop and1column mobile; no vertical borders/extra horizontal inset.",
+      "surfaces": "Full-width chapter backgrounds, exactly one1240px shell with48/24/20px gutters."
     },
     "verification": {
-      "round": 15,
+      "round": 16,
       "responsiveCases": 18,
+      "plannedResponsiveCases": 18,
       "pages": [
         "home",
         "security",
@@ -195,16 +199,19 @@
         375,
         390
       ],
-      "responsiveState": "18 actual screenshots and DOM cases; no horizontal overflow. Four weight roles and navigation without underline verified. Matching original-screen states and shared FAQ geometry checked.",
-      "interactionState": "Tabs including Left/Right/Home/End, gallery/plan, Esc/focus, F01/F04, menu/anchor, contact/preview download, safety and support-return product state verified.",
-      "releaseState": "See external round15-preview/release-verification.json and live screenshots; local checks do not prove publication.",
-      "evidence": "../round15-preview/",
-      "skillInstallation": "Existing verified design skills reused; no new installation. Better Icons/Iconify fetched the licensed Lucide maximize-2 asset.",
-      "launcherFallback": "Impeccable context permission denied; direct read of PRODUCT/DESIGN and layout/typeset/polish references; not a detector pass.",
+      "responsiveState": "18 actual layouts: four pages at1440/360/375/390 plus home1024/760; no horizontal overflow or broken visible images. Each6homecase has9full-bleed surfaces and23primary axes.",
+      "interactionState": "Current native download/contact/FAQ/plan/tab keyboard/gallery/security/return/menu regression completed, console warning/error empty. Seven-page static and JS syntax checked.",
+      "releaseState": "Online release conclusions are recorded in ../round16-preview/release-verification.json through commit, CI and actual browser evidence; this metadata records local acceptance.",
+      "evidence": "../round16-preview/",
+      "competitorEvidence": "../round16-preview/competitors/",
+      "skillInstallation": "Existing verified skills reused; no new installation this round.",
+      "launcherFallback": "Prior direct-read Impeccable fallback retained; not a detector pass.",
       "extraHomeWidths": [
         1024,
         760
-      ]
+      ],
+      "productFrameState": "Same x/width/height/radius across online/repayment at4required widths;240desktop/210mobile; mobile y may differ naturally due to content length.",
+      "layoutAvailableWidthNote": "Reserved15px scrollbar gutter excluded from full-bleed width; primaryL=(availableWidth-min(1240,availableWidth-2*gutter))/2."
     }
   },
   "components": [
@@ -242,9 +249,9 @@
     {
       "name": "Tabbed Product Explanation",
       "kind": "section",
-      "description": "One showcase with reviewed online and repayment labels, original copy and equal240/210px complete App frames. Roving tabindex and Left/Right/Home/End handled by assets/app.js.",
+      "description": "Full-width neutral product chapter with zero nested inset; balanced6+6 explanation/media columns, reviewed native tabs and same240/210px original frames.",
       "html": "<div class=\"ds-product\"><div role=\"tablist\" aria-label=\"จุดเด่นของบริการ\"><button type=\"button\" role=\"tab\" aria-selected=\"true\" aria-controls=\"ds-online\" id=\"ds-tab-online\" tabindex=\"0\">สมัครออนไลน์ทุกขั้นตอน</button><button type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"ds-repayment\" id=\"ds-tab-repayment\" tabindex=\"-1\">ชำระคืนสะดวก</button></div><div role=\"tabpanel\" aria-labelledby=\"ds-tab-online\" id=\"ds-online\" tabindex=\"0\"><!-- Complete reviewed introduction and original HOME --></div><div role=\"tabpanel\" aria-labelledby=\"ds-tab-repayment\" id=\"ds-repayment\" tabindex=\"0\" hidden><!-- Complete reviewed repayment text and original screenshot --></div></div>",
-      "css": ".ds-product{padding:32px 40px;border-radius:16px;background:var(--surface,#F2F6F7);color:var(--text,#183D49);font-family:Noto Sans Thai,sans-serif}.ds-product [role=tablist]{display:grid;grid-template-columns:1fr 1fr;max-width:640px;gap:4px;padding:4px;border:1px solid var(--line,#D9E2E5);border-radius:12px;background:#fff}.ds-product [role=tab]{min-height:52px;padding:12px 20px;border:0;border-radius:8px;background:transparent;color:var(--text,#183D49);font:inherit;font-weight:500}.ds-product [aria-selected=true]{background:var(--cyan,#44E0F8);color:var(--ink,#00384C);font-weight:600}.ds-product [role=tabpanel]{margin-top:32px;min-height:602px}.ds-product p{font-size:16px;line-height:1.85}@media(max-width:760px){.ds-product{padding:20px;border-radius:12px}.ds-product [role=tab]{min-height:72px;padding:10px 8px}.ds-product [role=tabpanel]{min-height:0}}"
+      "css": ".ds-product{padding:0;background:var(--surface,#F2F6F7);color:var(--text,#183D49);font-family:Noto Sans Thai,sans-serif}.ds-product [role=tablist]{display:grid;grid-template-columns:1fr 1fr;max-width:640px;gap:4px;padding:4px;border:1px solid var(--line,#D9E2E5);border-radius:12px;background:#fff}.ds-product [role=tab]{min-height:52px;padding:12px 20px;border:0;border-radius:8px;background:transparent;color:var(--text,#183D49);font:inherit;font-weight:500}.ds-product [aria-selected=true]{background:var(--cyan,#44E0F8);color:var(--ink,#00384C);font-weight:600}.ds-product [role=tabpanel]{margin-top:32px;min-height:602px}.ds-product p{font-size:16px;line-height:1.85}@media(max-width:760px){.ds-product{padding:0}.ds-product [role=tab]{min-height:72px;padding:10px 8px}.ds-product [role=tabpanel]{min-height:0}}"
     },
     {
       "name": "FAQ Question",
@@ -262,13 +269,13 @@
     }
   ],
   "narrative": {
-    "northStar": "Everyday Scene, Clear Product, Coherent Craft",
-    "overview": "Continuous authentic Bangkok food-stand photography leads the Hero; native edited text remains separate. One compact tabbed product showcase replaces the oversized independent repayment chapter. Four weight roles, meaningful icons and shared action/FAQ anatomy organize the site.",
+    "northStar": "One Content Axis, Full-width Chapters",
+    "overview": "Keep authentic photography, native product tabs and business truth. Remove Hero framing, nested product insets, side-heading gaps, download icon shifts and footer indents. Full-width chapter surfaces carry one shared1240px content shell.",
     "keyCharacteristics": [
-      "Real photo without generative person edits or customer implication.",
-      "One product showcase, two reviewed uses, unchanged complete App screenshots.",
-      "body400/UI500/strong600/display700; reading ink for explanations.",
-      "Quiet filled active navigation, branded active product tab, meaningful maximize icons and plain FAQ rows."
+      "Full-bleed Hero and full-width chapter backgrounds; one shared shell.",
+      "Balanced6+6 product layout without inset; unchanged equal devices.",
+      "Heading-above-content company/FAQ and left-stacked conversion.",
+      "Continuous ink safety/footer; branding whole row then2:1 company/contact, mobile1column."
     ],
     "rules": [
       {
@@ -288,7 +295,7 @@
       },
       {
         "name": "Proportion",
-        "body": "Size chapters to information value; do not make a two-line secondary use another full Banner.",
+        "body": "One content axis governs homepage chapters; remove nested insets and side-heading gaps rather than compensating each region separately.",
         "section": "layout"
       }
     ],

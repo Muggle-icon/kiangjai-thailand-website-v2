@@ -2,13 +2,15 @@
 
 Thai small-loan product website for everyday salary earners, self-employed people and small operators. Actual service coverage remains the reviewed Bangkok FAQ. The website explains the product and directs to the App when confirmed destinations become available; it does not accept loan applications or repayment itself.
 
-Keep exact #44E0F8, the original Kiangjai Logo, self-hosted Noto Sans Thai, approved Thai and complete original App screenshots. Round 15 studies MONIX and MoneyThunder for photographic composition, reading hierarchy and content-to-section proportion. Their assets, claims, reviews and credentials are not Kiangjai evidence.
+Keep exact #44E0F8, the original Kiangjai Logo, self-hosted Noto Sans Thai, approved Thai and complete original App screenshots. Round 16 refines full-width chapter surfaces and one content axis after reviewing MoneyThunder; prior composition research remains context. Their assets, claims, reviews and credentials are not Kiangjai evidence.
 
 The current Hero uses Tony Wu's Pexels photo 16761599, whose source identifies Bangkok, Thailand. Its upload date is 2023-05-10; no capture date is verified. Production derivatives are assets/campaign/bangkok-food-stand-1200.webp and bangkok-food-stand-2200.webp. Keep source and Pexels license records. Its subject is illustrative, not identified as a Kiangjai customer, borrower, employee or endorser; do not infer nationality, financial need or loan history. The photograph was resized/compressed only, with display cropping and legibility overlay in CSS; no generative change to people or scene. Previous cafe photography and generated concepts are history, not the current Hero.
 
 Approved Thai catalog and public config are unchanged. Maximum 50,000 THB. Do not invent rates, approval time, eligibility, license, official channels or store links. Company registration 0105567184971 is not a lending license. App-image promotional/rate conflicts still await business review.
 
 Section responsibilities stay distinct: Hero explains product positioning, maximum amount and next entry; one tabbed product section explains online application and repayment using their original complete screens; four steps explain sequence; company facts establish identity; FAQ answers details; conversion and safety remain separate. Only step 03 has a matching loan-plan image. Both tab panels keep their full reviewed descriptions and original images in the DOM; tabs change presentation, not available product information.
+
+Current presentation uses one max1240px shell with48/24/20px gutters, full-bleed Hero, full-width chapter backgrounds, balanced6+6 product columns without nested inset, company/FAQ headings above content, left-aligned stacked download and continuous ink safety/footer. Business truth, photography and JavaScript contracts are unchanged.
 
 All original screens use APP_SCREENS and the app-screen macro in the existing Python builder. Never crop, repaint, edit or replace the 750×1624 screenshots. HOME and repayment use one frame size, edge, radius and shadow per breakpoint; gallery and step viewers share one enlargement rule. New product tabs require native buttons, tab/tabpanel semantics, roving tabindex, Left/Right and Home/End keys, without changing the existing gallery and dialog contracts.
 

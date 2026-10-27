@@ -1,57 +1,53 @@
-/* One product demonstration, with original screens and two distinct use cases. */
-.product-section{padding-block:var(--section-space) 64px}
+/* Full-width chapter surfaces, with exactly one shared content container. */
+.product-section{padding-block:var(--section-space);background:var(--surface)}
 .product-intro{margin-bottom:var(--heading-gap)}
-.product-showcase{padding:32px 40px;background:var(--surface);border-radius:16px}
+.product-showcase{padding:0}
 .product-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:640px;gap:4px;padding:4px;border:1px solid var(--line);border-radius:12px;background:var(--white)}
 .product-tab{min-width:0;min-height:52px;padding:12px 20px;border:0;border-radius:8px;background:transparent;color:var(--text);font-family:inherit;font-size:var(--font-body);font-weight:var(--weight-ui);line-height:26px;text-align:center;transition:background-color .18s,color .18s}
 .product-tab:hover{color:var(--ink);background:var(--surface)}.product-tab[aria-selected=true]{background:var(--cyan);color:var(--ink);font-weight:var(--weight-strong)}
 .product-row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--grid-gap);align-items:start;margin-top:32px;min-height:602px}
 .product-row>.benefit-feature,.product-row>.benefit-copy{grid-column:1/span 6;min-width:0;max-width:58ch}
-.product-row>.app-media{grid-column:8/span 4}
+.product-row>.app-media{grid-column:7/span 6}
 .benefit-feature>p,.benefit-copy>p{font-size:var(--font-body);line-height:var(--leading-body);color:var(--text)}
 .benefit-feature>.service-area{font-size:var(--font-small);color:var(--muted);line-height:24px;margin-top:24px}
 .benefit-steps-link{margin-top:24px;padding:8px 18px;border:1px solid #a7bec6;border-radius:var(--radius);background:var(--white)}.benefit-steps-link:hover{background:var(--cyan-soft);text-decoration:none}
 .product-help-links{display:flex;flex-wrap:wrap;gap:0 24px;align-items:flex-start;margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}
 /* The process explains sequence; its numerals do not compete with the offer. */
-.application-steps{padding-block:0 var(--section-space);background:var(--white)}
-.application-steps>.shell{padding-top:48px;border-top:1px solid var(--line)}.application-steps h2{margin-bottom:var(--heading-gap)}
+.application-steps{padding-block:var(--section-space);background:var(--white)}
+.application-steps h2{margin-bottom:var(--heading-gap)}
 .application-steps h2>span{display:inline-block;white-space:nowrap}
 .step-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--grid-gap);margin:0;padding:0;list-style:none}
 .step-list li{min-width:0}.step-number{display:block;margin-bottom:16px;color:var(--ink);font-size:44px;font-weight:var(--weight-body);line-height:1.2;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .step-list h3{font-size:var(--font-title);font-weight:var(--weight-strong);line-height:1.5;margin-bottom:12px}.step-list p{font-size:var(--font-body);line-height:var(--leading-body);color:var(--text)}.step-list .screen-detail-link{margin-top:16px}
-/* Company and help share the same 4+8 content axes and quiet support actions. */
+/* Read in one direction: heading, full-width content, then the supporting action. */
 .company-section{padding-block:var(--section-space);background:var(--surface)}
-.company-layout,.help-layout{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--grid-gap);align-items:start}
-.company-heading,.help-layout>.section-heading{grid-column:1/span 4;min-width:0}
-.company-facts,.help-layout>.faq-panel{grid-column:5/span 8;min-width:0}
-.company-heading img{display:block;width:156px;height:auto;margin-bottom:24px}.company-heading h2,.help-layout .section-heading h2{font-size:var(--font-heading);margin-bottom:20px}
-.company-heading>[data-contact],.help-layout .section-heading>[data-contact]{padding:8px 18px;border:1px solid #a7bec6;border-radius:var(--radius)}.company-heading>[data-contact]:hover,.help-layout .section-heading>[data-contact]:hover{background:var(--white);text-decoration:none}
-.company-facts{display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:24px}
-.company-registration{grid-column:1/-1}.company-registration h3{font-size:var(--font-module);font-weight:var(--weight-strong);line-height:1.5;margin-bottom:12px}
+.company-layout,.help-layout{display:block}
+.company-heading h2,.help-layout .section-heading h2{font-size:var(--font-heading);margin-bottom:var(--heading-gap)}
+.section-contact{margin-top:24px;padding:8px 18px;border:1px solid #a7bec6;border-radius:var(--radius)}.section-contact:hover{background:var(--white);text-decoration:none}
+.company-facts{display:block}
+.company-registration h3{font-size:var(--font-module);font-weight:var(--weight-strong);line-height:1.5;margin-bottom:12px}
 .company-facts p{font-size:var(--font-body);line-height:var(--leading-body);color:var(--text)}
+.company-address{max-width:75ch;margin-top:16px}.company-phone{margin-top:24px}
 .company-phone p:first-child{font-size:var(--font-small);color:var(--muted)}.company-phone p[data-phone]{font-size:24px;font-weight:var(--weight-strong);line-height:1.6;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:8px}
 .help-section{padding-block:var(--section-space);background:var(--white)}
 /* Conversion and safety have separate duties, without repeated campaign imagery. */
-.download-section{background:var(--cyan);color:var(--ink)}.download{display:flex;align-items:center;justify-content:space-between;gap:32px;padding-block:48px}
-.download-identity{display:flex;align-items:center;gap:24px;min-width:0}.download-identity>img{width:64px;height:64px;border-radius:12px;flex:none}.download h2{font-size:var(--font-module);font-weight:var(--weight-strong);line-height:1.5}
-.download .download-note{font-size:var(--font-small);line-height:24px;margin-top:8px;color:var(--ink)}.download>.button{flex:none;width:var(--cta-width)}
-.official-section{padding-block:32px;background:var(--white)}.official-panel{display:grid;grid-template-columns:32px minmax(0,1fr) 224px;align-items:start;gap:24px}
-.official-icon>.icon{width:28px;height:28px}.official-panel h3{font-size:var(--font-title);font-weight:var(--weight-strong);line-height:1.5;margin-bottom:8px}.official-panel p{max-width:65ch;font-size:var(--font-small);line-height:24px;color:var(--muted)}
-.security-links{display:flex;justify-content:flex-end}.security-links a{display:flex;align-items:center;gap:8px;min-height:44px;font-size:var(--font-small);font-weight:var(--weight-ui);line-height:26px;text-decoration:none}.security-links a:hover{text-decoration:underline}.security-links .icon{width:18px;height:18px}
+.download-section{background:var(--cyan);color:var(--ink)}.download{padding-block:48px}
+.download h2{font-size:var(--font-module);font-weight:var(--weight-strong);line-height:1.5}
+.download .download-note{font-size:var(--font-small);line-height:24px;margin-top:8px;color:var(--ink)}.download>.button{width:var(--cta-width);margin-top:24px}
+.official-section{padding-block:40px 32px;background:var(--ink);color:var(--white)}.official-panel{display:block}
+.official-panel h3{font-size:var(--font-title);font-weight:var(--weight-strong);line-height:1.5;margin-bottom:8px;color:var(--white)}.official-panel p{max-width:75ch;font-size:var(--font-small);line-height:24px;color:#c5d8df}
+.security-links{margin-top:16px}.security-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:var(--font-small);font-weight:var(--weight-ui);line-height:26px;color:var(--cyan);text-decoration:none}.security-links a:hover{text-decoration:underline}.security-links .icon{width:18px;height:18px}.security-links a:focus-visible{outline-color:var(--cyan)}
 @media(max-width:1100px){
- .product-showcase{padding:32px}.product-row>.app-media{grid-column:8/span 5}.company-facts{grid-template-columns:1fr}.company-registration{grid-column:auto}.company-phone{display:flex;align-items:baseline;gap:16px}.company-phone p[data-phone]{margin:0}
- .step-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.download-identity{gap:16px}
+ .step-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
 }
 @media(max-width:760px){
- .product-section{padding-bottom:48px}.product-showcase{padding:20px;border-radius:12px}.product-tabs{gap:2px;padding:3px}.product-tab{padding:10px 8px;min-height:72px;font-size:16px;line-height:24px}
+ .product-tabs{gap:2px;padding:3px}.product-tab{padding:10px 8px;min-height:72px;font-size:16px;line-height:24px}
  .product-row{grid-template-columns:1fr;gap:32px;min-height:0;margin-top:24px}.product-row>.benefit-feature,.product-row>.benefit-copy,.product-row>.app-media{grid-column:1}
  .product-row>.app-media{width:100%}.benefit-feature>.service-area{margin-top:20px}.benefit-steps-link{margin-top:20px}
  .product-help-links{margin-top:20px;padding-top:12px;gap:0 16px}.app-media-caption{margin-top:16px}
- .application-steps>.shell{padding-top:32px}.step-list{grid-template-columns:1fr;gap:0}.step-list li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;padding-block:24px;border-top:1px solid var(--line)}.step-list li:first-child{padding-top:0;border-top:0}.step-list li:last-child{padding-bottom:0}
+ .step-list{grid-template-columns:1fr;gap:0}.step-list li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;padding-block:24px;border-top:1px solid var(--line)}.step-list li:first-child{padding-top:0;border-top:0}.step-list li:last-child{padding-bottom:0}
  .step-number{font-size:32px;margin:0;align-self:start}.step-copy{padding-top:2px}.step-list h3{margin-bottom:8px}
- .company-layout,.help-layout{grid-template-columns:1fr;gap:24px}.company-heading,.help-layout>.section-heading,.company-facts,.help-layout>.faq-panel{grid-column:1}
- .company-heading img{width:156px;margin-bottom:16px}.company-heading h2,.help-layout .section-heading h2{margin-bottom:16px}
- .company-facts{padding-top:24px;border-top:1px solid var(--line);gap:24px}.company-registration h3{margin-bottom:8px}.company-phone{display:block}.company-phone p[data-phone]{margin-top:8px}
- .download{display:block;padding-block:32px}.download-identity{align-items:start;gap:16px}.download-identity>img{width:56px;height:56px}.download .download-note{margin-top:8px}.download>.button{width:100%;margin-top:24px}
- .official-section{padding-block:24px}.official-panel{grid-template-columns:24px minmax(0,1fr);gap:16px}.official-icon>.icon{width:24px;height:24px}.security-links{grid-column:2;justify-content:flex-start}
+ .company-registration h3{margin-bottom:8px}
+ .download{padding-block:32px}.download>.button{width:100%}
+ .official-section{padding-block:32px}
 }

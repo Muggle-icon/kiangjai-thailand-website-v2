@@ -1,6 +1,6 @@
-# 第十五轮视觉素材与来源
+# 第十六轮视觉素材与来源
 
-日期：2026-10-27。当前首屏改用 Tony Wu 的曼谷餐食摊实拍，替代上一轮咖啡馆照片。照片提供生活工作情境，不表示画中人物的国籍、财务状况、借款需求或与公司的关系，不暗示其为 Kiangjai 代言。
+日期：2026-10-27。本轮沿用Tony Wu曼谷餐食摊实拍；照片、原App、Logo和图标均未更换，只有页面容器和对齐变化。照片提供生活工作情境，不表示画中人物的国籍、财务状况、借款需求或与公司的关系，不暗示其为 Kiangjai 代言。
 
 ## 当前生产素材
 
@@ -8,8 +8,8 @@
 | --- | --- | --- |
 | `assets/campaign/bangkok-food-stand-2200.webp` | 下述 Pexels 实拍优化派生；2200×1467；433,824B | 桌面贯穿整幅 Hero 的照片 |
 | `assets/campaign/bangkok-food-stand-1200.webp` | 同母片派生；1200×800；172,856B | ≤760px Hero，CSS 独立裁切 |
-| `assets/brand/logo-master.png` | 用户原 Logo；367×124 | 页头、公司区、页脚；原 PNG 不改 |
-| `assets/brand/app-icon.png` | 用户原 App 图标 | 下载产品身份 |
+| `assets/brand/logo-master.png` | 用户原 Logo；367×124 | 页头及页脚；公司区不再重复展示，原PNG不改 |
+| `assets/brand/app-icon.png` | 用户原App图标 | 保留来源；当前下载区移除，避免推移文字左起点 |
 | `assets/app/home-overview.png` | 用户最新原图；750×1624；221,409B | 产品在线申请 Tab、图库第 1 张 |
 | `assets/app/repayment.png` | 用户原图；750×1624 | 产品还款 Tab、图库第 2 张 |
 | `assets/app/loan-plan.png` | 用户原图；750×1624 | 步骤 03 详情、图库第 3 张 |
@@ -39,7 +39,7 @@
 
 ## 图标出处
 
-本轮通过 Better Icons／Iconify 获取 [Lucide `maximize-2`](https://icon-sets.iconify.design/lucide/maximize-2/)，保存为 `assets/icons/maximize.svg`；数据来源 `https://api.iconify.design/lucide/maximize-2.svg`。它表示查看大图；FAQ 加号继续只表示展开，方向箭头用于实际前后切换／安全页导航。
+第十五轮通过 Better Icons／Iconify 获取 [Lucide `maximize-2`](https://icon-sets.iconify.design/lucide/maximize-2/)，保存为 `assets/icons/maximize.svg`；数据来源 `https://api.iconify.design/lucide/maximize-2.svg`。它表示查看大图；FAQ 加号继续只表示展开，方向箭头用于实际前后切换／安全页导航。
 
 Lucide [许可](https://lucide.dev/license)及本地 `assets/icons/LICENSE-Lucide.txt` 保留 ISC 文本和相关 Feather MIT 文本。历史 Phosphor 图标来源／MIT 文本保留于 `LICENSE-Phosphor.txt`。历史 application.svg 为项目原创文档几何图；repayment.svg 的 QR 字形源自 Phosphor。图标许可不等于竞品品牌资源许可。
 
@@ -58,4 +58,4 @@ Lucide [许可](https://lucide.dev/license)及本地 `assets/icons/LICENSE-Lucid
 | 已审 Thai catalog | `d0a1668f74bab8b29a8d0bb369bcc734d2d0df8f21f1417084f29708a2d8dedc` |
 | 公开 config | `fc0ab4fd68c9727195d6fbb2a2998ffaa03c95629f3e508898b1d523be57e179` |
 
-原图 200,000 推广、日利率及示例金额／时效仍待业务核准，未提取为官网承诺。未配置的商店、官方渠道或牌照不制作替代图。本轮已检查图片加载、PC／手机裁切、Tab与弹窗及18组实页布局；原始值与截图在`../round15-preview/`，线上发布结果由release-verification.json另行记录。来源本身不替代验收。
+原图 200,000 推广、日利率及示例金额／时效仍待业务核准，未提取为官网承诺。未配置的商店、官方渠道或牌照不制作替代图。第十六轮已完成18组实际布局：四页×1440／360／375／390px，加首页1024／760px，无横向溢出或可见破图。6种首页布局的9个全宽背景、23个主要左起点以及4种必检宽度的两种Tab设备规格均已测量；交互回归、7页静态检查和JS语法已完成。证据目录为仓库外`../round16-preview/`；线上发布结论以`../round16-preview/release-verification.json`中的commit、CI与实际浏览器记录为准；本文件记录本地验收。 素材来源不替代验收。

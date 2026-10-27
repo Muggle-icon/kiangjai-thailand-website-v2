@@ -8,10 +8,12 @@
   color: #fff;
 }
 .kj-footer-grid {
-  grid-template-columns: 224px minmax(0, 1fr) 244px;
-  gap: var(--grid-gap);
-  padding-block: 48px 32px;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 32px 64px;
+  padding-block: 32px;
+  border-top: 1px solid var(--line);
 }
+.kj-footer-brand { grid-column: 1 / -1; }
 .kj-footer-brand img {
   display: block;
   width: 156px;
@@ -19,17 +21,18 @@
   filter: brightness(0) invert(1);
 }
 .kj-footer-brand > p:last-child {
-  max-width: 208px;
-  margin-top: 20px;
+  max-width: 75ch;
+  margin-top: 16px;
   color: var(--footer-muted);
   font-size: 14px;
   line-height: 1.85;
 }
 .kj-footer-company {
   min-width: 0;
-  padding-inline: var(--grid-gap);
-  border-inline: 1px solid var(--line);
+  padding: 0;
+  border: 0;
 }
+.footer-contact { padding: 0; border: 0; }
 .kj-footer h2 {
   margin: 0 0 16px;
   color: #fff;
@@ -63,7 +66,7 @@
 .kj-footer button:hover { color: var(--cyan); }
 .kj-footer a:focus-visible,
 .kj-footer button:focus-visible { outline-color: var(--cyan); }
-.footer-responsible { padding-block: 20px; background: #002e3f; }
+.footer-responsible { padding-block: 20px 32px; }
 .footer-responsible .kj-small {
   margin-block: 0;
   color: #d4e4e9;
@@ -316,16 +319,12 @@
 .kj-policy-empty .kj-primary { width: var(--cta-width); max-width: 100%; margin-top: var(--grid-gap); }
 
 @media (max-width: 1160px) {
-  .kj-footer-grid { grid-template-columns: 200px minmax(0, 1fr) 220px; }
   .security-content-layout { grid-template-columns: 210px minmax(0, 1fr); }
   .kj-security-channels .security-channel-app,
   .kj-security-channels .security-channel-contact { display: block; }
   .security-channel-icon { margin-bottom: 20px; }
 }
 @media (max-width: 900px) {
-  .kj-footer-grid { grid-template-columns: 184px minmax(0, 1fr); }
-  .kj-footer-company { padding-left: var(--grid-gap); padding-right: 0; border-right: 0; }
-  .footer-contact { grid-column: 2; padding-left: var(--grid-gap); border-left: 1px solid var(--line); }
   .security-content-layout { grid-template-columns: 180px minmax(0, 1fr); }
   .security-page-nav { padding-right: 0; }
   .security-page-nav a { padding-inline: 12px; }
