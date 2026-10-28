@@ -214,7 +214,7 @@
     }
   }
   $$('[data-home-return]').forEach(link => { try { if (sessionStorage.getItem(scrollKey) !== null) link.href += '?return=1'; } catch {} });
-  const links = $$('#main-nav a[href*="#"]').map(link => ({link,section:document.getElementById(new URL(link.href).hash.slice(1))})).filter(item => item.section);
+  const links = isHome ? $$('#main-nav a[href*="#"]').map(link => ({link,section:document.getElementById(new URL(link.href).hash.slice(1))})).filter(item => item.section).sort((a,b) => a.section.compareDocumentPosition(b.section) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1) : [];
   if (links.length) {
     let frame; const update = () => {
       const line = ($('.site-header')?.getBoundingClientRect().bottom||0)+150;
@@ -261,14 +261,26 @@
     const tabs = [...showcase.querySelectorAll('[data-product-tab]')];
     if (!tabs.length) return;
     const storageKey = 'kiangjai-v2-product-tab';
+    const compact = window.matchMedia('(max-width:1100px)');
+    let activeTab = tabs[0];
     const activate = (target, moveFocus = false) => {
+      activeTab = target;
+      showcase.querySelector('.product-tabs').hidden = !compact.matches;
       tabs.forEach(tab => {
         const selected = tab === target;
         tab.setAttribute('aria-selected', String(selected));
         tab.tabIndex = selected ? 0 : -1;
         tab.getAttribute('aria-controls').split(/\s+/).forEach(id => {
           const controlled = document.getElementById(id);
-          if (controlled) { controlled.hidden = !selected; controlled.inert = !selected; }
+          if (controlled) {
+            controlled.hidden = compact.matches && !selected;
+            controlled.inert = compact.matches && !selected;
+            if (controlled.hasAttribute('data-product-panel')) {
+              controlled.setAttribute('role',compact.matches ? 'tabpanel' : 'region');
+              controlled.setAttribute('aria-labelledby',compact.matches ? tab.id : 'product-heading-'+tab.dataset.productTab);
+              if (compact.matches) controlled.tabIndex=0; else controlled.removeAttribute('tabindex');
+            }
+          }
         });
       });
       try { sessionStorage.setItem(storageKey, target.dataset.productTab); } catch {}
@@ -286,6 +298,13 @@
         event.preventDefault();
         activate(tabs[next], true);
       });
+    });
+    compact.addEventListener('change', () => {
+      const focused = document.activeElement;
+      const focusedTab = tabs.find(tab => tab.getAttribute('aria-controls').split(/\s+/).some(id => document.getElementById(id)?.contains(focused)));
+      const target = focusedTab || activeTab;
+      activate(target);
+      if (!compact.matches && tabs.includes(focused)) document.getElementById('product-media-'+target.dataset.productTab)?.querySelector('button')?.focus({preventScroll:true});
     });
     let savedKey = '';
     if (new URLSearchParams(location.search).get('return') === '1') {

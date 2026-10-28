@@ -1,6 +1,6 @@
 ---
 name: Kiangjai Thailand V2
-description: Kanit display/UI with Noto Thai reading, stable interaction geometry and authentic product evidence.
+description: Bright cyan lending Hero, complete wide-screen product evidence and one consolidated brand footer.
 colors:
   cyan: "#44E0F8"
   ink: "#00384C"
@@ -13,9 +13,9 @@ colors:
 typography:
   display:
     fontFamily: "Kanit, Noto Sans Thai, sans-serif"
-    fontSize: "64px"
+    fontSize: "56px"
     fontWeight: 700
-    lineHeight: 1.25
+    lineHeight: 1.2
     letterSpacing: "0"
   page:
     fontFamily: "Kanit, Noto Sans Thai, sans-serif"
@@ -96,50 +96,52 @@ components:
 
 ## Current direction
 
-Round18 addresses clicking jumps and Thai visual character. Actual MoneyThunder font-family measurements identify Kanit aliases. Licensed self-hosted Google Fonts Kanit supplies headings/UI; original Noto Sans Thai remains reading text. Product state geometry, disclosures, dialogs, same-document anchors and return states are stabilized without changing business copy or imagery.
+Round19 is a structural redesign of the existing static site. A bright cyan Hero carries the strongest focus; a white product chapter exposes both real workflows on wide screens, followed by a compact connected process, plain FAQ and a single dark footer containing conversion, company identity and safety. Preserve the reviewed product framework and all copy. Previous full-cyan product and standalone company/download/safety chapters are superseded current descriptions.
 
-The current Hero uses Tony Wu's Pexels 16761599, identified by the source as Bangkok, Thailand, uploaded 2023-05-10. No capture date is verified. Production files are bangkok-food-stand-1200.webp and bangkok-food-stand-2200.webp. This is illustrative photography, not evidence of a customer, borrower, employee, endorser or company location. No generative subject edits; CSS alone controls display crop and legibility overlay. Keep the source and license in docs/visual-assets.md. Former cafe photography, synthetic shopkeeper and generated concepts are historical.
+MoneyThunder's current Hero/product/footer screenshots are in ../round19-preview/competitors/. They inform a bold offer, distinct chapter duties and a complete close; this does not authorize copied assets or financial claims. Actual prior-round font-family metrics remain valid provenance for the independently licensed Kanit files, not a claim of visual equivalence.
 
-MONIX informs a continuous photo-led opening and clear display hierarchy; MoneyThunder informs separate duties and content density for product explanation, financial details and help. They are different site types, and their choices are references, not universal rules or permission to copy claims, assets or credentials.
+## Shared roles and actions
 
-## Type, color and actions
+Exact cyan#44E0F8, ink#00384C, text#183D49, muted#566E76, surface#F2F6F7, line#D9E2E5 and white remain. The shared shell is max1120px with48/24/20px gutters. Noto Sans Thai remains16px/1.85/400 reading text; Kanit500/600/700 handles titles and UI. Six Thai/Latin WOFF2 files total98,568B, self-hosted underOFL with unicode-range/swap. Existing Thai500/600 and Noto preloads remain.
 
-Noto Sans Thai body stays16px/1.85/400. Kanit500/600/700 serves headings, navigation, buttons and questions, with no synthetic heading weights. Hero product64/36px, product chapter48/32px, shared page48/36 and chapter40/32, module28/24 and item20/20. Hero tagline28/21 and amount80/60 remain. Native FAQ/summary20/18px, button17px/500, text action16px/500 and image action14px. Kanit six Thai/Latin WOFF2 files total98,568B with SIL OFL, unicode-range and swap; preloadThai500/600 plus existing Noto. Sources and actual competitor metrics are external round18 evidence, not inferred from screenshots.
+General page/chapter/module roles stay48/40/28px desktop and36/32/24px mobile. Local chapter sizes follow purpose: product44/40/32px across wide/compact/mobile; product feature28px desktop; steps21px titles/20px mobile; FAQ20/18px. Hero product56px at1440,48px at<=1240,44px at<=1100,36px mobile; amount96/88/72px across wide/compact/mobile. Tagline28/26/24/21px across the same breakpoints.
 
-Main explanatory copy uses text ink #183D49; muted #566E76 is secondary metadata and captions. Exact #44E0F8 leads the amount/action and selected brand states, with white, ink #00384C, surface #F2F6F7 and quiet cyan #E7FAFD. Do not weaken every paragraph or saturate every region.
+Shared primary controls are52px minimum high,224px intended width,10px corners,Kanit17px/500,20px icons. Hero specifically uses a dark244×56px action on cyan, becoming full-width/min52px mobile. Footer download is cyan on ink. Header is compact44px; footer contact40px. Product process entry is a dark bordered action; auxiliary text actions stay quieter. Image viewing uses Lucide maximize-2, not an FAQ plus. SVG stroke inheritance and focus/reduced-motion behavior remain.
 
-Primary actions share 52px minimum height, 224px intended desktop width, 10px corners, Kanit17px/500 and20px icons. Header compact is 44px. Text actions are Kanit16px/500 with at least 44px hit areas; resting text has no repeated underline, with hover/focus feedback retained. Contact and process entry use quiet outlined shapes. Image viewing uses a bordered control and Lucide maximize-2 (assets/icons/maximize.svg), not the FAQ plus. Direction arrows remain only where navigation warrants them. Inline prose links must remain recognizable.
+Header heights88/76/68px, centered link group, quiet cyan active fill without decorative underline. Actual order: home,product,steps,FAQ,About,safety. Only home scrollspy compares existing target sections sorted by DOM order; safety page gets its own current-page state. One root header+24px scroll offset remains.
 
-The desktop header is independently centered; current navigation uses 600 and a quiet cyan fill, without an underline pseudo-element. Header heights remain 88/76/68px. Below 1100px, native menu behavior remains. Root scroll-padding supplies the sole header+24px anchor offset.
+## Bright photographic Hero
 
-## Integrated photographic Hero
+Hero is full bleed without outer inset or corners, brand cyan background, dark ink copy. Desktop stage/copy minimum580px. Photo occupies the right-side composition with left inset27%, object-position77%43%, CSSscale1.42 and origin72%48%; a cyan horizontal fade joins it to the offer. CSS brightness1.06/saturation.9 applies to the same original photo. Amount96px is the main numerical emphasis; do not repeat this offer as another product headline.
 
-Hero is full bleed without outer inset, width cap or corners. hero-copy also carries shell, sharing the same content axis as later chapters. Minimum600px desktop/690px mobile is preserved. Mobile uses the existing20px shell gutters without another horizontal padding layer. The photograph, ink gradients, editable text and image focal points remain; no photo or person edits this round.
+Mobile copy minimum700px, title at top, real photo between title and lower offer/action. Photo inset64px0 240px, object-position80%42%, scale1.12/origin75%43%; a vertical cyan fade preserves reading. Offer uses margin:auto above the full-width action. Figcaption remains illustrative. This is a display crop, not a person/scene edit or a new generated photo. Source: Tony Wu/Pexels16761599, Bangkok source location, upload2023-05-10, unverified capture date; no customer or endorsement claim.
 
-## Compact product explanation and spatial rhythm
+## Product, process and FAQ
 
-The shared shell is max1120px with 48/24/20px gutters, a 24px desktop/20px mobile grid gap, 80/48px chapter spacing and 32/24px heading gap. Repeated roles share values, but sections are sized to their actual content; numerical consistency alone is insufficient.
+White product chapter padding72px wide,64px compact,48px mobile. Centered title44/40/32px, bottom gap48/32/24px. At>1100px showcase columns1.1fr/1fr gap64px, vertically centered: left shows both original240px App frames side by side with24px gap and a quiet cyan-soft backing; right shows both full descriptions, separated by one rule. No visible desktop tabs. Feature headings28px and reading copy18px/1.8; captions/actions12px. Content/media remain separate semantic units, not fake App interactions.
 
-The full product band is exact#44E0F8. Showcase columns are .85fr/1.15fr with64px gap and top alignment, no600px minimum: original media left, and one product-content group right containing heading, tabs, description and actions. DOM content precedes media, so mobile reads heading/tabs/copy/actions before the complete screen. No invented or repeated claim fills space. Explanation is20px/1.8 desktop and18px mobile; chapter padding64/40px.
+At<=1100px showcase becomes .8fr/1.2fr with48px gap/top alignment. Native paired tabs become visible above right copy, media atleft; only selected feature is visible/interactive. Both text states share one intrinsic grid area and both media another, with scoped hidden display override plus visibility:hidden/pointer-events:none/inert. At<=760px layout is one column: tabs→media→description/actions,24px gap,210px complete frame. Copy16px/1.85; tabs16px,min72px (compact18px,min56px). Breakpoint changes retain the focused feature and move focus from a hidden desktop-bound tab to its visible image action when needed. This responsive contract supersedes the previous one-tab display on all widths.
 
-Tabs are520px max100%, white tray, selected ink/white600 and unselected reading ink500, Kanit18/16px, min52/72px. Each tab controls both its text panel and paired media figure via two IDREFS. The JS splits aria-controls on whitespace and toggles both, preserving roving tabindex/Left/Right/Home/End and return-state behavior. Caption/view action sit inline desktop, stacked mobile. Both body states share one grid area, and both media states share another. Inactive hidden states keep intrinsic layout via scoped display:block override, visibility:hidden/pointer-events:none plus inert. Their longest real content sizes the group without arbitrary fixed heights. JS paired-ID visibility and preventScroll focus preserve the reading position; galleries/FAQ retain ordinary hidden rules.
+Original PNGs remain complete750×1624 via APP_SCREENS/app-screen macro. Frames240/210px,4px edge,28/26px corners,ink background and0 12px32px #00384c18 shadow. Both viewers share min(320px,calc((100dvh -280px)*.46182266),100%). No crop/repaint/fake screens.
 
-All original App images use APP_SCREENS and the app-screen macro, complete 750×1624 PNGs, explicit dimensions and height:auto. One frame is 240px desktop/210px mobile, 4px inner edge, 28/26px corners, ink background and 0 12px 32px #00384c18 shadow. Both native viewers use min(320px,calc((100dvh - 280px)*.46182266),100%). Do not crop, repaint or generate a fake screen.
+Process has surface background,64/48px padding, centered PC heading and40px heading gap; mobile30px heading,left aligned,gap32px. Four48px cyan markers with14px corners,Kanit24px/600 connect horizontally; at<=1100px2columns with no connector; mobile one vertical sequence with40px/12px markers and22px numbers,28px item spacing. Only step03 opens the real loan-plan image.
 
-Four application steps use cyan48/40px square markers with14/12px corners and Kanit24/22px600 numerals. Same numbered treatment appears in safety reminders. Only step 03 opens matching loan-plan evidence. Company heading precedes1.8fr facts/1fr contact columns, gap64px; contact has a36px phone/44px action,30px phone on mobile. Mobile stacks facts then contact. FAQ keeps its heading-above-content structure. FAQ is a plain ruled list, not a stack of cards: Kanit20px/500,76px row/20px vertical padding and32/20px marker desktop; Kanit18px,72px/18px and28/18px mobile. Main FAQ and safety FAQ share this anatomy; plus/minus expresses expansion only.
+FAQ remains seven unchanged questions, a centered chapter on PC and a max880px ruled list;72/48px section padding. Shared question20/18px,Kanit500;76/72px minrow;32/28px marker with20/18px SVG. Mobile heading32px,left aligned. Contact is one centered outlined action below the list. The list remains single-open and preserves clicked-row position.
 
-## Supporting pages and integrity
+## One complete closing footer
 
-Safety uses a horizontal wrapping chapter menu above the full shared axis instead of a sticky side directory. Mobile menu remains2columns. Its original help/scam/FAQ copy stays; native details share the same question typography and actual SVG plus/minus marks as homepage FAQs. Company/contact and unknown official identity remain distinct. Policies keep original Logo/return-home navigation, shared shell, readable pending state and natural-height content. Download and safety are compact horizontal rows on desktop and stacked mobile. Safety/footer remain continuous ink. Footer identity atleft combines176px Logo and company; services at right start with the existing home/product/steps/FAQ links in2columns at18/16px, then36px contact phone. Existing safety/policy/contact links occupy a separate full-width bottom row, flex desktop/grid2columns mobile. Footer columns1.25fr/1fr, gap80px; mobile stacks with156px Logo and30px phone. No new channels or business content. Missing legal bodies remain genuinely pending.
+Old standalone main company/download/safety sections are consolidated into the common dark footer, not repeated. Order: download strip→brand/company/contact→six main links→safety notice→privacy/terms/contact plus responsible-borrowing text. About anchor kj-about stays on the footer company section.
 
-Preserve four steps, seven home FAQs, six safety FAQs, seven scam categories, original gallery order, native dialogs, Esc/direction keys, focus restoration, F01/F04 targeting, menu, contact and download behavior. Do not invent rates, approval times, licenses, eligibility, store links, official channels or customer outcomes. Preview/noindex remains.
+Desktop download is one horizontal row,48px vertical padding,32px heading,224px action. Company group is .8fr/1.7fr/1fr with48px gap/padding: brand180px; company feature22px,body14px; contact phone32px and40px action. At<=1100px brand spans above two columns1.5fr/1fr. At<=760px all stack with32px gaps/padding,156px Logo,20px company title and30px phone; contact has one top divider. Main nav has six links16px desktop/14px mobile2columns. Safety18px heading/13px body,24px padding; legal actions14/13px and12px final text. All widths share the page content axis. Current Logo remains original PNG with a CSS white filter in the dark footer.
 
-## Interaction-position contract
+## Supporting pages and interaction integrity
 
-Product title/tabs stay top-aligned and intrinsic stacked states reserve the true maximum body/media footprint. Hidden content is invisible and inert. Dialog open/close stores and restores scroll, focus uses preventScroll, and copy feedback reserves52px rather than resizing the centered dialog. FAQ/native details preserve the clicked control top through a measured scroll correction, with html overflow-anchor:none preventing duplicate browser anchoring. Targeted FAQ navigation sets state first and then scrolls deliberately. Same-document pathname aliases normalize index.html/.html/trailing slash, avoiding reload for hash links. Safety-return JSON restores open FAQ and scroll, accepting legacy numeric storage; product state is retained.
+Safety keeps horizontal chapter navigation above the full1120px content axis, mobile2columns, existing6FAQ/7scams and shared native SVG disclosures. Policies retain original Logo/return-home navigation, readable pending bodies and natural height, now sharing the consolidated footer. No new legal or operating claims.
+
+Round18 position contracts remain: dialogs restore scroll/trigger focus with52px feedback space; FAQ/details pin clicked controls using measured correction with html overflow-anchor:none; same-document aliases avoid reload; safety return restores FAQ/product/scroll and legacy state. Compact product state uses preventScroll. These implementation contracts were checked against the current browser records below; untested paths are not inferred from previous rounds.
 
 ## Current verification state
 
-Round18 local browser evidence:21 page/width cases with no horizontal overflow, missing ARIA targets or broken visible images;4 product-state/keyboard-return cases and8 modal open/close cases have exact0 measured geometry/scroll delta. Six disclosure checks keep the clicked row within0.25px, row height unchanged and one item open in the tested group. Fourteen interaction records cover navigation/return, skip link, pending download, real-image viewers, feedback, loaded fonts and inert inactive states. Raw records: ../../work/round18/. Static build and release are checked separately. Online conclusions use ../round18-preview/release-verification.json with commit, CI and actual browser records. This is a typography/hierarchy/interaction improvement with unchanged photography, not a claim of full competitor visual equivalence.
+Round19 local browser evidence:21 page/width cases without overflow, missing ARIA targets or broken images;1440 shows both240px original screens and two regions, no tabs. Four compact state/keyboard-return cases at1024/390/375/360 and8 modal groups have exact0 measured geometry/scroll delta, with company trigger focus restored. Two homepage FAQ keyboard cases have unchanged row height and -0.1875/0.125px clicked-row top delta. Thirteen interaction records cover breakpoint focus, mobile focus order, navigation/return, viewers, preview download and copy feedback. Static7-page build/link/duplicate-ID, JS syntax and diff checks pass. An independent full-surface visual review identified mobile brand wrapping and illustrative-caption contrast; both were corrected and rechecked on390/360 crops. Raw records: ../../work/round19/. Evidence: ../round19-preview/. Online conclusions use ../round19-preview/release-verification.json with commit,CI and actual browser records. Photo/font provenance is unchanged; browser viewport checks are not physical-device testing or proof of complete competitor visual equivalence.
 
-Existing GitHub skills are reused, not newly installed. Impeccable launcher context returned permission denied; its direct-read fallback supplied PRODUCT.md, DESIGN.md and layout/typeset/polish references. That is not a detector pass. See docs/round18-review.md for scope, observed competitor choices and rules.
+Existing GitHub skills are reused; no new installation or generated-person edits. Impeccable launcher previously needed direct-read fallback; that is not an automated detector pass. See docs/round19-review.md and docs/visual-assets.md.

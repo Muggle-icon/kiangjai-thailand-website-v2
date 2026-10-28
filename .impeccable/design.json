@@ -48,7 +48,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Kanit Product Display",
-        "purpose": "Licensed Kanit: Hero64/36px product and80/60amount, product chapter48/32px; body remains Noto Thai."
+        "purpose": "Kanit Hero product56/36px, tagline28/21px and amount96/72px at1440/mobile; compact roles48/44 and88px amount. Original Noto body remains."
       },
       "page": {
         "displayName": "Kanit Page Title",
@@ -56,7 +56,7 @@
       },
       "headline": {
         "displayName": "Kanit Chapter Title",
-        "purpose": "40/32px general chapters; product48/32px, with Kanit600/700 roles."
+        "purpose": "General40/32px; centered product44px wide,40px compact,32px mobile. Kanit600/700 roles."
       },
       "module": {
         "displayName": "Kanit Module Title",
@@ -64,7 +64,7 @@
       },
       "body": {
         "displayName": "Noto Thai Reading Text",
-        "purpose": "Original Noto Sans Thai16px/1.85/400; product20/18px at1.8."
+        "purpose": "Original Noto Sans Thai16px/1.85/400; product18px/1.8 wide/compact,16px/1.85 mobile."
       },
       "ui": {
         "displayName": "Kanit Controls",
@@ -132,7 +132,7 @@
       "conceptStatus": "Cafe photography, round13 shopkeeper and concepts are superseded history, not current Hero art.",
       "realApp": "assets/app/home-overview.png",
       "repayment": "assets/app/repayment.png",
-      "realAppLocation": "Original full App atleft; complete heading/tabs/copy/actions at right. DOM content then paired media for mobile. Both state figures and original reviewed text stay in DOM.",
+      "realAppLocation": "At>1100px both240px original HOME/repayment frames atleft and both full descriptions atright. At<=1100 paired compact tabs; mobile DOM order tabs,media,panels with210px frame.",
       "renderer": "scripts/build.py APP_SCREENS and {{app-screen:key}}",
       "frameWidth": {
         "desktop": "240px",
@@ -144,16 +144,17 @@
         "mobile": "26px"
       },
       "dialogFrameWidth": "min(320px,calc((100dvh - 280px)*.46182266),100%)",
-      "heroDesktopComposition": "Full bleed, no outer inset/cap/radius. hero-copy.shell uses the page content axis; same photo and ink gradient, min600px.",
-      "mobileHeroComposition": "Full bleed, no outer inset/corners. Native690px composition uses shared20px shell gutters without another horizontal padding layer.",
-      "heroPhotoFocalPointDesktop": "64% 45%",
-      "heroPhotoFocalPointMobile": "64% 35%",
+      "heroDesktopComposition": "Bright cyan full-bleed Hero, no outer inset/radius;580px stage/copy. Ink text and96px amount. Original photo right from27% inset, cyan horizontal fade, CSSscale1.42.",
+      "mobileHeroComposition": "700px copy minimum, cyan background, title above photo and offer/action below. Photo inset64px0 240px, CSSscale1.12 with vertical cyan fade; shared20px shell.",
+      "heroPhotoFocalPointDesktop": "object-position77%43%;transform-origin72%48%;scale1.42",
+      "heroPhotoFocalPointMobile": "object-position80%42%;transform-origin75%43%;scale1.12",
       "viewIcon": {
         "file": "assets/icons/maximize.svg",
         "sourceId": "lucide:maximize-2",
         "source": "https://api.iconify.design/lucide/maximize-2.svg",
         "license": "assets/icons/LICENSE-Lucide.txt"
-      }
+      },
+      "photoColorTreatment": "CSSbrightness1.06/saturate.9 only; existing WebP bytes and person/scene unchanged."
     },
     "layoutContract": {
       "content": "1120px",
@@ -175,21 +176,21 @@
         "desktop": "32px",
         "mobile": "24px"
       },
-      "companyAndFaq": "Company heading then1.8fr facts/1fr contact,64px gap; phone36/30 and contact44px. FAQ heading remains above full accordion.",
+      "companyAndFaq": "Standalone main company section removed; company facts retained once in common footer. FAQ centered heading andmax880px ruled list,72/48px padding; mobile heading left.",
       "anchorOffset": "One root scroll-padding value: header height +24px",
       "policy": "Shared1120px shell, max720px reading text, natural height and flex footer push.",
-      "product": "Full-cyan .85fr/1.15fr grid top-aligned, no600px minimum. Paired text states overlap in one intrinsic grid area; paired media overlap in another, reserving true maximum content space.",
-      "tabState": "Native paired-ID controls; inactive states visibility:hidden,pointer-events:none and inert with scoped hidden display override; focus preventScroll. Other hidden components retain their usual behavior.",
-      "navigation": "Current quiet-cyan fill/600, no decorative underline pseudo-element.",
+      "product": "White chapter72/64/48px. Wide>1100: centered44px heading,1.1fr/1fr showcase gap64px, both full240px media/description states visible. Compact .8fr/1.2fr gap48px, tabs/media/panels; mobile one column tabs→media→panels.",
+      "tabState": "Only<=1100 uses native paired-ID tab controls; inactive body/media visibility:hidden,pointer-events:none,inert in scoped intrinsic grid stacks. Wide panels become labelled regions, both visible/non-inert and tabs hidden. Breakpoint preserves focused feature.",
+      "navigation": "Home/product/steps/FAQ/About/safety. Quiet cyan active fill,no decorative underline or added active weight. Home-only scrollspy sorts target DOM order; safety current page separately.",
       "faq": "Shared Kanit20/18px questions/native summaries and32/20→28/18 SVG markers; clicked disclosure position pinned.",
-      "process": "Solid cyan 48px square markers desktop (14px corners, Kanit24px/600) and40px mobile (12px corners, Kanit22px/600); same number treatment in safety reminders.",
-      "conversion": "Download and safety inline compact desktop; stacked mobile. Existing content only.",
-      "footer": "Continuous ink; identity(left176px Logo+company), services(right existing4main links2cols18/16px, then36/30px phone/contact). Existing4legal/safety/contact links full-width bottom row: flexdesktop/grid2mobile. Columns1.25fr/1fr,gap80px.",
+      "process": "Surface chapter64/48px; four connected columns wide,two unconnected compact,one vertical connector mobile. Cyan48/40px markers,corners14/12,glyphKanit24/22px600; only03opens real plan.",
+      "conversion": "No standalone main download/safety chapters. Download is the first row of common dark footer, safety row follows footer main navigation.",
+      "footer": "Single ink close: download row; brand/company/contact .8fr/1.7fr/1fr gap48px;6main links;safety;3privacy/terms/contact actions+borrowing reminder. About remainskj-about. Logo180/156px,phone32/30px; compact brand full row over2columns,mobile single column.",
       "surfaces": "Full-width chapter backgrounds; one1120px shell with48/24/20px gutters across header/Hero/all routes.",
       "safety": "Horizontal wrapping chapter nav above full1120px content axis, mobile2columns; no sticky side directory."
     },
     "verification": {
-      "round": 18,
+      "round": 19,
       "responsiveCases": 21,
       "requiredWidths": [
         1440,
@@ -197,20 +198,20 @@
         375,
         390
       ],
-      "responsiveState": "21 current local page/width cases: no horizontal overflow, missing ARIA targets or broken visible images. Four main pages at1440/390/375/360 plus three clean-route aliases at390 and home1024/760.",
-      "interactionState": "4 product-state/keyboard-return and8 modal groups show exact0 numeric geometry/scroll delta. Six disclosure cases: clicked row top delta -0.25..0.125px, unchanged row height, one open item. Fourteen interaction records cover anchors, state return, menus, skip link, preview downloads, original viewers, copy feedback, loaded Kanit/Noto and inactive inert content.",
-      "releaseState": "Online conclusion uses ../round18-preview/release-verification.json commit, CI and actual browser records.",
-      "evidence": "../round18-preview/",
+      "responsiveState": "21 current browser-viewport cases:4canonical pages x1440/390/375/360,home1024/760,3aliases390;nooverflow,missingARIA targets orbroken images. Desktop1440:2visible240px screens,2regions,noTabs.",
+      "interactionState": "4compact state/keyboard cases at1024/390/375/360 and8modal groups exact0 numeric geometry/scroll delta;modal focus returns company. Two HOME FAQ keyboard cases topdelta-0.1875/0.125px,height0. Thirteen interactions cover breakpoint focus,mobile focus order,preview,viewers,navigation/return andcopyfeedback.",
+      "releaseState": "Online conclusion uses ../round19-preview/release-verification.json commit, CI and actual browser records.",
+      "evidence": "../round19-preview/",
       "fontEvidence": "../round18-preview/kanit-font-sources.json",
-      "beforeJumpEvidence": "../round18-preview/before-jump-measurements.json",
       "skillInstallation": "Existing skills reused; no new skill installation this round.",
+      "scope": "Browserviewport QA,not physicaldevices orfullcompetitor visualequivalence. Existingphoto/fontprovenance unchanged.",
       "productStabilityCases": 4,
       "modalCases": 8,
-      "disclosureCases": 6,
-      "interactionRecords": 14,
-      "rawEvidence": "../../work/round18/{cases,stability,modals,disclosures,interactions}.json",
-      "staticState": "Static build and JS syntax checked separately; browser records alone do not establish release.",
-      "scope": "Typography, hierarchy and interaction stability improvement; photography unchanged. No full competitor visual-equivalence claim."
+      "disclosureCases": 2,
+      "interactionRecords": 13,
+      "rawEvidence": "../../work/round19/{cases,stability,modals,disclosures,interactions}.json",
+      "staticState": "7page build,link/duplicateID checks,JSsyntax anddiff pass.",
+      "visualReview": "Independent fullsurface review found mobilebrand wrapping andcaption contrast;both corrected and390/360crops rechecked,follow-up limited tothese2fixes."
     },
     "fontAssets": {
       "displayFamily": "Kanit",
@@ -261,11 +262,12 @@
       "evidenceBoundary": "Actual competitor family aliases identify Kanit; licensed Google Fonts files are acquired independently, not copied from competitor."
     },
     "interactionContract": {
-      "product": "Intrinsic stacked text/media retain geometry while inactive controls are inert/invisible; top-aligned heading/tab and preventScroll focus.",
+      "product": "Wide both features visible as regions; compact<=1100 paired intrinsic stacked panels/media, inactive invisible/inert. Preserve active/focused feature on breakpoint change; move hidden-tab focus to visible image action when expanding; focus preventScroll.",
       "dialog": "Store/restore scroll on open/close, restore trigger focus; feedback minimum52px preserved when empty.",
       "disclosures": "Measure clicked visible control top before state change and compensate delta; html overflow-anchor:none.",
       "anchors": "Normalize same-document /index.html,.html and trailing slash aliases for hash scrolling without reload; preserve ordinary cross-page links.",
-      "return": "Safety return stores open FAQ plus y as JSON, accepting legacy numeric state; product selection restored."
+      "return": "Safety return stores open FAQ plus y as JSON, accepting legacy numeric state; product selection restored.",
+      "navigation": "Home-only scrollspy orders actual target DOM; FAQ before footerAbout. Same-document aliases avoid reload; other routes retain native navigation."
     }
   },
   "components": [
@@ -273,7 +275,7 @@
       "name": "Primary Download Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Dark primary on final cyan conversion;224×52px desktop/full width on mobile. Hero uses the cyan variant on photographic ink; compact header44px.",
+      "description": "Shared dark224×52px primary; Hero uses dark244×56px on bright cyan,full width/min52px mobile; compact header44px.",
       "html": "<button type=\"button\" class=\"ds-button ds-primary\">ดาวน์โหลดแอป</button>",
       "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Kanit,Noto Sans Thai,sans-serif;font-size:17px;line-height:24px;font-weight:500;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-primary{width:224px;background:var(--ink,#00384C);color:var(--white,#FFFFFF)}.ds-primary:hover{background:#07586A}.ds-primary:active{background:#07586A}@media(max-width:760px){.ds-primary{width:100%}}"
     },
@@ -281,7 +283,7 @@
       "name": "Cyan Button",
       "kind": "button",
       "refersTo": "button-cyan",
-      "description": "Hero primary action on ink-overlaid continuous photography; same52px anatomy/600 weight.",
+      "description": "Footer download action on the common dark close; shared52px/Kanit17px500 anatomy. Hero now uses the dark variant.",
       "html": "<button type=\"button\" class=\"ds-button ds-cyan\">ดาวน์โหลดแอป</button>",
       "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Kanit,Noto Sans Thai,sans-serif;font-size:17px;line-height:24px;font-weight:500;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-cyan{background:var(--cyan,#44E0F8);color:var(--ink,#00384C)}.ds-cyan:hover,.ds-cyan:active{background:#74E9FA}"
     },
@@ -296,16 +298,16 @@
     {
       "name": "Brand Navigation Links",
       "kind": "nav",
-      "description": "Centered native links on white; current quiet-cyan fill and600 weight, no underline.",
+      "description": "Centered links:home/product/steps/FAQ/About/safety; quiet cyan active fill, shared500weight without underline. Home-only scrollspy sorts actual DOM.",
       "html": "<nav class=\"ds-nav\" aria-label=\"เมนูหลัก\"><a href=\"#\" aria-current=\"page\">หน้าแรก</a><a href=\"#\">จุดเด่นของบริการ</a><a href=\"#\">ศูนย์ความปลอดภัย</a></nav>",
-      "css": ".ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;font-family:Kanit,Noto Sans Thai,sans-serif;font-size:16px;font-weight:500}.ds-nav a{padding:10px 9px;border-radius:8px;color:var(--ink,#00384C);text-decoration:none}.ds-nav a:hover{background:var(--surface,#F2F6F7)}.ds-nav a[aria-current]{font-weight:600;background:var(--cyan-soft,#E7FAFD)}.ds-nav a:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}"
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;font-family:Kanit,Noto Sans Thai,sans-serif;font-size:16px;font-weight:500}.ds-nav a{padding:10px 9px;border-radius:8px;color:var(--ink,#00384C);text-decoration:none}.ds-nav a:hover{background:var(--surface,#F2F6F7)}.ds-nav a[aria-current]{background:var(--cyan-soft,#E7FAFD)}.ds-nav a:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}"
     },
     {
-      "name": "Tabbed Product Explanation",
+      "name": "Responsive Complete Product Explanation",
       "kind": "section",
-      "description": "Top-aligned product. Kanit48/32px heading and UI, Noto20/18px explanation. Both body/media states stack intrinsically; inactive invisible/inert states reserve space, preserving geometry.",
-      "html": "<div class=\"ds-product\"><div class=\"ds-product-content\"><h2>ทำไมต้องเลือกเคียงใจ</h2><div role=\"tablist\" aria-label=\"จุดเด่นของบริการ\"><button type=\"button\" role=\"tab\" aria-selected=\"true\" aria-controls=\"ds-online ds-media-online\" id=\"ds-tab-online\" tabindex=\"0\">สมัครออนไลน์ทุกขั้นตอน</button><button type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"ds-repayment ds-media-repayment\" id=\"ds-tab-repayment\" tabindex=\"-1\">ชำระคืนสะดวก</button></div><div class=\"ds-panels\"><div id=\"ds-online\" role=\"tabpanel\" aria-labelledby=\"ds-tab-online\" tabindex=\"0\"><!-- unchanged reviewed online copy/actions --></div><div id=\"ds-repayment\" role=\"tabpanel\" aria-labelledby=\"ds-tab-repayment\" tabindex=\"0\" hidden inert><!-- unchanged reviewed repayment copy --></div></div></div><div class=\"ds-product-media\"><figure id=\"ds-media-online\"><!-- original HOME --></figure><figure id=\"ds-media-repayment\" hidden inert><!-- original repayment --></figure></div></div>",
-      "css": ".ds-product{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start;padding:0;background:var(--cyan,#44E0F8);color:var(--ink,#00384C);font-family:Noto Sans Thai,sans-serif}.ds-product-content{grid-column:2;grid-row:1;min-width:0}.ds-product-media{grid-column:1;grid-row:1;min-width:0}.ds-product h2{font-family:Kanit,Noto Sans Thai,sans-serif;font-size:48px;line-height:1.25;font-weight:600}.ds-product [role=tablist]{display:grid;grid-template-columns:1fr 1fr;width:520px;max-width:100%;gap:4px;padding:4px;margin-top:24px;border-radius:12px;background:#fff}.ds-product [role=tab]{min-height:52px;padding:12px 20px;border:0;border-radius:8px;background:transparent;color:var(--text,#183D49);font-family:Kanit,Noto Sans Thai,sans-serif;font-size:18px;font-weight:500}.ds-product [aria-selected=true]{background:var(--ink,#00384C);color:#fff;font-weight:600}.ds-panels,.ds-product-media{display:grid;overflow-anchor:none}.ds-panels{margin-top:24px}.ds-panels>[role=tabpanel],.ds-product-media>figure{grid-area:1/1}.ds-panels>[hidden],.ds-product-media>[hidden]{display:block!important;visibility:hidden;pointer-events:none}.ds-product p{font-size:20px;line-height:1.8}@media(max-width:760px){.ds-product{display:flex;flex-direction:column;gap:24px;align-items:stretch}.ds-product h2{font-size:32px}.ds-product [role=tab]{min-height:72px;padding:10px 8px;font-size:16px}.ds-product p{font-size:18px}}"
+      "description": "Wide>1100 displays both original240px media and full descriptions as labelled regions; compact paired tabs;mobile order tabs/media/panels at210px. Actual app.js performs semantics/inert/focus updates on breakpoint changes.",
+      "html": "<section class=\"ds-product\"><h2>ทำไมต้องเลือกเคียงใจ</h2><div class=\"ds-showcase\"><div class=\"ds-tabs\" role=\"tablist\" hidden><!-- compact paired native tab controls; source app.js owns state --></div><div class=\"ds-media\"><figure id=\"ds-home\"><!-- complete original HOME --></figure><figure id=\"ds-repay\"><!-- complete original repayment --></figure></div><div class=\"ds-panels\"><section role=\"region\" aria-labelledby=\"ds-heading-home\"><h3 id=\"ds-heading-home\">สมัครออนไลน์ทุกขั้นตอน</h3><!-- unchanged reviewed online copy/actions --></section><section role=\"region\" aria-labelledby=\"ds-heading-repay\"><h3 id=\"ds-heading-repay\">ชำระคืนสะดวก</h3><!-- unchanged reviewed repayment copy --></section></div></div></section>",
+      "css": ".ds-product{padding-block:72px;background:var(--white,#fff)}.ds-product h2{text-align:center;font-family:Kanit,sans-serif;font-size:44px;line-height:1.3;margin-bottom:48px}.ds-showcase{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:64px;align-items:center}.ds-tabs{display:none}.ds-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;min-width:0}.ds-panels{display:grid;gap:32px;min-width:0}.ds-panels h3{font-size:28px;line-height:1.4}.ds-panels p{font-size:18px;line-height:1.8}.ds-panels>section+section{border-top:1px solid var(--line,#d9e2e5);padding-top:28px}@media(max-width:1100px){.ds-product{padding-block:64px}.ds-product h2{font-size:40px;margin-bottom:32px}.ds-showcase{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}.ds-tabs{display:grid;grid-column:2;grid-row:1}.ds-media{grid-column:1;grid-row:1/3}.ds-panels{grid-column:2;grid-row:2}.ds-media,.ds-panels{display:grid;grid-template-columns:1fr;gap:0;overflow-anchor:none}.ds-media>figure,.ds-panels>section{grid-area:1/1}.ds-media>[hidden],.ds-panels>[hidden]{display:block!important;visibility:hidden;pointer-events:none}.ds-panels h3{display:none}.ds-panels>section+section{border:0;padding:0}}@media(max-width:760px){.ds-product{padding-block:48px}.ds-product h2{font-size:32px;margin-bottom:24px}.ds-showcase{grid-template-columns:1fr;gap:24px}.ds-tabs{grid-column:1;grid-row:1}.ds-media{grid-column:1;grid-row:2;padding-top:16px}.ds-panels{grid-column:1;grid-row:3}.ds-panels p{font-size:16px;line-height:1.85}}"
     },
     {
       "name": "FAQ Question",
@@ -323,47 +325,41 @@
     }
   ],
   "narrative": {
-    "northStar": "Thai Display Character, Stable Interactions",
-    "overview": "Measured MoneyThunder Kanit family informs licensed self-hosted heading/UI typography while Noto Thai reading remains. Top-aligned intrinsic product stacks, disclosure control pinning, dialog restoration and same-document anchor handling address actual click jumps. Safety reading uses the full shared axis.",
+    "northStar": "Bright Offer, Complete Product Evidence, One Brand Close",
+    "overview": "Round19 structurally reorganizes Hero/product/process/FAQ/footer. A bright cyan offer leads; wide screens reveal both real workflows together; compact screens use stable paired tabs. One dark footer retains conversion, company, contact and safety without repeated main chapters.",
     "keyCharacteristics": [
-      "Actual Kanit family evidence and independent OFL Google Fonts files,98,568B.",
-      "Noto body with Kanit headings/UI; Hero64/36, product48/32 and solid step markers.",
-      "Intrinsic paired states keep product geometry while inactive states remain invisible/inert.",
-      "Full-axis safety reading and shared native SVG disclosure anatomy."
+      "Unchanged Tony Wu photo, CSSzoom1.42/1.12 and cyan fades;Hero580/700px and96/72px amount.",
+      "White product section:both240px screens/descriptions wide;paired tabs<=1100 and tabs/media/panels mobile.",
+      "Connected four-step sequence, max880px FAQ and one consolidated dark footer.",
+      "Existing licensed Kanit/Noto, reviewed copy/config and original750x1624screens preserved."
     ],
     "rules": [
       {
-        "name": "Shared Roles",
-        "body": "Noto16/1.85 reading; Kanit500/600/700 display/UI. Product48/32, Hero64/36, FAQ/native summary20/18.",
-        "section": "typography"
+        "name": "Product Responsive Semantics",
+        "body": "Both regions visible>1100; paired tabpanels<=1100;inert/invisible inactive states preserve intrinsic height; breakpoint retains focused feature.",
+        "section": "layout"
       },
       {
         "name": "Photographic Integrity",
-        "body": "Tony Wu Pexels16761599, Bangkok source location, uploaded2023-05-10, capture date unverified. No implicit customer or endorsement.",
+        "body": "Same Tony Wu Pexels16761599;Bangkok source location,upload2023-05-10,capture unverified. CSScrop/color only,no customer/endorsement.",
         "section": "assets"
       },
       {
-        "name": "Product Integrity",
-        "body": "Keep untouched750×1624 screens and full reviewed copy in native tabpanels; one renderer and same inline frames.",
-        "section": "assets"
-      },
-      {
-        "name": "Proportion",
-        "body": "Reserve intrinsic tallest product states rather than hard-coded filler height; keep heading/tab top-aligned and focus preventScroll.",
+        "name": "Closing Information",
+        "body": "Company/download/safety retained once in common footer;About anchor remains. No new business channels.",
         "section": "layout"
       }
     ],
     "dos": [
-      "Keep original Logo, exact cyan, reviewed Thai and confirmed configuration.",
-      "Verify current required widths, paired Tab controls, original frame ratios and all existing keyboard paths.",
-      "Keep content-first DOM order for mobile while desktop media leads visually.",
-      "Keep truthful preview/legal states, sources and release evidence."
+      "Keep original Logo,exact cyan,reviewed Thai/config and full screenshots.",
+      "Test current wide/compact modes,all required widths,breakpoint focus and full keyboard/navigation paths.",
+      "Keep current source/provenance and truthful preview/legal states."
     ],
     "donts": [
-      "Do not use old cafe/generated art as current production.",
-      "Do not infer customer, nationality, finances or endorsement from the photo.",
-      "Do not invent fees, approval promises, licenses, store links or official channels.",
-      "Do not reuse prior QA or local build as proof of current release."
+      "Do not restore old generated/cafe imagery as production.",
+      "Do not infer nationality,financial need,customer or endorsement from a photo.",
+      "Do not invent rates,approval,license,store links or official channels.",
+      "Do not carry previous QA counts into a changed implementation or call structure changes competitor-equivalent."
     ]
   }
 }

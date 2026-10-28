@@ -1,17 +1,17 @@
-# 第十八轮视觉素材与来源
+# 第十九轮视觉素材与来源
 
-日期：2026-10-28。本轮沿用Tony Wu曼谷餐食摊实拍；照片、原App、Logo和图标均未更换，本轮新增独立授权的Kanit字体；图片／图标文件未改。照片提供生活工作情境，不表示画中人物的国籍、财务状况、借款需求或与公司的关系，不暗示其为 Kiangjai 代言。
+日期：2026-10-28。本轮沿用Tony Wu曼谷餐食摊实拍、原App、Logo、图标和上一轮已取得的Kanit字体；上述素材文件均未新增或更换。只改Hero的CSS构图与产品展示结构。照片提供生活工作情境，不表示画中人物的国籍、财务状况、借款需求或与公司的关系，不暗示其为 Kiangjai 代言。
 
 ## 当前生产素材
 
 | 素材 | 来源／尺寸／大小 | 当前用途 |
 | --- | --- | --- |
-| `assets/campaign/bangkok-food-stand-2200.webp` | 下述 Pexels 实拍优化派生；2200×1467；433,824B | 桌面贯穿整幅 Hero 的照片 |
-| `assets/campaign/bangkok-food-stand-1200.webp` | 同母片派生；1200×800；172,856B | ≤760px Hero，CSS 独立裁切 |
+| `assets/campaign/bangkok-food-stand-2200.webp` | 下述 Pexels 实拍优化派生；2200×1467；433,824B | PC青蓝Hero的右侧生活场景，CSS放大1.42 |
+| `assets/campaign/bangkok-food-stand-1200.webp` | 同母片派生；1200×800；172,856B | ≤760px Hero，CSS独立裁切／放大1.12 |
 | `assets/brand/logo-master.png` | 用户原 Logo；367×124 | 页头及页脚；公司区不再重复展示，原PNG不改 |
 | `assets/brand/app-icon.png` | 用户原App图标 | 保留来源；当前下载区移除，避免推移文字左起点 |
-| `assets/app/home-overview.png` | 用户最新原图；750×1624；221,409B | 产品在线申请 Tab、图库第 1 张 |
-| `assets/app/repayment.png` | 用户原图；750×1624 | 产品还款 Tab、图库第 2 张 |
+| `assets/app/home-overview.png` | 用户最新原图；750×1624；221,409B | 宽屏双图中的首页；紧凑在线申请Tab；图库第1张 |
+| `assets/app/repayment.png` | 用户原图；750×1624 | 宽屏双图中的还款；紧凑还款Tab；图库第2张 |
 | `assets/app/loan-plan.png` | 用户原图；750×1624 | 步骤 03 详情、图库第 3 张 |
 | `assets/app/withdrawal-current.png` | 用户原图；750×1624 | 图库第 4 张示例，不作到账证据 |
 | `assets/app/home-current.png`、`home.png` | 历史用户原图 | 留来源，不作当前主展示 |
@@ -24,7 +24,7 @@
 - 上传日：**2023-05-10**。**拍摄日期未核验**，不得把上传日写成拍摄日。
 - [Pexels 许可](https://www.pexels.com/license/)允许网站和营销使用、修改照片；无强制署名要求，本项目仍保留摄影师／出处。不得暗示画中人物或品牌为产品代言，不得贬损或冒犯可识别人物。
 - 首屏保留 `ภาพประกอบ` 配图说明；照片不证明真实客户、公司员工、借贷结果、服务资质或公司地点，也不推定人物的国籍／财务状态。
-- 本轮仅缩放和 WebP 压缩；没有 AI 修补或修改人物、衣服、手部和场景。显示裁切及可读性渐隐均为 CSS，未烘焙到照片。原母片在仓库外 `../../work/round15/bangkok-food-stand-original.jpg`。
+- 两份WebP沿用既有缩放／压缩文件，本轮字节不变；没有AI修补或修改人物、衣服、手部和场景。PC CSSscale1.42、object-position77%43%，手机scale1.12、80%42%；brightness1.06／saturate.9及青蓝渐隐均为CSS，未烘焙进照片。原母片在仓库外`../../work/round15/bangkok-food-stand-original.jpg`。
 
 | 当前派生 | SHA256 |
 | --- | --- |
@@ -33,7 +33,7 @@
 
 ## 原 App 与图片查看
 
-`APP_SCREENS` 和 `{{app-screen:…}}` 统一生成 `.app-device > .app-screen`，所有 PNG 保持原像素、完整比例、750×1624 显式尺寸、height:auto。原App移到桌面产品左侧，右侧为完整内容组；手机先内容后原图。两张产品图配对切换，每个断点同宽：240px／手机 210px，4px 内边、28／26px 角及统一阴影。两个原图弹窗共用 `min(320px,calc((100dvh - 280px)*.46182266),100%)`，不另做硬件。
+`APP_SCREENS` 和 `{{app-screen:…}}` 统一生成 `.app-device > .app-screen`，所有 PNG 保持原像素、完整比例、750×1624 显式尺寸、height:auto。>1100px产品左侧同时显示HOME和还款两张原图，右侧同时呈现两段完整说明；≤1100px才配对Tab切换，≤760px顺序为Tab→完整原图→对应正文。两张每个断点同宽：240px／手机210px、4px内边、28／26px角及统一阴影。两个原图弹窗共用 `min(320px,calc((100dvh - 280px)*.46182266),100%)`，不另做硬件。
 
 仅步骤 03 有匹配确认页，不将其他图伪装成注册、审批、到账操作。图库不是操作 App，账单 QR 不是网站支付入口。图内推广、费率和示例状态未变更，仍待业务核准。
 
@@ -43,9 +43,9 @@
 
 Lucide [许可](https://lucide.dev/license)及本地 `assets/icons/LICENSE-Lucide.txt` 保留 ISC 文本和相关 Feather MIT 文本。历史 Phosphor 图标来源／MIT 文本保留于 `LICENSE-Phosphor.txt`。历史 application.svg 为项目原创文档几何图；repayment.svg 的 QR 字形源自 Phosphor。图标许可不等于竞品品牌资源许可。
 
-## 字体新增来源
+## 既有字体来源
 
-当前正文继续原自托管Noto Sans Thai；新增Kanit用于标题／UI。竞品[实际font-family记录](../../round18-preview/competitors/moneythunder-type-metrics.json)含orig_kanit_semibold／medium／regular，本项目未下载竞品字体文件，而是单独从Google Fonts获取授权文件。
+当前正文继续原自托管Noto Sans Thai；Kanit用于标题／UI，沿用第十八轮已获取的文件，本轮未新增字体。竞品[实际font-family记录](../../round18-preview/competitors/moneythunder-type-metrics.json)含orig_kanit_semibold／medium／regular，本项目未下载竞品字体文件，而是单独从Google Fonts获取授权文件。
 
 - [Google Fonts CSS来源](https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&display=swap)，各WOFF2的gstatic直链和SHA见[完整来源记录](../../round18-preview/kanit-font-sources.json)。
 - [Google Fonts Kanit OFL原文](https://github.com/google/fonts/blob/main/ofl/kanit/OFL.txt)，本地`assets/fonts/Kanit-OFL.txt`；©2020 The Kanit Project Authors，SIL Open Font License1.1。原Noto许可仍保留在OFL-NotoSansThai.txt。
@@ -76,4 +76,4 @@ Lucide [许可](https://lucide.dev/license)及本地 `assets/icons/LICENSE-Lucid
 | 已审 Thai catalog | `d0a1668f74bab8b29a8d0bb369bcc734d2d0df8f21f1417084f29708a2d8dedc` |
 | 公开 config | `fc0ab4fd68c9727195d6fbb2a2998ffaa03c95629f3e508898b1d523be57e179` |
 
-原图 200,000 推广、日利率及示例金额／时效仍待业务核准，未提取为官网承诺。未配置的商店、官方渠道或牌照不制作替代图。第十八轮本地记录21个页面／宽度场景，无可见破图、横向溢出或缺失ARIA目标；Kanit与Noto字体加载、产品非激活状态的visibility:hidden及inert已实测。4组产品、8组弹窗、6组展开和14条交互记录见[round18-review.md](round18-review.md)。照片不变，本轮是字体／层级／交互改进，不宣称与竞品完整视觉等同。静态构建及发布另行核验；线上发布结论以`../round18-preview/release-verification.json`中的commit、CI和实际浏览器记录为准。
+原图 200,000 推广、日利率及示例金额／时效仍待业务核准，未提取为官网承诺。未配置的商店、官方渠道或牌照不制作替代图。第十九轮21个浏览器页面场景无破图、溢出或缺失ARIA目标；1440两张原图完整750×1624、框同240px，手机210px；图库和步骤03仍用完整原图。当前4组紧凑产品、8组弹窗、2组首页FAQ与13条交互记录见[round19-review.md](round19-review.md)。独立整页视觉复查提出的移动品牌断行／配图说明对比度已修改并在390／360裁图复查；素材字节及来源未变。静态检查通过；不据浏览器视口验收宣称物理设备测试或与竞品完整视觉等同。当前截图在`../round19-preview/`；线上发布结论以`../round19-preview/release-verification.json`中的commit、CI与实际浏览器记录为准。

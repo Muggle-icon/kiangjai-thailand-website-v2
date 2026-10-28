@@ -1,81 +1,43 @@
-/* Shared company identity and supporting pages. Approved copy stays in src/. */
-.kj-footer {
-  --footer-muted: #c5d8df;
-  --line: #ffffff29;
-  padding: 0;
-  border: 0;
-  background: var(--ink);
-  color: #fff;
-}
-.kj-footer-grid {
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  gap: 80px;
-  padding-block: 48px;
-  border-top: 1px solid var(--line);
-}
-.kj-footer-identity,.kj-footer-services{min-width:0}
-.footer-main-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;margin-bottom:24px}
-.footer-main-nav a{display:flex;align-items:center;min-height:44px;color:var(--white);font-family:var(--font-display);font-size:18px;font-weight:500;line-height:1.6;text-decoration:none}
-.kj-footer-brand img {
-  display: block;
-  width: 176px;
-  height: auto;
-  filter: brightness(0) invert(1);
-}
-.kj-footer-brand > p:last-child {
-  max-width: 75ch;
-  margin-top: 16px;
-  color: var(--footer-muted);
-  font-size: 18px;
-  line-height: 1.85;
-}
-.kj-footer-company {
-  min-width: 0;
-  padding: 0;
-  border: 0;
-  margin-top: 24px;
-}
-.footer-contact { padding: 0; border: 0; }
-.kj-footer h2 {
-  margin: 0 0 16px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.65;
-}
-.kj-footer-company p,
-.footer-contact > p {
-  color: var(--footer-muted);
-  font-size: 14px;
-  line-height: 1.85;
-  overflow-wrap: break-word;
-}
-.kj-footer-company p + p { margin-top: 8px; }
-.kj-footer .kj-company-name { color: #fff; font-size: 20px; font-weight: 500; }
-.footer-contact .footer-phone {
-  margin-block: 2px 6px;
-  color: #fff;
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 1.65;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-.footer-contact > p:last-child { margin-top: 10px; }
-.kj-footer-bottom { padding-block:16px; }
-.kj-footer-bottom nav { display:flex;flex-wrap:wrap;gap:0 32px; margin: 0;align-items:center }
-.kj-footer-bottom .kj-link{font-size:16px}
-.kj-footer .kj-link { color: #fff; }
-.kj-footer a:hover,
-.kj-footer button:hover { color: var(--cyan); }
-.kj-footer a:focus-visible,
-.kj-footer button:focus-visible { outline-color: var(--cyan); }
-.footer-responsible { padding-block: 24px;border-top:1px solid var(--line); }
-.footer-responsible .kj-small {
-  margin-block: 0;
-  color: #d4e4e9;
-  font-size: 14px;
-  line-height: 1.85;
+/* One company and brand close: conversion, identity, navigation and safety share one surface. */
+.kj-footer{--footer-muted:#c5d8df;--line:#ffffff29;background:var(--ink);color:var(--white);padding:0;border:0}
+.footer-download{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-block:48px;border-bottom:1px solid var(--line)}
+.kj-footer .footer-download h2{font-size:32px;line-height:1.4;color:var(--white);margin:0}
+.footer-download h2>span{display:inline-block;white-space:nowrap}
+.footer-download .download-note{color:var(--footer-muted);font-size:14px;margin-top:8px}
+.footer-download>.button{width:var(--cta-width);flex:none}
+.footer-company{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr) minmax(0,1fr);gap:48px;padding-block:48px;align-items:start}
+.kj-footer-brand img{display:block;width:180px;max-width:100%;height:auto;filter:brightness(0) invert(1)}
+.kj-footer-brand>p{margin-top:16px;font-size:16px;line-height:1.85;color:var(--footer-muted);max-width:22ch}
+.kj-footer h2{margin:0 0 16px;font-size:20px;font-weight:600;line-height:1.5;color:var(--white)}
+.kj-footer-company,.footer-contact{min-width:0}
+.kj-footer .kj-company-name{font-size:22px;line-height:1.5;color:var(--white);margin-bottom:16px}
+.kj-footer-company p,.footer-contact>p{font-size:14px;line-height:1.85;color:var(--footer-muted);overflow-wrap:break-word}
+.kj-footer-company p+p{margin-top:12px}
+.footer-contact .footer-phone{font-family:var(--font-display);font-size:32px;font-weight:600;line-height:1.4;color:var(--white);white-space:nowrap;margin-top:4px}
+.footer-contact>.kj-link{display:flex;font-size:14px;padding:4px 0}
+.footer-contact>.button{min-height:40px;padding:7px 18px;margin-top:8px;border-color:#ffffff70;color:var(--white);font-size:14px}.footer-contact>.button:hover{background:#ffffff14}
+.footer-contact>p:last-child{margin-top:16px}
+.footer-main-nav{display:flex;flex-wrap:wrap;gap:0 32px;padding-block:16px;border-block:1px solid var(--line)}
+.footer-main-nav a{display:flex;align-items:center;min-height:44px;color:var(--white);font-family:var(--font-display);font-size:16px;font-weight:500;line-height:1.6;text-decoration:none}
+.footer-safety{display:flex;align-items:center;justify-content:space-between;gap:48px;padding-block:24px}
+.footer-safety h3{font-size:18px;line-height:1.5;color:var(--white);margin-bottom:8px}
+.footer-safety p{max-width:80ch;font-size:13px;line-height:1.8;color:var(--footer-muted)}
+.footer-safety>.kj-link{flex:none;color:var(--cyan);font-size:14px}
+.kj-footer-bottom{padding-block:16px 24px;border-top:1px solid var(--line)}
+.kj-footer-bottom nav{display:flex;flex-wrap:wrap;gap:0 28px;align-items:center}
+.kj-footer-bottom .kj-link{font-size:14px}
+.kj-footer .kj-link{color:var(--white)}
+.kj-footer .kj-small{max-width:90ch;margin-top:12px;font-size:12px;line-height:1.8;color:var(--footer-muted)}
+.kj-footer a:hover,.kj-footer button:hover{color:var(--cyan)}.kj-footer .button-cyan:hover{color:var(--ink)}
+.kj-footer a:focus-visible,.kj-footer button:focus-visible{outline-color:var(--cyan)}
+@media(max-width:1100px){.footer-company{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px}.kj-footer-brand{grid-column:1/-1;display:flex;align-items:center;gap:32px}.kj-footer-brand>p{margin:0;max-width:none}}
+@media(max-width:760px){
+ .footer-download{display:block;padding-block:32px}.kj-footer .footer-download h2{font-size:26px}.footer-download>.button{width:100%;margin-top:24px}
+ .footer-company{grid-template-columns:minmax(0,1fr);gap:32px;padding-block:32px}.kj-footer-brand{display:block;grid-column:auto}.kj-footer-brand img{width:156px}.kj-footer-brand>p{margin-top:12px;max-width:none;font-size:14px}
+ .kj-footer h2{font-size:18px;margin-bottom:12px}.kj-footer .kj-company-name{font-size:20px;margin-bottom:12px}.footer-contact{padding-top:24px;border-top:1px solid var(--line)}.footer-contact .footer-phone{font-size:30px}
+ .footer-main-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;padding-block:16px}.footer-main-nav a{font-size:14px}
+ .footer-safety{display:block;padding-block:24px}.footer-safety>.kj-link{margin-top:8px}.footer-safety h3{font-size:18px}
+ .kj-footer-bottom{padding-bottom:24px}.kj-footer-bottom nav{gap:0 20px}.kj-footer-bottom .kj-link{font-size:13px}.kj-footer .kj-small{margin-top:12px}
 }
 
 /* A clear title band leads into a reading layout rather than another campaign. */
@@ -296,7 +258,6 @@
   .security-channel-icon { margin-bottom: 20px; }
 }
 @media (max-width: 900px) {
-  .kj-footer-grid{gap:48px}
   .security-title-layout { grid-template-columns: 1fr; gap: var(--grid-gap); }
   .kj-security-channels { grid-template-columns: 1fr; }
   .kj-security-channels .security-channel-app,
@@ -304,18 +265,6 @@
   .security-channel-icon { margin: 0; }
 }
 @media (max-width: 760px) {
-  .kj-footer-grid { grid-template-columns: 1fr; gap: var(--grid-gap); padding-block: 32px 24px; }
-  .kj-footer-brand img { width: 156px; }
-  .kj-footer-brand > p:last-child { max-width: 290px; margin-top: 12px;font-size:16px; }
-  .kj-footer-company { padding:0;border:0;margin-top:24px; }
-  .footer-contact { padding:24px 0 0;border:0;border-top:1px solid var(--line); }
-  .kj-footer h2 { margin-bottom: 8px; }
-  .kj-footer-bottom { padding-block:16px; }
-  .kj-footer-bottom nav { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;align-items:start }
-  .footer-main-nav a{font-size:16px}
-  .footer-contact .footer-phone{font-size:30px}
-  .footer-responsible { padding-block: 20px; }
-  .breadcrumb { margin-bottom: 16px; font-size: var(--font-caption) !important; }
   .kj-security-hero { padding-block: 32px; }
   .security-title-description h2 { max-width: 320px; }
   .security-content-layout { display: block; padding-block: 24px var(--section-space); }
