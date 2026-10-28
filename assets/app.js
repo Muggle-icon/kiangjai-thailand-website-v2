@@ -270,6 +270,11 @@
         const selected = tab === target;
         tab.setAttribute('aria-selected', String(selected));
         tab.tabIndex = selected ? 0 : -1;
+        const story = showcase.querySelector('[data-product-story="'+tab.dataset.productTab+'"]');
+        if (story) {
+          story.hidden = compact.matches && !selected;
+          story.inert = compact.matches && !selected;
+        }
         tab.getAttribute('aria-controls').split(/\s+/).forEach(id => {
           const controlled = document.getElementById(id);
           if (controlled) {

@@ -48,7 +48,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Kanit Product Display",
-        "purpose": "Kanit Hero product56/36px,tagline28/21px,amount80/64px at1440/mobile;PCcompact amount80. Existing independently licensed files."
+        "purpose": "Kanit Hero product56/36px,tagline28/21px andcyan amount80/64px. White positioning on one whole ink-scrim photograph."
       },
       "page": {
         "displayName": "Kanit Page Title",
@@ -56,7 +56,7 @@
       },
       "headline": {
         "displayName": "Kanit Chapter Title",
-        "purpose": "Shared product/process/FAQ chapter40px desktop/compact,28px mobile. Page48/36 andmodule28/24 stay distinct."
+        "purpose": "General chapter40/28px;desktop product story headings40px,compact tabs name features. Company36/28px,download close36/26px."
       },
       "module": {
         "displayName": "Kanit Module Title",
@@ -64,7 +64,7 @@
       },
       "body": {
         "displayName": "Noto Thai Reading Text",
-        "purpose": "Noto16px/1.85;product summary18px wide/16mobile;footerfacts/safety16px/1.7. Captions14px."
+        "purpose": "Noto16px/1.85;story18px PC/16px mobile;company facts16px;secondary close/safety14px. Caption14px/24px."
       },
       "ui": {
         "displayName": "Kanit Controls",
@@ -132,7 +132,7 @@
       "conceptStatus": "Cafe photography, round13 shopkeeper and concepts are superseded history, not current Hero art.",
       "realApp": "assets/app/home-overview.png",
       "repayment": "assets/app/repayment.png",
-      "realAppLocation": "Wide>1100 both240px HOME/repayment andboth summaries;compact paired tabs. MobileDOM tabs→short summary→210px originalmedia→always-visible sharedsupport.",
+      "realAppLocation": "Two independent full-width stories,each copy left andone complete App right on the same axes. White online/ink repayment. No two-phone collage orshared slab. Compact selectedwhole story;mobile summary then210px original.",
       "renderer": "scripts/build.py APP_SCREENS and {{app-screen:key}}",
       "frameWidth": {
         "desktop": "240px",
@@ -144,17 +144,18 @@
         "mobile": "26px"
       },
       "dialogFrameWidth": "min(320px,calc((100dvh - 280px)*.46182266),100%)",
-      "heroDesktopComposition": "Bright cyan full-bleed Hero, no outer inset/radius;560px stage/copy. Ink text and80px amount. Original photo right from27% inset, cyan horizontal fade, CSSscale1.42.",
-      "mobileHeroComposition": "640px copyminimum;cyan title/photo/offer composition,64pxamount. Photo inset64px0 216px,CSSscale1.75/origin69%44%;sameWebP.",
-      "heroPhotoFocalPointDesktop": "object-position77%43%;transform-origin72%48%;scale1.42",
-      "heroPhotoFocalPointMobile": "object-position80%42%;transform-origin69%44%;scale1.75",
+      "heroDesktopComposition": "One whole photographic field,inset0,600px stage/copy;ink horizontal contrast gradient,white positioning,cyan amount/action. Same photo scale1.38/origin76%46%.",
+      "mobileHeroComposition": "680px copy;photo inset0 0 170px,position64%43%,scale1.75/origin71%43%;vertical ink gradient,caption top300px,right20px. Title,work subject andlower offer distinct.",
+      "heroPhotoFocalPointDesktop": "object-position74%44%;transform-origin76%46%;scale1.38",
+      "heroPhotoFocalPointMobile": "object-position64%43%;transform-origin71%43%;scale1.75",
       "viewIcon": {
         "file": "assets/icons/maximize.svg",
         "sourceId": "lucide:maximize-2",
         "source": "https://api.iconify.design/lucide/maximize-2.svg",
         "license": "assets/icons/LICENSE-Lucide.txt"
       },
-      "photoColorTreatment": "CSSbrightness1.06/saturate.9 only; existing WebP bytes and person/scene unchanged."
+      "photoColorTreatment": "CSS saturate.9 andink readability gradients only;photo files andpeople/scene unchanged.",
+      "appIconUsage": "Original assets/brand/app-icon.png inclose identity/download heading,80pxPC/64pxmobile."
     },
     "layoutContract": {
       "content": "1120px",
@@ -176,67 +177,46 @@
         "desktop": "32px",
         "mobile": "24px"
       },
-      "companyAndFaq": "Standalone main company section removed; company facts retained once in common footer. FAQ centered heading andmax880px ruled list,72/48px padding; mobile heading left.",
+      "companyAndFaq": "White company chapter inside commonfooter,1.55fr/1fr facts/cyancontact,gap64,padding64PC;mobile stacked,padding48. FAQ largelykept max880px.",
       "anchorOffset": "One root scroll-padding value: header height +24px",
       "policy": "Shared1120px shell, max720px reading text, natural height and flex footer push.",
-      "product": "White chapter72/64/48px. Shared40/28px centeredtitle. Wide1.1fr/1fr,column-gap64,row24,topaligned;bothmedia spanleftrows,twosummaries/right thenalwaysvisible support. Compact .8/1.2 tabs/rightsummary/support;mobile tabs→summary→media→support.",
-      "tabState": "Exactly2controlledIDs pertab forsummary/media;shared fee-reminder/service-area/steps/FAQ support remains visible. Compact intrinsic stacks retainheight,inactive visibilityhidden+inert;wide2labelledregions visible. Breakpointfocuscontract retained.",
+      "product": "Two full-width same-axis stories,white online/ink repayment,copy left/media right,1.1fr/1fr gap80,padding40. No two-phonecollage orpaleslab;240px originals. Sharedsupport outside stories.",
+      "tabState": "Compact<=1100:two-ID panel/media controls plus synchronizedstoryancestor hidden/inert. Productfeatures intrinsic stack;mobile2shared rows+storysubgrid align summary/media;inactive invisible/noninteractive. Wide2visible regions/stories. Tablist CSS base isgrid with source-initial nativehidden;JS owns visibility so breakpoint focus is captured beforehiding.",
       "navigation": "Home/product/steps/FAQ/About/safety. Quiet cyan active fill,no decorative underline or added active weight. Home-only scrollspy sorts target DOM order; safety current page separately.",
       "faq": "Shared Kanit20/18px questions/native summaries and32/20→28/18 SVG markers; clicked disclosure position pinned.",
       "process": "Surface chapter64/48px; four connected columns wide,two unconnected compact,one vertical connector mobile. Cyan48/40px markers,corners14/12,glyphKanit24/22px600; only03opens real plan.",
-      "conversion": "No standalone main download/safety chapters. Download is the first row of common dark footer, safety row follows footer main navigation.",
-      "footer": "Commoninkfooter:downloadpadding32;company.8/1.7/1fr,gap40,padding32PC/24mobile;companytitle24/22,facts+safety16/1.7,small14. Phone32/30andcopy shareonerow,contact44. Mobilebrand132+tagline shareonerow. Existing6nav,notice,policy/contact unchanged.",
+      "conversion": "One cyan primary inphotographicHero;one brand/download group ininkclose. No fiveequallyweighted fullwidth footer ribbons.",
+      "footer": "Commonfooter:independentwhitecompanychapter theninkclose. Close1.55fr/1fr gap64,row48,padding64;appidentity/download left,6navright,safety/policiessecondary below. Mobile1col,row32,padding40,nav2cols. Originalappicon80/64;contactmin44 rendered46.",
       "surfaces": "Full-width chapter backgrounds; one1120px shell with48/24/20px gutters across header/Hero/all routes.",
       "safety": "Horizontal wrapping chapter nav above full1120px content axis, mobile2columns; no sticky side directory."
     },
     "verification": {
-      "round": 20,
+      "round": 21,
       "responsiveCases": 21,
+      "productStabilityCases": 4,
+      "modalCases": 8,
+      "interactionRecords": 10,
       "requiredWidths": [
         1440,
         360,
         375,
         390
       ],
-      "responsiveState": "21 current cases:4canonical pages x1440/390/375/360 +home1024/760 +3clean aliases390; no overflow,broken images or missing ARIA targets. Shared1120px shell/gutters48/24/20;full240/210px frames.",
-      "interactionState": "4compact1024/390/375/360 online→repayment→Home cases show exact0 geometry/scroll;shared support remains visible/non-inert. Eight modal groups exact0 geometry/scroll and focus returns company. Two FAQ keyboard top deltas -0.1875/0.125px,height0. Seven current action records cover preview,original viewers,copy,mobilemenu and settled88px product anchor.",
-      "releaseState": "Online conclusions use ../round20-preview/release-verification.json with commit, CI and actual browser records.",
-      "evidence": "../round20-preview/",
-      "competitorEvidence": "../round20-preview/competitors/type-layout-metrics.json",
+      "responsiveState": "21 current cases after the breakpoint-focus fix:16canonical +home1024/760 +3aliases390. No overflow,broken images or missing ARIA targets;allcanonical screenshots recaptured.",
+      "interactionState": "4compact state/Home-return groups and8modal groups show exact0 measured geometry/scroll;modals restore company focus. FAQ F02 deltas -0.1875/0.125px,height0. Tenactions include both breakpoint-focus directions andsafety-return F02/repayment/y4066.5.",
+      "releaseState": "Online conclusions use ../round21-preview/release-verification.json with commit, CI and actual browser records.",
+      "evidence": "../round21-preview/",
+      "directionContract": "../../work/round21/direction.md",
+      "competitorEvidence": "../round21-preview/competitors/regions.json",
       "fontEvidence": "../round18-preview/kanit-font-sources.json",
-      "skillExecution": "Direct reading of Impeccable layout/typeset/craft-floor; manual rules and browser QA. No automatic detector. Vercel/Anthropic/UI UX Pro Max are installed and available, not individually executed. No new skill installation or font download.",
-      "scope": "Whole-page typography, proportion, reading order and footer review; not physical-device testing or full competitor visual equivalence.",
-      "productStabilityCases": 4,
-      "modalCases": 8,
+      "independentVisualReview": "../../work/round21/reviewer/finish-review.md",
+      "reviewScope": "Fresh reviewer ship disposition is limited to supplied desktop/default-mobile screenshots and source. No browser operation, all-state coverage, numerical contrast, physical devices or deployment verified.",
+      "skillExecution": "Direct reading of Impeccable new-work/craft-floor; code-led implementation of the explicit MoneyThunder direction. No seed-concept lottery, comp generation, detector or new installation.",
+      "scope": "Actual Hero/product/company/footer composition replacement, not Round20 size polish. No full competitor visual equivalence or business-claim transfer.",
       "disclosureCases": 2,
-      "interactionRecords": 7,
-      "qaSummary": "../round20-preview/qa-summary.json",
-      "rawEvidence": "../round20-preview/{cases,stability,modals,disclosures,interactions}.json",
-      "staticState": "Build7pages,link/duplicate-ID,JSsyntax/diff and exact approved-paragraph reconstruction/SHA assertions pass;browser warnings/errors empty.",
-      "visualReview": "Independent full-resolution screenshot/source review found no new must-fix;latest44px contact recaptured on canonical routes.",
-      "proportions": {
-        "heroPC": [
-          580,
-          560
-        ],
-        "heroMobile": [
-          700,
-          640
-        ],
-        "footerPC": [
-          854.7,
-          763.1
-        ],
-        "footer390": [
-          1465.7,
-          1393.6
-        ],
-        "product390": [
-          1139,
-          1205
-        ],
-        "meaning": "Larger footer facts with tighter grouping;summary-first product and readable captions may require more height. Shorter is not the only objective."
-      }
+      "rawEvidence": "../../work/round21/{cases,stability,modals,disclosures,interactions}.json",
+      "staticState": "7-page build,links/anchors/duplicate-ID,JSsyntax/diff pass;data/font/App/photo hashes unchanged;browser warnings/errors0.",
+      "focusFix": "Tab CSS basegrid plus source-initial nativehidden;JS owns visibility. Capture focus before activate/hide,preventing pre-event CSSblur. Expansion focuses visibleonline media;collapse preservesfocusedrepayment;both hiddenFocus:false."
     },
     "fontAssets": {
       "displayFamily": "Kanit",
@@ -287,7 +267,7 @@
       "evidenceBoundary": "Actual competitor family aliases identify Kanit; licensed Google Fonts files are acquired independently, not copied from competitor."
     },
     "interactionContract": {
-      "product": "Widebothregions visible;compact tab controls exactlysummary+media IDs,inactiveinvisible/inert intrinsicstacks;shared support never toggled. Mobile summaryprecedesApp. Breakpointactive/focusedfeature preserved.",
+      "product": "Pair panel/media asbeforeand synchronize whole story ancestor hidden/inert incompact. Mobile subgrid shares summary/media rows. Sharedsupport staysvisible. Wide stories both visible;focus/breakpoint contracts preserved.",
       "dialog": "Store/restore scroll on open/close, restore trigger focus; feedback minimum52px preserved when empty.",
       "disclosures": "Measure clicked visible control top before state change and compensate delta; html overflow-anchor:none.",
       "anchors": "Normalize same-document /index.html,.html and trailing slash aliases for hash scrolling without reload; preserve ordinary cross-page links.",
@@ -300,7 +280,7 @@
       "name": "Primary Download Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Shared dark224×52px primary; Hero uses dark244×56px on bright cyan,full width/min52px mobile; compact header44px.",
+      "description": "Shared dark224x52px primary whereappropriate. Hero retainedclass usescyan override244x56px,fullwidth/min52mobile;close actioncyan. Headercompact44px.",
       "html": "<button type=\"button\" class=\"ds-button ds-primary\">ดาวน์โหลดแอป</button>",
       "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Kanit,Noto Sans Thai,sans-serif;font-size:17px;line-height:24px;font-weight:500;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-primary{width:224px;background:var(--ink,#00384C);color:var(--white,#FFFFFF)}.ds-primary:hover{background:#07586A}.ds-primary:active{background:#07586A}@media(max-width:760px){.ds-primary{width:100%}}"
     },
@@ -308,7 +288,7 @@
       "name": "Cyan Button",
       "kind": "button",
       "refersTo": "button-cyan",
-      "description": "Footer download action on the common dark close; shared52px/Kanit17px500 anatomy. Hero now uses the dark variant.",
+      "description": "Primary forwhole-photo Hero anddarkclose;Kanit17px500. Herohas244x56px localvariant,close224x52px;mobilefullwidth.",
       "html": "<button type=\"button\" class=\"ds-button ds-cyan\">ดาวน์โหลดแอป</button>",
       "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius,10px);font-family:Kanit,Noto Sans Thai,sans-serif;font-size:17px;line-height:24px;font-weight:500;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}.ds-button:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-cyan{background:var(--cyan,#44E0F8);color:var(--ink,#00384C)}.ds-cyan:hover,.ds-cyan:active{background:#74E9FA}"
     },
@@ -328,11 +308,11 @@
       "css": ".ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;font-family:Kanit,Noto Sans Thai,sans-serif;font-size:16px;font-weight:500}.ds-nav a{padding:10px 9px;border-radius:8px;color:var(--ink,#00384C);text-decoration:none}.ds-nav a:hover{background:var(--surface,#F2F6F7)}.ds-nav a[aria-current]{background:var(--cyan-soft,#E7FAFD)}.ds-nav a:focus-visible{outline:3px solid var(--ink,#00384C);outline-offset:5px}"
     },
     {
-      "name": "Responsive Complete Product Explanation",
+      "name": "Paired Full-width Product Stories",
       "kind": "section",
-      "description": "Wideboth240pxmedia/summaryregions;compactstablepairedtabs;mobile tabs→shortsummary→210pxApp→sharedsupport. Fee-reminder/service-area/steps/FAQ alwaysvisible andoutside2controlledIDs. Caption/action14px,min44px.",
-      "html": "<section class=\"ds-product\"><h2>ทำไมต้องเลือกเคียงใจ</h2><div class=\"ds-showcase\"><div class=\"ds-tabs\" role=\"tablist\" hidden><!-- native paired tabs; source app.js owns responsive state --></div><div class=\"ds-panels\"><section role=\"region\" aria-labelledby=\"ds-heading-home\"><h3 id=\"ds-heading-home\">สมัครออนไลน์ทุกขั้นตอน</h3><!-- unchanged approved summary --></section><section role=\"region\" aria-labelledby=\"ds-heading-repay\"><h3 id=\"ds-heading-repay\">ชำระคืนสะดวก</h3><!-- unchanged approved repayment copy --></section></div><div class=\"ds-media\"><figure><!-- original HOME --></figure><figure><!-- original repayment --></figure></div><div class=\"ds-support\"><!-- existing fee reminder/service area/application+FAQ entries, always visible --></div></div></section>",
-      "css": ".ds-product{padding-block:72px;background:#fff}.ds-product h2{text-align:center;font-family:Kanit,sans-serif;font-size:40px;line-height:1.3;margin-bottom:40px}.ds-showcase{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);column-gap:64px;row-gap:24px;align-items:start}.ds-tabs{display:none}.ds-media{grid-column:1;grid-row:1/3;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;min-width:0}.ds-panels{grid-column:2;grid-row:1;display:grid;gap:32px;min-width:0}.ds-support{grid-column:2;grid-row:2;min-width:0;overflow-anchor:none}.ds-panels h3{font-size:28px;line-height:1.4}.ds-panels p{font-size:18px;line-height:1.8}.ds-panels>section+section{border-top:1px solid #d9e2e5;padding-top:28px}@media(max-width:1100px){.ds-product{padding-block:64px}.ds-product h2{margin-bottom:32px}.ds-showcase{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);column-gap:48px}.ds-tabs{display:grid;grid-column:2;grid-row:1}.ds-media{grid-row:1/4}.ds-panels{grid-row:2}.ds-support{grid-row:3}.ds-media,.ds-panels{grid-template-columns:1fr;gap:0;overflow-anchor:none}.ds-media>figure,.ds-panels>section{grid-area:1/1}.ds-media>[hidden],.ds-panels>[hidden]{display:block!important;visibility:hidden;pointer-events:none}.ds-panels h3{display:none}.ds-panels>section+section{border:0;padding:0}}@media(max-width:760px){.ds-product{padding-block:48px}.ds-product h2{font-size:28px;margin-bottom:24px}.ds-showcase{grid-template-columns:1fr;gap:24px}.ds-tabs{grid-column:1;grid-row:1}.ds-panels{grid-column:1;grid-row:2}.ds-media{grid-column:1;grid-row:3;padding-top:8px}.ds-support{grid-column:1;grid-row:4}.ds-panels p{font-size:16px;line-height:1.85}}"
+      "description": "Two independent same-axis full-width stories:copy left/fullApp right,white online/ink repayment. Compact paired2IDs andwhole storyancestor hidden/inert;mobile2row subgrid aligns summary/media. Sharedsupport outside. Source app.js owns responsive state. Tablist starts nativehidden;CSSbasegrid andJSvisibility ownership preservefocus acrossbreakpoints.",
+      "html": "<section class=\"ds-product\"><header><h2>ทำไมต้องเลือกเคียงใจ</h2><div role=\"tablist\" class=\"ds-tabs\" hidden><!-- unchanged paired native tabs --></div></header><div class=\"ds-features\"><article class=\"ds-story ds-online\"><div class=\"ds-story-inner\"><section role=\"region\" aria-labelledby=\"ds-online-heading\"><h3 id=\"ds-online-heading\">สมัครออนไลน์ทุกขั้นตอน</h3><!-- unchanged summary --></section><figure><!-- complete original HOME,240/210px --></figure></div></article><article class=\"ds-story ds-repayment\"><div class=\"ds-story-inner\"><section role=\"region\" aria-labelledby=\"ds-repayment-heading\"><h3 id=\"ds-repayment-heading\">ชำระคืนสะดวก</h3><!-- unchanged repayment copy --></section><figure><!-- complete original repayment --></figure></div></article></div><div class=\"ds-support\"><!-- always-visible reviewed reminder/service/steps/FAQ --></div></section>",
+      "css": ".ds-story{padding-block:40px;background:#fff}.ds-story-inner{width:min(1120px,calc(100% - 96px));margin-inline:auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:80px;align-items:center}.ds-story h3{font:600 40px/1.35 Kanit,sans-serif}.ds-story p{font:400 18px/1.85 Noto Sans Thai,sans-serif}.ds-repayment{background:#00384c;color:#fff}.ds-repayment h3,.ds-repayment p{color:#fff}.ds-tabs{display:grid}.ds-tabs[hidden]{display:none!important}@media(max-width:1100px){.ds-tabs{display:grid}.ds-features{display:grid;overflow-anchor:none}.ds-story{grid-area:1/1;padding-block:32px}.ds-story-inner{width:calc(100% - 48px);gap:48px}.ds-story[hidden]{display:block!important;visibility:hidden;pointer-events:none}.ds-story h3{display:none}}@media(max-width:760px){.ds-features{grid-template-columns:1fr;grid-template-rows:auto auto;row-gap:24px}.ds-story,.ds-story[hidden]{display:grid!important;grid-column:1;grid-row:1/3;grid-template-rows:subgrid;padding:24px 20px 32px}.ds-story-inner{display:contents}.ds-story section{grid-row:1}.ds-story figure{grid-row:2}.ds-story p{font-size:16px}}"
     },
     {
       "name": "FAQ Question",
@@ -350,40 +330,41 @@
     }
   ],
   "narrative": {
-    "northStar": "Whole-page Role Hierarchy and Legible Supporting Information",
-    "overview": "Round20 compares complete LINE BK, Rabbit Cash and MoneyThunder pages and metrics, then adjusts proportions, summary-first product reading, shared support and footer legibility. Business content, photo/font files and the product framework remain.",
+    "northStar": "Whole Photo, Independent Product Stories, Clear Identity and Brand Close",
+    "overview": "Round21 replaces the rejected Round20 composition in existing static code. One photographic Hero, two full-width same-axis stories, a white facts/cyan contact chapter and a two-column ink close provide distinct visual duties.",
     "keyCharacteristics": [
-      "Hero560/640px, amount80/64px, chapter40/28px, caption/action14px and minimum44px action.",
-      "Mobile tabs → summary → App → shared support; two IDs per tab; fee reminder, service area, steps and FAQ remain visible.",
-      "Footer facts/safety16px/1.7, company24/22px, small14px; compact grouping and a phone/copy row.",
-      "Competitor font families and roles differ; MoneyThunder390 is clipped desktop, not mobile evidence."
+      "Same whole-photo field with ink gradient, white positioning and cyan amount/action;600/680px.",
+      "Each product owns its complete240/210px App in white/ink chapters; no phone collage or shared slab.",
+      "Compact story ancestor and two controlled IDs stay synchronized; mobile subgrid aligns summary/media rows.",
+      "Company facts appear once in white; app identity/download and navigation form the two-column ink close."
     ],
     "rules": [
       {
-        "name": "Whole Page Evidence",
-        "body": "Use complete pages and role-specific metrics, not one font size or first screen. Different font families are not optically equivalent.",
+        "name": "Pinned Direction",
+        "body": "Use fresh MoneyThunder PC composition evidence; rotating referral Hero is not necessarily the initial loan campaign. No valid new mobile sample claimed.",
         "section": "research"
       },
       {
-        "name": "Truthful Copy Layout",
-        "body": "Split the approved paragraph at its existing reminder boundary with builder checks; catalog unchanged. Keep fee/support information visible in both states.",
-        "section": "content"
+        "name": "Whole Story State",
+        "body": "Synchronize ancestor and paired panel/media hidden/inert, retain intrinsic rows and always-visible support.",
+        "section": "interaction"
       },
       {
-        "name": "Skill Evidence",
-        "body": "Impeccable references were read directly with manual rules/browser QA; no detector ran. Other installed skills are not claimed as executed.",
+        "name": "Scoped Review",
+        "body": "Fresh screenshot/source ship decision covers visual scope only. Browser actions, numerical contrast, physical devices and deployment require separate evidence.",
         "section": "verification"
       }
     ],
     "dos": [
-      "Keep original Logo, exact cyan, reviewed copy/config and complete App PNGs.",
-      "Recheck current state geometry, shared support, mobile order, footers and all routes.",
-      "Keep existing OFL/photo provenance and current release evidence."
+      "Preserve exact cyan, Logo, reviewed copy/config and unchanged full App/photo/font files.",
+      "Recheck new story states, focus/modals/navigation and all common-footer routes.",
+      "Separate composition review from runtime and public release evidence."
     ],
     "donts": [
-      "Do not treat MoneyThunder390 desktop clipping as a mobile reference.",
-      "Do not copy competitor business claims, assets or proprietary fonts.",
-      "Do not recycle Round19 QA counts or claim an automatic detector or physical-device pass."
-    ]
+      "Do not restore the Round20 cyan-panel/photo join, two-phone collage or five equal footer ribbons.",
+      "Do not copy competitor claims, people, awards, stores or credentials.",
+      "Do not reuse old QA counts or claim concept generation or an automatic detector ran."
+    ],
+    "selectedRepaymentVisualFollowup": "ship; final canonical1440/390/360 and selected-repayment capture checked for painted images and readable dark story/shared support; browser QA/release separately recorded"
   }
 }
