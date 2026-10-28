@@ -1,6 +1,6 @@
-# Kiangjai V2 第二十二轮产品章清理
+# Kiangjai V2 第二十三轮Hero层级调整
 
-日期：2026-10-28。第二十二轮仅删除还款章后的孤立支持条：恢复`copy:cdd17cff597160`完整线上段落及费用提醒，移除builder拆分宏与无用样式；固定服务范围只保留在公司联系区。重复步骤／F01／F04快捷入口移除，页头／页尾步骤导航、四步正文及完整FAQ不变。业务config、catalog、照片、字体与App不改。
+日期：2026-10-28。第二十三轮仅调整Hero分组：PC左侧品牌标题，额度与下载／待开放提示并列，业务说明另占下方两行；手机品牌／额度／行动居中，长说明左对齐。原照片、已审文案、字体、config、App与JS不改。第二十二轮删除孤立产品支持条、恢复完整费用提醒和移除重复快捷入口的结果保持。
 
 独立仓库`Muggle-icon/kiangjai-thailand-website-v2`，不影响原V1。第二十一轮重做上一版结构：从青蓝拼接首屏／双机拼贴／多横带收尾，改为整幅实拍／两条产品story／独立公司章／两列品牌close。已审业务和产品框架保留。
 
@@ -8,13 +8,15 @@
 
 | 区域 | 当前实现与职责 |
 | --- | --- |
-| Hero | 原生活工作实拍铺满、深青遮罩、白定位、青蓝50,000额度／CTA；PC600／手机680px，无新人物素材 |
+| Hero | 原实拍与白定位不变；PC600px，额度320px／CTA224×56px并列、gap24；手机720px，品牌／额度／行动居中，业务说明左对齐 |
 | 产品 | 宽屏白线上／深青还款两独立全宽story，均左说明／右完整App；compact成组Tab与story祖先同步隐藏，移动subgrid对齐摘要／原图 |
 | 公司 | 共同footer内独立白事实章，青蓝联系块，真实登记／地址一次呈现，About保留 |
 | Close | 深青两列，App身份／下载左、导航右，安全／政策辅助在下；不恢复五条同级横带 |
 | 其他 | 原导航／四步／FAQ主要保留，安全与政策路由共用新footer，维持原生功能 |
 
 主要文件：`src/components/hero.html`、`benefits.html`、`footer.html`及三份CSS；app.js增加story祖先与panel／media的同步hidden／inert。保持静态HTML/CSS/JS和原Python builder，无JSX／框架迁移。四根页与三clean-route aliases一同构建。业务config、catalog、字体／照片／App文件未改。
+
+第二十三轮代码仅涉及`src/components/hero.html`与`assets/redesign.css`的Hero：新hero-conversion容纳额度、行动和业务说明，PC标题56／定位28／金额80px；待开放与业务说明16px／26px。说明上距24px、顶部内距16px和细分隔线。手机标题36／定位20／金额64／币种20px，标签16px／26px，按钮满宽52px，待开放居中14px／24px，长说明左对齐14px／24px。手机照片bottom inset190px，渐隐至62%为纯深青；无新横栏或JS变更。
 
 原图仍由`APP_SCREENS`／`{{app-screen:…}}`统一输出完整750×1624、240／210px框、4px内边、28／26px角及共同放大查看器。只有步骤03打开匹配贷款计划图。产品章后无共享支持条；线上完整段落保留费用提醒，联系区保留固定服务范围。
 
@@ -41,7 +43,9 @@ Kanit六WOFF2仍98,568B及SIL OFL；Noto正文、SVG来源／许可不变，无�
 
 ## 当前证据与发布
 
-第二十二轮当前浏览器证明见[round22-preview](../../round22-preview/)与[stability.json](../../round22-preview/stability.json)：390／375／360／760／1024共5个紧凑宽度的online→repayment→Home中，scroll、手机与下一章节位置差均0，横向溢出0。已检查1440／390／375／360首页完整截图及390还款选中态；独立复查确认本次删除与内容归位，无新增设计问题。构建、7页静态链接／ID及JS检查通过；线上结果单独记录在round22-preview/release-verification.json，不复用上一轮完整21场景计数。
+第二十三轮Hero截图见[round23-preview](../../round23-preview/)：1440／390／375／360／760／1024六种宽度无横向溢出；独立复查1440／1024／760／390／360五张，未见新增重叠、断行或文字遮脸。该结论仅覆盖Hero视觉范围；首页1440／390／360整页已截图检查；三组原生点击下载弹窗的scroll／几何差均0，焦点返回Hero按钮。构建、7页静态链接／ID和JS检查通过；发布结果单独记录，不构成数值对比度或全面无障碍认证。
+
+第二十二轮历史浏览器证明见[round22-preview](../../round22-preview/)与[stability.json](../../round22-preview/stability.json)：390／375／360／760／1024共5个紧凑宽度的online→repayment→Home中，scroll、手机与下一章节位置差均0，横向溢出0。已检查1440／390／375／360首页完整截图及390还款选中态；独立复查确认当时删除与内容归位，无新增设计问题。当时构建、7页静态链接／ID及JS检查通过；线上结果记录在round22-preview/release-verification.json，不认证本轮部署。
 
 第二十一轮历史记录为21个页面／宽度场景、4组紧凑产品、8组模态、2组FAQ键盘检查和10条动作，其独立ship判断只覆盖当时所给截图／源码范围。历史证据见[round21-review.md](round21-review.md)及`../../round21-preview/`；这些结果不认证本次修改。不能以旧轮通过、技能已安装或本地构建推定当前实现已发布。MoneyThunder仍只作PC结构参考，其自动轮播不构成固定首屏或有效手机样本。
 
