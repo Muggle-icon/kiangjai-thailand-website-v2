@@ -15,7 +15,7 @@
 }
 .kj-footer-identity,.kj-footer-services{min-width:0}
 .footer-main-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;margin-bottom:24px}
-.footer-main-nav a{display:flex;align-items:center;min-height:44px;color:var(--white);font-size:18px;font-weight:500;line-height:1.6;text-decoration:none}
+.footer-main-nav a{display:flex;align-items:center;min-height:44px;color:var(--white);font-family:var(--font-display);font-size:18px;font-weight:500;line-height:1.6;text-decoration:none}
 .kj-footer-brand img {
   display: block;
   width: 176px;
@@ -117,55 +117,38 @@
 .security-title-description > p { max-width: 520px; color: var(--muted); }
 .security-title-description > .kj-link { margin-top: 8px; }
 .security-content-layout {
-  display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  gap: var(--grid-gap);
-  align-items: start;
+  display: block;
   padding-block: 40px var(--section-space);
 }
 .security-page-nav {
-  position: sticky;
-  top: 116px;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
-  padding: 0 var(--grid-gap) 0 0;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
 }
 .security-page-nav a {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 52px;
-  padding: 12px 16px;
-  border-radius: 0 8px 8px 0;
+  min-height: 48px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: var(--surface);
   color: var(--ink);
-  font-size: 14px;
+  font-family: var(--font-display);
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.7;
   text-decoration: none;
 }
 .security-page-nav a:hover { background: var(--surface); }
-.security-page-nav a:first-child { background: var(--cyan-soft); }
-.security-page-nav a:first-child::before {
-  content: "";
-  position: absolute;
-  inset: 10px auto 10px 0;
-  width: 3px;
-  border-radius: 3px;
+.security-page-nav a[aria-current] {
   background: var(--cyan);
 }
-.security-content-layout:has(.kj-section:target) .security-page-nav a:first-child { background: transparent; }
-.security-content-layout:has(.kj-section:target) .security-page-nav a:first-child::before { display: none; }
-.security-content-layout:has(#channels:target) .security-page-nav a[href="#channels"],
-.security-content-layout:has(#reminders:target) .security-page-nav a[href="#reminders"],
-.security-content-layout:has(#scams:target) .security-page-nav a[href="#scams"],
-.security-content-layout:has(#help:target) .security-page-nav a[href="#help"],
-.security-content-layout:has(#security-faq:target) .security-page-nav a[href="#security-faq"] {
-  background: var(--cyan-soft);
-  box-shadow: inset 3px 0 0 var(--cyan);
-}
-.security-article { min-width: 0; padding-left: var(--grid-gap); border-left: 1px solid var(--line); }
+.security-article { min-width: 0; padding: 0; border: 0; }
 .security-article > .kj-section { margin: 0; padding: 0 0 40px; border: 0; }
 .security-article > .kj-section + .kj-section { padding-top: 40px; border-top: 1px solid var(--line); }
 .security-article > .kj-section:last-child { padding-bottom: 0; }
@@ -231,7 +214,7 @@
 .kj-safety-list { max-width: 720px; margin: 0; padding: 0; list-style: none; counter-reset: safety-item; }
 .kj-safety-list li {
   position: relative;
-  padding-left: 56px;
+  padding-left: 64px;
   color: var(--text);
   counter-increment: safety-item;
 }
@@ -242,26 +225,30 @@
   top: 0;
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--cyan-soft);
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--cyan);
   color: var(--ink);
-  font-size: 16px;
+  font-family: var(--font-display);
+  font-size: 24px;
   font-weight: 600;
 }
 .kj-safety-list li + li { margin-top: var(--grid-gap); }
-.kj-scam-list { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 20px; }
-.kj-scam-list details { min-width: 0; padding: 0; border: 0; border-radius: 10px; background: var(--surface); }
+.kj-scam-list { display: grid; grid-template-columns: 1fr; gap: 0; margin-top: 20px; border-top: 1px solid var(--line); }
+.kj-scam-list details { min-width: 0; padding: 0; border: 0; border-bottom:1px solid var(--line);border-radius: 0; background: transparent; }
 .kj-scam-list summary,
 .kj-help-guide summary {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap:24px;
   min-height: 76px;
-  padding: 20px 68px 20px 24px;
+  padding: 20px 0;
   color: var(--ink);
-  font-size: var(--font-body);
+  font-family:var(--font-display);
+  font-size: 20px;
   font-weight: 500;
   line-height: 30px;
   list-style: none;
@@ -269,31 +256,12 @@
 }
 .kj-scam-list summary::-webkit-details-marker,
 .kj-help-guide summary::-webkit-details-marker { display: none; }
-.kj-scam-list summary::before,
-.kj-scam-list summary::after,
-.kj-help-guide summary::before,
-.kj-help-guide summary::after {
-  content: "";
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  width: 14px;
-  height: 2px;
-  border-radius: 1px;
-  background: var(--ink);
-  transform: translateY(-50%);
-}
-.kj-scam-list summary::after,
-.kj-help-guide summary::after { transform: translateY(-50%) rotate(90deg); }
-.kj-scam-list details[open] summary::after,
-.kj-help-guide[open] summary::after { display: none; }
-.kj-scam-list details[open] summary { padding-bottom: 16px; }
 .kj-scam-list summary:hover,
 .kj-help-guide summary:hover { color: #086278; }
 .kj-scam-list details p {
   max-width: 720px;
   margin: 0;
-  padding-inline: 24px;
+  padding-right:48px;
   color: var(--muted);
   font-size: var(--font-body);
   line-height: 1.85;
@@ -302,7 +270,7 @@
 .kj-scam-list details p:last-child { padding-bottom: 24px; }
 .kj-scam-list details strong { color: var(--text); font-weight: 600; }
 #kj-report-pending { padding: 24px; border-left: 3px solid var(--cyan); border-radius: 0 10px 10px 0; background: var(--cyan-soft); }
-.kj-help-guide { margin-block: 24px 12px; padding: 0; border: 0; border-radius: 10px; background: var(--surface); }
+.kj-help-guide { margin-block: 24px 12px; padding: 0; border-block:1px solid var(--line); border-radius: 0; background: transparent; }
 .kj-help-guide ol { margin: 0; padding: 0 28px 24px 52px; }
 .kj-help-guide li { padding-left: 4px; color: var(--text); font-size: var(--font-body); line-height: 1.85; }
 .kj-help-guide li + li { margin-top: 12px; }
@@ -323,16 +291,12 @@
 .kj-policy-empty .kj-primary { width: var(--cta-width); max-width: 100%; margin-top: var(--grid-gap); }
 
 @media (max-width: 1160px) {
-  .security-content-layout { grid-template-columns: 210px minmax(0, 1fr); }
   .kj-security-channels .security-channel-app,
   .kj-security-channels .security-channel-contact { display: block; }
   .security-channel-icon { margin-bottom: 20px; }
 }
 @media (max-width: 900px) {
   .kj-footer-grid{gap:48px}
-  .security-content-layout { grid-template-columns: 180px minmax(0, 1fr); }
-  .security-page-nav { padding-right: 0; }
-  .security-page-nav a { padding-inline: 12px; }
   .security-title-layout { grid-template-columns: 1fr; gap: var(--grid-gap); }
   .kj-security-channels { grid-template-columns: 1fr; }
   .kj-security-channels .security-channel-app,
@@ -355,8 +319,8 @@
   .kj-security-hero { padding-block: 32px; }
   .security-title-description h2 { max-width: 320px; }
   .security-content-layout { display: block; padding-block: 24px var(--section-space); }
-  .security-page-nav { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 8px; margin: 0 0 32px; padding: 0 0 24px; border-bottom: 1px solid var(--line); }
-  .security-page-nav a { min-height: 48px; padding: 10px 12px; border-radius: 6px; line-height: 1.65; }
+  .security-page-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 8px; margin: 0 0 32px; padding: 0 0 24px; border-bottom: 1px solid var(--line); }
+  .security-page-nav a { min-height: 48px; padding: 10px 12px; border-radius: 10px;font-size:16px; line-height: 1.65; }
   .security-article { padding: 0; border: 0; }
   .security-article > .kj-section { padding-bottom: 32px; }
   .security-article > .kj-section + .kj-section { padding-top: 32px; }
@@ -370,17 +334,13 @@
   #kj-identity-pending { gap: 12px; padding: var(--grid-gap); }
   .security-notice-icon { width: 24px; height: 24px; }
   .security-notice-icon > .icon { width: 22px; height: 22px; }
-  .kj-safety-list li { padding-left: 44px; }
-  .kj-safety-list li::before { width: 30px; height: 30px; font-size: 14px; }
+  .kj-safety-list li { padding-left: 56px; }
+  .kj-safety-list li::before { width: 40px; height: 40px;border-radius:12px; font-size: 22px; }
   .kj-safety-list li + li { margin-top: 20px; }
   .kj-scam-list { margin-top: 16px; }
   .kj-scam-list summary,
-  .kj-help-guide summary { min-height: 72px; padding: 18px 50px 18px 16px; line-height: 28px; }
-  .kj-scam-list summary::before,
-  .kj-scam-list summary::after,
-  .kj-help-guide summary::before,
-  .kj-help-guide summary::after { right: 20px; width: 12px; }
-  .kj-scam-list details p { padding-inline: 16px; }
+  .kj-help-guide summary { min-height: 72px; padding: 18px 0;gap:16px;font-size:18px; line-height: 28px; }
+  .kj-scam-list details p { padding:0; }
   .kj-scam-list details p:last-child { padding-bottom: 20px; }
   #kj-report-pending { padding: 20px; }
   .kj-help-guide { margin-top: 20px; }

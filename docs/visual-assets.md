@@ -1,6 +1,6 @@
-# 第十七轮视觉素材与来源
+# 第十八轮视觉素材与来源
 
-日期：2026-10-27。本轮沿用Tony Wu曼谷餐食摊实拍；照片、原App、Logo和图标均未更换，本轮只调整布局和文字层级，图片及图标文件未改。照片提供生活工作情境，不表示画中人物的国籍、财务状况、借款需求或与公司的关系，不暗示其为 Kiangjai 代言。
+日期：2026-10-28。本轮沿用Tony Wu曼谷餐食摊实拍；照片、原App、Logo和图标均未更换，本轮新增独立授权的Kanit字体；图片／图标文件未改。照片提供生活工作情境，不表示画中人物的国籍、财务状况、借款需求或与公司的关系，不暗示其为 Kiangjai 代言。
 
 ## 当前生产素材
 
@@ -43,6 +43,24 @@
 
 Lucide [许可](https://lucide.dev/license)及本地 `assets/icons/LICENSE-Lucide.txt` 保留 ISC 文本和相关 Feather MIT 文本。历史 Phosphor 图标来源／MIT 文本保留于 `LICENSE-Phosphor.txt`。历史 application.svg 为项目原创文档几何图；repayment.svg 的 QR 字形源自 Phosphor。图标许可不等于竞品品牌资源许可。
 
+## 字体新增来源
+
+当前正文继续原自托管Noto Sans Thai；新增Kanit用于标题／UI。竞品[实际font-family记录](../../round18-preview/competitors/moneythunder-type-metrics.json)含orig_kanit_semibold／medium／regular，本项目未下载竞品字体文件，而是单独从Google Fonts获取授权文件。
+
+- [Google Fonts CSS来源](https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&display=swap)，各WOFF2的gstatic直链和SHA见[完整来源记录](../../round18-preview/kanit-font-sources.json)。
+- [Google Fonts Kanit OFL原文](https://github.com/google/fonts/blob/main/ofl/kanit/OFL.txt)，本地`assets/fonts/Kanit-OFL.txt`；©2020 The Kanit Project Authors，SIL Open Font License1.1。原Noto许可仍保留在OFL-NotoSansThai.txt。
+
+| 文件 | 字重／子集 | 大小 |
+| --- | --- | --- |
+| Kanit-500-thai.woff2 | 500／Thai | 13,288B |
+| Kanit-500-latin.woff2 | 500／Latin | 19,236B |
+| Kanit-600-thai.woff2 | 600／Thai | 13,784B |
+| Kanit-600-latin.woff2 | 600／Latin | 19,496B |
+| Kanit-700-thai.woff2 | 700／Thai | 13,488B |
+| Kanit-700-latin.woff2 | 700／Latin | 19,276B |
+
+六文件总98,568B，已对照来源JSON检查大小及SHA。@font-face使用unicode-range、font-display:swap；预加载500／600 Thai。访客字体均从自身站点加载，来源URL仅用于出处，不引入运行时Google字体请求。
+
 ## 被替代的历史来源
 
 - 第十四轮 Sommart Sopon 的 [Pexels 35764278 咖啡馆照片](https://www.pexels.com/photo/professional-working-remotely-in-bangkok-cafe-35764278/)不再用于当前 Hero。其来源曾标记曼谷、拍摄日 2022-02-19；`bangkok-workday-1200.webp`／`2000.webp` 属上一轮派生，当前页面及生产派生均已撤下。母片保留在 `../../work/round14/bangkok-cafe-original.jpg`。
@@ -58,4 +76,4 @@ Lucide [许可](https://lucide.dev/license)及本地 `assets/icons/LICENSE-Lucid
 | 已审 Thai catalog | `d0a1668f74bab8b29a8d0bb369bcc734d2d0df8f21f1417084f29708a2d8dedc` |
 | 公开 config | `fc0ab4fd68c9727195d6fbb2a2998ffaa03c95629f3e508898b1d523be57e179` |
 
-原图 200,000 推广、日利率及示例金额／时效仍待业务核准，未提取为官网承诺。未配置的商店、官方渠道或牌照不制作替代图。第十七轮已完成18组实际页面（四页×1440／360／375／390px，另加首页1024／760px），无横向溢出或可见破图；4组配对设备规格、所有aria-controls目标及17项运行记录已检查，7页静态检查、JS语法和差异检查通过。catalog／config／原HOME的SHA保持基线。当前证据在`../round17-preview/`；线上发布结论以`../round17-preview/release-verification.json`中的commit、CI与实际浏览器记录为准。
+原图 200,000 推广、日利率及示例金额／时效仍待业务核准，未提取为官网承诺。未配置的商店、官方渠道或牌照不制作替代图。第十八轮本地记录21个页面／宽度场景，无可见破图、横向溢出或缺失ARIA目标；Kanit与Noto字体加载、产品非激活状态的visibility:hidden及inert已实测。4组产品、8组弹窗、6组展开和14条交互记录见[round18-review.md](round18-review.md)。照片不变，本轮是字体／层级／交互改进，不宣称与竞品完整视觉等同。静态构建及发布另行核验；线上发布结论以`../round18-preview/release-verification.json`中的commit、CI和实际浏览器记录为准。

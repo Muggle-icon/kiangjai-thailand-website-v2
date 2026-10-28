@@ -15,7 +15,7 @@
       ? parsed.hostname === 'play.google.com' && parsed.pathname === '/store/apps/details' && !!parsed.searchParams.get('id') ? url : ''
       : parsed.hostname === 'apps.apple.com' && /\/id\d+(?:\/|$)/.test(parsed.pathname) ? url : '';
   };
-  let toastTimer, copyTimer, lastTrigger = null, oldOverflow = '';
+  let toastTimer, copyTimer, lastTrigger = null, oldOverflow = '', dialogPosition = null;
   const notify = message => {
     const toast = $('#toast'); if (!toast) return;
     toast.textContent = message; toast.hidden = false; clearTimeout(toastTimer);
@@ -24,7 +24,9 @@
   const openDialog = (dialog, button) => {
     if (!dialog) return;
     lastTrigger = button; oldOverflow = document.body.style.overflow;
-    dialog.showModal(); document.body.style.overflow = 'hidden';
+    dialogPosition = {left:window.scrollX,top:window.scrollY};
+    document.body.style.overflow = 'hidden'; dialog.showModal();
+    window.scrollTo({...dialogPosition,behavior:'instant'});
   };
   $$('[data-download]').forEach(button => button.addEventListener('click', () => {
     const dialog = $('#download-dialog');
@@ -36,7 +38,11 @@
   }));
   $$('[data-close]').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));
   $$('dialog').forEach(dialog => {
-    dialog.addEventListener('close', () => { document.body.style.overflow = oldOverflow; lastTrigger?.focus({preventScroll:true}); });
+    dialog.addEventListener('close', () => {
+      document.body.style.overflow = oldOverflow;
+      lastTrigger?.focus({preventScroll:true});
+      if (dialogPosition) window.scrollTo({...dialogPosition,behavior:'instant'});
+    });
     dialog.addEventListener('click', event => {
       if (event.target !== dialog) return;
       const box = dialog.getBoundingClientRect();
@@ -89,8 +95,18 @@
       $('#store-platforms').append(article);
     }
   }
-  $$('[data-faq]').forEach(button => button.addEventListener('click', () => {
-    const expand = button.getAttribute('aria-expanded') !== 'true';
+  // Keep the clicked disclosure in place when a previously open answer above it closes.
+  const preserveControlPosition = (control, change) => {
+    const before = control.getBoundingClientRect();
+    const visible = before.bottom > ($('.site-header')?.getBoundingClientRect().bottom || 0) && before.top < window.innerHeight;
+    change();
+    if (visible) {
+      const delta = control.getBoundingClientRect().top - before.top;
+      if (Math.abs(delta) > .5) window.scrollBy({top:delta,behavior:'instant'});
+    }
+  };
+  const setFaqExpanded = (button, expand, preserve = true) => {
+    const change = () => {
     const group = button.closest('.kj-faq-list');
     group.querySelectorAll('[data-faq]').forEach(other => {
       other.setAttribute('aria-expanded','false');
@@ -98,6 +114,18 @@
     });
     button.setAttribute('aria-expanded',String(expand));
     document.getElementById(button.getAttribute('aria-controls')).hidden = !expand;
+    };
+    if (preserve) preserveControlPosition(button, change); else change();
+  };
+  $$('[data-faq]').forEach(button => button.addEventListener('click', () => setFaqExpanded(button,button.getAttribute('aria-expanded') !== 'true')));
+  $$('details > summary').forEach(summary => summary.addEventListener('click', event => {
+    event.preventDefault();
+    const detail = summary.parentElement;
+    const expand = !detail.open;
+    preserveControlPosition(summary, () => {
+      if (expand && detail.name) $$('details').filter(other => other !== detail && other.name === detail.name).forEach(other => { other.open=false; });
+      detail.open = expand;
+    });
   }));
   // Product-information links open the existing reviewed answer, without duplicating it.
   $$('[data-faq-target]').forEach(link => link.addEventListener('click', event => {
@@ -105,7 +133,7 @@
     const target = $(`[data-faq="${link.dataset.faqTarget}"]`);
     if (!target) return;
     event.preventDefault();
-    if (target.getAttribute('aria-expanded') !== 'true') target.click();
+    if (target.getAttribute('aria-expanded') !== 'true') setFaqExpanded(target,true,false);
     target.scrollIntoView({behavior:reduceMotion.matches ? 'instant' : 'smooth',block:'start'});
     target.focus({preventScroll:true});
   }));
@@ -118,7 +146,35 @@
   menu?.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
   $$('#main-nav a').forEach(link => link.addEventListener('click', () => setMenu(false)));
   document.addEventListener('click', event => { if (menu && !event.target.closest('.site-header')) setMenu(false); });
-  document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') { setMenu(false); menu.focus(); } });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') { setMenu(false); menu.focus({preventScroll:true}); } });
+  // / and /index.html are the same page. Keep in-page navigation in this document.
+  const pagePath = pathname => pathname.replace(/\/index\.html$/,'/').replace(/\.html$/,'').replace(/\/$/,'');
+  const updateChapterNav = () => {
+    const chapterLinks = $$('.security-page-nav a');
+    const active = chapterLinks.find(link => new URL(link.href).hash === location.hash) || chapterLinks[0];
+    chapterLinks.forEach(link => { if (link === active) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current'); });
+  };
+  updateChapterNav();
+  window.addEventListener('popstate',updateChapterNav);
+  window.addEventListener('hashchange',updateChapterNav);
+  $$('a[href]').forEach(link => link.addEventListener('click', event => {
+    if (event.defaultPrevented || link.classList.contains('skip-link') || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || link.target === '_blank') return;
+    const url = new URL(link.href);
+    if (url.origin !== location.origin || pagePath(url.pathname) !== pagePath(location.pathname)) return;
+    if (!url.hash) {
+      event.preventDefault(); setMenu(false);
+      if (location.hash) history.pushState(null,'',location.pathname + location.search);
+      updateChapterNav();
+      window.scrollTo({top:0,behavior:reduceMotion.matches ? 'instant' : 'smooth'});
+      return;
+    }
+    const target = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+    if (!target) return;
+    event.preventDefault(); setMenu(false);
+    if (location.hash !== url.hash) history.pushState(null,'',url.hash);
+    updateChapterNav();
+    target.scrollIntoView({behavior:reduceMotion.matches ? 'instant' : 'smooth',block:'start'});
+  }));
   // Only the real confirmation screen is bound to application step 03.
   $$('[data-screen-detail]').forEach(button => button.addEventListener('click', () => openDialog($('#screen-dialog'), button)));
   // Original App examples stay separate from the four-step application walkthrough.
@@ -143,9 +199,18 @@
   // Store homepage position only when entering the safety page, never on brand-to-top links.
   const scrollKey = 'kiangjai-v2-home-position';
   if (isHome) {
-    $$('a[href*="security"]').forEach(link => link.addEventListener('click', () => { try { sessionStorage.setItem(scrollKey,String(window.scrollY)); } catch {} }));
+    $$('a[href*="security"]').forEach(link => link.addEventListener('click', () => { try {
+      sessionStorage.setItem(scrollKey,JSON.stringify({y:window.scrollY,faq:$('.kj-faq-list [aria-expanded="true"]')?.dataset.faq || ''}));
+    } catch {} }));
     if (new URLSearchParams(location.search).has('return')) {
-      try { const y = Number(sessionStorage.getItem(scrollKey)); sessionStorage.removeItem(scrollKey); document.fonts.ready.then(() => { window.scrollTo({top:y||0,behavior:'instant'}); history.replaceState(null,'',location.pathname); }); } catch {}
+      try {
+        const saved = JSON.parse(sessionStorage.getItem(scrollKey) || '0');
+        const y = typeof saved === 'number' ? saved : Number(saved.y);
+        const faq = typeof saved === 'object' && saved?.faq ? $(`[data-faq="${saved.faq}"]`) : null;
+        if (faq) setFaqExpanded(faq,true,false);
+        sessionStorage.removeItem(scrollKey);
+        document.fonts.ready.then(() => { window.scrollTo({top:y||0,behavior:'instant'}); history.replaceState(null,'',location.pathname); });
+      } catch {}
     }
   }
   $$('[data-home-return]').forEach(link => { try { if (sessionStorage.getItem(scrollKey) !== null) link.href += '?return=1'; } catch {} });
@@ -203,11 +268,11 @@
         tab.tabIndex = selected ? 0 : -1;
         tab.getAttribute('aria-controls').split(/\s+/).forEach(id => {
           const controlled = document.getElementById(id);
-          if (controlled) controlled.hidden = !selected;
+          if (controlled) { controlled.hidden = !selected; controlled.inert = !selected; }
         });
       });
       try { sessionStorage.setItem(storageKey, target.dataset.productTab); } catch {}
-      if (moveFocus) target.focus();
+      if (moveFocus) target.focus({preventScroll:true});
     };
     tabs.forEach((tab, index) => {
       tab.addEventListener('click', () => activate(tab));

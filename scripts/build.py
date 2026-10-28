@@ -42,6 +42,8 @@ for source,filename,title in [('home','index','หน้าแรก'),('securit
     dialogs=render('{{component:dialogs}}')
     description='เคียงใจ สินเชื่อผ่านแอปพลิเคชัน สมัครออนไลน์ทุกขั้นตอน ดูข้อมูลผลิตภัณฑ์และช่องทางทางการ'
     robots='index,follow' if CONFIG.get('releaseStatus') == 'production' else 'noindex,nofollow'
+    hero_preload = ('''<link rel="preload" as="image" href="assets/campaign/bangkok-food-stand-1200.webp" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/campaign/bangkok-food-stand-2200.webp" media="(min-width:761px)" fetchpriority="high">''' if source == 'home' else '')
     html=f'''<!doctype html>
 <html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="{robots}"><meta name="description" content="{description}">
@@ -49,6 +51,9 @@ for source,filename,title in [('home','index','หน้าแรก'),('securit
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>{title} — เคียงใจ</title><link rel="icon" href="assets/brand/app-icon.png" type="image/png">
 <link rel="preload" href="assets/fonts/NotoSansThai-Variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/fonts/Kanit-500-thai.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Kanit-600-thai.woff2" as="font" type="font/woff2" crossorigin>
+{hero_preload}
 <link rel="stylesheet" href="assets/base.css?v={VERSION}"><link rel="stylesheet" href="assets/redesign.css?v={VERSION}"><link rel="stylesheet" href="assets/homepage.css?v={VERSION}"><link rel="stylesheet" href="assets/secondary.css?v={VERSION}"><script src="assets/vendor/qrcode.js?v={VERSION}" defer></script><script src="assets/config.js?v={VERSION}" defer></script><script src="assets/app.js?v={VERSION}" defer></script></head>
 <body data-page="{source}"><a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a><div id="kiangjai-v2">
 {header}
