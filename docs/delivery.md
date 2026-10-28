@@ -1,6 +1,8 @@
-# Kiangjai V2 第二十一轮结构交付
+# Kiangjai V2 第二十二轮产品章清理
 
-日期：2026-10-28。独立仓库`Muggle-icon/kiangjai-thailand-website-v2`，不影响原V1。本轮明确重做上一版结构：从青蓝拼接首屏／双机拼贴／多横带收尾，改为整幅实拍／两条产品story／独立公司章／两列品牌close。已审业务和产品框架保留。
+日期：2026-10-28。第二十二轮仅删除还款章后的孤立支持条：恢复`copy:cdd17cff597160`完整线上段落及费用提醒，移除builder拆分宏与无用样式；固定服务范围只保留在公司联系区。重复步骤／F01／F04快捷入口移除，页头／页尾步骤导航、四步正文及完整FAQ不变。业务config、catalog、照片、字体与App不改。
+
+独立仓库`Muggle-icon/kiangjai-thailand-website-v2`，不影响原V1。第二十一轮重做上一版结构：从青蓝拼接首屏／双机拼贴／多横带收尾，改为整幅实拍／两条产品story／独立公司章／两列品牌close。已审业务和产品框架保留。
 
 ## 当前页面与源文件
 
@@ -14,13 +16,13 @@
 
 主要文件：`src/components/hero.html`、`benefits.html`、`footer.html`及三份CSS；app.js增加story祖先与panel／media的同步hidden／inert。保持静态HTML/CSS/JS和原Python builder，无JSX／框架迁移。四根页与三clean-route aliases一同构建。业务config、catalog、字体／照片／App文件未改。
 
-原图仍由`APP_SCREENS`／`{{app-screen:…}}`统一输出完整750×1624、240／210px框、4px内边、28／26px角及共同放大查看器。只有步骤03打开匹配贷款计划图；共享费用／范围／步骤／FAQ支持区始终可用。
+原图仍由`APP_SCREENS`／`{{app-screen:…}}`统一输出完整750×1624、240／210px框、4px内边、28／26px角及共同放大查看器。只有步骤03打开匹配贷款计划图。产品章后无共享支持条；线上完整段落保留费用提醒，联系区保留固定服务范围。
 
 ## 交互和布局合同
 
->1100两个story同时可见，panel为region；≤1100成对native tabs，仍双IDREFS和四键／roving tabindex，JS另同步整个story祖先，避免底色与内容脱离。手机父grid两行配合story subgrid，摘要在上、原图在下，两状态共享内在轨道几何。支持区位于story外，不随标签隐去。
+>1100两个story同时可见，panel为region；≤1100成对native tabs，仍双IDREFS和四键／roving tabindex，JS另同步整个story祖先，避免底色与内容脱离。手机父grid两行配合story subgrid，摘要在上、原图在下，两状态共享内在轨道几何。线上费用提醒随线上Tab显示；还款章后直接进入流程。
 
-保留原弹窗scroll／焦点恢复、52px反馈槽、FAQ／details点击行定位、同文档锚点、返回FAQ／产品／scroll、菜单与图库。当前模态／动作及断点焦点已按本轮记录完成，不复用上一轮计数。QA发现并修复Tab宽屏CSS提前隐藏导致焦点丢失：基底grid／源码native hidden，JS在断点先捕获focus再统一显隐；展开焦点在online媒体、收缩保留聚焦还款，均hiddenFocus:false。精确视觉／控件尺寸见[design-system.md](design-system.md)。
+保留原弹窗scroll／焦点恢复、52px反馈槽、FAQ／details点击行定位、同文档锚点、返回FAQ／产品／scroll、菜单与图库。第二十一轮模态／动作与断点焦点结果仅作历史记录，不作为本轮重跑计数。其QA发现并修复Tab宽屏CSS提前隐藏导致焦点丢失：基底grid／源码native hidden，JS在断点先捕获focus再统一显隐；展开焦点在online媒体、收缩保留聚焦还款，均hiddenFocus:false。精确视觉／控件尺寸见[design-system.md](design-system.md)。
 
 ## 素材和真实业务
 
@@ -39,11 +41,8 @@ Kanit六WOFF2仍98,568B及SIL OFL；Noto正文、SVG来源／许可不变，无�
 
 ## 当前证据与发布
 
-第二十一轮本地最终记录21个页面／宽度场景、4组紧凑产品、8组模态、2组FAQ键盘展开及10条动作。无溢出／破图／缺失ARIA目标；产品和模态所测几何／scroll差均0，模态焦点回company；数据／字体／原图／照片SHA保持，静态7页／链接锚点／重复ID／JS／diff通过，浏览器warn／error为空。4组产品在1024／390／375／360覆盖online→还款→Home；8组模态为四页×1440／360；2组F02行差−0.1875／0.125px。断点修复后全部21场景／canonical截图已重跑。独立审查重新看完整PC／默认移动及原分辨率裁图和源码，给出该视觉范围的ship判断；没有操作浏览器、验证所有状态、实机、数值对比度或公开部署。此前笼统“视觉合格”措辞不足，本轮分开记录设计范围与功能／发布证据。
+第二十二轮当前浏览器证明见[round22-preview](../../round22-preview/)与[stability.json](../../round22-preview/stability.json)：390／375／360／760／1024共5个紧凑宽度的online→repayment→Home中，scroll、手机与下一章节位置差均0，横向溢出0。已检查1440／390／375／360首页完整截图及390还款选中态；独立复查确认本次删除与内容归位，无新增设计问题。构建、7页静态链接／ID及JS检查通过；线上结果单独记录在round22-preview/release-verification.json，不复用上一轮完整21场景计数。
 
-当前文件在`../round21-preview/`，线上结论以`../round21-preview/release-verification.json`中的commit、CI与实际浏览器记录为准。不能以旧轮通过、技能已安装或本地构建推定新实现已发布。MoneyThunder仅用新PC参考，当前轮播为推荐活动，不能把它当作固定首屏或有效手机样本。
+第二十一轮历史记录为21个页面／宽度场景、4组紧凑产品、8组模态、2组FAQ键盘检查和10条动作，其独立ship判断只覆盖当时所给截图／源码范围。历史证据见[round21-review.md](round21-review.md)及`../../round21-preview/`；这些结果不认证本次修改。不能以旧轮通过、技能已安装或本地构建推定当前实现已发布。MoneyThunder仍只作PC结构参考，其自动轮播不构成固定首屏或有效手机样本。
 
-本轮实际阅读Impeccable new-work／craft-floor并按固定方向直接实现；无seed concept筛选／comp生成／自动detector。正式运营仍需商店／开发者身份、有效资质核验、已审法律正文／日期、官方举报渠道和无推广／费率冲突的App展示图。详见[round21-review.md](round21-review.md)，历史报告原文保留。
-
-
-追加的窄范围复查已检查最终1440／390／360截图和还款手机选中态：照片与App均完整绘制，深色还款章、查看操作及共享support可读，结论ship，仅限这些视觉项；浏览器与发布数据仍以各自记录为准。
+第二十一轮实际阅读Impeccable new-work／craft-floor并按固定方向直接实现；无seed concept筛选／comp生成／自动detector。正式运营仍需商店／开发者身份、有效资质核验、已审法律正文／日期、官方举报渠道和无推广／费率冲突的App展示图。详见[round21-review.md](round21-review.md)，历史报告原文保留。

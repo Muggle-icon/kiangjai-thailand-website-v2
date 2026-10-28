@@ -10,13 +10,6 @@ CONFIG = json.loads((ROOT/'src/config.json').read_text())
 if not isinstance(CONFIG.get('loanMaxAmount'),int) or isinstance(CONFIG['loanMaxAmount'],bool) or CONFIG['loanMaxAmount'] <= 0:
     raise ValueError('loanMaxAmount must be a confirmed positive integer')
 COPY = json.loads((ROOT/'src/content/reviewed-th.json').read_text())['copy']
-# Preserve the approved paragraph verbatim while placing its fee-reading reminder
-# beside the supporting links. Fail if a future copy revision changes the split.
-PRODUCT_COPY = COPY['cdd17cff597160']
-PRODUCT_SUMMARY, PRODUCT_BREAK, PRODUCT_REMINDER = PRODUCT_COPY.partition(' กรุณาอ่าน')
-if not PRODUCT_BREAK or PRODUCT_SUMMARY + PRODUCT_BREAK + PRODUCT_REMINDER != PRODUCT_COPY:
-    raise ValueError('Reviewed product paragraph needs an explicit layout boundary')
-PRODUCT_PARTS = {'summary': PRODUCT_SUMMARY, 'reminder': PRODUCT_BREAK.lstrip() + PRODUCT_REMINDER}
 (ROOT/'assets/config.js').write_text('window.KIANGJAI_CONFIG = '+json.dumps(CONFIG,ensure_ascii=False).replace('<','\\u003c')+';\n')
 VERSION = hashlib.sha256(b''.join((ROOT/name).read_bytes() for name in ('assets/base.css','assets/redesign.css','assets/homepage.css','assets/secondary.css','assets/app.js','assets/config.js'))).hexdigest()[:12]
 
@@ -30,7 +23,6 @@ APP_SCREENS = {
 
 def render(text):
     text=re.sub(r'\{\{copy:([\w-]+)\}\}', lambda m:escape(COPY[m[1]]),text)
-    text=re.sub(r'\{\{product-copy:(summary|reminder)\}\}', lambda m:escape(PRODUCT_PARTS[m[1]]),text)
     def component(match): return render((ROOT/'src/components'/(match[1]+'.html')).read_text())
     def icon(match):
         svg=(ROOT/'assets/icons'/(match[1]+'.svg')).read_text()
