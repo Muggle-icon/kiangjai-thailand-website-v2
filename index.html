@@ -9,7 +9,7 @@
 <link rel="preload" href="assets/fonts/Kanit-600-thai.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="assets/campaign/bangkok-food-stand-1200.webp" media="(max-width:760px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/campaign/bangkok-food-stand-2200.webp" media="(min-width:761px)" fetchpriority="high">
-<link rel="stylesheet" href="assets/base.css?v=5ad82d49c32a"><link rel="stylesheet" href="assets/redesign.css?v=5ad82d49c32a"><link rel="stylesheet" href="assets/homepage.css?v=5ad82d49c32a"><link rel="stylesheet" href="assets/secondary.css?v=5ad82d49c32a"><script src="assets/vendor/qrcode.js?v=5ad82d49c32a" defer></script><script src="assets/config.js?v=5ad82d49c32a" defer></script><script src="assets/app.js?v=5ad82d49c32a" defer></script></head>
+<link rel="stylesheet" href="assets/base.css?v=7393de0ea6aa"><link rel="stylesheet" href="assets/redesign.css?v=7393de0ea6aa"><link rel="stylesheet" href="assets/homepage.css?v=7393de0ea6aa"><link rel="stylesheet" href="assets/secondary.css?v=7393de0ea6aa"><script src="assets/vendor/qrcode.js?v=7393de0ea6aa" defer></script><script src="assets/config.js?v=7393de0ea6aa" defer></script><script src="assets/app.js?v=7393de0ea6aa" defer></script></head>
 <body data-page="home"><a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a><div id="kiangjai-v2">
 <header class="site-header"><div class="shell header-inner"><a class="brand-logo" href="index.html" aria-label="เคียงใจ — หน้าแรก"><img src="assets/brand/logo-master.png" alt="เคียงใจ" width="367" height="124"></a><nav id="main-nav" aria-label="เมนูหลัก"><a href="index.html" data-home-nav>หน้าแรก</a><a href="index.html#kj-benefits">จุดเด่นของบริการ</a><a href="index.html#kj-steps">ขั้นตอนการสมัคร</a><a href="index.html#kj-faq">คำถามที่พบบ่อย</a><a href="index.html#kj-about">เกี่ยวกับเรา</a><a href="security.html">ศูนย์ความปลอดภัย</a></nav><button class="button button-outline header-cta" type="button" data-download="header">ดาวน์โหลดแอป</button><button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="เปิดเมนู"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"/></svg></button></div></header>
 
@@ -34,6 +34,14 @@
         <button class="product-tab" id="product-tab-repayment" type="button" role="tab" aria-selected="false" aria-controls="product-panel-repayment product-media-repayment" tabindex="-1" data-product-tab="repayment">ชำระคืนสะดวก</button>
       </div>
       </div>
+      <div class="product-panels">
+        <div class="product-panel" id="product-panel-online" role="tabpanel" aria-labelledby="product-tab-online" tabindex="0" data-product-panel="online">
+          <div class="benefit-feature"><h3 id="product-heading-online">สมัครออนไลน์ทุกขั้นตอน</h3><p>เคียงใจ ให้บริการช่องทางยื่นคำขอสินเชื่อผ่านระบบออนไลน์ เพื่อให้การสมัคร การยืนยันตัวตน และการยืนยันการกู้ยืมสะดวกยิ่งขึ้น</p></div>
+        </div>
+        <div class="product-panel" id="product-panel-repayment" role="tabpanel" aria-labelledby="product-tab-repayment" tabindex="0" data-product-panel="repayment" hidden>
+          <div class="benefit-copy"><h3 id="product-heading-repayment">ชำระคืนสะดวก</h3><p>ชำระคืนได้โดยสแกน QR Code ผ่านแอปธนาคาร ตามคำแนะนำในใบแจ้งยอดภายในแอป</p></div>
+        </div>
+      </div>
       <div class="product-media">
           <figure class="app-media product-home" id="product-media-online" data-product-media="online">
             <div class="app-media-stage"><div class="app-device"><img class="app-screen" src="assets/app/home-overview.png" alt="หน้าหลักแอปเคียงใจ แสดงวงเงินและความคืบหน้าการกรอกข้อมูล" width="750" height="1624" loading="lazy" decoding="async"></div></div>
@@ -44,21 +52,15 @@
             <figcaption class="app-media-caption"><span>ภาพตัวอย่างหน้าจอแอป</span><button class="app-image-action" type="button" data-app-gallery data-gallery-start="1">ดูภาพหน้าจอชำระคืน <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m0-6l-7 7M3 21l7-7m-1 7H3v-6"/></svg></button></figcaption>
           </figure>
       </div>
-      <div class="product-panels">
-        <div class="product-panel" id="product-panel-online" role="tabpanel" aria-labelledby="product-tab-online" tabindex="0" data-product-panel="online">
-          <div class="benefit-feature">
-            <h3 id="product-heading-online">สมัครออนไลน์ทุกขั้นตอน</h3>
-            <p>เคียงใจ ให้บริการช่องทางยื่นคำขอสินเชื่อผ่านระบบออนไลน์ เพื่อให้การสมัคร การยืนยันตัวตน และการยืนยันการกู้ยืมสะดวกยิ่งขึ้น กรุณาอ่านข้อตกลงที่เกี่ยวข้องและรายละเอียดค่าธรรมเนียมให้ครบถ้วนก่อนยืนยันการกู้ยืม</p>
+      <div class="product-support">
+        <div class="product-support-copy" id="product-support">
+            <p class="product-reminder">กรุณาอ่านข้อตกลงที่เกี่ยวข้องและรายละเอียดค่าธรรมเนียมให้ครบถ้วนก่อนยืนยันการกู้ยืม</p>
             <p class="service-area">พื้นที่ให้บริการ: กรุงเทพมหานคร</p>
             <a class="text-link benefit-steps-link" href="#kj-steps">ขั้นตอนการสมัคร</a>
             <nav class="product-help-links" aria-label="ข้อมูลประกอบการสมัครสินเชื่อ">
               <a class="text-link" href="#kj-faq" data-faq-target="F01">สมัครได้ในพื้นที่ใดบ้าง?</a>
               <a class="text-link" href="#kj-faq" data-faq-target="F04">ดูค่าใช้จ่ายในการกู้ได้ที่ไหน?</a>
             </nav>
-          </div>
-        </div>
-        <div class="product-panel" id="product-panel-repayment" role="tabpanel" aria-labelledby="product-tab-repayment" tabindex="0" data-product-panel="repayment" hidden>
-          <div class="benefit-copy"><h3 id="product-heading-repayment">ชำระคืนสะดวก</h3><p>ชำระคืนได้โดยสแกน QR Code ผ่านแอปธนาคาร ตามคำแนะนำในใบแจ้งยอดภายในแอป</p></div>
         </div>
       </div>
     </div>
@@ -117,7 +119,7 @@
   <section class="footer-company shell" id="kj-about" aria-labelledby="about-title">
     <div class="kj-footer-brand"><img src="assets/brand/logo-master.png" alt="เคียงใจ" width="367" height="124" loading="lazy"><p>สินเชื่อเคียงใจ เคียงข้างคุณทุกเรื่องเงิน</p></div>
     <div class="kj-footer-company"><h2 id="about-title">ข้อมูลบริษัท</h2><h3 class="kj-company-name">บริษัท ชิง เหอ เทคโนโลยี จำกัด</h3><p>เลขทะเบียนนิติบุคคล: 0105567184971</p><p>ที่อยู่บริษัท: เลขที่ 134 ชั้น 4, ซอยพระรามที่ 2 ซอย 38, แขวงบางมด เขตจอมทอง กรุงเทพมหานคร 10150</p><p data-license hidden></p><a class="kj-link" data-license-link hidden target="_blank" rel="noopener noreferrer">ตรวจสอบใบอนุญาต</a></div>
-    <section class="footer-contact" aria-labelledby="footer-contact-heading"><h2 id="footer-contact-heading">ติดต่อบริษัท</h2><p>โทรศัพท์บริษัท</p><p class="footer-phone" data-phone>0812341407</p><button class="kj-link" type="button" data-copy-phone="footer">คัดลอกหมายเลขโทรศัพท์</button><button class="button button-outline" type="button" data-contact="company">ติดต่อบริษัท</button><p>พื้นที่ให้บริการ: กรุงเทพมหานคร</p></section>
+    <section class="footer-contact" aria-labelledby="footer-contact-heading"><h2 id="footer-contact-heading">ติดต่อบริษัท</h2><p>โทรศัพท์บริษัท</p><div class="footer-phone-row"><p class="footer-phone" data-phone>0812341407</p><button class="kj-link" type="button" data-copy-phone="footer">คัดลอกหมายเลขโทรศัพท์</button></div><button class="button button-outline" type="button" data-contact="company">ติดต่อบริษัท</button><p>พื้นที่ให้บริการ: กรุงเทพมหานคร</p></section>
   </section>
   <nav class="footer-main-nav shell" aria-label="เมนูหลักส่วนท้าย"><a href="index.html">หน้าแรก</a><a href="index.html#kj-benefits">จุดเด่นของบริการ</a><a href="index.html#kj-steps">ขั้นตอนการสมัคร</a><a href="index.html#kj-faq">คำถามที่พบบ่อย</a><a href="index.html#kj-about">เกี่ยวกับเรา</a><a href="security.html">ศูนย์ความปลอดภัย</a></nav>
   <section class="footer-safety shell" id="kj-antifraud-banner" aria-labelledby="official-title"><div><h3 id="official-title">ตรวจสอบช่องทางทางการ ระวังมิจฉาชีพ</h3><p>ดาวน์โหลดแอปผ่านลิงก์สโตร์ทางการที่ประกาศบนเว็บไซต์นี้เท่านั้น อย่าเปิดเผยรหัสผ่านหรือรหัสยืนยันแก่ผู้อื่น และอย่าโอนเงินเข้าบัญชีบุคคล</p></div><a class="kj-link" href="security.html">ไปที่ศูนย์ความปลอดภัย</a></section>

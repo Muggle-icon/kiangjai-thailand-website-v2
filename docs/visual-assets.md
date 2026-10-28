@@ -1,13 +1,13 @@
-# 第十九轮视觉素材与来源
+# 第二十轮视觉素材与来源
 
-日期：2026-10-28。本轮沿用Tony Wu曼谷餐食摊实拍、原App、Logo、图标和上一轮已取得的Kanit字体；上述素材文件均未新增或更换。只改Hero的CSS构图与产品展示结构。照片提供生活工作情境，不表示画中人物的国籍、财务状况、借款需求或与公司的关系，不暗示其为 Kiangjai 代言。
+日期：2026-10-28。本轮沿用Tony Wu曼谷餐食摊实拍、原App、Logo、图标和上一轮已取得的Kanit字体；上述素材文件均未新增或更换。本轮改手机Hero的CSS裁切、产品阅读顺序和文字角色；桌面照片不换。照片提供生活工作情境，不表示画中人物的国籍、财务状况、借款需求或与公司的关系，不暗示其为 Kiangjai 代言。
 
 ## 当前生产素材
 
 | 素材 | 来源／尺寸／大小 | 当前用途 |
 | --- | --- | --- |
 | `assets/campaign/bangkok-food-stand-2200.webp` | 下述 Pexels 实拍优化派生；2200×1467；433,824B | PC青蓝Hero的右侧生活场景，CSS放大1.42 |
-| `assets/campaign/bangkok-food-stand-1200.webp` | 同母片派生；1200×800；172,856B | ≤760px Hero，CSS独立裁切／放大1.12 |
+| `assets/campaign/bangkok-food-stand-1200.webp` | 同母片派生；1200×800；172,856B | ≤760px Hero，CSS独立裁切／放大1.75 |
 | `assets/brand/logo-master.png` | 用户原 Logo；367×124 | 页头及页脚；公司区不再重复展示，原PNG不改 |
 | `assets/brand/app-icon.png` | 用户原App图标 | 保留来源；当前下载区移除，避免推移文字左起点 |
 | `assets/app/home-overview.png` | 用户最新原图；750×1624；221,409B | 宽屏双图中的首页；紧凑在线申请Tab；图库第1张 |
@@ -24,7 +24,7 @@
 - 上传日：**2023-05-10**。**拍摄日期未核验**，不得把上传日写成拍摄日。
 - [Pexels 许可](https://www.pexels.com/license/)允许网站和营销使用、修改照片；无强制署名要求，本项目仍保留摄影师／出处。不得暗示画中人物或品牌为产品代言，不得贬损或冒犯可识别人物。
 - 首屏保留 `ภาพประกอบ` 配图说明；照片不证明真实客户、公司员工、借贷结果、服务资质或公司地点，也不推定人物的国籍／财务状态。
-- 两份WebP沿用既有缩放／压缩文件，本轮字节不变；没有AI修补或修改人物、衣服、手部和场景。PC CSSscale1.42、object-position77%43%，手机scale1.12、80%42%；brightness1.06／saturate.9及青蓝渐隐均为CSS，未烘焙进照片。原母片在仓库外`../../work/round15/bangkok-food-stand-original.jpg`。
+- 两份WebP沿用既有缩放／压缩文件，本轮字节不变；没有AI修补或修改人物、衣服、手部和场景。PC CSSscale1.42、object-position77%43%，手机scale1.75、origin69%44%及position80%42%；brightness1.06／saturate.9及青蓝渐隐均为CSS，未烘焙进照片。原母片在仓库外`../../work/round15/bangkok-food-stand-original.jpg`。
 
 | 当前派生 | SHA256 |
 | --- | --- |
@@ -33,7 +33,7 @@
 
 ## 原 App 与图片查看
 
-`APP_SCREENS` 和 `{{app-screen:…}}` 统一生成 `.app-device > .app-screen`，所有 PNG 保持原像素、完整比例、750×1624 显式尺寸、height:auto。>1100px产品左侧同时显示HOME和还款两张原图，右侧同时呈现两段完整说明；≤1100px才配对Tab切换，≤760px顺序为Tab→完整原图→对应正文。两张每个断点同宽：240px／手机210px、4px内边、28／26px角及统一阴影。两个原图弹窗共用 `min(320px,calc((100dvh - 280px)*.46182266),100%)`，不另做硬件。
+`APP_SCREENS` 和 `{{app-screen:…}}` 统一生成 `.app-device > .app-screen`，所有 PNG 保持原像素、完整比例、750×1624 显式尺寸、height:auto。>1100px产品左侧同时显示HOME和还款两张原图，右侧同时呈现两段完整说明；≤1100px才配对Tab切换，≤760px顺序为Tab→摘要→完整原图→共享support。图注及查看操作14px／min44px，两种状态均可找到共享费用提醒／申请／FAQ入口。两张每个断点同宽：240px／手机210px、4px内边、28／26px角及统一阴影。两个原图弹窗共用 `min(320px,calc((100dvh - 280px)*.46182266),100%)`，不另做硬件。
 
 仅步骤 03 有匹配确认页，不将其他图伪装成注册、审批、到账操作。图库不是操作 App，账单 QR 不是网站支付入口。图内推广、费率和示例状态未变更，仍待业务核准。
 
@@ -76,4 +76,6 @@ Lucide [许可](https://lucide.dev/license)及本地 `assets/icons/LICENSE-Lucid
 | 已审 Thai catalog | `d0a1668f74bab8b29a8d0bb369bcc734d2d0df8f21f1417084f29708a2d8dedc` |
 | 公开 config | `fc0ab4fd68c9727195d6fbb2a2998ffaa03c95629f3e508898b1d523be57e179` |
 
-原图 200,000 推广、日利率及示例金额／时效仍待业务核准，未提取为官网承诺。未配置的商店、官方渠道或牌照不制作替代图。第十九轮21个浏览器页面场景无破图、溢出或缺失ARIA目标；1440两张原图完整750×1624、框同240px，手机210px；图库和步骤03仍用完整原图。当前4组紧凑产品、8组弹窗、2组首页FAQ与13条交互记录见[round19-review.md](round19-review.md)。独立整页视觉复查提出的移动品牌断行／配图说明对比度已修改并在390／360裁图复查；素材字节及来源未变。静态检查通过；不据浏览器视口验收宣称物理设备测试或与竞品完整视觉等同。当前截图在`../round19-preview/`；线上发布结论以`../round19-preview/release-verification.json`中的commit、CI与实际浏览器记录为准。
+原图 200,000 推广、日利率及示例金额／时效仍待业务核准，未提取为官网承诺。未配置的商店、官方渠道或牌照不制作替代图。第二十轮21个页面场景无破图／溢出／缺失ARIA目标；4组紧凑双态／8组弹窗差0，2组FAQ行位移小于0.2px，另7条动作确认原HOME750×1624、图库下一张还款、步骤03及下载／复制／导航。完整原图比例、共享support及14px图注／44px操作按当前实现核验；原文重建与原图／catalog／config SHA断言通过。独立原分辨率截图／源码审查未见新增必修，最新联系44px已重拍页面证据。图片、字体及许可文件未变，不宣称物理设备测试或完整竞品视觉等同。当前整页证据在`../round20-preview/`；线上发布结论以`../round20-preview/release-verification.json`中的commit、CI和实际浏览器记录为准。
+
+本轮三竞品完整截图及[字体／布局metrics](../../round20-preview/competitors/type-layout-metrics.json)仅作研究，非可复用生产素材。[LINE BK](https://www.linebk.com/th/)、[Rabbit Cash](https://www.rabbitcash.co.th/)、[MoneyThunder](https://www.money-thunder.com/)来源各有字体／布局；MoneyThunder390截图为desktop-clipped，不能当手机参考。未下载LINE Seed／DB Adman等竞品字体；本站仍用原SIL OFL Kanit及Noto。
