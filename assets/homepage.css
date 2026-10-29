@@ -1,10 +1,11 @@
 /* One product topic and its own full original App per full-width chapter. */
 .product-section{padding:0;background:var(--white)}
-.product-header{padding-top:64px;padding-bottom:16px}.product-header h2{text-align:center;font-size:var(--font-heading);margin:0}
+.product-header{padding-top:64px;padding-bottom:0}.product-header h2{text-align:center;font-size:var(--font-heading);margin:0}
 .product-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;max-width:600px;margin-inline:auto;padding:4px;border-radius:12px;background:var(--surface)}
 .product-story{padding-block:40px;background:var(--white)}
 .product-story-inner{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:80px;align-items:center}
-.product-panel{min-width:0;max-width:520px}.product-panel h3{font-size:40px;line-height:1.35;margin-bottom:24px}
+.product-panel{min-width:0;max-width:520px}.product-panel h3{font-size:var(--font-module);font-weight:var(--weight-ui);line-height:1.5;margin-bottom:16px}
+.product-story-online{padding-top:32px}.product-story-online .product-panel{align-self:start}
 .product-panel>p{font-size:18px;line-height:1.85;color:var(--text)}
 .product-story-repayment{background:var(--ink);color:var(--white)}
 .product-story-repayment h3,.product-story-repayment .product-panel>p{color:var(--white)}
@@ -16,7 +17,7 @@
 .product-story .app-image-action{font-size:14px;min-height:44px}
 @media(max-width:1100px){
  .product-header{padding-top:48px;padding-bottom:24px}.product-header h2{margin-bottom:24px}
- .product-tab{min-width:0;min-height:56px;padding:10px 12px;border:0;border-radius:8px;background:transparent;color:var(--text);font-family:var(--font-display);font-size:18px;font-weight:500;line-height:26px;text-align:center;transition:background-color .18s,color .18s}
+ .product-tab{min-width:0;min-height:56px;padding:10px 12px;border:0;border-radius:8px;background:transparent;color:var(--text);font-family:var(--font-display);font-size:18px;font-weight:500;line-height:26px;text-align:center;text-wrap:balance;transition:background-color .18s,color .18s}
  .product-tab:hover{background:var(--cyan-soft)}.product-tab[aria-selected=true]{background:var(--ink);color:var(--white)}
  .product-features{display:grid;overflow-anchor:none}.product-story{grid-area:1/1;padding-block:32px}.product-story-inner{gap:48px}
  .product-story[hidden]{display:block!important;visibility:hidden;pointer-events:none}
@@ -37,7 +38,7 @@
 .step-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin:0;padding:0;list-style:none;position:relative}
 .step-list::before{content:"";position:absolute;top:24px;left:24px;right:calc(25% - 8px);height:1px;background:#a7c4cc}
 .step-list li{min-width:0;position:relative}.step-number{display:grid;place-items:center;width:48px;height:48px;margin-bottom:20px;border-radius:14px;background:var(--cyan);color:var(--ink);font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:0;position:relative}
-.step-list h3{font-size:21px;font-weight:var(--weight-strong);line-height:1.45;margin-bottom:12px}.step-list p{font-size:var(--font-body);line-height:var(--leading-body);color:var(--text)}.step-list .screen-detail-link{margin-top:16px}
+.step-list h3{font-size:21px;font-weight:var(--weight-strong);line-height:1.45;margin-bottom:12px}.step-list p{font-size:var(--font-body);line-height:var(--leading-body);color:var(--text)}
 .help-section{padding-block:72px;background:var(--white)}
 .help-layout .section-heading h2{text-align:center;margin-bottom:40px}
 .faq-panel{max-width:880px;margin-inline:auto}

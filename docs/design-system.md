@@ -17,7 +17,7 @@
 | Hero主操作 | 青蓝244×56px | 青蓝满宽／min52px |
 | 即将开放提示 | 14px／22px；浅青78% | 同PC；按钮下居中 |
 | 审批／到账说明 | 13px／22px；浅青72%；上距20px | 13px／22px；浅青72%；上距16px |
-| 通用章节／产品story标题 | 40px／40px | 章节28px；story标题由Tab命名 |
+| 通用章节／产品story标题 | 40px/600／28px/500 | 章节28px；story标题由Tab命名 |
 | 产品正文／图注 | 18px／1.85；14px／24px | 16px／1.85；图注同角色 |
 | 原App框 | 每条story一张同240px | 210px |
 | 公司章标题／公司名 | 36／24px | 28／22px |
@@ -36,7 +36,7 @@ PC照片inset0铺满，position74%44%、scale1.38／origin76%46%，仅saturate.9
 
 ## 产品：独立章节，稳定成组切换
 
-宽屏>1100同时呈现两个全宽story。每条内部为左说明／右原图，同一1120px轴、1.1fr／1fr、gap80px、垂直居中；story padding40px。线上白底、还款深青底／白文，不交替左右，不共享浅青承托板。完整产品证据各归自己的信息组，而非两部手机集中拼贴。
+宽屏>1100同时呈现两个全宽story。每条内部为左说明／右原图，同一1120px轴、1.1fr／1fr、gap80px；线上说明与App顶部对齐，章节后32px；还款维持垂直居中和40px上下间距。功能标题28px/500，与正文16px。线上白底、还款深青底／白文，不交替左右，不共享浅青承托板。完整产品证据各归自己的信息组，而非两部手机集中拼贴。
 
 ≤1100显示max600px Tab，18px／min56px；两story同处一个内在grid区域保高，story padding32px、内部gap48px。JS仍只把两个ID写在每个Tab的aria-controls，同时同步story祖先hidden／inert；其子panel／media同步，隐藏状态仅在产品局部以visibility:hidden／pointer-events:none保留内在空间。宽屏两个panel为可见命名region，compact为tabpanel。 Tab基底CSS为grid，源码初始native hidden，显隐由JS统一管理；不再用宽屏display:none提前隐藏。原规则会在mql事件前让焦点失效，现断点先记录焦点再activate，扩展后进入可见media操作，收缩保留聚焦的还款feature；两项hiddenFocus:false已实测。
 
@@ -59,3 +59,5 @@ PC照片inset0铺满，position74%44%、scale1.38／origin76%46%，仅saturate.9
 第二十二轮历史证据见[round22-preview](../../round22-preview/)与[stability.json](../../round22-preview/stability.json)。390／375／360／760／1024共5个紧凑宽度完成online→repayment→Home：scroll、手机及下一章节位置差均0，横向溢出0。已检查1440／390／375／360首页完整截图及390还款选中态；独立复查确认本次删除与内容归位，无新增设计问题。构建、7页静态链接／ID及JS检查通过；线上结果单独记录在round22-preview/release-verification.json，不复用上一轮完整21场景计数。
 
 第二十一轮的21个页面／宽度场景、4组紧凑产品、8组模态、2组FAQ键盘检查、10条动作及独立截图／源码ship判断均为历史证据，见[round21-review.md](round21-review.md)与`../../round21-preview/`；不代表本轮完成同范围重跑。第二十一轮按MoneyThunder固定方向直接实现，阅读Impeccable new-work／craft-floor，无随机概念筛选、comp生成、自动detector或新安装。金融内容不因竞品展示而成为本站已证实能力。
+
+第二十六轮：四步区域只解释流程，不包含单独的截图按钮或弹窗。产品图库保留四张原图（贷款计划为第3张），按钮明确命名所查看的图片。

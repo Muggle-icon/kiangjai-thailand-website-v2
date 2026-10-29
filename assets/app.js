@@ -175,8 +175,6 @@
     updateChapterNav();
     target.scrollIntoView({behavior:reduceMotion.matches ? 'instant' : 'smooth',block:'start'});
   }));
-  // Only the real confirmation screen is bound to application step 03.
-  $$('[data-screen-detail]').forEach(button => button.addEventListener('click', () => openDialog($('#screen-dialog'), button)));
   // Original App examples stay separate from the four-step application walkthrough.
   const gallery = $('#app-gallery-dialog');
   const galleryPanels = $$('[data-gallery-panel]');
