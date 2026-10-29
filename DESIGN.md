@@ -1,6 +1,6 @@
 ---
 name: Kiangjai Thailand V2
-description: Whole-photo Hero, paired same-axis product chapters, a white identity chapter and a two-column ink close.
+description: Whole-photo Hero, one integrated product module, a white identity chapter and a two-column ink close.
 colors:
   cyan: "#44E0F8"
   ink: "#00384C"
@@ -96,6 +96,10 @@ components:
 
 ## Current direction
 
+Round27 supersedes the Round21/26 product composition. Use ONE white product module: title and both approved explanations grouped left; ONE complete App with feature selection right. Wide grid1.3fr/1fr,gap96px,padding64px; device220px. Selection changes only the image on desktop, while both descriptions remain visible labelled regions. Wide selectors are native pressed buttons controlling media only. No second ink product story and no unsupported copy or filler strip.
+
+At<=1100px compact controls become native tabs with two panel/media IDREFs,roving tabindex and Left/Right/Home/End. Only the selected description and image are visible; overlay grids reserve the maximum intrinsic height. At<=760px order is title,tabs,description,image with24px gaps and210px device. At intermediate widths description/image share one row. Controls move as existing nodes to match DOM/visual reading order at the breakpoint; capture and restore any focused button. Wide controls stay visible, so no forced focus jump into media is needed. Preserve gallery,Escape/scroll/focus restoration and safety-return product state.
+
 Round26 separates the product chapter40px/600 from feature28px/500 with16px body spacing. Online copy is top-aligned beside its original App,32px after the chapter. Steps remain a plain connected sequence; no isolated screenshot button or step viewer. Image gallery controls name the actual image. Hero and compressed assets are unchanged.
 
 Round24 restores the Round22 (`e0cc8ff`) Hero composition, superseding Round23. Preserve original copy, photo, left-axis desktop/mobile composition and600/680px stages. Pending stays centered within the244px action group at14px/22px with rgba(231,250,253,.78). The two approval/timing clauses remain near the offer/action at13px/22px with rgba(231,250,253,.72),20px desktop/16px mobile top space and original mobile inline wrapping. No conversion-row layout, mobile centering, new divider or support band.
@@ -108,7 +112,7 @@ Fresh PC evidence is in ../round21-preview/competitors/moneythunder-1440.png and
 
 ## Tokens, type and actions
 
-Keep exact cyan #44E0F8, ink #00384C, text #183D49, muted #566E76, surface #F2F6F7, line #D9E2E5 and white. The shared axis remains 1120px with 48/24/20px gutters. Cyan emphasizes the offer/action and contact area; white and ink separate the product chapters. Do not reset the palette or add arbitrary tokens.
+Keep exact cyan #44E0F8, ink #00384C, text #183D49, muted #566E76, surface #F2F6F7, line #D9E2E5 and white. The shared axis remains 1120px with 48/24/20px gutters. Cyan emphasizes the offer/action and contact area; one white product canvas groups both explanations; ink closes the page. Do not reset the palette or add arbitrary tokens.
 
 Body uses Noto Sans Thai 16px/1.85/400. Headings and UI use the existing licensed Kanit 500/600/700 files, six Thai/Latin WOFF2 files totaling 98,568B. SIL OFL, unicode-range, swap and prior preloads remain. Hero product/tagline/amount are 56/28/80px at1440 and 36/21/64px mobile. Page/chapter/module roles remain 48/40/28px desktop and 36/28/24px mobile. Story titles are28px/500 on desktop; compact tabs name the selected feature. Company title/name are36/24px desktop and28/22px mobile. Close title is36/26px. FAQ questions are20/18px, captions14px/24px, and the Hero legal disclaimer13px/22px on desktop and mobile, with the pending note14px/22px.
 
@@ -120,15 +124,15 @@ The stage and copy have minimum600px desktop/680px mobile with no outer inset or
 
 Mobile photo inset0 0 170px, position64%43%, scale1.75 and origin71%43%. A vertical ink gradient separates the top title, ordinary work subject and lower offer. Copy has28px vertical padding; the offer uses auto top space. Illustrative caption top300px/right20px avoids the amount. These are CSS display changes only. Tony Wu/Pexels16761599 remains the same Bangkok-source image: uploaded2023-05-10, capture date unverified, no customer/endorsement/nationality/financial inference.
 
-## Independent product stories
+## Integrated product module
 
-Desktop has a centered40px/600 chapter heading with64px top/0 bottom padding. The online story starts32px below it with copy top-aligned to the image; repayment keeps40px vertical padding and vertically centered content. Both retain the inner1.1fr/1fr grid with80px gap. Copy is left/max520px and its own complete App is right/max320px media group. Online is white; repayment is ink with white copy, pale caption and outlined image action. Copy/media axes stay consistent. There is no alternating zigzag, collage or common pale backing. Story reading is18px/1.85; feature heading28px/1.5/500 with16px gap.
+Wide layout uses one1120px shell,1.3fr/1fr columns,96px gap and64px vertical padding,center aligned. Left content groups the40px/600 chapter title with32px lower gap and both approved feature descriptions. Feature titles remain28px/500 with16px body gap; reading stays18px/1.85. Two descriptions are separated by a thin line with32px on either side. Right visual groups the two56px-min selectors and one complete220px device. Both images overlap one intrinsic media grid cell; inactive media is invisible/inert while reserving height. There is no second product band, collage or decorative backdrop.
 
-At<=1100px, header padding48/24px, tabs max600px with18px/min56px controls, story padding32px and gap48px. Both stories stack in one intrinsic product-features grid area. JS synchronizes each story ancestor's hidden/inert with its two controlled panel/media IDs. Scoped hidden overrides reserve geometry; visibility:hidden, pointer-events:none and inert prevent painting or interaction. Wide panels instead become visible labelled regions and tabs hide. Tab visibility is owned by JS/native hidden: the source tablist starts hidden and its CSS base stays grid. A wide display:none media rule previously blurred focus before the breakpoint handler;removing that race lets the handler capture focus before activation and move it to the visible media action. Round21 tested expansion and focused-feature collapse with hiddenFocus:false.
+Round27 supersedes the Round21/26 product composition. Use ONE white product module: title and both approved explanations grouped left; ONE complete App with feature selection right. Wide grid1.3fr/1fr,gap96px,padding64px; device220px. Selection changes only the image on desktop, while both descriptions remain visible labelled regions. Wide selectors are native pressed buttons controlling media only. No second ink product story and no unsupported copy or filler strip.
 
-At<=760px, title28px left aligned, header40/24px, tabs16px/min72px. Product-features defines two shared rows with24px gap. Both story wrappers span rows1/3 using subgrid; the inner wrapper is display:contents. Summary occupies row1, complete App row2, with story padding24px20px32px. Shared tracks align both states without arbitrary filler height. The full reviewed online paragraph includes its fee reminder and occupies the online summary row. No product-support strip or duplicate Steps/F01/F04 actions follow the stories. The fixed service-area display remains in company contact; header/footer Steps navigation and the full FAQ retain those entry points. The builder split-copy macro is removed.
+At<=1100px compact controls become native tabs with two panel/media IDREFs,roving tabindex and Left/Right/Home/End. Only the selected description and image are visible; overlay grids reserve the maximum intrinsic height. At<=760px order is title,tabs,description,image with24px gaps and210px device. At intermediate widths description/image share one row. Controls move as existing nodes to match DOM/visual reading order at the breakpoint; capture and restore any focused button. Wide controls stay visible, so no forced focus jump into media is needed. Preserve gallery,Escape/scroll/focus restoration and safety-return product state.
 
-All App PNGs stay complete750×1624 through APP_SCREENS/app-screen. Frames remain240/210px,4px edge,28/26px corners and the shared shadow. The product gallery uses min(320px,calc((100dvh -280px)*.46182266),100%). Steps have no image action. Loan-plan stays in the product gallery as a static example; no cropped, repainted or invented product state.
+All PNGs stay complete750×1624 through APP_SCREENS. Product preview220px desktop/210px mobile is a local override; gallery height-fit remains min(320px,calc((100dvh -280px)*.46182266),100%). Original4px edge and28/26px corners remain. Gallery image actions explicitly name the image; four application steps have no screenshot action. No business/catalog/config/font/image edits.
 
 ## Company and brand close
 

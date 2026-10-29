@@ -1,5 +1,7 @@
 # เคียงใจ Thailand website V2
 
+第二十七轮将产品区重组为一个完整模块：左侧集中章节标题、在线申请与还款两段已审说明；右侧仅一部完整App，功能选择切换对应截图。桌面220px、手机210px，同状态共用几何；移除原第二条深青产品横幅。章节／功能／正文沿用40／28／18px层级。本轮改变构图与信息组合，不靠新增文字、装饰或营销承诺填空。详见[本轮自查](docs/round27-review.md)。
+
 第二十六轮仅修正产品标题层级与截图入口：章节40px／600，功能28px／500，正文18px；首个产品说明与App顶部对齐，章节至内容32px，标题至正文16px。移动端仍由Tab命名功能，不重复显示H3。移除步骤03的截图按钮及独立弹窗，完整四步文案保留；贷款计划图仍在产品图库第3张。产品图按钮明确写明查看哪张图片。首屏、压缩素材、业务配置及已审catalog保持。详见[本轮检查](docs/round26-review.md)与[前后截图](../round26-preview/)。
 
 2026-10-29：已通过TinyPNG压缩8张实际加载图片，合计1.28MB→595KB（减少53.52%），保持当前设计／尺寸／透明背景；图片引用加入内容哈希以更新缓存。详见[图片压缩记录](docs/image-compression.md)。
@@ -31,7 +33,7 @@ python3 -m http.server 4173
 | `src/components/footer.html` | 白公司章／青蓝联系与深青双列close，所有页面共用 |
 | `src/components/header.html`、`application-steps.html`、`src/pages/home.html` | 原导航、四步及FAQ框架 |
 | `assets/redesign.css`、`homepage.css`、`secondary.css` | Tokens、整幅Hero、产品story／移动subgrid及支持页／footer |
-| `assets/app.js` | 成对Tab及story祖先hidden／inert同步，原导航／弹窗／FAQ／原图交互 |
+| `assets/app.js` | 桌面媒体选择／compact Tab语义与阅读顺序同步，原导航／弹窗／FAQ／原图交互 |
 | `scripts/build.py` | 静态构建与统一`APP_SCREENS`图片组件；已移除产品段落拆分宏 |
 | `assets/app/`、`campaign/`、`brand/`、`icons/`、`fonts/` | 原始App／实拍／品牌／SVG及自托管授权字体 |
 | `src/content/reviewed-th.json`、`src/config.json` | 已审原文及公开配置，保持原值 |

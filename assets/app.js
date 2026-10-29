@@ -252,67 +252,79 @@
   }
 })();
 
-// One compact product section; all reviewed descriptions and original screens stay in the DOM.
+// Desktop groups both explanations; one image changes. Compact tabs change copy and image together.
 (() => {
   'use strict';
   document.querySelectorAll('.product-showcase').forEach(showcase => {
     const tabs = [...showcase.querySelectorAll('[data-product-tab]')];
     if (!tabs.length) return;
+    const controls = showcase.querySelector('.product-tabs');
     const storageKey = 'kiangjai-v2-product-tab';
     const compact = window.matchMedia('(max-width:1100px)');
     let activeTab = tabs[0];
     const activate = (target, moveFocus = false) => {
       activeTab = target;
-      showcase.querySelector('.product-tabs').hidden = !compact.matches;
+      // Match the compact reading order: heading, controls, description, image.
+      // Move the existing controls only at a breakpoint; retain any focused button.
+      const controlsParent = showcase.querySelector(compact.matches ? '.product-copy' : '.product-visual');
+      if (controls.parentElement !== controlsParent) {
+        const focused = controls.contains(document.activeElement) ? document.activeElement : null;
+        if (compact.matches) showcase.querySelector('.product-descriptions').before(controls);
+        else controlsParent.prepend(controls);
+        focused?.focus({preventScroll:true});
+      }
+      controls.hidden = false;
+      controls.setAttribute('role', compact.matches ? 'tablist' : 'group');
       tabs.forEach(tab => {
         const selected = tab === target;
-        tab.setAttribute('aria-selected', String(selected));
-        tab.tabIndex = selected ? 0 : -1;
-        const story = showcase.querySelector('[data-product-story="'+tab.dataset.productTab+'"]');
-        if (story) {
-          story.hidden = compact.matches && !selected;
-          story.inert = compact.matches && !selected;
+        const key = tab.dataset.productTab;
+        const panel = document.getElementById('product-panel-'+key);
+        const media = document.getElementById('product-media-'+key);
+        if (compact.matches) {
+          tab.setAttribute('role','tab');
+          tab.setAttribute('aria-selected',String(selected));
+          tab.removeAttribute('aria-pressed');
+        } else {
+          tab.removeAttribute('role');
+          tab.removeAttribute('aria-selected');
+          tab.setAttribute('aria-pressed',String(selected));
         }
-        tab.getAttribute('aria-controls').split(/\s+/).forEach(id => {
-          const controlled = document.getElementById(id);
-          if (controlled) {
-            controlled.hidden = compact.matches && !selected;
-            controlled.inert = compact.matches && !selected;
-            if (controlled.hasAttribute('data-product-panel')) {
-              controlled.setAttribute('role',compact.matches ? 'tabpanel' : 'region');
-              controlled.setAttribute('aria-labelledby',compact.matches ? tab.id : 'product-heading-'+tab.dataset.productTab);
-              if (compact.matches) controlled.tabIndex=0; else controlled.removeAttribute('tabindex');
-            }
-          }
-        });
+        tab.tabIndex = compact.matches && !selected ? -1 : 0;
+        tab.setAttribute('aria-controls',compact.matches ? panel.id+' '+media.id : media.id);
+        panel.hidden = compact.matches && !selected;
+        panel.inert = compact.matches && !selected;
+        panel.setAttribute('role',compact.matches ? 'tabpanel' : 'region');
+        panel.setAttribute('aria-labelledby',compact.matches ? tab.id : 'product-heading-'+key);
+        if (compact.matches) panel.tabIndex=0; else panel.removeAttribute('tabindex');
+        media.hidden = !selected;
+        media.inert = !selected;
+        media.setAttribute('role','group');
+        media.setAttribute('aria-labelledby',tab.id);
       });
-      try { sessionStorage.setItem(storageKey, target.dataset.productTab); } catch {}
+      try { sessionStorage.setItem(storageKey,target.dataset.productTab); } catch {}
       if (moveFocus) target.focus({preventScroll:true});
     };
-    tabs.forEach((tab, index) => {
-      tab.addEventListener('click', () => activate(tab));
-      tab.addEventListener('keydown', event => {
+    tabs.forEach((tab,index) => {
+      tab.addEventListener('click',() => activate(tab));
+      tab.addEventListener('keydown',event => {
         let next;
-        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-        else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
-        else if (event.key === 'Home') next = 0;
-        else if (event.key === 'End') next = tabs.length - 1;
+        if (event.key === 'ArrowRight') next=(index+1)%tabs.length;
+        else if (event.key === 'ArrowLeft') next=(index-1+tabs.length)%tabs.length;
+        else if (event.key === 'Home') next=0;
+        else if (event.key === 'End') next=tabs.length-1;
         else return;
-        event.preventDefault();
-        activate(tabs[next], true);
+        event.preventDefault(); activate(tabs[next],true);
       });
     });
-    compact.addEventListener('change', () => {
-      const focused = document.activeElement;
-      const focusedTab = tabs.find(tab => tab.getAttribute('aria-controls').split(/\s+/).some(id => document.getElementById(id)?.contains(focused)));
-      const target = focusedTab || activeTab;
-      activate(target);
-      if (!compact.matches && tabs.includes(focused)) document.getElementById('product-media-'+target.dataset.productTab)?.querySelector('button')?.focus({preventScroll:true});
+    compact.addEventListener('change',() => {
+      const focused=document.activeElement;
+      const focusedTab=tabs.find(tab => tab === focused || document.getElementById('product-panel-'+tab.dataset.productTab).contains(focused) || document.getElementById('product-media-'+tab.dataset.productTab).contains(focused));
+      activate(focusedTab || activeTab);
     });
-    let savedKey = '';
+    let savedKey='';
     if (new URLSearchParams(location.search).get('return') === '1') {
-      try { savedKey = sessionStorage.getItem(storageKey) || ''; } catch {}
+      try { savedKey=sessionStorage.getItem(storageKey) || ''; } catch {}
     }
-    activate(tabs.find(tab => tab.dataset.productTab === savedKey) || tabs.find(tab => tab.getAttribute('aria-selected') === 'true') || tabs[0]);
+    activate(tabs.find(tab => tab.dataset.productTab === savedKey) || tabs[0]);
   });
 })();

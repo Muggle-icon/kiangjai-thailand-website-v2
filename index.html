@@ -9,7 +9,7 @@
 <link rel="preload" href="assets/fonts/Kanit-600-thai.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="assets/campaign/bangkok-food-stand-1200.webp?v=ff931cf8c137" media="(max-width:760px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/campaign/bangkok-food-stand-2200.webp?v=2c0ce7c69e1a" media="(min-width:761px)" fetchpriority="high">
-<link rel="stylesheet" href="assets/base.css?v=2c4d418b4fde"><link rel="stylesheet" href="assets/redesign.css?v=2c4d418b4fde"><link rel="stylesheet" href="assets/homepage.css?v=2c4d418b4fde"><link rel="stylesheet" href="assets/secondary.css?v=2c4d418b4fde"><script src="assets/vendor/qrcode.js?v=2c4d418b4fde" defer></script><script src="assets/config.js?v=2c4d418b4fde" defer></script><script src="assets/app.js?v=2c4d418b4fde" defer></script></head>
+<link rel="stylesheet" href="assets/base.css?v=a5c8bf417870"><link rel="stylesheet" href="assets/redesign.css?v=a5c8bf417870"><link rel="stylesheet" href="assets/homepage.css?v=a5c8bf417870"><link rel="stylesheet" href="assets/secondary.css?v=a5c8bf417870"><script src="assets/vendor/qrcode.js?v=a5c8bf417870" defer></script><script src="assets/config.js?v=a5c8bf417870" defer></script><script src="assets/app.js?v=a5c8bf417870" defer></script></head>
 <body data-page="home"><a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a><div id="kiangjai-v2">
 <header class="site-header"><div class="shell header-inner"><a class="brand-logo" href="index.html" aria-label="เคียงใจ — หน้าแรก"><img src="assets/brand/logo-master.png?v=23b143330bb9" alt="เคียงใจ" width="367" height="124"></a><nav id="main-nav" aria-label="เมนูหลัก"><a href="index.html" data-home-nav>หน้าแรก</a><a href="index.html#kj-benefits">จุดเด่นของบริการ</a><a href="index.html#kj-steps">ขั้นตอนการสมัคร</a><a href="index.html#kj-faq">คำถามที่พบบ่อย</a><a href="index.html#kj-about">เกี่ยวกับเรา</a><a href="security.html">ศูนย์ความปลอดภัย</a></nav><button class="button button-outline header-cta" type="button" data-download="header">ดาวน์โหลดแอป</button><button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="เปิดเมนู"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"/></svg></button></div></header>
 
@@ -25,39 +25,35 @@
 </div></section>
 
 <section class="product-section" id="kj-benefits" aria-labelledby="benefits-title">
-  <div class="product-showcase">
-    <header class="product-header shell">
-      <h2 id="benefits-title">ทำไมต้องเลือกเคียงใจ</h2>
-      <div class="product-tabs" role="tablist" hidden aria-labelledby="benefits-title">
-        <button class="product-tab" id="product-tab-online" type="button" role="tab" aria-selected="true" aria-controls="product-panel-online product-media-online" tabindex="0" data-product-tab="online">สมัครออนไลน์ทุกขั้นตอน</button>
-        <button class="product-tab" id="product-tab-repayment" type="button" role="tab" aria-selected="false" aria-controls="product-panel-repayment product-media-repayment" tabindex="-1" data-product-tab="repayment">ชำระคืนสะดวก</button>
-      </div>
-    </header>
-    <div class="product-features">
-      <article class="product-story product-story-online" data-product-story="online">
-        <div class="product-story-inner shell">
-          <div class="product-panel" id="product-panel-online" role="tabpanel" aria-labelledby="product-tab-online" tabindex="0" data-product-panel="online">
+  <div class="product-showcase product-layout shell">
+    <div class="product-copy">
+      <h2 class="product-title" id="benefits-title">ทำไมต้องเลือกเคียงใจ</h2>
+      <div class="product-descriptions">
+          <section class="product-panel" id="product-panel-online" role="region" aria-labelledby="product-heading-online" data-product-panel="online">
             <h3 id="product-heading-online">สมัครออนไลน์ทุกขั้นตอน</h3>
             <p>เคียงใจ ให้บริการช่องทางยื่นคำขอสินเชื่อผ่านระบบออนไลน์ เพื่อให้การสมัคร การยืนยันตัวตน และการยืนยันการกู้ยืมสะดวกยิ่งขึ้น กรุณาอ่านข้อตกลงที่เกี่ยวข้องและรายละเอียดค่าธรรมเนียมให้ครบถ้วนก่อนยืนยันการกู้ยืม</p>
-          </div>
+          </section>
+          <section class="product-panel" id="product-panel-repayment" role="region" aria-labelledby="product-heading-repayment" data-product-panel="repayment">
+            <h3 id="product-heading-repayment">ชำระคืนสะดวก</h3>
+            <p>ชำระคืนได้โดยสแกน QR Code ผ่านแอปธนาคาร ตามคำแนะนำในใบแจ้งยอดภายในแอป</p>
+          </section>
+      </div>
+    </div>
+    <div class="product-visual">
+      <div class="product-tabs" role="group" hidden aria-labelledby="benefits-title">
+        <button class="product-tab" id="product-tab-online" type="button" aria-pressed="true" aria-controls="product-media-online" data-product-tab="online">สมัครออนไลน์ทุกขั้นตอน</button>
+        <button class="product-tab" id="product-tab-repayment" type="button" aria-pressed="false" aria-controls="product-media-repayment" data-product-tab="repayment">ชำระคืนสะดวก</button>
+      </div>
+      <div class="product-media">
           <figure class="app-media" id="product-media-online" data-product-media="online">
             <div class="app-media-stage"><div class="app-device"><img class="app-screen" src="assets/app/home-overview.png?v=a8240905dc57" alt="หน้าหลักแอปเคียงใจ แสดงวงเงินและความคืบหน้าการกรอกข้อมูล" width="750" height="1624" loading="lazy" decoding="async"></div></div>
             <figcaption class="app-media-caption"><span>ภาพตัวอย่างหน้าหลักของแอป</span><button class="app-image-action" type="button" data-app-gallery>ดูภาพหน้าหลักแอปเคียงใจ <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m0-6l-7 7M3 21l7-7m-1 7H3v-6"/></svg></button></figcaption>
           </figure>
-        </div>
-      </article>
-      <article class="product-story product-story-repayment" data-product-story="repayment">
-        <div class="product-story-inner shell">
-          <div class="product-panel" id="product-panel-repayment" role="tabpanel" aria-labelledby="product-tab-repayment" tabindex="0" data-product-panel="repayment" hidden>
-            <h3 id="product-heading-repayment">ชำระคืนสะดวก</h3>
-            <p>ชำระคืนได้โดยสแกน QR Code ผ่านแอปธนาคาร ตามคำแนะนำในใบแจ้งยอดภายในแอป</p>
-          </div>
-          <figure class="app-media" id="product-media-repayment" data-product-media="repayment" hidden>
+          <figure class="app-media" id="product-media-repayment" data-product-media="repayment" hidden inert>
             <div class="app-media-stage"><div class="app-device"><img class="app-screen" src="assets/app/repayment.png?v=16564c4c7594" alt="หน้าจอสแกนจ่ายเพื่อชำระคืน" width="750" height="1624" loading="lazy" decoding="async"></div></div>
             <figcaption class="app-media-caption"><span>ภาพตัวอย่างหน้าจอแอป</span><button class="app-image-action" type="button" data-app-gallery data-gallery-start="1">ดูภาพหน้าจอชำระคืน <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m0-6l-7 7M3 21l7-7m-1 7H3v-6"/></svg></button></figcaption>
           </figure>
-        </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>

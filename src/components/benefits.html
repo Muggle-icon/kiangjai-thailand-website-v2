@@ -1,37 +1,33 @@
 <section class="product-section" id="kj-benefits" aria-labelledby="benefits-title">
-  <div class="product-showcase">
-    <header class="product-header shell">
-      <h2 id="benefits-title">{{copy:23d289eadb5323}}</h2>
-      <div class="product-tabs" role="tablist" hidden aria-labelledby="benefits-title">
-        <button class="product-tab" id="product-tab-online" type="button" role="tab" aria-selected="true" aria-controls="product-panel-online product-media-online" tabindex="0" data-product-tab="online">{{copy:1bebb0e80ef694}}</button>
-        <button class="product-tab" id="product-tab-repayment" type="button" role="tab" aria-selected="false" aria-controls="product-panel-repayment product-media-repayment" tabindex="-1" data-product-tab="repayment">{{copy:f3d479ae42c826}}</button>
-      </div>
-    </header>
-    <div class="product-features">
-      <article class="product-story product-story-online" data-product-story="online">
-        <div class="product-story-inner shell">
-          <div class="product-panel" id="product-panel-online" role="tabpanel" aria-labelledby="product-tab-online" tabindex="0" data-product-panel="online">
+  <div class="product-showcase product-layout shell">
+    <div class="product-copy">
+      <h2 class="product-title" id="benefits-title">{{copy:23d289eadb5323}}</h2>
+      <div class="product-descriptions">
+          <section class="product-panel" id="product-panel-online" role="region" aria-labelledby="product-heading-online" data-product-panel="online">
             <h3 id="product-heading-online">{{copy:1bebb0e80ef694}}</h3>
             <p>{{copy:cdd17cff597160}}</p>
-          </div>
+          </section>
+          <section class="product-panel" id="product-panel-repayment" role="region" aria-labelledby="product-heading-repayment" data-product-panel="repayment">
+            <h3 id="product-heading-repayment">{{copy:f3d479ae42c826}}</h3>
+            <p>{{copy:edc2af888c79aa}}</p>
+          </section>
+      </div>
+    </div>
+    <div class="product-visual">
+      <div class="product-tabs" role="group" hidden aria-labelledby="benefits-title">
+        <button class="product-tab" id="product-tab-online" type="button" aria-pressed="true" aria-controls="product-media-online" data-product-tab="online">{{copy:1bebb0e80ef694}}</button>
+        <button class="product-tab" id="product-tab-repayment" type="button" aria-pressed="false" aria-controls="product-media-repayment" data-product-tab="repayment">{{copy:f3d479ae42c826}}</button>
+      </div>
+      <div class="product-media">
           <figure class="app-media" id="product-media-online" data-product-media="online">
             <div class="app-media-stage">{{app-screen:home}}</div>
             <figcaption class="app-media-caption"><span>ภาพตัวอย่างหน้าหลักของแอป</span><button class="app-image-action" type="button" data-app-gallery>ดูภาพหน้าหลักแอปเคียงใจ {{icon:maximize}}</button></figcaption>
           </figure>
-        </div>
-      </article>
-      <article class="product-story product-story-repayment" data-product-story="repayment">
-        <div class="product-story-inner shell">
-          <div class="product-panel" id="product-panel-repayment" role="tabpanel" aria-labelledby="product-tab-repayment" tabindex="0" data-product-panel="repayment" hidden>
-            <h3 id="product-heading-repayment">{{copy:f3d479ae42c826}}</h3>
-            <p>{{copy:edc2af888c79aa}}</p>
-          </div>
-          <figure class="app-media" id="product-media-repayment" data-product-media="repayment" hidden>
+          <figure class="app-media" id="product-media-repayment" data-product-media="repayment" hidden inert>
             <div class="app-media-stage">{{app-screen:repayment}}</div>
             <figcaption class="app-media-caption"><span>ภาพตัวอย่างหน้าจอแอป</span><button class="app-image-action" type="button" data-app-gallery data-gallery-start="1">ดูภาพหน้าจอชำระคืน {{icon:maximize}}</button></figcaption>
           </figure>
-        </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
