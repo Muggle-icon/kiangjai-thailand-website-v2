@@ -79,3 +79,8 @@ Lucide [许可](https://lucide.dev/license)及本地 `assets/icons/LICENSE-Lucid
 原图 200,000 推广、日利率及示例金额／时效仍待业务核准，未提取为官网承诺。未配置的商店、官方渠道或牌照不制作替代图。本轮最终记录21／4／8／2／10；完整App／照片／字体／数据SHA保持、原图比例正确，静态7页检查及浏览器零warn／error通过。21场景及canonical截图在断点焦点修复后全部重跑／重截。独立截图／源码审查仅在所给PC／默认移动视觉范围给出ship，未验证所有交互／实机／数值对比度或公开部署。图片、字体和许可字节保持；当前截图在`../round21-preview/`；线上发布结论以`../round21-preview/release-verification.json`中的commit、CI与实际浏览器记录为准。
 
 本轮使用[MoneyThunder官网](https://www.money-thunder.com/)新鲜PC整页[参考](../../round21-preview/competitors/moneythunder-1440.png)与[区域指标](../../round21-preview/competitors/regions.json)，仅作构图／层级研究。当前轮播是推荐活动；不把其照片／品牌／金融或资质主张拿来生产使用，也不称为新的有效手机样本。此前三站字体指标属于历史出处研究，Money390桌面裁切限制仍成立；本站继续原SIL OFL字体。生成提示词与旧轮审查原文保留。
+
+
+## 2026-10-29 TinyPNG压缩
+
+实际使用的8张光栅图经TinyPNG压缩，格式／尺寸与原来源保持，品牌透明背景保留。当前二进制文件SHA已变化，早期未压缩SHA视为历史基线。来源、许可与人物说明不变；详见[图片压缩记录](image-compression.md)。

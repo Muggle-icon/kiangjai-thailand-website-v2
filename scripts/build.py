@@ -3,7 +3,8 @@ from pathlib import Path
 import hashlib
 import re
 import json
-from html import escape
+from html import escape, unescape
+from urllib.parse import parse_qsl, unquote, urlencode, urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT/'src/config.json').read_text())
@@ -20,6 +21,35 @@ APP_SCREENS = {
     'loan-plan': ('assets/app/loan-plan.png', 'หน้าจอเลือกจำนวนเงินและจำนวนงวด'),
     'withdrawal': ('assets/app/withdrawal-current.png', 'หน้าจอแอปเคียงใจแสดงวงเงินที่พร้อมใช้งาน'),
 }
+
+def version_image_url(value):
+    """Version local raster files by their bytes without touching other assets."""
+    url = urlsplit(unescape(value))
+    if url.scheme or url.netloc:
+        return value
+    image = (ROOT/unquote(url.path).lstrip('/')).resolve()
+    if (image.suffix.lower() not in {'.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif'}
+            or not image.is_relative_to(ROOT) or not image.is_file()):
+        return value
+    version = hashlib.sha256(image.read_bytes()).hexdigest()[:12]
+    query = [(key, val) for key, val in parse_qsl(url.query, keep_blank_values=True) if key != 'v']
+    query.append(('v', version))
+    return escape(urlunsplit((url.scheme, url.netloc, url.path, urlencode(query), url.fragment)), quote=True)
+
+def version_image_references(html):
+    # Run before route aliases are made, so root and nested pages share image versions.
+    # The same URL handling also keeps responsive sources and hero preloads identical.
+    def attribute(match):
+        name, quote, value = match.groups()
+        if name.lower() == 'srcset':
+            if 'data:' in value.lower():
+                return match[0]
+            value = re.sub(r'(^|,\s*)([^\s,]+)',
+                           lambda candidate: candidate[1]+version_image_url(candidate[2]), value)
+        else:
+            value = version_image_url(value)
+        return name+'='+quote+value+quote
+    return re.sub(r'(?<![\w:-])(src|href|srcset)=([\"\'])(.*?)\2', attribute, html, flags=re.IGNORECASE)
 
 def render(text):
     text=re.sub(r'\{\{copy:([\w-]+)\}\}', lambda m:escape(COPY[m[1]]),text)
@@ -61,6 +91,7 @@ for source,filename,title in [('home','index','หน้าแรก'),('securit
 {footer}
 {dialogs}
 </div></body></html>'''
+    html = version_image_references(html)
     (ROOT/(filename+'.html')).write_text(html)
     if source != 'home':
         directory=ROOT/source; directory.mkdir(exist_ok=True)
